@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-22T14:24:29+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;h1 id=&quot;react-컴포넌트-만들기&quot;&gt;React 컴포넌트 만들기&lt;/h1&gt;
+
+&lt;p&gt;React의 본질은 사용자 정의 태그를 만드는 것입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;1-왜&quot;&gt;1. 왜?&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d713060b-c42b-4709-b6b2-02ec3dee7435/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;2-방법&quot;&gt;2. 방법&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c366fffd-bb8a-45a3-a4c5-370148e81d64/Untitled.png&quot; alt=&quot;간단해진 App 컴포넌트&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;간단해진 App 컴포넌트&lt;/p&gt;
+
+&lt;p&gt;위와 같이 &amp;lt;Header&amp;gt; , &amp;lt;Nav&amp;gt; , &amp;lt;Article&amp;gt;로 코드를 짧게 줄일 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;아래와 같이 각각 함수로 만들어 주면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d9db40e-0b51-4edf-af39-8ee70072416a/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;함수로 만들 때 주의할 사항은 함수명(컴포넌트)은 항상 대문자로 시작해야 한다는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;일반 html태그와 차이를 주는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;함수를 만들고 App컴포넌트에 일반 태그 쓰듯이 붙여주면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 하면 코드의 가독성도 좋고 코드를 반복해서 사용할 필요없이 계속해서 컴포넌트를 독립된 부품처럼 가져다 쓸 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;또한 컴포넌트를 공유할 수 있으므로 생산성도 높아집니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React 컴포넌트 만들기</summary></entry><entry><title type="html">CSS란 무엇일까?</title><link href="https://ykkim97.github.io/css-basic" rel="alternate" type="text/html" title="CSS란 무엇일까?" /><published>2022-03-20T23:00:00+09:00</published><updated>2022-03-20T23:00:00+09:00</updated><id>https://ykkim97.github.io/css-basic</id><content type="html" xml:base="https://ykkim97.github.io/css-basic">&lt;p&gt;CSS는 Cascading Style Sheets의 약자입니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 Cascading Style Sheets의 약자입니다.</summary></entry><entry><title type="html">React란?</title><link href="https://ykkim97.github.io/react-basic" rel="alternate" type="text/html" title="React란?" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/react-basic</id><content type="html" xml:base="https://ykkim97.github.io/react-basic">&lt;h1 id=&quot;1-react&quot;&gt;1. React&lt;/h1&gt;
+
+&lt;p&gt;React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다.&lt;/p&gt;
+
+&lt;p&gt;React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와 같은 프레임워크들이 사용되고 있는데 현재 가장 많이 사용되고 있는 것은 React인 것이다.&lt;/p&gt;
+
+&lt;h1 id=&quot;2-react의-특징&quot;&gt;2. React의 특징&lt;/h1&gt;
+
+&lt;h2 id=&quot;1-data-flow&quot;&gt;1. Data flow&lt;/h2&gt;
+
+&lt;p&gt;React는 단방향 데이터 흐름을 가지고 있다고 한다.&lt;/p&gt;
+
+&lt;p&gt;Angular.js와 같은 양방향 데이터 바인딩은 개발 규모가 커질수록 데이터의 흐름을 추적하기 힘들고 복잡해질 수 있지만 React의 경우는 복잡한 어플리케이션의 경우에도 데이터 흐름에서 일어나는 변화를 보다 예측 가능하도록 단방향 흐름을 가지도록 했다고함.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-컴포넌트-기반-구조&quot;&gt;2. 컴포넌트 기반 구조&lt;/h2&gt;
+
+&lt;p&gt;컴포넌트란 독립적인 소프트웨어 모듈을 의미한다.&lt;/p&gt;
+
+&lt;p&gt;React의 경우 UI를 여러 개의 컴포넌트로 나누어서 개발한다. 즉 여러 컴포넌트를 모아서 하나의 페이지를 구성하는 것이다. 컴포넌트 별로 나누어져 있기 때문에 전체 코드를 파악하기 쉽다.&lt;/p&gt;
+
+&lt;p&gt;그리고 코드를 반복해서 작성할 필요없이 컴포넌트를 import하여 간단히 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;애플리케이션이 복잡해지더라도 코드의 관리와 유지보수가 용이하다는 장점이 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-virtual-dom&quot;&gt;3. Virtual DOM&lt;/h2&gt;
+
+&lt;p&gt;DOM은 Documnet Object Model이며 html,css,xml등을 트리 구조로 인식하고 데이터를 객체로 간주하고 관리한다.&lt;/p&gt;
+
+&lt;p&gt;React는 이 DOM TREE 구조와 같은 구조체를 Virtual DOM으로 가지고 있다. Virtual DOM은 가상의 DOM으로 이벤트가 발생할 떄 마다 Virtual DOM을 만들고 다시 그릴 때마다 실제 DOM과 비교하여 변경이 필요한 최소한의 변경사항만 실제 DOM에 반영하여 어플리케이션의 효율성과 속도를 개선할 수 있다고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-props-와-state&quot;&gt;4. Props 와 State&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Props&lt;/p&gt;
+
+    &lt;p&gt;Props는 부모 컴포넌트에서 자식 컴포넌트로 전달해주는 데이터이다.&lt;/p&gt;
+
+    &lt;p&gt;쉽게 읽기 전용 데이터라고 생각하면 될 것 같다. 자식 컴포넌트에서 전달받은 props는 변경이 불가능하고 props를 전달해준 최상위 부모 컴포넌트만 props를 변경할 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;State&lt;/p&gt;
+
+    &lt;p&gt;State는 컴포넌트 내부에서 선언하며 내부에서 값을 변경할 수 있습니다. state는 동적인 데이터를 다룰 때 사용하며, 사용자와의 상호작용을 통해 데이터를 동적으로 변경할 때 사용합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-jsx&quot;&gt;5. JSX&lt;/h2&gt;
+
+&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">1. React</summary></entry><entry><title type="html">웹의 기본중의 기본! HTML에 대해서 알아보자</title><link href="https://ykkim97.github.io/html-basic" rel="alternate" type="text/html" title="웹의 기본중의 기본! HTML에 대해서 알아보자" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic</id><content type="html" xml:base="https://ykkim97.github.io/html-basic">&lt;p&gt;HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.
+HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;HTML요소의 형식은 다음과 같습니다.&lt;/p&gt;
+
+&lt;태그명 속성명1=&quot;속성값1&quot; 속성명2=&quot;속성값2&quot;&gt; 컨텐츠 &lt;/태그명&gt;
+
+&lt;p&gt;&lt;br /&gt;
+위 처럼 태그안에 컨텐츠가 들어가게 되고, 태그에는 여러 속성들이 들어갈 수 있습니다.
+물론 위처럼 열고 닫는 태그만 존재하는 것은 아닙니다.
+컨텐츠가 없는 태그도 존재하죠.
+이를 빈 태그(Empty Tag)라고도 합니다.&lt;/p&gt;
+
+&lt;p&gt;HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &amp;lt;html&amp;gt;을 사용한다. 그 하위에 &amp;lt;head&amp;gt; 태그와 &amp;lt;body&amp;gt; 태그를 컨텐츠로 가지고 있습니다.&lt;/p&gt;
+&lt;head&gt; 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고 &lt;body&gt; 태그에는 문서의 내용이 위치합니다.
+
+&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다. HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.</summary></entry><entry><title type="html">HTML 기본 태그들</title><link href="https://ykkim97.github.io/html-basic-tags" rel="alternate" type="text/html" title="HTML 기본 태그들" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic-tags</id><content type="html" xml:base="https://ykkim97.github.io/html-basic-tags">&lt;ol&gt;
+  &lt;li&gt;“&amp;lt;p&amp;gt;” 태그&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">“&amp;lt;p&amp;gt;” 태그</summary></entry><entry><title type="html">Git!</title><link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/git-basic</id><content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git</summary></entry></feed>
