@@ -28,6 +28,9 @@
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -53,7 +56,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="React란?" />
-    <meta property="og:description" content="1. React React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다. React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와 같은 프레임워크들이 사용되고 있는데 현재 가장 많이 사용되고 있는" />
+    <meta property="og:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 1. React React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다. React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와" />
     <meta property="og:url" content="https://ykkim97.github.io/react-basic" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -63,7 +66,7 @@
     <meta property="article:tag" content="React" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="React란?" />
-    <meta name="twitter:description" content="1. React React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다. React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와 같은 프레임워크들이 사용되고 있는데 현재 가장 많이 사용되고 있는" />
+    <meta name="twitter:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 1. React React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다. React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -95,7 +98,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/react-basic"
     },
-    "description": "1. React React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다. React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와 같은 프레임워크들이 사용되고 있는데 현재 가장 많이 사용되고 있는"
+    "description": "React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 1. React React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다. React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와"
 }
     </script>
 
@@ -193,7 +196,13 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="1-react">1. React</h1>
+                    <p><span class="table-of-contents-list">React은 다음과 같이 구성되어 있습니다. </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./react-basic">React란?</a></li>
+    <li><a href="./react-mkcomponent">React 컴포넌트 만들기</a></li>
+</ul>
+
+<h1 id="1-react">1. React</h1>
 
 <p>React는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다.</p>
 

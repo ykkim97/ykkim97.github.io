@@ -28,6 +28,9 @@
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -53,7 +56,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="React 컴포넌트 만들기" />
-    <meta property="og:description" content="React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? 위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다. 2. 방법" />
+    <meta property="og:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? import './App.css'; function App() { return ( &lt;div className='app'&gt; &lt;header&gt; &lt;h1&gt;&lt;a href='/'&gt;WEB&lt;/a&gt;&lt;/h1&gt; &lt;/header&gt; &lt;nav&gt; &lt;ol&gt; &lt;li&gt;&lt;a href='/read/1'&gt;html&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href='/read/1'&gt;css&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href='/read/1'&gt;javascript&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/nav&gt; &lt;article&gt; &lt;h2&gt;Welcome&lt;/h2&gt; Hello, WEB &lt;/article&gt; &lt;/div&gt;" />
     <meta property="og:url" content="https://ykkim97.github.io/react-mkcomponent" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -63,7 +66,7 @@
     <meta property="article:tag" content="React" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="React 컴포넌트 만들기" />
-    <meta name="twitter:description" content="React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? 위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다. 2. 방법" />
+    <meta name="twitter:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? import './App.css'; function App() { return ( &lt;div className='app'&gt; &lt;header&gt; &lt;h1&gt;&lt;a href='/'&gt;WEB&lt;/a&gt;&lt;/h1&gt; &lt;/header&gt; &lt;nav&gt; &lt;ol&gt; &lt;li&gt;&lt;a href='/read/1'&gt;html&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href='/read/1'&gt;css&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href='/read/1'&gt;javascript&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/nav&gt; &lt;article&gt; &lt;h2&gt;Welcome&lt;/h2&gt; Hello, WEB &lt;/article&gt; &lt;/div&gt;" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -95,7 +98,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/react-mkcomponent"
     },
-    "description": "React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? 위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다. 2. 방법"
+    "description": "React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? import './App.css'; function App() { return ( &lt;div className='app'&gt; &lt;header&gt; &lt;h1&gt;&lt;a href='/'&gt;WEB&lt;/a&gt;&lt;/h1&gt; &lt;/header&gt; &lt;nav&gt; &lt;ol&gt; &lt;li&gt;&lt;a href='/read/1'&gt;html&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href='/read/1'&gt;css&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href='/read/1'&gt;javascript&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/nav&gt; &lt;article&gt; &lt;h2&gt;Welcome&lt;/h2&gt; Hello, WEB &lt;/article&gt; &lt;/div&gt;"
 }
     </script>
 
@@ -193,19 +196,58 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="react-컴포넌트-만들기">React 컴포넌트 만들기</h1>
+                    <p><span class="table-of-contents-list">React은 다음과 같이 구성되어 있습니다. </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./react-basic">React란?</a></li>
+    <li><a href="./react-mkcomponent">React 컴포넌트 만들기</a></li>
+</ul>
+
+<h1 id="react-컴포넌트-만들기">React 컴포넌트 만들기</h1>
 
 <p>React의 본질은 사용자 정의 태그를 만드는 것입니다.</p>
 
 <h1 id="1-왜">1. 왜?</h1>
 
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d713060b-c42b-4709-b6b2-02ec3dee7435/Untitled.png" alt="Untitled" /></p>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">'app'</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/'</span><span class="p">&gt;</span>WEB<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>css<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>javascript<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        Hello, WEB
+      <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div></div>
 
 <p>위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다.</p>
 
 <h1 id="2-방법">2. 방법</h1>
 
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c366fffd-bb8a-45a3-a4c5-370148e81d64/Untitled.png" alt="간단해진 App 컴포넌트" /></p>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">'app'</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Header</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Nav</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Article</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>간단해진 App 컴포넌트</p>
 
@@ -213,7 +255,45 @@ into the {body} of the default.hbs template -->
 
 <p>아래와 같이 각각 함수로 만들어 주면 됩니다.</p>
 
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9d9db40e-0b51-4edf-af39-8ee70072416a/Untitled.png" alt="Untitled" /></p>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Header</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/'</span><span class="p">&gt;</span>WEB<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Nav</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>css<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>javascript<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Article</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+      Hello, WEB
+    <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">'app'</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Header</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Nav</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Article</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>함수로 만들 때 주의할 사항은 함수명(컴포넌트)은 항상 대문자로 시작해야 한다는 것입니다.</p>
 
