@@ -11,7 +11,7 @@
 
 
 
-    <title>About</title>
+    <title>Search Result</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -49,31 +49,28 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/about/" />
+    <link rel="canonical" href="https://ykkim97.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="About" />
-    <meta property="og:description" content="안녕하세요! 초보 개발자 김영권입니다." />
-    <meta property="og:url" content="https://ykkim97.github.io/about/" />
+    <meta property="og:title" content="Search Result" />
+    <meta property="og:description" content="IT 기술 블로그입니다." />
+    <meta property="og:url" content="https://ykkim97.github.io/search" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/blog-cover1.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
-    <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="" />
-    <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="안녕하세요! 초보 개발자 김영권입니다." />
+    <meta name="twitter:title" content="Search Result" />
+    <meta name="twitter:description" content="IT 기술 블로그입니다." />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/blog-cover1.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
-    <meta property="og:image:width" content="1400" />
-    <meta property="og:image:height" content="933" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
 
     <script type="application/ld+json">
 {
@@ -84,7 +81,7 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/about/",
+    "url": "https://ykkim97.github.io/search",
     "image": {
         "@type": "ImageObject",
         "url": "https://ykkim97.github.io/assets/built/images/blog-cover1.png",
@@ -93,9 +90,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/about/"
+        "@id": "https://ykkim97.github.io/search"
     },
-    "description": "안녕하세요! 초보 개발자 김영권입니다."
+    "description": "IT 기술 블로그입니다."
 }
     </script>
 
@@ -108,7 +105,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="About" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Search Result" href="/feed.xml" />
 
 
 </head>
@@ -171,14 +168,80 @@ into the {body} of the default.hbs template -->
         <article class="post-full  post page no-image">
 
             <header class="post-full-header">
-                <h1 class="post-full-title">About</h1>
+                <h1 class="post-full-title">Search Result</h1>
             </header>
 
             
 
             <section class="post-full-content">
-                <p>안녕하세요! 초보 개발자 김영권입니다.</p>
+                <form action="/search" method="get" hidden="hidden">
+    <label for="search-box"></label>
+    <input type="text" id="search-box" name="query">
+</form>
 
+<ul class="mylist" id="search-results"></ul>
+
+<script>
+    window.store = {
+    
+    "react-mkcomponent": {
+        "title": "React 컴포넌트 만들기",
+            "author": "ykkim97",
+            "category": "",
+            "content": "React은 다음과 같이 구성되어 있습니다.     React란?    React 컴포넌트 만들기React 컴포넌트 만들기React의 본질은 사용자 정의 태그를 만드는 것입니다.1. 왜?import './App.css';function App() {  return (    &lt;div className='app'&gt;      &lt;header&gt;        &lt;h1&gt;&lt;a href='/'&gt;WEB&lt;/a&gt;&lt;/h1&gt;      &lt;/header&gt;      &lt;nav&gt;        &lt;ol&gt;          &lt;li&gt;&lt;a href='/read/1'&gt;html&lt;/a&gt;&lt;/li&gt;          &lt;li&gt;&lt;a href='/read/1'&gt;css&lt;/a&gt;&lt;/li&gt;          &lt;li&gt;&lt;a href='/read/1'&gt;javascript&lt;/a&gt;&lt;/li&gt;        &lt;/ol&gt;      &lt;/nav&gt;      &lt;article&gt;        &lt;h2&gt;Welcome&lt;/h2&gt;        Hello, WEB      &lt;/article&gt;    &lt;/div&gt;  );}export default App;위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다.2. 방법function App() {  return (    &lt;div className='app'&gt;      &lt;Header /&gt;      &lt;Nav /&gt;      &lt;Article /&gt;    &lt;/div&gt;  );}간단해진 App 컴포넌트위와 같이 &lt;Header&gt; , &lt;Nav&gt; , &lt;Article&gt;로 코드를 짧게 줄일 수 있습니다.아래와 같이 각각 함수로 만들어 주면 됩니다.function Header() {  return (    &lt;header&gt;      &lt;h1&gt;&lt;a href='/'&gt;WEB&lt;/a&gt;&lt;/h1&gt;    &lt;/header&gt;  )}function Nav() {  return (    &lt;nav&gt;      &lt;ol&gt;        &lt;li&gt;&lt;a href='/read/1'&gt;html&lt;/a&gt;&lt;/li&gt;        &lt;li&gt;&lt;a href='/read/1'&gt;css&lt;/a&gt;&lt;/li&gt;        &lt;li&gt;&lt;a href='/read/1'&gt;javascript&lt;/a&gt;&lt;/li&gt;      &lt;/ol&gt;    &lt;/nav&gt;  )}function Article() {  return (    &lt;article&gt;      &lt;h2&gt;Welcome&lt;/h2&gt;      Hello, WEB    &lt;/article&gt;  )}function App() {  return (    &lt;div className='app'&gt;      &lt;Header /&gt;      &lt;Nav /&gt;      &lt;Article /&gt;    &lt;/div&gt;  );}함수로 만들 때 주의할 사항은 함수명(컴포넌트)은 항상 대문자로 시작해야 한다는 것입니다.일반 html태그와 차이를 주는 것입니다.함수를 만들고 App컴포넌트에 일반 태그 쓰듯이 붙여주면 됩니다.이렇게 하면 코드의 가독성도 좋고 코드를 반복해서 사용할 필요없이 계속해서 컴포넌트를 독립된 부품처럼 가져다 쓸 수 있습니다.또한 컴포넌트를 공유할 수 있으므로 생산성도 높아집니다.",
+        "url": "/react-mkcomponent"
+    }
+    ,
+    
+    "css-basic": {
+        "title": "CSS란 무엇일까?",
+            "author": "ykkim97",
+            "category": "",
+            "content": "CSS는 Cascading Style Sheets의 약자입니다.",
+        "url": "/css-basic"
+    }
+    ,
+    
+    "html-basic-tags": {
+        "title": "HTML 기본 태그들",
+            "author": "ykkim97",
+            "category": "",
+            "content": "HTML은 다음과 같이 구성되어 있습니다.     웹의 기본중의 기본! HTML에 대해서 알아보자    HTML 기본 태그들HTML 기본 태그들1. &lt;head&gt;1) 태그문서의 정보를 담고 있는 태그로 웹을 설계하고 구축할 때 필수적으로 들어가야 되는 문서의 정보입니다.2) 태그문서의 제목을 나타내는 태그입니다. 웹페이지 탭을 띄우게 되면 웹의 제목이 나타나게 됩니다.3) 태그주로 css 파일을 연결할 때 사용합니다. 물론 다른 외부요소를 연결하는 데에도 사용합니다.4) ",
+        "url": "/html-basic-tags"
+    }
+    ,
+    
+    "html-basic": {
+        "title": "웹의 기본중의 기본! HTML에 대해서 알아보자",
+            "author": "ykkim97",
+            "category": "",
+            "content": "HTML은 다음과 같이 구성되어 있습니다.     웹의 기본중의 기본! HTML에 대해서 알아보자    HTML 기본 태그들HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.HTML요소의 형식은 다음과 같습니다. 컨텐츠 위 처럼 태그안에 컨텐츠가 들어가게 되고, 태그에는 여러 속성들이 들어갈 수 있습니다.물론 위처럼 열고 닫는 태그만 존재하는 것은 아닙니다.컨텐츠가 없는 태그도 존재하죠.이를 빈 태그(Empty Tag)라고도 합니다.HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &lt;html&gt;을 사용한다. 그 하위에 &lt;head&gt; 태그와 &lt;body&gt; 태그를 컨텐츠로 가지고 있습니다. 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고  태그에는 문서의 내용이 위치합니다.",
+        "url": "/html-basic"
+    }
+    ,
+    
+    "git-basic": {
+        "title": "Git!",
+            "author": "ykkim97",
+            "category": "",
+            "content": "Git",
+        "url": "/git-basic"
+    }
+    ,
+    
+    "react-basic": {
+        "title": "React란?",
+            "author": "ykkim97",
+            "category": "",
+            "content": "React은 다음과 같이 구성되어 있습니다.     React란?    React 컴포넌트 만들기1. ReactReact는 Facebook에서 제공 중인 자바스크립트 라이브러리이자 웹 프레임워크이다.React를 사용하지 않더라도 HTML, CSS, JS 만으로도 웹페이지를 만들 수 있지만 React를 이용해 사용자와 상호 작용할 수 있는 동적인 UI를 쉽게 개발할 수 있기 때문에 많이 사용된다. React 말고도 Vue나 Angular와 같은 프레임워크들이 사용되고 있는데 현재 가장 많이 사용되고 있는 것은 React인 것이다.2. React의 특징1. Data flowReact는 단방향 데이터 흐름을 가지고 있다고 한다.Angular.js와 같은 양방향 데이터 바인딩은 개발 규모가 커질수록 데이터의 흐름을 추적하기 힘들고 복잡해질 수 있지만 React의 경우는 복잡한 어플리케이션의 경우에도 데이터 흐름에서 일어나는 변화를 보다 예측 가능하도록 단방향 흐름을 가지도록 했다고함.2. 컴포넌트 기반 구조컴포넌트란 독립적인 소프트웨어 모듈을 의미한다.React의 경우 UI를 여러 개의 컴포넌트로 나누어서 개발한다. 즉 여러 컴포넌트를 모아서 하나의 페이지를 구성하는 것이다. 컴포넌트 별로 나누어져 있기 때문에 전체 코드를 파악하기 쉽다.그리고 코드를 반복해서 작성할 필요없이 컴포넌트를 import하여 간단히 사용할 수 있다.애플리케이션이 복잡해지더라도 코드의 관리와 유지보수가 용이하다는 장점이 있다.3. Virtual DOMDOM은 Documnet Object Model이며 html,css,xml등을 트리 구조로 인식하고 데이터를 객체로 간주하고 관리한다.React는 이 DOM TREE 구조와 같은 구조체를 Virtual DOM으로 가지고 있다. Virtual DOM은 가상의 DOM으로 이벤트가 발생할 떄 마다 Virtual DOM을 만들고 다시 그릴 때마다 실제 DOM과 비교하여 변경이 필요한 최소한의 변경사항만 실제 DOM에 반영하여 어플리케이션의 효율성과 속도를 개선할 수 있다고 한다.4. Props 와 State      Props    Props는 부모 컴포넌트에서 자식 컴포넌트로 전달해주는 데이터이다.    쉽게 읽기 전용 데이터라고 생각하면 될 것 같다. 자식 컴포넌트에서 전달받은 props는 변경이 불가능하고 props를 전달해준 최상위 부모 컴포넌트만 props를 변경할 수 있습니다.        State    State는 컴포넌트 내부에서 선언하며 내부에서 값을 변경할 수 있습니다. state는 동적인 데이터를 다룰 때 사용하며, 사용자와의 상호작용을 통해 데이터를 동적으로 변경할 때 사용합니다.  5. JSXReact는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.",
+        "url": "/react-basic"
+    }
+    
+    
+    };
+</script>
+<script src="assets/js/lunr.js"></script>
+<script src="assets/js/search.js"></script>
             </section>
 
         </article>
