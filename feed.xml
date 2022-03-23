@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-22T17:08:46+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;h1 id=&quot;react-컴포넌트-만들기&quot;&gt;React 컴포넌트 만들기&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-23T18:43:46+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;h1 id=&quot;react-컴포넌트-만들기&quot;&gt;React 컴포넌트 만들기&lt;/h1&gt;
 
 &lt;p&gt;React의 본질은 사용자 정의 태그를 만드는 것입니다.&lt;/p&gt;
 
@@ -77,7 +77,14 @@
 
 &lt;h2 id=&quot;5-jsx&quot;&gt;5. JSX&lt;/h2&gt;
 
-&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">1. React</summary></entry><entry><title type="html">웹의 기본중의 기본! HTML에 대해서 알아보자</title><link href="https://ykkim97.github.io/html-basic" rel="alternate" type="text/html" title="웹의 기본중의 기본! HTML에 대해서 알아보자" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic</id><content type="html" xml:base="https://ykkim97.github.io/html-basic">&lt;p&gt;HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.
+&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">1. React</summary></entry><entry><title type="html">웹의 기본중의 기본! HTML에 대해서 알아보자</title><link href="https://ykkim97.github.io/html-basic" rel="alternate" type="text/html" title="웹의 기본중의 기본! HTML에 대해서 알아보자" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic</id><content type="html" xml:base="https://ykkim97.github.io/html-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.
 HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.&lt;/p&gt;
 
 &lt;p&gt;HTML요소의 형식은 다음과 같습니다.&lt;/p&gt;
@@ -93,6 +100,96 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
 &lt;p&gt;HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &amp;lt;html&amp;gt;을 사용한다. 그 하위에 &amp;lt;head&amp;gt; 태그와 &amp;lt;body&amp;gt; 태그를 컨텐츠로 가지고 있습니다.&lt;/p&gt;
 &lt;head&gt; 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고 &lt;body&gt; 태그에는 문서의 내용이 위치합니다.
 
-&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다. HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.</summary></entry><entry><title type="html">HTML 기본 태그들</title><link href="https://ykkim97.github.io/html-basic-tags" rel="alternate" type="text/html" title="HTML 기본 태그들" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic-tags</id><content type="html" xml:base="https://ykkim97.github.io/html-basic-tags">&lt;ol&gt;
-  &lt;li&gt;“&amp;lt;p&amp;gt;” 태그&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">“&amp;lt;p&amp;gt;” 태그</summary></entry><entry><title type="html">Git!</title><link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/git-basic</id><content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git</summary></entry></feed>
+&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">HTML 기본 태그들</title><link href="https://ykkim97.github.io/html-basic-tags" rel="alternate" type="text/html" title="HTML 기본 태그들" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic-tags</id><content type="html" xml:base="https://ykkim97.github.io/html-basic-tags">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;html-기본-태그들&quot;&gt;HTML 기본 태그들&lt;/h1&gt;
+
+&lt;h1 id=&quot;1-head&quot;&gt;1. &amp;lt;head&amp;gt;&lt;/h1&gt;
+
+&lt;h2 id=&quot;1-태그&quot;&gt;1) &lt;meta /&gt;태그&lt;/h2&gt;
+
+&lt;p&gt;문서의 정보를 담고 있는 태그로 웹을 설계하고 구축할 때 필수적으로 들어가야 되는 문서의 정보입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-태그&quot;&gt;2) &lt;title&gt;태그&lt;/title&gt;&lt;/h2&gt;
+
+&lt;p&gt;문서의 제목을 나타내는 태그입니다. 웹페이지 탭을 띄우게 되면 웹의 제목이 나타나게 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-태그&quot;&gt;3) &lt;link /&gt;태그&lt;/h2&gt;
+
+&lt;p&gt;주로 css 파일을 연결할 때 사용합니다. 물론 다른 외부요소를 연결하는 데에도 사용합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-태그&quot;&gt;4) &lt;style&gt;태그&lt;/style&gt;&lt;/h2&gt;
+
+&lt;style&gt;태그는 외부 css파일을 만들지 않고 html문서 내부에 css 스타일을 주고 싶을 때 사용합니다. 간단하게 외부 css파일을 만들지 않고도 스타일을 줄 수 있습니다.
+
+## 5) &lt;script&gt;태그
+
+&lt;script&gt;태그는 자바스크립트 코드를 적용할 때 사용하는데 태그안에 자바스크립트 소스코드를 바로 작성할 수 도 있고 “src” 라는 속성을 사용해 외부 JS파일을 불러와 적용할 수도 있습니다. 
+
+# 2. &lt;body&gt;
+
+## 1) &lt;h1&gt; ~ &lt;h6&gt;태그
+
+위 태그는 제목 태그입니다. 본문의 헤드라인으로 사용됩니다. 
+
+h 뒤의 숫자가 커질수록 글씨 크기가 작아집니다.
+
+## 2) &lt;p&gt;태그
+
+문단 태그로 텍스트를 감싸는 태그입니다. 
+
+&lt;p&gt;태그 하나는 가로 줄을 전부 사용하는 태그이고 공백은 최대 한 칸으로 인식합니다.
+
+## 3) &lt;br&gt;태그
+
+&lt;br&gt;태그는 줄 바꿈 태그입니다.
+
+## 4) &lt;strong&gt;태그와 &lt;em&gt;태그
+
+&lt;strong&gt;태그와 &lt;em&gt;태그는 강조 태그입니다.
+
+&lt;strong&gt;태그는 글자를 굵게 표시하고 &lt;em&gt;태그는 글자를 기울입니다.
+
+## 5) &lt;a&gt;, &lt;img&gt;태그
+
+정말 많이 사용되는 태그로 &lt;a&gt;태그는 하이퍼링크 태그이고, &lt;img&gt;태그는 이미지를 불러오는 태그입니다. 
+
+## 6) &lt;ul&gt;,&lt;ol&gt;,&lt;li&gt;
+
+&lt;ul&gt; 태그는 unordered list로 순서가 없는 목록을 나타낼 때 쓰이고
+
+&lt;ol&gt;태그는 ordered list로 순서가 있는 목록을 나타낼 때 쓰입니다.
+
+그 안에 목록은 &lt;li&gt;태그를 통해 나타냅니다.
+
+## 7) &lt;div&gt;
+
+&lt;div&gt;태그는 레이아웃을 나누고 싶을 때 영역을 만듭니다.
+
+&lt;div&gt;태그만으로 레이아웃을 짜는 것은 좋은 방법은 아니며 &lt;header&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;, &lt;nav&gt; 등과 같이 의미있는 태그를 활용하여 코드를 짜는 것이 좋은 방법입니다.
+
+## 8) &lt;table&gt;태그
+
+&lt;table&gt;태그는 표를 만드는 태그입니다.
+
+기본적으로 &lt;table&gt;안에 &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;의 구조를 가지고 있지만 생략도 가능합니다.
+
+테이블의 행은 &lt;tr&gt;, 셀은 &lt;td&gt;를 사용하며 &lt;td&gt;는 rowspan과 colspan을 속성으로 가질 수 있습니다.
+
+## 9) &lt;form&gt;태그
+
+&lt;form&gt;태그는 서버와의 통신을 하기 위해 필수적인 태그로 보통 회원가입이나 로그인에 사용됩니다. 
+
+- &lt;form&gt;태그는 action과 method 속성을 가지고 있는데 action속성은 form태그가 가진 정보를 넘겨주는 페이지를 말하며, methon는 넘겨줬을 때의 방식을 설정하게 됩니다.
+- &lt;input&gt;태그는 타입에 따라 다르지만 보통 입력을 받기 위해 사용됩니다.
+- &lt;textarea&gt;태그는 긴 내용을 입력 받고 싶을 때 사용합니다.
+- &lt;select&gt;태그는 셀렉트박스를 출력해주는 태그입니다. 하위요소로 &lt;option&gt;태그를 두어 사용합니다.
+
+이외에도 많은 태그들이 존재합니다. 이 태그들을 다 외워서 사용하기보다는 추가적으로 필요한 태그들은 그때그때 검색을 통해 사용하는 것이 좋습니다.
+
+
+&lt;/style&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">Git!</title><link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/git-basic</id><content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git</summary></entry></feed>
