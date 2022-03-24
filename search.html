@@ -197,10 +197,10 @@ into the {body} of the default.hbs template -->
     ,
     
     "css-basic": {
-        "title": "CSS란 무엇일까?",
+        "title": "CSS의 의미와 적용방법",
             "author": "ykkim97",
             "category": "",
-            "content": "CSS는 Cascading Style Sheets의 약자입니다.",
+            "content": "1. CSS란?CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다.CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다.2. 내부 스타일시트내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다.아래처럼 head태그안에 style태그를 입력하고 그 안에 css 스타일링을 해주면 됩니다.간편하게 사용할 수 있는 장점이 있습니다.&lt;!DOCTYPE html&gt;&lt;html lang=\"en\"&gt;&lt;head&gt;    &lt;meta charset=\"UTF-8\"&gt;    &lt;meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"&gt;    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;    &lt;title&gt;Document&lt;/title&gt;    &lt;style&gt;        p {            color: tomato;        }    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;p&gt;안녕하세요!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;3. 외부 스타일시트확장자가 .css로 끝나는 별도의 파일을 만들어 연결하는 방법입니다.p {    color: tomato;}위처럼 따로 css파일을 만들고,&lt;!DOCTYPE html&gt;&lt;html lang=\"en\"&gt;&lt;head&gt;    &lt;meta charset=\"UTF-8\"&gt;    &lt;meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"&gt;    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;    &lt;title&gt;Document&lt;/title&gt;    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;&lt;body&gt;    &lt;p&gt;안녕하세요!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;link 태그의 href속성에 css파일의 경로를 적어주면 끝!4. 인라인 스타일시트&lt;body&gt;    &lt;p style=\"color: tomato;\"&gt;안녕하세요!&lt;/p&gt;&lt;/body&gt;인라인 스타일시트는 html태그의 속성에 바로 스타일을 작성하는 방법입니다.End.",
         "url": "/css-basic"
     }
     ,
