@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-24T18:45:48+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-26T00:47:34+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-타입스크립트typescript란&quot;&gt;1. 타입스크립트(TypeScript)란?&lt;/h2&gt;
+
+&lt;p&gt;타입스크립트(TypeScript)란 자바스크립트(JavaScript)에 타입을 적용한 언어로, 자바스크립트의 확장버전이라고 말할 수도 있을 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-타입스크립트를-쓰는-이유&quot;&gt;2. 타입스크립트를 쓰는 이유?&lt;/h2&gt;
+
+&lt;p&gt;제가 예시를 들어보겠습니다.
+문자와 숫자의 연산은 자바스크립트에서 가능합니다.자바스크립트가 알아서 문자를 숫자로 바꿔주기 때문입니다.
+물론 이러한 자바스크립트의 유연성이 편리할 때도 있습니다. 하지만 코드가 길어져 규모가 커지고 협업을 하는 경우 단점이 됩니다.
+이러한 경우 타입스크립트를 쓰면 문자와 숫자를 연산할 수 없다는 에러를 띄워줍니다.&lt;/p&gt;
+
+&lt;p&gt;또한 타입스크립트의 에러메세지는 자바스크립트에 비해서 엄격하게 타입을 체크해주기 때문에 정확하고 추적
+하기 쉬운 에러메세지를 띄워줍니다. 또한 오타 교정도 해줍니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-타입스크립트-설치&quot;&gt;3. 타입스크립트 설치&lt;/h2&gt;
+
+&lt;h3 id=&quot;기본적인-htmlcssjs를-가지고-웹-개발을-한다고-가정할-경우&quot;&gt;기본적인 html,css,js를 가지고 웹 개발을 한다고 가정할 경우&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;node.js를 설치합니다.(최신버전으로)&lt;/li&gt;
+  &lt;li&gt;에디터 터미널에 npm install -g typescript 입력하여 설치합니다.&lt;/li&gt;
+  &lt;li&gt;.ts로 끝나는 타입스크립트 파일을 생성합니다.&lt;/li&gt;
+  &lt;li&gt;tsconfig.json 파일을 하나 만들어 줍니다.&lt;/li&gt;
+  &lt;li&gt;tsconfig.json 파일안에 다음 코드를 입력합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;compilerOptions&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;es5&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;commonjs&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;react-프로젝트에서-typescript-사용할-경우&quot;&gt;React 프로젝트에서 Typescript 사용할 경우&lt;/h3&gt;
+
+&lt;p&gt;이미 존재하는 React 프로젝트에 설치할 경우에는
+프로젝트 터미널에서 다음 명령을 입력해주면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그냥 React 프로젝트를 새로만든다면
+새 프로젝트 폴더를 만들고 에디터 터미널을 열고 다음처럼 입력해주면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;npx create-react-app my-app --template typescript
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-타입스크립트-컴파일하기&quot;&gt;3. 타입스크립트 컴파일하기&lt;/h2&gt;
+
+&lt;p&gt;타입스크립트 자체는 브라우저가 읽지 못합니다. 따라서 ts파일을 js로 변환해주어야합니다. 컴파일을 하는 것이죠.
+&lt;br /&gt;
+터미널에&lt;/p&gt;
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;tsc -w 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;라는 명령어를 입력하고 켜놓으면&lt;/p&gt;
+
+&lt;p&gt;코드를 저장할때마다 js파일로 변환됩니다.
+파일을 사용할때는 변환된 js파일을 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란?</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
@@ -226,30 +293,7 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
 
 &lt;h2 id=&quot;5-jsx&quot;&gt;5. JSX&lt;/h2&gt;
 
-&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기</summary></entry><entry><title type="html">웹의 기본중의 기본! HTML에 대해서 알아보자</title><link href="https://ykkim97.github.io/html-basic" rel="alternate" type="text/html" title="웹의 기본중의 기본! HTML에 대해서 알아보자" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic</id><content type="html" xml:base="https://ykkim97.github.io/html-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.
-HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.&lt;/p&gt;
-
-&lt;p&gt;HTML요소의 형식은 다음과 같습니다.&lt;/p&gt;
-
-&lt;태그명 속성명1=&quot;속성값1&quot; 속성명2=&quot;속성값2&quot;&gt; 컨텐츠 &lt;/태그명&gt;
-
-&lt;p&gt;&lt;br /&gt;
-위 처럼 태그안에 컨텐츠가 들어가게 되고, 태그에는 여러 속성들이 들어갈 수 있습니다.
-물론 위처럼 열고 닫는 태그만 존재하는 것은 아닙니다.
-컨텐츠가 없는 태그도 존재하죠.
-이를 빈 태그(Empty Tag)라고도 합니다.&lt;/p&gt;
-
-&lt;p&gt;HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &amp;lt;html&amp;gt;을 사용한다. 그 하위에 &amp;lt;head&amp;gt; 태그와 &amp;lt;body&amp;gt; 태그를 컨텐츠로 가지고 있습니다.&lt;/p&gt;
-&lt;head&gt; 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고 &lt;body&gt; 태그에는 문서의 내용이 위치합니다.
-
-&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">HTML 기본 태그들</title><link href="https://ykkim97.github.io/html-basic-tags" rel="alternate" type="text/html" title="HTML 기본 태그들" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic-tags</id><content type="html" xml:base="https://ykkim97.github.io/html-basic-tags">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기</summary></entry><entry><title type="html">HTML 기본 태그들</title><link href="https://ykkim97.github.io/html-basic-tags" rel="alternate" type="text/html" title="HTML 기본 태그들" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic-tags</id><content type="html" xml:base="https://ykkim97.github.io/html-basic-tags">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
@@ -341,4 +385,27 @@ h 뒤의 숫자가 커질수록 글씨 크기가 작아집니다.
 이외에도 많은 태그들이 존재합니다. 이 태그들을 다 외워서 사용하기보다는 추가적으로 필요한 태그들은 그때그때 검색을 통해 사용하는 것이 좋습니다.
 
 
-&lt;/style&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">Git!</title><link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/git-basic</id><content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git</summary></entry></feed>
+&lt;/style&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">웹의 기본중의 기본! HTML에 대해서 알아보자</title><link href="https://ykkim97.github.io/html-basic" rel="alternate" type="text/html" title="웹의 기본중의 기본! HTML에 대해서 알아보자" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/html-basic</id><content type="html" xml:base="https://ykkim97.github.io/html-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.
+HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;HTML요소의 형식은 다음과 같습니다.&lt;/p&gt;
+
+&lt;태그명 속성명1=&quot;속성값1&quot; 속성명2=&quot;속성값2&quot;&gt; 컨텐츠 &lt;/태그명&gt;
+
+&lt;p&gt;&lt;br /&gt;
+위 처럼 태그안에 컨텐츠가 들어가게 되고, 태그에는 여러 속성들이 들어갈 수 있습니다.
+물론 위처럼 열고 닫는 태그만 존재하는 것은 아닙니다.
+컨텐츠가 없는 태그도 존재하죠.
+이를 빈 태그(Empty Tag)라고도 합니다.&lt;/p&gt;
+
+&lt;p&gt;HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &amp;lt;html&amp;gt;을 사용한다. 그 하위에 &amp;lt;head&amp;gt; 태그와 &amp;lt;body&amp;gt; 태그를 컨텐츠로 가지고 있습니다.&lt;/p&gt;
+&lt;head&gt; 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고 &lt;body&gt; 태그에는 문서의 내용이 위치합니다.
+
+&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">Git!</title><link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/git-basic</id><content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git</summary></entry></feed>
