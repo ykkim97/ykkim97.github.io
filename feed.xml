@@ -1,6 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-26T00:47:34+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-27T18:31:18+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Type Narrowing</title><link href="https://ykkim97.github.io/typescript-narrowing" rel="alternate" type="text/html" title="Type Narrowing" /><published>2022-03-26T01:36:00+09:00</published><updated>2022-03-26T01:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-narrowing</id><content type="html" xml:base="https://ykkim97.github.io/typescript-narrowing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;타입-좁히기-type-narrowing&quot;&gt;타입 좁히기 (Type Narrowing)&lt;/h1&gt;
+
+&lt;h2 id=&quot;type-narrowing&quot;&gt;Type Narrowing&lt;/h2&gt;
+
+&lt;p&gt;타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만 타입스크립트는 엄격하기때문에 정확한 타입이 필요합니다. 그렇지 않으면 타입 에러가 발생하게 되죠.
+이렇게 타입 에러를 막기 위해 Type Narrowing이 필요합니다.&lt;/p&gt;
+
+&lt;p&gt;Type Narrowing은 if문 등으로 타입을 하나로 정해주는 것입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myFun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;if문으로 타입을 나누지 않고 그냥 return x + 1 처리하면 에러가 발생합니다.&lt;br /&gt;
+x는 number | string 타입이지 number 타입이나 string 타입이 아니라고 보면됩니다.
+따라서 조건문으로 타입 별로 처리를 나눠주면 에러를 피할 수 있습니다. 
+&lt;br /&gt;
+&lt;br /&gt;
+위 코드처럼 조건에 typeof를 꼭 쓸 필요는 없습니다.
+타입을 하나로 확정지을 수 있는 표현이라면 어떤 것도 Narrowing 역할을 할 수 있습니다.
+in, instanceof 등의 키워드도 사용이 가능합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;type-assertion&quot;&gt;Type Assertion&lt;/h2&gt;
+
+&lt;p&gt;물론 타입을 간편하게 assert할 수도 있습니다.
+Type Assertion 이라는 것을 사용하는 것인데, 변수 뒤에 as를 붙이는 것이죠.
+&lt;br /&gt;
+&lt;br /&gt;
+변수명 as string
+&lt;br /&gt;
+&lt;br /&gt;
+이렇게 쓰면 “이 변수의 타입을 string으로 생각해주세요”라는 뜻입니다. 하지만 실제로 타입을 바꿔주는 것은 아니기 때문에 조심해서 사용해야합니다.
+assertion을 남발하는 것은 좋지 않습니다.
+&lt;br /&gt;
+as 키워드를 사용하면 다음과 같은 특징이 있습니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;as 키워드는 Union Type과 같은 복잡한 타입을 하나의 정확한 타입으로 좁혀주는 역할을 합니다. &lt;br /&gt;
+그래서 number타입인 변수를 as string 으로 바꾸려고한다면 에러가 발생합니다.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;사실 임시로 타입을 해제시키는 용도입니다. 실제 코드의 실행결과는 as가 있을 때나 없을 때나 동일합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+정리하자면 as를 사용하면 간편하지만, 정확한 코드를 위해 Narrowing을 사용하는 것이 좋습니다. 
+왜 타입에러가 나는지 정말 모르겠을 때 임시방편으로 사용하거나, 내가 어떤 타입이 들어올지 확실하게 알고 있으나, 컴파일러 에러가 발생하는 경우 비상용으로 사용하면 되겠습니다.
+&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing</summary></entry><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -65,7 +131,7 @@
 &lt;p&gt;코드를 저장할때마다 js파일로 변환됩니다.
 파일을 사용할때는 변환된 js파일을 사용합니다.&lt;/p&gt;
 
-&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란?</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
