@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-27T22:12:36+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Type 키워드로 타입을 변수에 담기</title><link href="https://ykkim97.github.io/typescript-typekeyword" rel="alternate" type="text/html" title="Type 키워드로 타입을 변수에 담기" /><published>2022-03-27T07:06:00+09:00</published><updated>2022-03-27T07:06:00+09:00</updated><id>https://ykkim97.github.io/typescript-typekeyword</id><content type="html" xml:base="https://ykkim97.github.io/typescript-typekeyword">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-28T13:34:38+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Type 키워드로 타입을 변수에 담기</title><link href="https://ykkim97.github.io/typescript-typekeyword" rel="alternate" type="text/html" title="Type 키워드로 타입을 변수에 담기" /><published>2022-03-27T07:06:00+09:00</published><updated>2022-03-27T07:06:00+09:00</updated><id>https://ykkim97.github.io/typescript-typekeyword</id><content type="html" xml:base="https://ykkim97.github.io/typescript-typekeyword">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -25,11 +26,72 @@
 이렇게 따로 저장해둔다면 코드 읽기도 편하고 똑같은 코드를 반복해서 적을 필요가 없겠죠?
 &lt;br /&gt;
 &lt;br /&gt;
-End&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기</summary></entry><entry><title type="html">Type Narrowing</title><link href="https://ykkim97.github.io/typescript-narrowing" rel="alternate" type="text/html" title="Type Narrowing" /><published>2022-03-26T01:36:00+09:00</published><updated>2022-03-26T01:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-narrowing</id><content type="html" xml:base="https://ykkim97.github.io/typescript-narrowing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해</summary></entry><entry><title type="html">as const에 대해</title><link href="https://ykkim97.github.io/typescript-asconst" rel="alternate" type="text/html" title="as const에 대해" /><published>2022-03-26T22:20:00+09:00</published><updated>2022-03-26T22:20:00+09:00</updated><id>https://ykkim97.github.io/typescript-asconst</id><content type="html" xml:base="https://ykkim97.github.io/typescript-asconst">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;as-const-문법&quot;&gt;as const 문법&lt;/h2&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myFun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;myFun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 student객체와 myFun이라는 함수를 만들었습니다.
+myFun함수의 매개변수 a의 타입은 “Kim”타입으로 지정하였습니다. 
+이후 myFun함수에 student.name을 전달하였습니다. 그런데 이는 에러를 발생시킵니다.
+student.name이라는 값은 분명 “Kim”인데 왜 에러가 발생하지? 라는 생각이 들 수도 있습니다. 
+&lt;br /&gt;
+&lt;br /&gt;
+여기서 분명히 해야하는 점은 myFun함수의 매개변수 a는 “Kim”이라는 값만 들어올 수 있다는 의미가 아니라 “Kim”이라는 타입만 들어올 수 있다는 의미입니다.
+student.name의 값은 “Kim”이지만 타입은 분명 string타입이기 때문에 에러가 발생하는 것입니다.
+&lt;br /&gt;
+&lt;br /&gt;
+이를 해결하기위한 방법은 여러가지가 있습니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;student 객체의 타입에 직접 name을 “Kim” 타입으로 지정&lt;/li&gt;
+  &lt;li&gt;Type assertion 사용&lt;/li&gt;
+  &lt;li&gt;student객체에 as const 사용하기
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myFun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;myFun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;자료&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위처럼 as const 를 object뒤에 붙이면 에러가 나지 않습니다.
+&lt;br /&gt;
+&lt;br /&gt;
+as const는 2개의 효과를 가지고 있습니다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;타입을 object의 value로 바꿔줍니다. (타입을 ‘kim’으로 바꿔줍니다)&lt;/li&gt;
+  &lt;li&gt;object안에 있는 속성을 모두 readonly로 바꿔줍니다. (변경하면 에러나도록)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이번 포스팅에서는 as const에 대해서 알아보았습니다.감사합니다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해</summary></entry><entry><title type="html">Type Narrowing</title><link href="https://ykkim97.github.io/typescript-narrowing" rel="alternate" type="text/html" title="Type Narrowing" /><published>2022-03-26T01:36:00+09:00</published><updated>2022-03-26T01:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-narrowing</id><content type="html" xml:base="https://ykkim97.github.io/typescript-narrowing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -91,11 +153,12 @@ as 키워드를 사용하면 다음과 같은 특징이 있습니다.&lt;/p&gt;
 왜 타입에러가 나는지 정말 모르겠을 때 임시방편으로 사용하거나, 내가 어떤 타입이 들어올지 확실하게 알고 있으나, 컴파일러 에러가 발생하는 경우 비상용으로 사용하면 되겠습니다.
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기</summary></entry><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해</summary></entry><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -160,7 +223,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
 &lt;p&gt;코드를 저장할때마다 js파일로 변환됩니다.
 파일을 사용할때는 변환된 js파일을 사용합니다.&lt;/p&gt;
 
-&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
