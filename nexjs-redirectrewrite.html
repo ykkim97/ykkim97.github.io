@@ -14,7 +14,7 @@
 
 
 
-    <title>TypeScript란?</title>
+    <title>(NextJS) redirect와 rewrite</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/typescript-basic" />
+    <link rel="canonical" href="https://ykkim97.github.io/nexjs-redirectrewrite" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="TypeScript란?" />
-    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 1. 타입스크립트(TypeScript)란? 타입스크립트(TypeScript)란 자바스크립트(JavaScript)에 타입을 적용한 언어로, 자바스크립트의 확장버전이라고 말할 수도 있을 것입니다. 2. 타입스크립트를 쓰는 이유? 제가 예시를 들어보겠습니다. 문자와 숫자의 연산은 자바스크립트에서 가능합니다.자바스크립트가 알아서 문자를 숫자로 바꿔주기 때문입니다. 물론 이러한 자바스크립트의 유연성이" />
-    <meta property="og:url" content="https://ykkim97.github.io/typescript-basic" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
+    <meta property="og:title" content="(NextJS) redirect와 rewrite" />
+    <meta property="og:description" content="NextJS는 다음과 같이 구성되어 있습니다. (NextJS) redirect와 rewrite 오늘은 NextJS의 redirect와 rewrites 사용법에 대해 알아보겠습니다. redirect // next.config.js에 작성합니다. /** @type {import('next').NextConfig} */ const nextConfig = { reactStrictMode: true, async redirects() { return [ { source : "/before", destination : "/after", permanent : false } ] } } module.exports =" />
+    <meta property="og:url" content="https://ykkim97.github.io/nexjs-redirectrewrite" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/nextjs.jpeg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-03-25T07:36:00+09:00" />
-    <meta property="article:modified_time" content="2022-03-25T07:36:00+09:00" />
-    <meta property="article:tag" content="Typescript" />
+    <meta property="article:published_time" content="2022-03-31T08:10:00+09:00" />
+    <meta property="article:modified_time" content="2022-03-31T08:10:00+09:00" />
+    <meta property="article:tag" content="Nextjs" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TypeScript란?" />
-    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 1. 타입스크립트(TypeScript)란? 타입스크립트(TypeScript)란 자바스크립트(JavaScript)에 타입을 적용한 언어로, 자바스크립트의 확장버전이라고 말할 수도 있을 것입니다. 2. 타입스크립트를 쓰는 이유? 제가 예시를 들어보겠습니다. 문자와 숫자의 연산은 자바스크립트에서 가능합니다.자바스크립트가 알아서 문자를 숫자로 바꿔주기 때문입니다. 물론 이러한 자바스크립트의 유연성이" />
+    <meta name="twitter:title" content="(NextJS) redirect와 rewrite" />
+    <meta name="twitter:description" content="NextJS는 다음과 같이 구성되어 있습니다. (NextJS) redirect와 rewrite 오늘은 NextJS의 redirect와 rewrites 사용법에 대해 알아보겠습니다. redirect // next.config.js에 작성합니다. /** @type {import('next').NextConfig} */ const nextConfig = { reactStrictMode: true, async redirects() { return [ { source : "/before", destination : "/after", permanent : false } ] } } module.exports =" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/nextjs.jpeg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Typescript" />
+    <meta name="twitter:data2" content="Nextjs" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/typescript-basic",
+    "url": "https://ykkim97.github.io/nexjs-redirectrewrite",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/typeScript-logo.png",
+        "url": "https://ykkim97.github.io/assets/built/images/nextjs.jpeg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/typescript-basic"
+        "@id": "https://ykkim97.github.io/nexjs-redirectrewrite"
     },
-    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 1. 타입스크립트(TypeScript)란? 타입스크립트(TypeScript)란 자바스크립트(JavaScript)에 타입을 적용한 언어로, 자바스크립트의 확장버전이라고 말할 수도 있을 것입니다. 2. 타입스크립트를 쓰는 이유? 제가 예시를 들어보겠습니다. 문자와 숫자의 연산은 자바스크립트에서 가능합니다.자바스크립트가 알아서 문자를 숫자로 바꿔주기 때문입니다. 물론 이러한 자바스크립트의 유연성이"
+    "description": "NextJS는 다음과 같이 구성되어 있습니다. (NextJS) redirect와 rewrite 오늘은 NextJS의 redirect와 rewrites 사용법에 대해 알아보겠습니다. redirect // next.config.js에 작성합니다. /** @type {import('next').NextConfig} */ const nextConfig = { reactStrictMode: true, async redirects() { return [ { source : "/before", destination : "/after", permanent : false } ] } } module.exports ="
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="TypeScript란?" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="(NextJS) redirect와 rewrite" href="/feed.xml" />
 
 
 </head>
@@ -176,102 +176,97 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-typescript post tag-typescipt ">
+        <article class="post-full  tag-nextjs post tag-nextjs ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="25 March 2022">25 March 2022</time>
+                    <time class="post-full-meta-date" datetime="31 March 2022">31 March 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/typescript/'>TYPESCRIPT</a>
+                                <a href='/tag/nextjs/'>NEXTJS</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">TypeScript란?</h1>
+                <h1 class="post-full-title">(NextJS) redirect와 rewrite</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/typeScript-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/nextjs.jpeg)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">TypeScript은 다음과 같이 구성되어 있습니다. </span></p>
+                    <p><span class="table-of-contents-list">NextJS는 다음과 같이 구성되어 있습니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./typescript-basic">TypeScript란?</a></li>
-    <li><a href="./typescript-narrowing">Type Narrowing</a></li>
-    <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
-    <li><a href="./typescript-asconst">as const에 대해</a></li>
+    <li><a href="./nextjs-redirectrewrite">(NextJS) redirect와 rewrite</a></li>
+    
 
 </ul>
 
-<h2 id="1-타입스크립트typescript란">1. 타입스크립트(TypeScript)란?</h2>
+<p>오늘은 NextJS의 redirect와 rewrites 사용법에 대해 알아보겠습니다.</p>
 
-<p>타입스크립트(TypeScript)란 자바스크립트(JavaScript)에 타입을 적용한 언어로, 자바스크립트의 확장버전이라고 말할 수도 있을 것입니다.</p>
+<h2 id="redirect">redirect</h2>
 
-<h2 id="2-타입스크립트를-쓰는-이유">2. 타입스크립트를 쓰는 이유?</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// next.config.js에 작성합니다.</span>
 
-<p>제가 예시를 들어보겠습니다.
-문자와 숫자의 연산은 자바스크립트에서 가능합니다.자바스크립트가 알아서 문자를 숫자로 바꿔주기 때문입니다.
-물론 이러한 자바스크립트의 유연성이 편리할 때도 있습니다. 하지만 코드가 길어져 규모가 커지고 협업을 하는 경우 단점이 됩니다.
-이러한 경우 타입스크립트를 쓰면 문자와 숫자를 연산할 수 없다는 에러를 띄워줍니다.</p>
+<span class="cm">/** @type {import('next').NextConfig} */</span>
 
-<p>또한 타입스크립트의 에러메세지는 자바스크립트에 비해서 엄격하게 타입을 체크해주기 때문에 정확하고 추적
-하기 쉬운 에러메세지를 띄워줍니다. 또한 오타 교정도 해줍니다.</p>
+<span class="kd">const</span> <span class="nx">nextConfig</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">reactStrictMode</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="k">async</span> <span class="nx">redirects</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">source</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">/before</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">destination</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">/after</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">permanent</span> <span class="p">:</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-<h2 id="3-타입스크립트-설치">3. 타입스크립트 설치</h2>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">nextConfig</span>
+</code></pre></div></div>
 
-<h3 id="기본적인-htmlcssjs를-가지고-웹-개발을-한다고-가정할-경우">기본적인 html,css,js를 가지고 웹 개발을 한다고 가정할 경우</h3>
-<p><br /></p>
-<ol>
-  <li>node.js를 설치합니다.(최신버전으로)</li>
-  <li>에디터 터미널에 npm install -g typescript 입력하여 설치합니다.</li>
-  <li>.ts로 끝나는 타입스크립트 파일을 생성합니다.</li>
-  <li>tsconfig.json 파일을 하나 만들어 줍니다.</li>
-  <li>tsconfig.json 파일안에 다음 코드를 입력합니다.</li>
-</ol>
+<p>위와 같이 사용하면되는데, 
+async redirects로 설정해주어 사용하면됩니다.
+source부분은 url로 먼저 접근하는 주소이고 destination은 source로 접근할 경우 변경될 주소입니다.</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">target</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">es5</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">module</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">commonjs</span><span class="dl">"</span><span class="p">,</span>
-    <span class="p">}</span>
+<p>/before로 접근하면 /after가 되는 것이죠.</p>
+
+<p>추가적인 redirect설정을 하고 싶다면 저 묶음을 배열에 추가해주면 됩니다.</p>
+
+<ul>
+  <li>참고<br />
+ex) /before/:path =&gt; /after/:path (:path부분은 기존과 동일한 값으로 유지)
+<br />
+ex) /before/:path* =&gt; /after/:path* (*를 붙여주는 경우 어떤값이 오더라도 뒷부분 모두를 반영)</li>
+</ul>
+
+<h2 id="rewrites">rewrites</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">nextConfig</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">reactStrictMode</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="k">async</span> <span class="nx">rewrites</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">source</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">/api/movies</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">destination</span> <span class="p">:</span> <span class="s2">`https://api.themoviedb.org/3/movie/popular?api_key=</span><span class="p">${</span><span class="nx">API_KEY</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h3 id="react-프로젝트에서-typescript-사용할-경우">React 프로젝트에서 Typescript 사용할 경우</h3>
+<p>rewrites는 redirect와 같은 level에 추가하면되고
+source값으로 불러오면 내부적으로 destination값을 호출하게됩니다.
+예를 들어, api-key와 같이 숨기고 싶은 값이 url에 있을 경우 실제 url을 숨기고 다른 url로 대체할 수 있습니다.</p>
 
-<p>이미 존재하는 React 프로젝트에 설치할 경우에는
-프로젝트 터미널에서 다음 명령을 입력해주면 됩니다.</p>
-
-<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">npm install --save typescript @types/node @types/react @types/react-dom @types/jest
-</span></code></pre></div></div>
-
-<p>그냥 React 프로젝트를 새로만든다면
-새 프로젝트 폴더를 만들고 에디터 터미널을 열고 다음처럼 입력해주면 됩니다.</p>
-
-<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">npx create-react-app my-app --template typescript
-</span></code></pre></div></div>
-
-<h2 id="3-타입스크립트-컴파일하기">3. 타입스크립트 컴파일하기</h2>
-
-<p>타입스크립트 자체는 브라우저가 읽지 못합니다. 따라서 ts파일을 js로 변환해주어야합니다. 컴파일을 하는 것이죠.
-<br />
-터미널에</p>
-<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">tsc -w 
-</span></code></pre></div></div>
-
-<p>라는 명령어를 입력하고 켜놓으면</p>
-
-<p>코드를 저장할때마다 js파일로 변환됩니다.
-파일을 사용할때는 변환된 js파일을 사용합니다.</p>
-
-<p>tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.</p>
+<p>End.</p>
 
                 </div>
             </section>
@@ -336,9 +331,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/typescript-basic';
-                            var this_page_identifier = '/typescript-basic';
-                            var this_page_title = 'TypeScript란?';
+                            var this_page_url = 'https://ykkim97.github.io/nexjs-redirectrewrite';
+                            var this_page_identifier = '/nexjs-redirectrewrite';
+                            var this_page_title = '(NextJS) redirect와 rewrite';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -364,93 +359,23 @@ into the {body} of the default.hbs template -->
                 
                 
                 
-                    <article class="read-next-card"
-                        
-                            style="background-image: url(/assets/built/images/blog-cover1.png)"
-                        
-                    >
-                        <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
-                            
-                                <h3 class="read-next-card-header-title"><a href="/tag/typescript/">Typescript</a></h3>
-                            
-                        </header>
-                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
-</div>
-                        <div class="read-next-card-content">
-                            <ul>
-                                
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-asconst">as const에 대해</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-narrowing">Type Narrowing</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                            </ul>
-                        </div>
-                        <footer class="read-next-card-footer">
-                            <a href="/tag/typescript/">
-                                
-                                    See all 3 posts  →
-                                
-                            </a>
-                        </footer>
-                    </article>
-                
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/typescript-narrowing">
+            <a class="post-card-image-link" href="/typescript-typekeyword">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/typescript-narrowing">
+            <a class="post-card-content-link" href="/typescript-typekeyword">
                 <header class="post-card-header">
                     
                         
@@ -460,7 +385,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">Type Narrowing</h2>
+                    <h2 class="post-card-title">Type 키워드로 타입을 변수에 담기</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -471,64 +396,6 @@ into the {body} of the default.hbs template -->
     Type 키워드로 타입을 변수에 담기
     as const에 대해
 
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/react-mkcomponent">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/react-logo.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/react-mkcomponent">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">React</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">React 컴포넌트 만들기</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>React은 다음과 같이 구성되어 있습니다. 
-
-    React란?
-    React 컴포넌트 만들기
 
 
 </p>
@@ -571,18 +438,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">TypeScript란?</div>
+    <div class="floating-header-title">(NextJS) redirect와 rewrite</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=TypeScript%EB%9E%80%3F&amp;url=https://ykkim97.github.io/typescript-basic"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%28NextJS%29+redirect%EC%99%80+rewrite&amp;url=https://ykkim97.github.io/nexjs-redirectrewrite"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/typescript-basic"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/nexjs-redirectrewrite"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

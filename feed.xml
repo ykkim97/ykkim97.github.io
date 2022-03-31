@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-28T13:34:38+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Type 키워드로 타입을 변수에 담기</title><link href="https://ykkim97.github.io/typescript-typekeyword" rel="alternate" type="text/html" title="Type 키워드로 타입을 변수에 담기" /><published>2022-03-27T07:06:00+09:00</published><updated>2022-03-27T07:06:00+09:00</updated><id>https://ykkim97.github.io/typescript-typekeyword</id><content type="html" xml:base="https://ykkim97.github.io/typescript-typekeyword">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-03-31T23:29:10+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">(NextJS) redirect와 rewrite</title><link href="https://ykkim97.github.io/nexjs-redirectrewrite" rel="alternate" type="text/html" title="(NextJS) redirect와 rewrite" /><published>2022-03-31T08:10:00+09:00</published><updated>2022-03-31T08:10:00+09:00</updated><id>https://ykkim97.github.io/nexjs-redirectrewrite</id><content type="html" xml:base="https://ykkim97.github.io/nexjs-redirectrewrite">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;NextJS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./nextjs-redirectrewrite&quot;&gt;(NextJS) redirect와 rewrite&lt;/a&gt;&lt;/li&gt;
+    
+
+&lt;/ul&gt;
+
+&lt;p&gt;오늘은 NextJS의 redirect와 rewrites 사용법에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;redirect&quot;&gt;redirect&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// next.config.js에 작성합니다.&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/** @type {import('next').NextConfig} */&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;reactStrictMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;redirects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/before&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;destination&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/after&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;permanent&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextConfig&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 사용하면되는데, 
+async redirects로 설정해주어 사용하면됩니다.
+source부분은 url로 먼저 접근하는 주소이고 destination은 source로 접근할 경우 변경될 주소입니다.&lt;/p&gt;
+
+&lt;p&gt;/before로 접근하면 /after가 되는 것이죠.&lt;/p&gt;
+
+&lt;p&gt;추가적인 redirect설정을 하고 싶다면 저 묶음을 배열에 추가해주면 됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;참고&lt;br /&gt;
+ex) /before/:path =&amp;gt; /after/:path (:path부분은 기존과 동일한 값으로 유지)
+&lt;br /&gt;
+ex) /before/:path* =&amp;gt; /after/:path* (*를 붙여주는 경우 어떤값이 오더라도 뒷부분 모두를 반영)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;rewrites&quot;&gt;rewrites&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nextConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;reactStrictMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rewrites&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/api/movies&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;destination&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`https://api.themoviedb.org/3/movie/popular?api_key=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;API_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;rewrites는 redirect와 같은 level에 추가하면되고
+source값으로 불러오면 내부적으로 destination값을 호출하게됩니다.
+예를 들어, api-key와 같이 숨기고 싶은 값이 url에 있을 경우 실제 url을 숨기고 다른 url로 대체할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="nextjs" /><summary type="html">NextJS는 다음과 같이 구성되어 있습니다. (NextJS) redirect와 rewrite</summary></entry><entry><title type="html">Type 키워드로 타입을 변수에 담기</title><link href="https://ykkim97.github.io/typescript-typekeyword" rel="alternate" type="text/html" title="Type 키워드로 타입을 변수에 담기" /><published>2022-03-27T07:06:00+09:00</published><updated>2022-03-27T07:06:00+09:00</updated><id>https://ykkim97.github.io/typescript-typekeyword</id><content type="html" xml:base="https://ykkim97.github.io/typescript-typekeyword">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
@@ -566,4 +631,4 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
 &lt;p&gt;HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &amp;lt;html&amp;gt;을 사용한다. 그 하위에 &amp;lt;head&amp;gt; 태그와 &amp;lt;body&amp;gt; 태그를 컨텐츠로 가지고 있습니다.&lt;/p&gt;
 &lt;head&gt; 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고 &lt;body&gt; 태그에는 문서의 내용이 위치합니다.
 
-&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry><entry><title type="html">Git!</title><link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" /><published>2022-03-20T08:12:00+09:00</published><updated>2022-03-20T08:12:00+09:00</updated><id>https://ykkim97.github.io/git-basic</id><content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git</summary></entry></feed>
+&lt;/body&gt;&lt;/head&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary></entry></feed>
