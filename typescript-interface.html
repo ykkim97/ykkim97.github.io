@@ -59,7 +59,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="TypeScript - interface에 대해" />
-    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할 수 있습니다. interface를 사용하면 Object의 타입을" />
+    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할 수 있습니다. interface를" />
     <meta property="og:url" content="https://ykkim97.github.io/typescript-interface" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,7 +69,7 @@
     <meta property="article:tag" content="Typescript" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="TypeScript - interface에 대해" />
-    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할 수 있습니다. interface를 사용하면 Object의 타입을" />
+    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할 수 있습니다. interface를" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -101,7 +101,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/typescript-interface"
     },
-    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할 수 있습니다. interface를 사용하면 Object의 타입을"
+    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할 수 있습니다. interface를"
 }
     </script>
 
@@ -210,6 +210,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
     <li><a href="./typescript-asconst">as const에 대해</a></li>
     <li><a href="./typescript-interface">TypeScript - interface에 대해</a></li>
+    <li><a href="./typescript-nevertype">TypeScript - never타입?</a></li>
 
 </ul>
 
@@ -383,6 +384,15 @@ End.</p>
                                 
                                     
                                         
+                                            
+                                            
+                                                <li><a href="/typescript-nevertype">TypeScript - never타입?</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
                                     
                                 
                                     
@@ -408,8 +418,6 @@ End.</p>
                                     
                                         
                                             
-                                            
-                                                <li><a href="/typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
                                             
                                         
                                     
@@ -452,7 +460,7 @@ End.</p>
                         <footer class="read-next-card-footer">
                             <a href="/tag/typescript/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -461,6 +469,55 @@ End.</p>
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/typescript-nevertype">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/typescript-nevertype">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Typescript</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">TypeScript - never타입?</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/ykkim97/">ykkim97</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -488,19 +545,7 @@ End.</p>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. 
-
-    TypeScript란?
-    TypeScript - 기본 타입 작성법
-    TypeScript - Union Type, any, unknown
-    Type Narrowing
-    Type 키워드로 타입을 변수에 담기
-    as const에 대해
-    TypeScript - interface에 대해
-
-
-
-</p>
+                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
                     
                 </section>
             </a>

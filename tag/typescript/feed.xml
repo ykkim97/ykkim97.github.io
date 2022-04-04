@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/typescript/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-04-03T17:57:53+09:00</updated>
+  <updated>2022-04-04T19:33:07+09:00</updated>
   <id>https://ykkim97.github.io/tag/typescript/feed.xml</id>
 
   
@@ -32,6 +32,122 @@
 
   
     <entry>
+      <title type="html">TypeScript - never타입?</title>
+      <link href="https://ykkim97.github.io/typescript-nevertype" rel="alternate" type="text/html" title="TypeScript - never타입?" />
+      <published>2022-04-04T03:36:00+09:00</published>
+      <updated>2022-04-04T03:36:00+09:00</updated>
+      <id>https://ykkim97.github.io/typescript-nevertype</id>
+      <content type="html" xml:base="https://ykkim97.github.io/typescript-nevertype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;never타입&quot;&gt;never타입?&lt;/h2&gt;
+
+&lt;p&gt;타입에는 never타입이라는 것도 있습니다.
+함수에 붙이는데, 조건이 있습니다. 
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;return을 하면 안됩니다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;함수의 실행이 종료되면 안됩니다.&lt;br /&gt;
+&lt;br /&gt;
+이런 조건을 가진 함수에 붙일 수 있는 타입이 never타입입니다.
+기본적으로 자바스크립트 함수 맨 마지막에는 “return undefined”가 숨겨져있습니다.
+따라서 2번조건이 맞는다면 1번도 자동으로 조건이 성립됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위의 예시는 return을 하지 않았지만, console.log()로 출력한 이후 함수의 실행이 종료되버리기 때문에 never타입을 쓸 수 없는 것이죠.
+그러면 도대체 어디에 쓸 수 있을까요?
+&lt;br /&gt;
+예를 들면 무한반복문일 경우나 에러를 발생시키는 함수가 있습니다.
+아래와 같이 말이죠.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fuc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;에러&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;사실 never타입은 거의 사용할 일이 없습니다.
+return을 하고 싶지 않다면 void타입을 사용하면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위는 never타입이 나타나는 예시를 든 것입니다.
+fun()의 파라미터인 param의 타입은 “string”으로 지정했는데도 불구하고 narrowing을 사용하여 param이 string타입일 경우와 그렇지 않은 경우를
+나누어서 코드를 작성했습니다. param이라는 파라미터는 이미 string으로 지정했음에도 굳이 narrowing을 할 필요가 없죠.
+else안에 param은 never타입이 되있을 것입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 함수선언식&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;함수1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//함수표현식&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;함수2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;또 다른 예시입니다. 
+함수1()은 함수선언식으로 작성했고 함수2()는 함수표현식으로 작성했습니다.
+함수1의 경우는 void타입이고, 함수2는 never타입으로 나타나게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+이번 글에서는 never타입에 대해서 알아보았습니다. 크게 사용할 일은 없겠지만 알아두면 괜찮을 것입니다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="typescript" />
+      
+
+      
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">TypeScript - interface에 대해</title>
       <link href="https://ykkim97.github.io/typescript-interface" rel="alternate" type="text/html" title="TypeScript - interface에 대해" />
       <published>2022-04-03T02:27:00+09:00</published>
@@ -46,6 +162,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -128,7 +245,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       
@@ -150,6 +267,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -214,7 +332,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       
@@ -236,6 +354,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -298,7 +417,7 @@ unknown타입은 any타입을 제외한 다른 타입으로 선언한 변수에 
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       
@@ -320,6 +439,7 @@ unknown타입은 any타입을 제외한 다른 타입으로 선언한 변수에 
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -363,7 +483,7 @@ End&lt;/p&gt;</content>
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       
@@ -385,6 +505,7 @@ End&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -460,7 +581,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       
@@ -482,6 +603,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -564,7 +686,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       
@@ -586,6 +708,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -671,7 +794,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary>
+        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary>
       
 
       

@@ -59,7 +59,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="TypeScript - 기본 타입 작성법" />
-    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 타입스크립트 - 타입 작성 타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 변수를 만들 때 변수의 타입을 지정가능합니다. 변수에 타입 지정하기 let" />
+    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? 타입스크립트 - 타입 작성 타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 변수를 만들 때 변수의 타입을 지정가능합니다. 변수에" />
     <meta property="og:url" content="https://ykkim97.github.io/typescript-basicsyntax" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,7 +69,7 @@
     <meta property="article:tag" content="Typescript" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="TypeScript - 기본 타입 작성법" />
-    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 타입스크립트 - 타입 작성 타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 변수를 만들 때 변수의 타입을 지정가능합니다. 변수에 타입 지정하기 let" />
+    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? 타입스크립트 - 타입 작성 타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 변수를 만들 때 변수의 타입을 지정가능합니다. 변수에" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -101,7 +101,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/typescript-basicsyntax"
     },
-    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 타입스크립트 - 타입 작성 타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 변수를 만들 때 변수의 타입을 지정가능합니다. 변수에 타입 지정하기 let"
+    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? 타입스크립트 - 타입 작성 타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 변수를 만들 때 변수의 타입을 지정가능합니다. 변수에"
 }
     </script>
 
@@ -210,6 +210,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
     <li><a href="./typescript-asconst">as const에 대해</a></li>
     <li><a href="./typescript-interface">TypeScript - interface에 대해</a></li>
+    <li><a href="./typescript-nevertype">TypeScript - never타입?</a></li>
 
 </ul>
 
@@ -367,6 +368,15 @@ into the {body} of the default.hbs template -->
                                         
                                             
                                             
+                                                <li><a href="/typescript-nevertype">TypeScript - never타입?</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
                                                 <li><a href="/typescript-interface">TypeScript - interface에 대해</a></li>
                                             
                                         
@@ -390,8 +400,6 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                             
-                                            
-                                                <li><a href="/typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
                                             
                                         
                                     
@@ -434,7 +442,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/typescript/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -467,19 +475,7 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. 
-
-    TypeScript란?
-    TypeScript - 기본 타입 작성법
-    TypeScript - Union Type, any, unknown
-    Type Narrowing
-    Type 키워드로 타입을 변수에 담기
-    as const에 대해
-    TypeScript - interface에 대해
-
-
-
-</p>
+                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
                     
                 </section>
             </a>

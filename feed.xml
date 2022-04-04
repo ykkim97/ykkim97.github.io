@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-04-03T17:57:53+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">TypeScript - interface에 대해</title><link href="https://ykkim97.github.io/typescript-interface" rel="alternate" type="text/html" title="TypeScript - interface에 대해" /><published>2022-04-03T02:27:00+09:00</published><updated>2022-04-03T02:27:00+09:00</updated><id>https://ykkim97.github.io/typescript-interface</id><content type="html" xml:base="https://ykkim97.github.io/typescript-interface">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-04-04T19:33:07+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">TypeScript - never타입?</title><link href="https://ykkim97.github.io/typescript-nevertype" rel="alternate" type="text/html" title="TypeScript - never타입?" /><published>2022-04-04T03:36:00+09:00</published><updated>2022-04-04T03:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-nevertype</id><content type="html" xml:base="https://ykkim97.github.io/typescript-nevertype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -7,6 +7,89 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;never타입&quot;&gt;never타입?&lt;/h2&gt;
+
+&lt;p&gt;타입에는 never타입이라는 것도 있습니다.
+함수에 붙이는데, 조건이 있습니다. 
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;return을 하면 안됩니다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;함수의 실행이 종료되면 안됩니다.&lt;br /&gt;
+&lt;br /&gt;
+이런 조건을 가진 함수에 붙일 수 있는 타입이 never타입입니다.
+기본적으로 자바스크립트 함수 맨 마지막에는 “return undefined”가 숨겨져있습니다.
+따라서 2번조건이 맞는다면 1번도 자동으로 조건이 성립됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위의 예시는 return을 하지 않았지만, console.log()로 출력한 이후 함수의 실행이 종료되버리기 때문에 never타입을 쓸 수 없는 것이죠.
+그러면 도대체 어디에 쓸 수 있을까요?
+&lt;br /&gt;
+예를 들면 무한반복문일 경우나 에러를 발생시키는 함수가 있습니다.
+아래와 같이 말이죠.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;hi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fuc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;에러&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;사실 never타입은 거의 사용할 일이 없습니다.
+return을 하고 싶지 않다면 void타입을 사용하면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위는 never타입이 나타나는 예시를 든 것입니다.
+fun()의 파라미터인 param의 타입은 “string”으로 지정했는데도 불구하고 narrowing을 사용하여 param이 string타입일 경우와 그렇지 않은 경우를
+나누어서 코드를 작성했습니다. param이라는 파라미터는 이미 string으로 지정했음에도 굳이 narrowing을 할 필요가 없죠.
+else안에 param은 never타입이 되있을 것입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 함수선언식&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;함수1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//함수표현식&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;함수2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;또 다른 예시입니다. 
+함수1()은 함수선언식으로 작성했고 함수2()는 함수표현식으로 작성했습니다.
+함수1의 경우는 void타입이고, 함수2는 never타입으로 나타나게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+이번 글에서는 never타입에 대해서 알아보았습니다. 크게 사용할 일은 없겠지만 알아두면 괜찮을 것입니다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">TypeScript - interface에 대해</title><link href="https://ykkim97.github.io/typescript-interface" rel="alternate" type="text/html" title="TypeScript - interface에 대해" /><published>2022-04-03T02:27:00+09:00</published><updated>2022-04-03T02:27:00+09:00</updated><id>https://ykkim97.github.io/typescript-interface</id><content type="html" xml:base="https://ykkim97.github.io/typescript-interface">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -68,7 +151,7 @@ type의 경우는 “&amp;amp;”을 사용하여 두 object를 합칠 수 있�
 interface는 중복이 될 경우 extends한 것처럼 합쳐집니다. 물론 속성이 중복되면 에러가 나고 type도 마찬가지로 에러가 발생합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">TypeScript - 기본 타입 작성법</title><link href="https://ykkim97.github.io/typescript-basicsyntax" rel="alternate" type="text/html" title="TypeScript - 기본 타입 작성법" /><published>2022-04-02T04:01:00+09:00</published><updated>2022-04-02T04:01:00+09:00</updated><id>https://ykkim97.github.io/typescript-basicsyntax</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basicsyntax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">TypeScript - 기본 타입 작성법</title><link href="https://ykkim97.github.io/typescript-basicsyntax" rel="alternate" type="text/html" title="TypeScript - 기본 타입 작성법" /><published>2022-04-02T04:01:00+09:00</published><updated>2022-04-02T04:01:00+09:00</updated><id>https://ykkim97.github.io/typescript-basicsyntax</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basicsyntax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -77,6 +160,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -120,7 +204,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
 &lt;br /&gt;
 오늘은 타입을 지정하는 법을 알아봤습니다.감사합니다.&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">TypeScript - Union Type, any, unknown</title><link href="https://ykkim97.github.io/typescript-uniontype" rel="alternate" type="text/html" title="TypeScript - Union Type, any, unknown" /><published>2022-04-02T04:01:00+09:00</published><updated>2022-04-02T04:01:00+09:00</updated><id>https://ykkim97.github.io/typescript-uniontype</id><content type="html" xml:base="https://ykkim97.github.io/typescript-uniontype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">TypeScript - Union Type, any, unknown</title><link href="https://ykkim97.github.io/typescript-uniontype" rel="alternate" type="text/html" title="TypeScript - Union Type, any, unknown" /><published>2022-04-02T04:01:00+09:00</published><updated>2022-04-02T04:01:00+09:00</updated><id>https://ykkim97.github.io/typescript-uniontype</id><content type="html" xml:base="https://ykkim97.github.io/typescript-uniontype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -129,6 +213,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -170,7 +255,7 @@ unknown타입은 any타입을 제외한 다른 타입으로 선언한 변수에 
 &lt;p&gt;정리하면, 아직 변수에 무엇이 들어갈지 애매할 때, 조금의 안전성을 가져가고 싶다면 unknown타입을 쓰는 것입니다. 
 많이 쓰진 않지만 any와 unknown에 대해 알아보았습니다.&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">(NextJS) redirect와 rewrite</title><link href="https://ykkim97.github.io/nexjs-redirectrewrite" rel="alternate" type="text/html" title="(NextJS) redirect와 rewrite" /><published>2022-03-31T08:10:00+09:00</published><updated>2022-03-31T08:10:00+09:00</updated><id>https://ykkim97.github.io/nexjs-redirectrewrite</id><content type="html" xml:base="https://ykkim97.github.io/nexjs-redirectrewrite">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;NextJS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">(NextJS) redirect와 rewrite</title><link href="https://ykkim97.github.io/nexjs-redirectrewrite" rel="alternate" type="text/html" title="(NextJS) redirect와 rewrite" /><published>2022-03-31T08:10:00+09:00</published><updated>2022-03-31T08:10:00+09:00</updated><id>https://ykkim97.github.io/nexjs-redirectrewrite</id><content type="html" xml:base="https://ykkim97.github.io/nexjs-redirectrewrite">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;NextJS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./nextjs-redirectrewrite&quot;&gt;(NextJS) redirect와 rewrite&lt;/a&gt;&lt;/li&gt;
     
@@ -244,6 +329,7 @@ source값으로 불러오면 내부적으로 destination값을 호출하게됩�
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -266,7 +352,7 @@ source값으로 불러오면 내부적으로 destination값을 호출하게됩�
 이렇게 따로 저장해둔다면 코드 읽기도 편하고 똑같은 코드를 반복해서 적을 필요가 없겠죠?
 &lt;br /&gt;
 &lt;br /&gt;
-End&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">as const에 대해</title><link href="https://ykkim97.github.io/typescript-asconst" rel="alternate" type="text/html" title="as const에 대해" /><published>2022-03-26T22:20:00+09:00</published><updated>2022-03-26T22:20:00+09:00</updated><id>https://ykkim97.github.io/typescript-asconst</id><content type="html" xml:base="https://ykkim97.github.io/typescript-asconst">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">as const에 대해</title><link href="https://ykkim97.github.io/typescript-asconst" rel="alternate" type="text/html" title="as const에 대해" /><published>2022-03-26T22:20:00+09:00</published><updated>2022-03-26T22:20:00+09:00</updated><id>https://ykkim97.github.io/typescript-asconst</id><content type="html" xml:base="https://ykkim97.github.io/typescript-asconst">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -275,6 +361,7 @@ End&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="type
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -329,7 +416,7 @@ as const는 2개의 효과를 가지고 있습니다.&lt;/p&gt;
 
 &lt;p&gt;이번 포스팅에서는 as const에 대해서 알아보았습니다.감사합니다.
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">Type Narrowing</title><link href="https://ykkim97.github.io/typescript-narrowing" rel="alternate" type="text/html" title="Type Narrowing" /><published>2022-03-26T01:36:00+09:00</published><updated>2022-03-26T01:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-narrowing</id><content type="html" xml:base="https://ykkim97.github.io/typescript-narrowing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">Type Narrowing</title><link href="https://ykkim97.github.io/typescript-narrowing" rel="alternate" type="text/html" title="Type Narrowing" /><published>2022-03-26T01:36:00+09:00</published><updated>2022-03-26T01:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-narrowing</id><content type="html" xml:base="https://ykkim97.github.io/typescript-narrowing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -338,6 +425,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -399,7 +487,7 @@ as 키워드를 사용하면 다음과 같은 특징이 있습니다.&lt;/p&gt;
 왜 타입에러가 나는지 정말 모르겠을 때 임시방편으로 사용하거나, 내가 어떤 타입이 들어올지 확실하게 알고 있으나, 컴파일러 에러가 발생하는 경우 비상용으로 사용하면 되겠습니다.
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">TypeScript란?</title><link href="https://ykkim97.github.io/typescript-basic" rel="alternate" type="text/html" title="TypeScript란?" /><published>2022-03-25T07:36:00+09:00</published><updated>2022-03-25T07:36:00+09:00</updated><id>https://ykkim97.github.io/typescript-basic</id><content type="html" xml:base="https://ykkim97.github.io/typescript-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -408,6 +496,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
     &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
@@ -472,7 +561,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
 &lt;p&gt;코드를 저장할때마다 js파일로 변환됩니다.
 파일을 사용할때는 변환된 js파일을 사용합니다.&lt;/p&gt;
 
-&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;tsconfig.json 파일은 ts에서 js로 컴파일 시에 옵션을 설정할 수 있습니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입?</summary></entry><entry><title type="html">React 컴포넌트 만들기</title><link href="https://ykkim97.github.io/react-mkcomponent" rel="alternate" type="text/html" title="React 컴포넌트 만들기" /><published>2022-03-21T21:34:00+09:00</published><updated>2022-03-21T21:34:00+09:00</updated><id>https://ykkim97.github.io/react-mkcomponent</id><content type="html" xml:base="https://ykkim97.github.io/react-mkcomponent">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
@@ -579,70 +668,4 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
 
 &lt;p&gt;이렇게 하면 코드의 가독성도 좋고 코드를 반복해서 사용할 필요없이 계속해서 컴포넌트를 독립된 부품처럼 가져다 쓸 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;또한 컴포넌트를 공유할 수 있으므로 생산성도 높아집니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기</summary></entry><entry><title type="html">CSS의 의미와 적용방법</title><link href="https://ykkim97.github.io/css-basic" rel="alternate" type="text/html" title="CSS의 의미와 적용방법" /><published>2022-03-20T23:00:00+09:00</published><updated>2022-03-20T23:00:00+09:00</updated><id>https://ykkim97.github.io/css-basic</id><content type="html" xml:base="https://ykkim97.github.io/css-basic">&lt;h1 id=&quot;1-css란&quot;&gt;1. CSS란?&lt;/h1&gt;
-
-&lt;p&gt;CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다.
-CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;2-내부-스타일시트&quot;&gt;2. 내부 스타일시트&lt;/h1&gt;
-
-&lt;p&gt;내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다.
-아래처럼 head태그안에 style태그를 입력하고 그 안에 css 스타일링을 해주면 됩니다.
-간편하게 사용할 수 있는 장점이 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Document&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;tomato&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;안녕하세요!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;3외부스타일시트&quot;&gt;3. 외부 스타일시트&lt;/h1&gt;
-
-&lt;p&gt;확장자가 .css로 끝나는 별도의 파일을 만들어 연결하는 방법입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;tomato&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위처럼 따로 css파일을 만들고,&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Document&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;style.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;안녕하세요!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;link 태그의 href속성에 css파일의 경로를 적어주면 끝!&lt;/p&gt;
-
-&lt;h1 id=&quot;4-인라인-스타일시트&quot;&gt;4. 인라인 스타일시트&lt;/h1&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;color: tomato;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;안녕하세요!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;인라인 스타일시트는 html태그의 속성에 바로 스타일을 작성하는 방법입니다.&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">1. CSS란?</summary></entry></feed>
+&lt;p&gt;또한 컴포넌트를 공유할 수 있으므로 생산성도 높아집니다.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기</summary></entry></feed>

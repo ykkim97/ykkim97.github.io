@@ -14,7 +14,7 @@
 
 
 
-    <title>웹의 기본중의 기본! HTML에 대해서 알아보자</title>
+    <title>TypeScript - never타입?</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/html-basic" />
+    <link rel="canonical" href="https://ykkim97.github.io/typescript-nevertype" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="웹의 기본중의 기본! HTML에 대해서 알아보자" />
-    <meta property="og:description" content="HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다. HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다. HTML요소의 형식은 다음과 같습니다. 컨텐츠 위" />
-    <meta property="og:url" content="https://ykkim97.github.io/html-basic" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/html-logo.png" />
+    <meta property="og:title" content="TypeScript - never타입?" />
+    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? never타입? 타입에는 never타입이라는 것도 있습니다. 함수에 붙이는데, 조건이 있습니다. return을 하면 안됩니다. 함수의 실행이 종료되면 안됩니다." />
+    <meta property="og:url" content="https://ykkim97.github.io/typescript-nevertype" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-03-20T08:12:00+09:00" />
-    <meta property="article:modified_time" content="2022-03-20T08:12:00+09:00" />
-    <meta property="article:tag" content="Html" />
+    <meta property="article:published_time" content="2022-04-04T03:36:00+09:00" />
+    <meta property="article:modified_time" content="2022-04-04T03:36:00+09:00" />
+    <meta property="article:tag" content="Typescript" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="웹의 기본중의 기본! HTML에 대해서 알아보자" />
-    <meta name="twitter:description" content="HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다. HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다. HTML요소의 형식은 다음과 같습니다. 컨텐츠 위" />
+    <meta name="twitter:title" content="TypeScript - never타입?" />
+    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? never타입? 타입에는 never타입이라는 것도 있습니다. 함수에 붙이는데, 조건이 있습니다. return을 하면 안됩니다. 함수의 실행이 종료되면 안됩니다." />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/html-logo.png" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Html" />
+    <meta name="twitter:data2" content="Typescript" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/html-basic",
+    "url": "https://ykkim97.github.io/typescript-nevertype",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/html-logo.png",
+        "url": "https://ykkim97.github.io/assets/built/images/typeScript-logo.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/html-basic"
+        "@id": "https://ykkim97.github.io/typescript-nevertype"
     },
-    "description": "HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다. HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다. HTML요소의 형식은 다음과 같습니다. 컨텐츠 위"
+    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? never타입? 타입에는 never타입이라는 것도 있습니다. 함수에 붙이는데, 조건이 있습니다. return을 하면 안됩니다. 함수의 실행이 종료되면 안됩니다."
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="웹의 기본중의 기본! HTML에 대해서 알아보자" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="TypeScript - never타입?" href="/feed.xml" />
 
 
 </head>
@@ -176,55 +176,114 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-html post tag-html ">
+        <article class="post-full  tag-typescript post tag-typescipt ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="20 March 2022">20 March 2022</time>
+                    <time class="post-full-meta-date" datetime=" 4 April 2022"> 4 April 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/html/'>HTML</a>
+                                <a href='/tag/typescript/'>TYPESCRIPT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">웹의 기본중의 기본! HTML에 대해서 알아보자</h1>
+                <h1 class="post-full-title">TypeScript - never타입?</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/html-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/typeScript-logo.png)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">HTML은 다음과 같이 구성되어 있습니다. </span></p>
+                    <p><span class="table-of-contents-list">TypeScript은 다음과 같이 구성되어 있습니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./html-basic">웹의 기본중의 기본! HTML에 대해서 알아보자</a></li>
-    <li><a href="./html-basic-tags">HTML 기본 태그들</a></li>
+    <li><a href="./typescript-basic">TypeScript란?</a></li>
+    <li><a href="./typescript-basicsyntax">TypeScript - 기본 타입 작성법</a></li>
+    <li><a href="./typescript-uniontype">TypeScript - Union Type, any, unknown</a></li>
+    <li><a href="./typescript-narrowing">Type Narrowing</a></li>
+    <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
+    <li><a href="./typescript-asconst">as const에 대해</a></li>
+    <li><a href="./typescript-interface">TypeScript - interface에 대해</a></li>
+    <li><a href="./typescript-nevertype">TypeScript - never타입?</a></li>
+
 </ul>
 
-<p><br /><br /><br />
-HTML은 HyperText Markup Language의 약자로 웹을 이루는 가장 기초적인 구성요소입니다. 웹 컨텐츠의 의미와 구조를 정의할 때 사용합니다.
-HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 JavaScript를 이용하게 됩니다.</p>
+<h2 id="never타입">never타입?</h2>
 
-<p>HTML요소의 형식은 다음과 같습니다.</p>
+<p>타입에는 never타입이라는 것도 있습니다.
+함수에 붙이는데, 조건이 있습니다. 
+<br />
+<br /></p>
+<ol>
+  <li>return을 하면 안됩니다.<br /></li>
+  <li>함수의 실행이 종료되면 안됩니다.<br />
+<br />
+이런 조건을 가진 함수에 붙일 수 있는 타입이 never타입입니다.
+기본적으로 자바스크립트 함수 맨 마지막에는 “return undefined”가 숨겨져있습니다.
+따라서 2번조건이 맞는다면 1번도 자동으로 조건이 성립됩니다.</li>
+</ol>
 
-<태그명 속성명1="속성값1" 속성명2="속성값2"> 컨텐츠 </태그명>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">fun</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hi</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>위의 예시는 return을 하지 않았지만, console.log()로 출력한 이후 함수의 실행이 종료되버리기 때문에 never타입을 쓸 수 없는 것이죠.
+그러면 도대체 어디에 쓸 수 있을까요?
+<br />
+예를 들면 무한반복문일 경우나 에러를 발생시키는 함수가 있습니다.
+아래와 같이 말이죠.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">fun1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hi</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">fuc2</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">"</span><span class="s2">에러</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>사실 never타입은 거의 사용할 일이 없습니다.
+return을 하고 싶지 않다면 void타입을 사용하면 됩니다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">fun</span><span class="p">(</span><span class="nx">param</span> <span class="p">:</span> <span class="kr">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">param</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>위는 never타입이 나타나는 예시를 든 것입니다.
+fun()의 파라미터인 param의 타입은 “string”으로 지정했는데도 불구하고 narrowing을 사용하여 param이 string타입일 경우와 그렇지 않은 경우를
+나누어서 코드를 작성했습니다. param이라는 파라미터는 이미 string으로 지정했음에도 굳이 narrowing을 할 필요가 없죠.
+else안에 param은 never타입이 되있을 것입니다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 함수선언식</span>
+<span class="kd">function</span> <span class="nx">함수1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c1">//함수표현식</span>
+<span class="kd">let</span> <span class="nx">함수2</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>또 다른 예시입니다. 
+함수1()은 함수선언식으로 작성했고 함수2()는 함수표현식으로 작성했습니다.
+함수1의 경우는 void타입이고, 함수2는 never타입으로 나타나게 됩니다.</p>
 
 <p><br />
-위 처럼 태그안에 컨텐츠가 들어가게 되고, 태그에는 여러 속성들이 들어갈 수 있습니다.
-물론 위처럼 열고 닫는 태그만 존재하는 것은 아닙니다.
-컨텐츠가 없는 태그도 존재하죠.
-이를 빈 태그(Empty Tag)라고도 합니다.</p>
-
-<p>HTML 문서는 파일의 확장자가 html로 끝나며 최상위 태그로 &lt;html&gt;을 사용한다. 그 하위에 &lt;head&gt; 태그와 &lt;body&gt; 태그를 컨텐츠로 가지고 있습니다.</p>
-<head> 태그는 문서를 설명하는 태그로 제목이나 키워드와 같은 정보를 담고 <body> 태그에는 문서의 내용이 위치합니다.
-
-</body></head>
+이번 글에서는 never타입에 대해서 알아보았습니다. 크게 사용할 일은 없겠지만 알아두면 괜찮을 것입니다.
+<br />
+End.</p>
 
                 </div>
             </section>
@@ -289,9 +348,9 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/html-basic';
-                            var this_page_identifier = '/html-basic';
-                            var this_page_title = '웹의 기본중의 기본! HTML에 대해서 알아보자';
+                            var this_page_url = 'https://ykkim97.github.io/typescript-nevertype';
+                            var this_page_identifier = '/typescript-nevertype';
+                            var this_page_title = 'TypeScript - never타입?';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -325,7 +384,7 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/html/">Html</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/typescript/">Typescript</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -335,23 +394,34 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
                                 
                                 
                                     
-                                
+                                        
                                     
                                 
                                     
-                                
+                                        
+                                            
+                                            
+                                                <li><a href="/typescript-interface">TypeScript - interface에 대해</a></li>
+                                            
+                                        
                                     
                                 
                                     
-                                
+                                        
+                                            
+                                            
+                                                <li><a href="/typescript-uniontype">TypeScript - Union Type, any, unknown</a></li>
+                                            
+                                        
                                     
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
+                                        
+                                            
+                                            
+                                                <li><a href="/typescript-basicsyntax">TypeScript - 기본 타입 작성법</a></li>
+                                            
+                                        
                                     
                                 
                                     
@@ -360,13 +430,36 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
                                         
                                             
                                             
-                                                <li><a href="/html-basic-tags">HTML 기본 태그들</a></li>
+                                        
+                                    
+                                
+                                    
+                                        
+                                            
                                             
                                         
                                     
                                 
                                     
                                         
+                                            
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
                                     
                                 
                                     
@@ -376,9 +469,9 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/html/">
+                            <a href="/tag/typescript/">
                                 
-                                    See all 1 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -388,61 +481,6 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/html-basic-tags">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/html-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/html-basic-tags">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Html</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">HTML 기본 태그들</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>HTML은 다음과 같이 구성되어 있습니다. 
-
-    웹의 기본중의 기본! HTML에 대해서 알아보자
-    HTML 기본 태그들
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -450,27 +488,26 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/git-basic">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/html-logo.png)"></div>
+            <a class="post-card-image-link" href="/typescript-interface">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/git-basic">
+            <a class="post-card-content-link" href="/typescript-interface">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Git</span>
+                                <span class="post-card-tags">Typescript</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Git!</h2>
+                    <h2 class="post-card-title">TypeScript - interface에 대해</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Git
-</p>
+                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
                     
                 </section>
             </a>
@@ -510,18 +547,18 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">웹의 기본중의 기본! HTML에 대해서 알아보자</div>
+    <div class="floating-header-title">TypeScript - never타입?</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%9B%B9%EC%9D%98+%EA%B8%B0%EB%B3%B8%EC%A4%91%EC%9D%98+%EA%B8%B0%EB%B3%B8%21+HTML%EC%97%90+%EB%8C%80%ED%95%B4%EC%84%9C+%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90&amp;url=https://ykkim97.github.io/html-basic"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=TypeScript+-+never%ED%83%80%EC%9E%85%3F&amp;url=https://ykkim97.github.io/typescript-nevertype"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/html-basic"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/typescript-nevertype"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

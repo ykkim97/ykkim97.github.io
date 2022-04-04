@@ -59,7 +59,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Type Narrowing" />
-    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만 타입스크립트는 엄격하기때문에 정확한" />
+    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만" />
     <meta property="og:url" content="https://ykkim97.github.io/typescript-narrowing" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,7 +69,7 @@
     <meta property="article:tag" content="Typescript" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Type Narrowing" />
-    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만 타입스크립트는 엄격하기때문에 정확한" />
+    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -101,7 +101,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/typescript-narrowing"
     },
-    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만 타입스크립트는 엄격하기때문에 정확한"
+    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만"
 }
     </script>
 
@@ -210,6 +210,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
     <li><a href="./typescript-asconst">as const에 대해</a></li>
     <li><a href="./typescript-interface">TypeScript - interface에 대해</a></li>
+    <li><a href="./typescript-nevertype">TypeScript - never타입?</a></li>
 
 </ul>
 
@@ -385,6 +386,15 @@ End.</p>
                                         
                                             
                                             
+                                                <li><a href="/typescript-nevertype">TypeScript - never타입?</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
                                                 <li><a href="/typescript-interface">TypeScript - interface에 대해</a></li>
                                             
                                         
@@ -402,8 +412,6 @@ End.</p>
                                     
                                         
                                             
-                                            
-                                                <li><a href="/typescript-basicsyntax">TypeScript - 기본 타입 작성법</a></li>
                                             
                                         
                                     
@@ -452,7 +460,7 @@ End.</p>
                         <footer class="read-next-card-footer">
                             <a href="/tag/typescript/">
                                 
-                                    See all 6 posts  →
+                                    See all 7 posts  →
                                 
                             </a>
                         </footer>
@@ -485,19 +493,7 @@ End.</p>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. 
-
-    TypeScript란?
-    TypeScript - 기본 타입 작성법
-    TypeScript - Union Type, any, unknown
-    Type Narrowing
-    Type 키워드로 타입을 변수에 담기
-    as const에 대해
-    TypeScript - interface에 대해
-
-
-
-</p>
+                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
                     
                 </section>
             </a>
@@ -549,19 +545,7 @@ End.</p>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. 
-
-    TypeScript란?
-    TypeScript - 기본 타입 작성법
-    TypeScript - Union Type, any, unknown
-    Type Narrowing
-    Type 키워드로 타입을 변수에 담기
-    as const에 대해
-    TypeScript - interface에 대해
-
-
-
-</p>
+                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
                     
                 </section>
             </a>
