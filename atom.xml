@@ -8,6 +8,32 @@
     
       
       <item>
+        <title>TypeScript - tuple 타입</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 05 Apr 2022 04:53:00 +0900</pubDate>
+        <link>
+        https://ykkim97.github.io/typescript-tupletype</link>
+        <guid isPermaLink="true">https://ykkim97.github.io/typescript-tupletype</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>TypeScript - never타입?</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
@@ -20,7 +46,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -46,7 +72,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -72,7 +98,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -98,7 +124,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -144,7 +170,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -170,7 +196,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -196,7 +222,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -222,7 +248,7 @@
     &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-
+    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
