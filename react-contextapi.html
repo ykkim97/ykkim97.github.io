@@ -14,7 +14,7 @@
 
 
 
-    <title>Type Narrowing</title>
+    <title>props가 번거로울 때 Context API를 사용해보자</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/typescript-narrowing" />
+    <link rel="canonical" href="https://ykkim97.github.io/react-contextapi" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Type Narrowing" />
-    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입? 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을" />
-    <meta property="og:url" content="https://ykkim97.github.io/typescript-narrowing" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
+    <meta property="og:title" content="props가 번거로울 때 Context API를 사용해보자" />
+    <meta property="og:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 props가 번거로울 때 Context API를 사용해보자 React에서 하위컴포넌트에 데이터를 전달하고 싶을 때 우리는 props를 사용하여 하위컴포넌트에 전달합니다. 만약 개발을 계속 진행하다가 하위컴포넌트가 많이 추가 될 때 props를 상위 컴포넌트로부터 해당 하위컴포넌트까지" />
+    <meta property="og:url" content="https://ykkim97.github.io/react-contextapi" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-03-26T01:36:00+09:00" />
-    <meta property="article:modified_time" content="2022-03-26T01:36:00+09:00" />
-    <meta property="article:tag" content="Typescript" />
+    <meta property="article:published_time" content="2022-04-21T08:21:00+09:00" />
+    <meta property="article:modified_time" content="2022-04-21T08:21:00+09:00" />
+    <meta property="article:tag" content="React" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Type Narrowing" />
-    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입? 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을" />
+    <meta name="twitter:title" content="props가 번거로울 때 Context API를 사용해보자" />
+    <meta name="twitter:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 props가 번거로울 때 Context API를 사용해보자 React에서 하위컴포넌트에 데이터를 전달하고 싶을 때 우리는 props를 사용하여 하위컴포넌트에 전달합니다. 만약 개발을 계속 진행하다가 하위컴포넌트가 많이 추가 될 때 props를 상위 컴포넌트로부터 해당 하위컴포넌트까지" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Typescript" />
+    <meta name="twitter:data2" content="React" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/typescript-narrowing",
+    "url": "https://ykkim97.github.io/react-contextapi",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/typeScript-logo.png",
+        "url": "https://ykkim97.github.io/assets/built/images/react-logo.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/typescript-narrowing"
+        "@id": "https://ykkim97.github.io/react-contextapi"
     },
-    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입? 타입 좁히기 (Type Narrowing) Type Narrowing 타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을"
+    "description": "React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 props가 번거로울 때 Context API를 사용해보자 React에서 하위컴포넌트에 데이터를 전달하고 싶을 때 우리는 props를 사용하여 하위컴포넌트에 전달합니다. 만약 개발을 계속 진행하다가 하위컴포넌트가 많이 추가 될 때 props를 상위 컴포넌트로부터 해당 하위컴포넌트까지"
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Type Narrowing" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="props가 번거로울 때 Context API를 사용해보자" href="/feed.xml" />
 
 
 </head>
@@ -176,100 +176,101 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-typescript post tag-typescipt ">
+        <article class="post-full  tag-react post tag-react ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="26 March 2022">26 March 2022</time>
+                    <time class="post-full-meta-date" datetime="21 April 2022">21 April 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/typescript/'>TYPESCRIPT</a>
+                                <a href='/tag/react/'>REACT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">Type Narrowing</h1>
+                <h1 class="post-full-title">props가 번거로울 때 Context API를 사용해보자</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/typeScript-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/react-logo.jpg)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">TypeScript은 다음과 같이 구성되어 있습니다. </span></p>
+                    <p><span class="table-of-contents-list">React은 다음과 같이 구성되어 있습니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./typescript-basic">TypeScript란?</a></li>
-    <li><a href="./typescript-basicsyntax">TypeScript - 기본 타입 작성법</a></li>
-    <li><a href="./typescript-uniontype">TypeScript - Union Type, any, unknown</a></li>
-    <li><a href="./typescript-narrowing">Type Narrowing</a></li>
-    <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
-    <li><a href="./typescript-asconst">as const에 대해</a></li>
-    <li><a href="./typescript-interface">TypeScript - interface에 대해</a></li>
-    <li><a href="./typescript-nevertype">TypeScript - never타입?</a></li>
-    <li><a href="./typescript-tupletype">TypeScript - tuple타입?</a></li>
+    <li><a href="./react-basic">React란?</a></li>
+    <li><a href="./react-mkcomponent">React 컴포넌트 만들기</a></li>
+    <li><a href="./react-gugudan">React로 간단한 구구단게임 만들기!</a></li>
+    <li><a href="./react-contextapi">props가 번거로울 때 Context API를 사용해보자</a></li>
 </ul>
 
-<h1 id="타입-좁히기-type-narrowing">타입 좁히기 (Type Narrowing)</h1>
+<h2 id="props가-번거로울-때-context-api를-사용해보자">props가 번거로울 때 Context API를 사용해보자</h2>
 
-<h2 id="type-narrowing">Type Narrowing</h2>
+<p>React에서 하위컴포넌트에 데이터를 전달하고 싶을 때 우리는 props를 사용하여 하위컴포넌트에 전달합니다.
+만약 개발을 계속 진행하다가 하위컴포넌트가 많이 추가 될 때 props를 상위 컴포넌트로부터 해당 하위컴포넌트까지 props를 전달해야하는데 정말 번거로울 수 있습니다.
+이때 사용할 수 있는 방법이 Redux를 사용하거나 Context API를 사용하는 방법이 있습니다.
+이번 포스팅에서는 Context API에 대해서 알아보겠습니다.</p>
 
-<p>타입스크립트의 타입은 덜 정확한, 애매한 타입이 있을 수 있습니다. 하지만 타입스크립트는 엄격하기때문에 정확한 타입이 필요합니다. 그렇지 않으면 타입 에러가 발생하게 되죠.
-이렇게 타입 에러를 막기 위해 Type Narrowing이 필요합니다.</p>
+<h3 id="context로-state를-props없이-공유하자">Context로 state를 props없이 공유하자.</h3>
 
-<p>Type Narrowing은 if문 등으로 타입을 하나로 정해주는 것입니다.</p>
+<p>모든 하위 컴포넌트들이 props로 state를 전달하지 않아도 state를 사용할 수 있게 할 수 있습니다.</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFun</span><span class="p">(</span><span class="nx">x</span> <span class="p">:</span><span class="kr">number</span> <span class="o">|</span> <span class="kr">string</span><span class="p">){</span>
-  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">number</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span>
-  <span class="p">}</span> 
-  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">string</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="mi">0</span>
-  <span class="p">}</span>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">testContext</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="p">[</span><span class="nx">test</span><span class="p">,</span> <span class="nx">setTest</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="c1">// .....code</span>
+    <span class="p">&lt;</span><span class="nt">testContext</span><span class="p">.</span><span class="nc">Provider</span> <span class="na">value</span><span class="p">=</span><span class="si">{</span><span class="nx">test</span><span class="si">}</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">AnotherComponent</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">testContext</span><span class="p">.</span><span class="nc">Provider</span><span class="p">&gt;</span>
+  <span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>if문으로 타입을 나누지 않고 그냥 return x + 1 처리하면 에러가 발생합니다.<br />
-x는 number | string 타입이지 number 타입이나 string 타입이 아니라고 보면됩니다.
-따라서 조건문으로 타입 별로 처리를 나눠주면 에러를 피할 수 있습니다. 
-<br />
-<br />
-위 코드처럼 조건에 typeof를 꼭 쓸 필요는 없습니다.
-타입을 하나로 확정지을 수 있는 표현이라면 어떤 것도 Narrowing 역할을 할 수 있습니다.
-in, instanceof 등의 키워드도 사용이 가능합니다.</p>
+<p>일단 let testContext = React.createContext();와 같이 context를 만듭니다.<br /> 이는 “공유할 범위”의 느낌이라고 보면됩니다.<br />
+위의 test라는 state를 하위컴포넌트인 AnotherComponent와 공유하고 싶을 때 AnotherComponent를 <testContext.Provider>로 감쌉니다.
+그리고 value값으로 공유하고싶은 state를 작성합니다.<br />
+그러면 감싸진 범위에 있는 하위 컴포넌트들은 state값을 그냥 가져다 쓸 수 있습니다.</testContext.Provider></p>
 
-<h2 id="type-assertion">Type Assertion</h2>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">useContext</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
 
-<p>물론 타입을 간편하게 assert할 수도 있습니다.
-Type Assertion 이라는 것을 사용하는 것인데, 변수 뒤에 as를 붙이는 것이죠.
-<br />
-<br />
-변수명 as string
-<br />
-<br />
-이렇게 쓰면 “이 변수의 타입을 string으로 생각해주세요”라는 뜻입니다. 하지만 실제로 타입을 바꿔주는 것은 아니기 때문에 조심해서 사용해야합니다.
-assertion을 남발하는 것은 좋지 않습니다.
-<br />
-as 키워드를 사용하면 다음과 같은 특징이 있습니다.</p>
-<ol>
-  <li>as 키워드는 Union Type과 같은 복잡한 타입을 하나의 정확한 타입으로 좁혀주는 역할을 합니다. <br />
-그래서 number타입인 변수를 as string 으로 바꾸려고한다면 에러가 발생합니다.
-<br />
-<br /></li>
-  <li>사실 임시로 타입을 해제시키는 용도입니다. 실제 코드의 실행결과는 as가 있을 때나 없을 때나 동일합니다.</li>
-</ol>
+<span class="kd">function</span> <span class="nx">AnotherComponent</span><span class="p">(){</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="c1">// ....code</span>
+    <span class="p">&lt;</span><span class="nc">Test</span><span class="p">&gt;&lt;/</span><span class="nc">Test</span><span class="p">&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
 
-<p><br />
+<span class="kd">function</span> <span class="nx">Test</span><span class="p">(){</span>
+  <span class="kd">let</span> <span class="nx">hello</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">testContext</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">hello</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<Test />
+<p>컴포넌트는 AnotherComponent의 하위 컴포넌트입니다. <bt>
+공유된 state를 사용하려면 위와 같이 useContext Hooks를 변수에 담고, 그 변수를 가지고 데이터바인딩을 하면됩니다.</bt></p>
+
+<h3 id="컴포넌트가-외부파일로-분리되어-있다면">컴포넌트가 외부파일로 분리되어 있다면?</h3>
+
+<p>만약 하위컴포넌트가 외부파일에 작성되어있다면,</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">let</span> <span class="nx">textContext</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>이렇게 export를 사용하고 해당 컴포넌트에 import 시켜주면 사용할 수 있습니다.
 <br />
-정리하자면 as를 사용하면 간편하지만, 정확한 코드를 위해 Narrowing을 사용하는 것이 좋습니다. 
-왜 타입에러가 나는지 정말 모르겠을 때 임시방편으로 사용하거나, 내가 어떤 타입이 들어올지 확실하게 알고 있으나, 컴파일러 에러가 발생하는 경우 비상용으로 사용하면 되겠습니다.
+<br />
+물론 Context API도 상황에 따라서는 오히려 번거로울 수도 있습니다. 
+상황에 맞게 props나 ContextAPI를 사용하는 것이 좋겠습니다.
 <br />
 <br />
 End.</p>
@@ -337,9 +338,9 @@ End.</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/typescript-narrowing';
-                            var this_page_identifier = '/typescript-narrowing';
-                            var this_page_title = 'Type Narrowing';
+                            var this_page_url = 'https://ykkim97.github.io/react-contextapi';
+                            var this_page_identifier = '/react-contextapi';
+                            var this_page_title = 'props가 번거로울 때 Context API를 사용해보자';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -373,7 +374,7 @@ End.</p>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/typescript/">Typescript</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/react/">React</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -383,15 +384,6 @@ End.</p>
                                 
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-tupletype">TypeScript - tuple 타입</a></li>
-                                            
                                         
                                     
                                 
@@ -399,57 +391,7 @@ End.</p>
                                         
                                             
                                             
-                                                <li><a href="/typescript-nevertype">TypeScript - never타입?</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-interface">TypeScript - interface에 대해</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
+                                                <li><a href="/react-gugudan">React로 간단한 구구단게임 만들기</a></li>
                                             
                                         
                                     
@@ -464,14 +406,48 @@ End.</p>
                                 
                                     
                                 
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                                <li><a href="/react-mkcomponent">React 컴포넌트 만들기</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                                <li><a href="/react-basic">React란?</a></li>
+                                            
+                                        
                                     
                                 
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/typescript/">
+                            <a href="/tag/react/">
                                 
-                                    See all 8 posts  →
+                                    See all 3 posts  →
                                 
                             </a>
                         </footer>
@@ -481,55 +457,6 @@ End.</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/typescript-asconst">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/typescript-asconst">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Typescript</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">as const에 대해</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -537,26 +464,34 @@ End.</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/typescript-basic">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
+            <a class="post-card-image-link" href="/react-gugudan">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/react-logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/typescript-basic">
+            <a class="post-card-content-link" href="/react-gugudan">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Typescript</span>
+                                <span class="post-card-tags">React</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">TypeScript란?</h2>
+                    <h2 class="post-card-title">React로 간단한 구구단게임 만들기</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
+                        <p>React은 다음과 같이 구성되어 있습니다. 
+
+    React란?
+    React 컴포넌트 만들기
+    React로 간단한 구구단게임 만들기!
+    props가 번거로울 때 Context API를 사용해보자
+
+
+</p>
                     
                 </section>
             </a>
@@ -596,18 +531,18 @@ End.</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Type Narrowing</div>
+    <div class="floating-header-title">props가 번거로울 때 Context API를 사용해보자</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Type+Narrowing&amp;url=https://ykkim97.github.io/typescript-narrowing"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=props%EA%B0%80+%EB%B2%88%EA%B1%B0%EB%A1%9C%EC%9A%B8+%EB%95%8C+Context+API%EB%A5%BC+%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90&amp;url=https://ykkim97.github.io/react-contextapi"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/typescript-narrowing"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/react-contextapi"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
