@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/react/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-04-28T23:32:45+09:00</updated>
+  <updated>2022-05-03T16:41:05+09:00</updated>
   <id>https://ykkim97.github.io/tag/react/feed.xml</id>
 
   
@@ -32,6 +32,86 @@
 
   
     <entry>
+      <title type="html">React - 페이지 이동시 최상단 스크롤 방법</title>
+      <link href="https://ykkim97.github.io/react-scrolltotop" rel="alternate" type="text/html" title="React - 페이지 이동시 최상단 스크롤 방법" />
+      <published>2022-05-02T01:43:00+09:00</published>
+      <updated>2022-05-02T01:43:00+09:00</updated>
+      <id>https://ykkim97.github.io/react-scrolltotop</id>
+      <content type="html" xml:base="https://ykkim97.github.io/react-scrolltotop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;react에서-페이지-이동시-최상단-스크롤-방법&quot;&gt;React에서 페이지 이동시 최상단 스크롤 방법&lt;/h2&gt;
+
+&lt;p&gt;프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에
+전환된 페이지의 스크롤 위치가 전 페이지의 스크롤 위치와 동일해지는 문제를 발견
+하였다. 구글에 검색해본 결과 해결방법이 잘 나와있었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useLocation&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollToTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음과 같은 코드에 해당하는 ScrollToTop이라는 컴포넌트를 만들고&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollToTop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./components/common/ScrollToTop&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ScrollToTop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;,&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;ScrollToTop 컴포넌트를 라우터 내부에 넣어주면 된다.
+pathname을 인식하게 하기위해 꼭 컴포넌트를 라우터 내부에 넣어야한다고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="react" />
+      
+
+      
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">React Bootstrap 사용하기</title>
       <link href="https://ykkim97.github.io/react-bootstrapguide" rel="alternate" type="text/html" title="React Bootstrap 사용하기" />
       <published>2022-04-27T08:32:00+09:00</published>
@@ -44,6 +124,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;react에서-bootstrap사용하기&quot;&gt;React에서 Bootstrap사용하기&lt;/h2&gt;
@@ -103,7 +184,7 @@
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary>
       
 
       
@@ -123,6 +204,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;props가-번거로울-때-context-api를-사용해보자&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/h2&gt;
@@ -210,7 +292,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary>
       
 
       
@@ -230,6 +312,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;react로-간단한-구구단게임-만들기&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/h2&gt;
@@ -358,7 +441,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary>
       
 
       
@@ -378,6 +461,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;react-컴포넌트-만들기&quot;&gt;React 컴포넌트 만들기&lt;/h1&gt;
@@ -502,7 +586,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary>
       
 
       
@@ -522,6 +606,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;1-react&quot;&gt;1. React&lt;/h1&gt;
@@ -594,7 +679,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary>
       
 
       

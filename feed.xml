@@ -1,10 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-04-28T23:32:45+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">React Bootstrap 사용하기</title><link href="https://ykkim97.github.io/react-bootstrapguide" rel="alternate" type="text/html" title="React Bootstrap 사용하기" /><published>2022-04-27T08:32:00+09:00</published><updated>2022-04-27T08:32:00+09:00</updated><id>https://ykkim97.github.io/react-bootstrapguide</id><content type="html" xml:base="https://ykkim97.github.io/react-bootstrapguide">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-05-03T16:41:05+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">React - 페이지 이동시 최상단 스크롤 방법</title><link href="https://ykkim97.github.io/react-scrolltotop" rel="alternate" type="text/html" title="React - 페이지 이동시 최상단 스크롤 방법" /><published>2022-05-02T01:43:00+09:00</published><updated>2022-05-02T01:43:00+09:00</updated><id>https://ykkim97.github.io/react-scrolltotop</id><content type="html" xml:base="https://ykkim97.github.io/react-scrolltotop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;react에서-페이지-이동시-최상단-스크롤-방법&quot;&gt;React에서 페이지 이동시 최상단 스크롤 방법&lt;/h2&gt;
+
+&lt;p&gt;프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에
+전환된 페이지의 스크롤 위치가 전 페이지의 스크롤 위치와 동일해지는 문제를 발견
+하였다. 구글에 검색해본 결과 해결방법이 잘 나와있었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useLocation&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollToTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음과 같은 코드에 해당하는 ScrollToTop이라는 컴포넌트를 만들고&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollToTop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./components/common/ScrollToTop&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ScrollToTop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;,&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;ScrollToTop 컴포넌트를 라우터 내부에 넣어주면 된다.
+pathname을 인식하게 하기위해 꼭 컴포넌트를 라우터 내부에 넣어야한다고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary></entry><entry><title type="html">React Bootstrap 사용하기</title><link href="https://ykkim97.github.io/react-bootstrapguide" rel="alternate" type="text/html" title="React Bootstrap 사용하기" /><published>2022-04-27T08:32:00+09:00</published><updated>2022-04-27T08:32:00+09:00</updated><id>https://ykkim97.github.io/react-bootstrapguide</id><content type="html" xml:base="https://ykkim97.github.io/react-bootstrapguide">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;react에서-bootstrap사용하기&quot;&gt;React에서 Bootstrap사용하기&lt;/h2&gt;
@@ -43,13 +90,14 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End!&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary></entry><entry><title type="html">props가 번거로울 때 Context API를 사용해보자</title><link href="https://ykkim97.github.io/react-contextapi" rel="alternate" type="text/html" title="props가 번거로울 때 Context API를 사용해보자" /><published>2022-04-21T08:21:00+09:00</published><updated>2022-04-21T08:21:00+09:00</updated><id>https://ykkim97.github.io/react-contextapi</id><content type="html" xml:base="https://ykkim97.github.io/react-contextapi">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End!&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary></entry><entry><title type="html">props가 번거로울 때 Context API를 사용해보자</title><link href="https://ykkim97.github.io/react-contextapi" rel="alternate" type="text/html" title="props가 번거로울 때 Context API를 사용해보자" /><published>2022-04-21T08:21:00+09:00</published><updated>2022-04-21T08:21:00+09:00</updated><id>https://ykkim97.github.io/react-contextapi</id><content type="html" xml:base="https://ykkim97.github.io/react-contextapi">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;props가-번거로울-때-context-api를-사용해보자&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/h2&gt;
@@ -116,13 +164,14 @@
 상황에 맞게 props나 ContextAPI를 사용하는 것이 좋겠습니다.
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary></entry><entry><title type="html">React로 간단한 구구단게임 만들기</title><link href="https://ykkim97.github.io/react-gugudan" rel="alternate" type="text/html" title="React로 간단한 구구단게임 만들기" /><published>2022-04-17T05:01:00+09:00</published><updated>2022-04-17T05:01:00+09:00</updated><id>https://ykkim97.github.io/react-gugudan</id><content type="html" xml:base="https://ykkim97.github.io/react-gugudan">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary></entry><entry><title type="html">React로 간단한 구구단게임 만들기</title><link href="https://ykkim97.github.io/react-gugudan" rel="alternate" type="text/html" title="React로 간단한 구구단게임 만들기" /><published>2022-04-17T05:01:00+09:00</published><updated>2022-04-17T05:01:00+09:00</updated><id>https://ykkim97.github.io/react-gugudan</id><content type="html" xml:base="https://ykkim97.github.io/react-gugudan">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;react로-간단한-구구단게임-만들기&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/h2&gt;
@@ -230,7 +279,7 @@ firstNumber와 secondNumber의 초기값은 1부터 9까지의 랜덤한 값으�
 Sourse Code : https://github.com/ykkim97/React_GuGuDan
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기</summary></entry><entry><title type="html">TypeScript - tuple 타입</title><link href="https://ykkim97.github.io/typescript-tupletype" rel="alternate" type="text/html" title="TypeScript - tuple 타입" /><published>2022-04-05T04:53:00+09:00</published><updated>2022-04-05T04:53:00+09:00</updated><id>https://ykkim97.github.io/typescript-tupletype</id><content type="html" xml:base="https://ykkim97.github.io/typescript-tupletype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법</summary></entry><entry><title type="html">TypeScript - tuple 타입</title><link href="https://ykkim97.github.io/typescript-tupletype" rel="alternate" type="text/html" title="TypeScript - tuple 타입" /><published>2022-04-05T04:53:00+09:00</published><updated>2022-04-05T04:53:00+09:00</updated><id>https://ykkim97.github.io/typescript-tupletype</id><content type="html" xml:base="https://ykkim97.github.io/typescript-tupletype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
@@ -597,36 +646,4 @@ ex) /before/:path* =&amp;gt; /after/:path* (*를 붙여주는 경우 어떤값�
 source값으로 불러오면 내부적으로 destination값을 호출하게됩니다.
 예를 들어, api-key와 같이 숨기고 싶은 값이 url에 있을 경우 실제 url을 숨기고 다른 url로 대체할 수 있습니다.&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="nextjs" /><summary type="html">NextJS는 다음과 같이 구성되어 있습니다. (NextJS) redirect와 rewrite</summary></entry><entry><title type="html">Type 키워드로 타입을 변수에 담기</title><link href="https://ykkim97.github.io/typescript-typekeyword" rel="alternate" type="text/html" title="Type 키워드로 타입을 변수에 담기" /><published>2022-03-27T07:06:00+09:00</published><updated>2022-03-27T07:06:00+09:00</updated><id>https://ykkim97.github.io/typescript-typekeyword</id><content type="html" xml:base="https://ykkim97.github.io/typescript-typekeyword">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;type-키워드&quot;&gt;Type 키워드&lt;/h1&gt;
-
-&lt;h2 id=&quot;타입의-정의가-너무-길다면-type-aliases로&quot;&gt;타입의 정의가 너무 길다면 Type Aliases로!&lt;/h2&gt;
-
-&lt;p&gt;타입스크립트에서 타입을 지정해줄 때 타입이 너무 길거나 작성한 타입이 나중에 재사용될 것 같다면 타입도 변수에 담아쓰는 것이 좋습니다.
-변수 만드는 것처럼 Type키워드를 사용합니다. 이를 Type Aliases(타입 별칭)이라 합니다.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Food&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;food&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Food&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;apple&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-위 처럼 type이라는 키워드를 쓰고 변수에 담으면 끝!
-보통 타입은 대문자로 시작하는 것이 좋습니다. 
-이렇게 따로 저장해둔다면 코드 읽기도 편하고 똑같은 코드를 반복해서 적을 필요가 없겠죠?
-&lt;br /&gt;
-&lt;br /&gt;
-End&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입?</summary></entry></feed>
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="nextjs" /><summary type="html">NextJS는 다음과 같이 구성되어 있습니다. (NextJS) redirect와 rewrite</summary></entry></feed>
