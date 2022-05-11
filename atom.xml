@@ -8,6 +8,25 @@
     
       
       <item>
+        <title>var, let, const의 특징</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-varletconst&quot;&gt;var, let, const의 특징&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 10 May 2022 20:00:00 +0900</pubDate>
+        <link>
+        https://ykkim97.github.io/javascript-varletconst</link>
+        <guid isPermaLink="true">https://ykkim97.github.io/javascript-varletconst</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>React - 페이지 이동시 최상단 스크롤 방법</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;

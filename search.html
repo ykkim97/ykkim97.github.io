@@ -189,6 +189,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "javascript-varletconst": {
+        "title": "var, let, const의 특징",
+            "author": "ykkim97",
+            "category": "",
+            "content": "JavaScript은 다음과 같이 구성되어 있습니다.     var, let, const의 특징    var, let, const의 특징1. var의 문제점이전 es5 까지만하더라도 var만이 존재했었고 이것으로만 변수를 선언할 수 있었습니다.하지만 var는 문제가 많았습니다.var a = 'korea';console.log(a);var a = 'USA';console.log(a);a라는 변수가 이미 선언이 되었는데도 불구하고 다시 a라는 이름으로 변수를 선언해도 에러가 나지 않고 정상적으로 출력됩니다.유연하다고 생각할 수 있지만 이는 혼란을 줄 수 있습니다.2. let과 const의 등장es6이후로 let과 const가 추가되었습니다.var를 사용하는 것을 권장하지 않고 이제 let과 const를 사용하는 것을 권장하고 있습니다.let과 const는 var처럼 변수이름을 중복하여 선언할 수 없습니다. 그러면 이 둘의 차이는 무엇일까요?// letlet a = 1;a = 2;console.log(a);let을 사용하여 변수를 선언하고 2라는 값을 재할당할 경우 에러가 발생하지 않고 정상적으로 동작합니다.// constconst a = 1;a = 2;console.log(a);하지만 const를 사용하여 변수를 선언하고 2라는 값을 재할당 해주었더니 에러가 발생했습니다. 이처럼 let과 const는 Mutable, Immutable의 특성을 각각 가지고 있습니다.Mutable은 변할 수 있는 값, Immutable은 변하지 않는 값을 뜻합니다. 이렇게 계속 변하는 값을 정의할 때는 let을 이용하여 선언하고, 변하지 않는 값을 정의할 떄는 const를 사용합니다.End.",
+        "url": "/javascript-varletconst"
+    }
+    ,
+    
     "react-scrolltotop": {
         "title": "React - 페이지 이동시 최상단 스크롤 방법",
             "author": "ykkim97",
