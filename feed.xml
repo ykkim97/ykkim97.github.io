@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-05-11T13:45:16+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">var, let, const의 특징</title><link href="https://ykkim97.github.io/javascript-varletconst" rel="alternate" type="text/html" title="var, let, const의 특징" /><published>2022-05-10T20:00:00+09:00</published><updated>2022-05-10T20:00:00+09:00</updated><id>https://ykkim97.github.io/javascript-varletconst</id><content type="html" xml:base="https://ykkim97.github.io/javascript-varletconst">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-05-19T23:20:53+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">block과 inline의 차이점</title><link href="https://ykkim97.github.io/css-blockinline" rel="alternate" type="text/html" title="block과 inline의 차이점" /><published>2022-05-17T23:00:00+09:00</published><updated>2022-05-17T23:00:00+09:00</updated><id>https://ykkim97.github.io/css-blockinline</id><content type="html" xml:base="https://ykkim97.github.io/css-blockinline">&lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
+
+&lt;p&gt;오늘은 block과 inline에 대해서 알아보겠습니다.&lt;br /&gt;
+display값으로 여러가지가 있지만 이번글에서는 block과 inline에 대해서만 알아볼 것입니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;display--block&quot;&gt;display : block&lt;/h3&gt;
+
+&lt;p&gt;먼저 block인데,
+block은 무조건 한 줄을 모두 차지합니다. 따라서 다음 요소는 줄바꿈이 되게됩니다.
+div태그가 대표적인 예시입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;display--inline&quot;&gt;display : inline&lt;/h3&gt;
+
+&lt;p&gt;inline은 한줄 전체를 차지하는 것이 아니라 해당 텍스트만큼만 자리를 차지합니다. 
+예로 span태그가 있습니다.&lt;br /&gt;
+inline 태그는 width와 height를 명시할 수 없습니다. 그리고 margin은 위아래엔 적용되지 않고 좌우만 적용됩니다.
+또한 padding도 보기에는 상하좌우 모두 적용되는 것처럼보이나, 위아래공간은 사실 차지하지 않습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;display--inline-block&quot;&gt;display : inline-block&lt;/h3&gt;
+
+&lt;p&gt;마지막으로 inline-block은 inline속성과 block속성을 모두가진 속성입니다. &lt;br /&gt;
+줄바꿈없이 한 줄에 다른 요소들을 배치할 수 있는 특징이 있고, width, height, margin-top, margin-bottom을 적용할 수 있습니다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">block과 inline의 차이</summary></entry><entry><title type="html">var, let, const의 특징</title><link href="https://ykkim97.github.io/javascript-varletconst" rel="alternate" type="text/html" title="var, let, const의 특징" /><published>2022-05-10T20:00:00+09:00</published><updated>2022-05-10T20:00:00+09:00</updated><id>https://ykkim97.github.io/javascript-varletconst</id><content type="html" xml:base="https://ykkim97.github.io/javascript-varletconst">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-varletconst&quot;&gt;var, let, const의 특징&lt;/a&gt;&lt;/li&gt;
     
@@ -585,56 +608,5 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typ
 하지만 타입을 적어주는게 좋긴합니다. 
 &lt;br /&gt;
 오늘은 타입을 지정하는 법을 알아봤습니다.감사합니다.&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입?</summary></entry><entry><title type="html">TypeScript - Union Type, any, unknown</title><link href="https://ykkim97.github.io/typescript-uniontype" rel="alternate" type="text/html" title="TypeScript - Union Type, any, unknown" /><published>2022-04-02T04:01:00+09:00</published><updated>2022-04-02T04:01:00+09:00</updated><id>https://ykkim97.github.io/typescript-uniontype</id><content type="html" xml:base="https://ykkim97.github.io/typescript-uniontype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;union-type-any-unknown에-대해&quot;&gt;Union Type, Any, unknown에 대해&lt;/h2&gt;
-
-&lt;p&gt;이번 글에는 Union Type, Any, unknown에 대해서 알아보겠습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;union-type&quot;&gt;Union Type&lt;/h3&gt;
-
-&lt;p&gt;앞서 Union Type에 대해서 언급한 적이 있습니다. 
-Union Type은 “A 또는 B 타입이 들어올 수 있어요”라는 상황에서 사용할 수 있는데 “또는”이라는 것을 나타냅니다.
-“|” 기호를 통해 나타냅니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;age라는 변수는 100이라는 number타입을 할당해도 되고, “100”이라는 string타입을 할당해도 되는 것입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;534&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Array와 Object의 경우에는 위처럼 타입을 정의하면 됩니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;any와-unknown&quot;&gt;any와 unknown&lt;/h3&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aaa&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;any타입은 그 어떤 타입이 와도 OK라는 뜻입니다.
-타입을 막 바꿔도 에러가 발생하지 않습니다. 에러가 나지 않으니 마냥 좋은 것이 아닙니다. 타입과 관련해서 버그가 발생할 경우 추적하기 힘들어지고
-타입스크립트를 사용하는 의미가 없는 것이죠. 
-&lt;br /&gt;
-&lt;br /&gt;
-unknown이라는 타입도 있습니다. unknown 역시 any타입처럼 에러가 발생하지 않습니다. 
-그럼 차이점이 무엇일까요?
-unknown타입은 any타입을 제외한 다른 타입으로 선언한 변수에 할당할 수 없으며, unknown으로 선언된 변수는 프로퍼티에 접근이 불가하고, 인스턴스를 생성할 수 없습니다.&lt;/p&gt;
-
-&lt;p&gt;정리하면, 아직 변수에 무엇이 들어갈지 애매할 때, 조금의 안전성을 가져가고 싶다면 unknown타입을 쓰는 것입니다. 
-많이 쓰진 않지만 any와 unknown에 대해 알아보았습니다.&lt;/p&gt;
 
 &lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="typescript" /><summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입?</summary></entry></feed>

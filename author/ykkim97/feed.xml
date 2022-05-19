@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-05-11T13:45:16+09:00</updated>
+  <updated>2022-05-19T23:20:53+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -30,6 +30,63 @@
   
   
 
+  
+    <entry>
+      <title type="html">block과 inline의 차이점</title>
+      <link href="https://ykkim97.github.io/css-blockinline" rel="alternate" type="text/html" title="block과 inline의 차이점" />
+      <published>2022-05-17T23:00:00+09:00</published>
+      <updated>2022-05-17T23:00:00+09:00</updated>
+      <id>https://ykkim97.github.io/css-blockinline</id>
+      <content type="html" xml:base="https://ykkim97.github.io/css-blockinline">&lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
+
+&lt;p&gt;오늘은 block과 inline에 대해서 알아보겠습니다.&lt;br /&gt;
+display값으로 여러가지가 있지만 이번글에서는 block과 inline에 대해서만 알아볼 것입니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;display--block&quot;&gt;display : block&lt;/h3&gt;
+
+&lt;p&gt;먼저 block인데,
+block은 무조건 한 줄을 모두 차지합니다. 따라서 다음 요소는 줄바꿈이 되게됩니다.
+div태그가 대표적인 예시입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;display--inline&quot;&gt;display : inline&lt;/h3&gt;
+
+&lt;p&gt;inline은 한줄 전체를 차지하는 것이 아니라 해당 텍스트만큼만 자리를 차지합니다. 
+예로 span태그가 있습니다.&lt;br /&gt;
+inline 태그는 width와 height를 명시할 수 없습니다. 그리고 margin은 위아래엔 적용되지 않고 좌우만 적용됩니다.
+또한 padding도 보기에는 상하좌우 모두 적용되는 것처럼보이나, 위아래공간은 사실 차지하지 않습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;display--inline-block&quot;&gt;display : inline-block&lt;/h3&gt;
+
+&lt;p&gt;마지막으로 inline-block은 inline속성과 block속성을 모두가진 속성입니다. &lt;br /&gt;
+줄바꿈없이 한 줄에 다른 요소들을 배치할 수 있는 특징이 있고, width, height, margin-top, margin-bottom을 적용할 수 있습니다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="css" />
+      
+
+      
+        <summary type="html">block과 inline의 차이</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">var, let, const의 특징</title>
@@ -811,93 +868,6 @@ interface는 중복이 될 경우 extends한 것처럼 합쳐집니다. 물론 �
 
 &lt;p&gt;&lt;br /&gt;
 End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="typescript" />
-      
-
-      
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">TypeScript - 기본 타입 작성법</title>
-      <link href="https://ykkim97.github.io/typescript-basicsyntax" rel="alternate" type="text/html" title="TypeScript - 기본 타입 작성법" />
-      <published>2022-04-02T04:01:00+09:00</published>
-      <updated>2022-04-02T04:01:00+09:00</updated>
-      <id>https://ykkim97.github.io/typescript-basicsyntax</id>
-      <content type="html" xml:base="https://ykkim97.github.io/typescript-basicsyntax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;타입스크립트---타입-작성&quot;&gt;타입스크립트 - 타입 작성&lt;/h2&gt;
-
-&lt;p&gt;타입스크립트는 자바스크립트에 타입을 더한 언어입니다. 
-변수를 만들 때 변수의 타입을 지정가능합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;변수에-타입-지정하기&quot;&gt;변수에 타입 지정하기&lt;/h3&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;myName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;KYG&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;myName이란 변수 뒤에 콜론과 함께 string이라는 타입을 적어주었습니다.
-간단합니다.&lt;br /&gt;
-변수명 : 타입 으로 작성하면되며, myName이라는 변수는 string타입이 된것입니다. 만약 myName변수에 숫자를 할당한다면 어떻게 될까요? 바로 에러가 발생하게 됩니다.
-타입의 종류에는 string, number, boolean, null, undefined 등이 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;array와-object에-타입-지정하기&quot;&gt;Array와 Object에 타입 지정하기&lt;/h3&gt;
-
-&lt;p&gt;Array와 Object에는 타입을 어떻게 지정할까요?
-역시 간단합니다.&lt;br /&gt;&lt;/p&gt;
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;members&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Lee&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Choi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;배열기호인 “[]”와 함께 배열 안에 들어갈 값에 대한 타입을 앞에 적어줍니다.
-만약에 여러 타입이 동시에 들어올 수 있는 경우는 Union Type을 사용하면되는데 &lt;br /&gt;
-숫자와 문자가 동시에 들어올 수 있다고 가정하면&lt;/p&gt;
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exam&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Choi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Object는 어떻게 지정할까요?&lt;/p&gt;
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;내정보&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;”{}”기호를 사용하고 안에다가 key와 value의 타입을 작성하면 됩니다.
-&lt;br /&gt;
-그런데 모든 변수에 타입을 지정해야하나요?
-사실 타입을 굳이 다 적지 않아도 되는데 이유는 변수를 생성할 때 Typescript가 타입을 자동으로 부여해줍니다. 
-하지만 타입을 적어주는게 좋긴합니다. 
-&lt;br /&gt;
-오늘은 타입을 지정하는 법을 알아봤습니다.감사합니다.&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content>
 
       
       
