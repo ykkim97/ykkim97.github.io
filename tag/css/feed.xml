@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/css/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-05-19T23:20:53+09:00</updated>
+  <updated>2022-05-22T21:13:19+09:00</updated>
   <id>https://ykkim97.github.io/tag/css/feed.xml</id>
 
   
@@ -37,7 +37,13 @@
       <published>2022-05-17T23:00:00+09:00</published>
       <updated>2022-05-17T23:00:00+09:00</updated>
       <id>https://ykkim97.github.io/css-blockinline</id>
-      <content type="html" xml:base="https://ykkim97.github.io/css-blockinline">&lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
+      <content type="html" xml:base="https://ykkim97.github.io/css-blockinline">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
 
 &lt;p&gt;오늘은 block과 inline에 대해서 알아보겠습니다.&lt;br /&gt;
 display값으로 여러가지가 있지만 이번글에서는 block과 inline에 대해서만 알아볼 것입니다.&lt;br /&gt;&lt;/p&gt;
@@ -81,7 +87,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">block과 inline의 차이</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점</summary>
       
 
       
