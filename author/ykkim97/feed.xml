@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-05-22T21:13:19+09:00</updated>
+  <updated>2022-05-23T22:08:59+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -32,6 +32,117 @@
 
   
     <entry>
+      <title type="html">useState에 대해</title>
+      <link href="https://ykkim97.github.io/react-usestate" rel="alternate" type="text/html" title="useState에 대해" />
+      <published>2022-05-22T06:03:00+09:00</published>
+      <updated>2022-05-22T06:03:00+09:00</updated>
+      <id>https://ykkim97.github.io/react-usestate</id>
+      <content type="html" xml:base="https://ykkim97.github.io/react-usestate">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;usestate&quot;&gt;useState?&lt;/h2&gt;
+
+&lt;h3 id=&quot;usestate로-데이터를-저장해보자&quot;&gt;useState로 데이터를 저장해보자.&lt;/h3&gt;
+
+&lt;p&gt;우리는 보통 데이터를 저장할 때 다음과 같이 변수에 데이터를 저장합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;test data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이것은 기본적인 방법입니다. 리액트에서는 이것 말고 state라는 것을 만들어서 데이터를 저장할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;test data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 코드는 useState라는 훅을 사용하는 한 예제입니다.&lt;br /&gt;
+먼저 useState를 import를 합니다. 그리고 []안에 data와 setData, 이 두가지의 값이 올 수 있는데 첫번째 값은 data는 초기값에 해당하고,
+두번째 값인 setData는 data라는 값을 변경할 때 사용하는 함수입니다. data의 초기값으로는 현재 ‘test data’라는 문자열이 인자로 들어와 있는
+상태입니다.&lt;br /&gt;
+이렇게 정의하고 data라는 값을 사용하면 끝입니다. 사실 별거 없습니다.
+실제로 확인해보면 ‘test data’라는 문자열이 화면에 보여질 것입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;setstate&quot;&gt;setState&lt;/h3&gt;
+
+&lt;p&gt;위에서 사용했던 예제 코드에 버튼을 하나 추가해보겠습니다.&lt;/p&gt;
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;test data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;change data&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;change&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 버튼은 onClick 이벤트를 발생합니다. 클릭 시에는 setData()가 실행될 것입니다.
+setData함수는 위에서 설명했듯이 data라는 state의 값을 변경하는데 사용되는 함수 입니다. 함수의 파라미터로 문자가 변경되었다는 것을 나타내보기위해
+‘change data’라는 문자열을 집어넣었습니다. 이렇게 하면 버튼을 클릭했을 때 ‘change data’로 data의 값이 변경될 것입니다.
+실제로 확인해보면 값이 변경될 것입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;state를-사용하는-이유&quot;&gt;state를 사용하는 이유?&lt;/h3&gt;
+
+&lt;p&gt;state를 사용하는 이유가 무엇일까요?
+사실 일반적인 변수로 저장해서 사용하는 것이 더 간단해 보이기도 합니다.
+그러나 state는 변경이 생길 경우 그 state를 사용하는 html을 자동으로 재렌더링 해줍니다.&lt;/p&gt;
+
+&lt;p&gt;일반적인 변수를 사용하고 그 변수를 데이터바인딩했다고 가정할 경우 변수를 변경 후 html에도 변경사항을 반영하려면 직접 
+반영할 수 있도록 코드를 추가해줘야합니다. 
+&lt;br /&gt;
+&lt;br /&gt;
+하지만 state를 사용하면 추가적인 코드없이 자동으로 html을 재렌더링 해주기 때문에 UI를 개발할 때 편리하고 부드럽게 동작할 수 있습니다.
+물론 모든 데이터를 state로 저장할 필요는 없습니다. 상황에 따라서 사용하면 되는데 데이터가 자주 변경될 것 같은 데이터는 state를 사용하면되고, 별로 안바뀔거같은
+데이터는 변수로 저장해도 무방합니다. 
+&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="react" />
+      
+
+      
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">React - lazy, Suspense에 대해</title>
       <link href="https://ykkim97.github.io/react-lazysuspense" rel="alternate" type="text/html" title="React - lazy, Suspense에 대해" />
       <published>2022-05-21T05:43:00+09:00</published>
@@ -41,6 +152,7 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
@@ -117,7 +229,7 @@ Detail페이지가 필요해지는 시점에서는 약간의 지연시간이 발
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
       
 
       
@@ -287,6 +399,7 @@ Mutable은 변할 수 있는 값, Immutable은 변하지 않는 값을 뜻합니
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
@@ -351,7 +464,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
       
 
       
@@ -368,6 +481,7 @@ End.&lt;/p&gt;</content>
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
@@ -432,7 +546,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
       
 
       
@@ -449,6 +563,7 @@ End.&lt;/p&gt;</content>
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
@@ -541,7 +656,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
       
 
       
@@ -558,6 +673,7 @@ End.&lt;/p&gt;</content>
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
@@ -691,7 +807,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
       
 
       
@@ -865,111 +981,6 @@ else안에 param은 never타입이 되있을 것입니다.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;
 이번 글에서는 never타입에 대해서 알아보았습니다. 크게 사용할 일은 없겠지만 알아두면 괜찮을 것입니다.
 &lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="typescript" />
-      
-
-      
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">TypeScript - interface에 대해</title>
-      <link href="https://ykkim97.github.io/typescript-interface" rel="alternate" type="text/html" title="TypeScript - interface에 대해" />
-      <published>2022-04-03T02:27:00+09:00</published>
-      <updated>2022-04-03T02:27:00+09:00</updated>
-      <id>https://ykkim97.github.io/typescript-interface</id>
-      <content type="html" xml:base="https://ykkim97.github.io/typescript-interface">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;interface문법&quot;&gt;interface문법&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-interface사용법&quot;&gt;1. interface사용법&lt;/h3&gt;
-
-&lt;p&gt;type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. 
-“interface”라는 것으로도 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;interface를 사용하면 Object의 타입을 편하게 지정할 수 있습니다.&lt;/p&gt;
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;greenLine&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;“Line”이라고 하는 interface명을 지정하고 Object처럼 비슷하게 interface를 정의하면 됩니다.
-주의할 점은 인터페이스명은 대문자로 시작하여 작명합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-interface의-확장성&quot;&gt;2. interface의 확장성&lt;/h3&gt;
-
-&lt;p&gt;interface는 extends, 즉 확장이 가능합니다.
-만약 Animal interface &amp;amp; Dog interface가 필요하다고 가정하면..&lt;/p&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Animal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-    &lt;span class=&quot;nl&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Dog interface 옆에 extends Animal이라고 작성했습니다. 이렇게 되면 Dog interface는 Animal interface를 상속받습니다.
-Dog interface는 부모의 “name : string”도 가지고 있는 동시에 “age : number”도 가지고 있게 되는 것입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-type와-interface의-차이점&quot;&gt;3. type와 interface의 차이점?&lt;/h3&gt;
-
-&lt;p&gt;type과 interface의 차이점이 무엇일까요?
-extends하는 법이 조금 다릅니다.
-interface의 경우는 위에서 처럼 “extends”를 쓰면됩니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-type의 경우는 “&amp;amp;”을 사용하여 두 object를 합칠 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-&lt;span class=&quot;kd&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;그런데 사실 interface의 경우도 “&amp;amp;”기호로 합칠 수 있습니다..&lt;br /&gt;
-주의할점이 있다면 extends를 사용하면 타입끼리 중복속성이 발견될 경우 에러를 내주는데 &amp;amp; 쓰면 때에 따라 아닐 수도 있다는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-또한 interface는 타입명이 중복되는 것을 허용해주지만, type의 경우 중복선언을 허용하지 않습니다. 엄격하죠.
-interface는 중복이 될 경우 extends한 것처럼 합쳐집니다. 물론 속성이 중복되면 에러가 나고 type도 마찬가지로 에러가 발생합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
 End.&lt;/p&gt;</content>
 
       

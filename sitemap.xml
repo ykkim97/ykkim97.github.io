@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/react-usestate.html</loc>
+        
+        <lastmod>2022-05-22T06:03:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/react-lazysuspense.html</loc>
         
         <lastmod>2022-05-21T05:43:00+09:00</lastmod>
