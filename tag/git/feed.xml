@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/git/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-05-23T22:08:59+09:00</updated>
+  <updated>2022-06-11T20:31:50+09:00</updated>
   <id>https://ykkim97.github.io/tag/git/feed.xml</id>
 
   
@@ -32,12 +32,73 @@
 
   
     <entry>
-      <title type="html">Git!</title>
-      <link href="https://ykkim97.github.io/git-basic" rel="alternate" type="text/html" title="Git!" />
-      <published>2022-03-20T08:12:00+09:00</published>
-      <updated>2022-03-20T08:12:00+09:00</updated>
-      <id>https://ykkim97.github.io/git-basic</id>
-      <content type="html" xml:base="https://ykkim97.github.io/git-basic">&lt;p&gt;Git&lt;/p&gt;</content>
+      <title type="html">Github Label별 의미</title>
+      <link href="https://ykkim97.github.io/git-githubissuelabel" rel="alternate" type="text/html" title="Github Label별 의미" />
+      <published>2022-06-10T07:32:00+09:00</published>
+      <updated>2022-06-10T07:32:00+09:00</updated>
+      <id>https://ykkim97.github.io/git-githubissuelabel</id>
+      <content type="html" xml:base="https://ykkim97.github.io/git-githubissuelabel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;github-기본-label들&quot;&gt;Github 기본 Label들&lt;/h2&gt;
+
+&lt;p&gt;프로젝트를 하면서 많은 이슈가 발생하게 되고 이런것을 관리하는 것의 필요성을 느끼고 이슈관리에 대해서 공부하던 중 
+이슈에 라벨이라는 것을 달 수 있게 되어있었다. 여러가지가 있었는데 다음과 같다.
+&lt;br /&gt;
+&lt;br /&gt;
+깃허브의 이슈, PR(Pull Request)에 Label을 지정할 수 있다. 제공되는 라벨은 다음과 같다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;라벨&lt;/th&gt;
+      &lt;th&gt;의미&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;bug&lt;/td&gt;
+      &lt;td&gt;예기치 않은 문제 또는 의도하지 않은 동작(버그)을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;documentation&lt;/td&gt;
+      &lt;td&gt;문서를 개선하거나 추가 할 필요가 있음을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;duplicate&lt;/td&gt;
+      &lt;td&gt;해당이슈 또는 PR이 기존에 있음을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;enhancement&lt;/td&gt;
+      &lt;td&gt;새로운 기능 요청을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;good first issue&lt;/td&gt;
+      &lt;td&gt;처음 기여해볼 사람에게 좋은 문제를 나타냅니다&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;help wanted&lt;/td&gt;
+      &lt;td&gt;관리자가 문제 또는 PR 요청에 대한 도움을 원함을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;invalid&lt;/td&gt;
+      &lt;td&gt;이슈 또는 PR 요청이 더 이상 관련이 없음을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;question&lt;/td&gt;
+      &lt;td&gt;이슈 또는 풀 요청에 추가 정보가 필요함을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;wontfix&lt;/td&gt;
+      &lt;td&gt;문제 나 PR 요청에서 작업이 계속되지 않음을 나타냅니다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content>
 
       
       
@@ -58,7 +119,7 @@
       
 
       
-        <summary type="html">Git</summary>
+        <summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미</summary>
       
 
       
