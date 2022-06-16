@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-06-11T20:31:50+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Github Label별 의미</title><link href="https://ykkim97.github.io/git-githubissuelabel" rel="alternate" type="text/html" title="Github Label별 의미" /><published>2022-06-10T07:32:00+09:00</published><updated>2022-06-10T07:32:00+09:00</updated><id>https://ykkim97.github.io/git-githubissuelabel</id><content type="html" xml:base="https://ykkim97.github.io/git-githubissuelabel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-06-16T17:31:25+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">JS Event Loop, 자바스크립트 동작 원리</title><link href="https://ykkim97.github.io/javascript-eventloop" rel="alternate" type="text/html" title="JS Event Loop, 자바스크립트 동작 원리" /><published>2022-06-14T01:22:00+09:00</published><updated>2022-06-14T01:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-eventloop</id><content type="html" xml:base="https://ykkim97.github.io/javascript-eventloop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;js-event-loop에-대해서&quot;&gt;JS Event Loop에 대해서&lt;/h2&gt;
+
+&lt;h3 id=&quot;javascript-engine&quot;&gt;Javascript Engine?&lt;/h3&gt;
+
+&lt;p&gt;일단 Javascript Engine과 Rendering Engine은 다릅니다. Rendering Engine(Layout Engine)은 HTML과 CSS로 작성된 마크업 관련 코드를 
+웹 페이지에 렌더링하는, 그려주는 역할을 하는 것이고 반면 Javascript Engine은 자바스크립트로 작성된 코드를 해석하고 실행시켜주는 
+인터프리터입니다.
+&lt;br /&gt;
+구글의 V8과 같은 자바스크립트엔진은 Call Stack, Task Queue, Heap으로 크게 나뉘고 추가적으로 Event Loop라는것이 있는데 Task queue에 
+들어가는 task들을 관리합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;call-stack&quot;&gt;Call Stack&lt;/h3&gt;
+
+&lt;p&gt;자바스크립트는 한개의 Call Stack을 사용합니다. 코드 요청이 들어올 때마다 순차적으로 Call Stack에 담아서 처리합니다. 메소드가 실행이되면 
+Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행이 종료되면 해당 프레임은 pop됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;heapmemory-heap&quot;&gt;Heap(Memory Heap)&lt;/h3&gt;
+
+&lt;p&gt;동적으로 생성된 객체는 Heap에 할당이 됩니다. 구조화 되지 않는 더미같은 메모리 영역을 힙(heap)이라고 합니다. 
+정리하면 변수 선언, 함수 저장, 호출 이런 작업이 발생하는 공간입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;task-queueevent-queue&quot;&gt;Task Queue(Event Queue)&lt;/h3&gt;
+
+&lt;p&gt;처리해야하는 Task들을 임시로 저장하는 대기 큐가 존재합니다. 이것을 Task Queue라고 합니다. 이 Task Queue에 존재하는 Task들은 Call Stack이 
+비어졌을 때 대기 큐에 들어온 순서대로 Call Stack에 올려져서 수행됩니다. 자바스크립트에서는 비동기적으로 호출되는 함수들은 Call Stack으로 바로
+들어가지 않고 Task Queue에 들어가게 됩니다. 예를들어 Ajax요청코드, 이벤트리스너, setTimeout같은 것들이 있습니다. 
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;결론&quot;&gt;결론&lt;/h3&gt;
+
+&lt;p&gt;자바스크립트 코드가 실행되면 Call Stack에 하나씩 들어가서 처리가되는데 Ajax요청코드, 이벤트리스너, setTimeout같은 것들은 Task Queue에 들어가서 
+대기합니다. Event Loop가 Call Stack이 비어있는지 확인하고 비어있다면 Task Queue에서 하나씩 Call Stack으로 보냅니다. 보내진 작업은 똑같은 과정을 
+거쳐서 처리가 되는 것입니다.
+&lt;br /&gt;
+&lt;br /&gt;
+ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리</summary></entry><entry><title type="html">Github Label별 의미</title><link href="https://ykkim97.github.io/git-githubissuelabel" rel="alternate" type="text/html" title="Github Label별 의미" /><published>2022-06-10T07:32:00+09:00</published><updated>2022-06-10T07:32:00+09:00</updated><id>https://ykkim97.github.io/git-githubissuelabel</id><content type="html" xml:base="https://ykkim97.github.io/git-githubissuelabel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
 
@@ -225,63 +267,7 @@ inline 태그는 width와 height를 명시할 수 없습니다. 그리고 margin
 &lt;p&gt;마지막으로 inline-block은 inline속성과 block속성을 모두가진 속성입니다. &lt;br /&gt;
 줄바꿈없이 한 줄에 다른 요소들을 배치할 수 있는 특징이 있고, width, height, margin-top, margin-bottom을 적용할 수 있습니다.
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점</summary></entry><entry><title type="html">var, let, const의 특징</title><link href="https://ykkim97.github.io/javascript-varletconst" rel="alternate" type="text/html" title="var, let, const의 특징" /><published>2022-05-10T20:00:00+09:00</published><updated>2022-05-10T20:00:00+09:00</updated><id>https://ykkim97.github.io/javascript-varletconst</id><content type="html" xml:base="https://ykkim97.github.io/javascript-varletconst">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-varletconst&quot;&gt;var, let, const의 특징&lt;/a&gt;&lt;/li&gt;
-    
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;var-let-const의-특징&quot;&gt;var, let, const의 특징&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-var의-문제점&quot;&gt;1. var의 문제점&lt;/h3&gt;
-
-&lt;p&gt;이전 es5 까지만하더라도 var만이 존재했었고 이것으로만 변수를 선언할 수 있었습니다.
-하지만 var는 문제가 많았습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;korea&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;USA&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;a라는 변수가 이미 선언이 되었는데도 불구하고 다시 a라는 이름으로 변수를 선언해도 에러가 나지 않고 정상적으로 출력됩니다.&lt;br /&gt;
-유연하다고 생각할 수 있지만 이는 혼란을 줄 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-let과-const의-등장&quot;&gt;2. let과 const의 등장&lt;/h3&gt;
-
-&lt;p&gt;es6이후로 let과 const가 추가되었습니다.
-var를 사용하는 것을 권장하지 않고 이제 let과 const를 사용하는 것을 권장하고 있습니다.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;let과 const는 var처럼 변수이름을 중복하여 선언할 수 없습니다. 
-그러면 이 둘의 차이는 무엇일까요?
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// let&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;let을 사용하여 변수를 선언하고 2라는 값을 재할당할 경우 에러가 발생하지 않고 정상적으로 동작합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// const&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;하지만 const를 사용하여 변수를 선언하고 2라는 값을 재할당 해주었더니 에러가 발생했습니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-이처럼 let과 const는 Mutable, Immutable의 특성을 각각 가지고 있습니다.
-Mutable은 변할 수 있는 값, Immutable은 변하지 않는 값을 뜻합니다. 이렇게 계속 변하는 값을 정의할 때는 let을 이용하여 선언하고, 변하지 않는 값을 정의할 떄는 const를 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. var, let, const의 특징</summary></entry><entry><title type="html">React - 페이지 이동시 최상단 스크롤 방법</title><link href="https://ykkim97.github.io/react-scrolltotop" rel="alternate" type="text/html" title="React - 페이지 이동시 최상단 스크롤 방법" /><published>2022-05-02T01:43:00+09:00</published><updated>2022-05-02T01:43:00+09:00</updated><id>https://ykkim97.github.io/react-scrolltotop</id><content type="html" xml:base="https://ykkim97.github.io/react-scrolltotop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점</summary></entry><entry><title type="html">React - 페이지 이동시 최상단 스크롤 방법</title><link href="https://ykkim97.github.io/react-scrolltotop" rel="alternate" type="text/html" title="React - 페이지 이동시 최상단 스크롤 방법" /><published>2022-05-02T01:43:00+09:00</published><updated>2022-05-02T01:43:00+09:00</updated><id>https://ykkim97.github.io/react-scrolltotop</id><content type="html" xml:base="https://ykkim97.github.io/react-scrolltotop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;

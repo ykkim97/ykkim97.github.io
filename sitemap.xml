@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/javascript-eventloop.html</loc>
+        
+        <lastmod>2022-06-14T01:22:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/git-githubissuelabel.html</loc>
         
         <lastmod>2022-06-10T07:32:00+09:00</lastmod>
@@ -55,22 +71,6 @@
         <loc>https://ykkim97.github.io/css-blockinline.html</loc>
         
         <lastmod>2022-05-17T23:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>https://ykkim97.github.io/javascript-varletconst.html</loc>
-        
-        <lastmod>2022-05-10T20:00:00+09:00</lastmod>
         
 
         

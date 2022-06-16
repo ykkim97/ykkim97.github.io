@@ -189,6 +189,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "javascript-eventloop": {
+        "title": "JS Event Loop, 자바스크립트 동작 원리",
+            "author": "ykkim97",
+            "category": "",
+            "content": "JavaScript은 다음과 같이 구성되어 있습니다.     JS Event Loop, 자바스크립트 동작 원리    JS Event Loop에 대해서Javascript Engine?일단 Javascript Engine과 Rendering Engine은 다릅니다. Rendering Engine(Layout Engine)은 HTML과 CSS로 작성된 마크업 관련 코드를 웹 페이지에 렌더링하는, 그려주는 역할을 하는 것이고 반면 Javascript Engine은 자바스크립트로 작성된 코드를 해석하고 실행시켜주는 인터프리터입니다.구글의 V8과 같은 자바스크립트엔진은 Call Stack, Task Queue, Heap으로 크게 나뉘고 추가적으로 Event Loop라는것이 있는데 Task queue에 들어가는 task들을 관리합니다.Call Stack자바스크립트는 한개의 Call Stack을 사용합니다. 코드 요청이 들어올 때마다 순차적으로 Call Stack에 담아서 처리합니다. 메소드가 실행이되면 Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행이 종료되면 해당 프레임은 pop됩니다.Heap(Memory Heap)동적으로 생성된 객체는 Heap에 할당이 됩니다. 구조화 되지 않는 더미같은 메모리 영역을 힙(heap)이라고 합니다. 정리하면 변수 선언, 함수 저장, 호출 이런 작업이 발생하는 공간입니다.Task Queue(Event Queue)처리해야하는 Task들을 임시로 저장하는 대기 큐가 존재합니다. 이것을 Task Queue라고 합니다. 이 Task Queue에 존재하는 Task들은 Call Stack이 비어졌을 때 대기 큐에 들어온 순서대로 Call Stack에 올려져서 수행됩니다. 자바스크립트에서는 비동기적으로 호출되는 함수들은 Call Stack으로 바로들어가지 않고 Task Queue에 들어가게 됩니다. 예를들어 Ajax요청코드, 이벤트리스너, setTimeout같은 것들이 있습니다. 결론자바스크립트 코드가 실행되면 Call Stack에 하나씩 들어가서 처리가되는데 Ajax요청코드, 이벤트리스너, setTimeout같은 것들은 Task Queue에 들어가서 대기합니다. Event Loop가 Call Stack이 비어있는지 확인하고 비어있다면 Task Queue에서 하나씩 Call Stack으로 보냅니다. 보내진 작업은 똑같은 과정을 거쳐서 처리가 되는 것입니다. End.",
+        "url": "/javascript-eventloop"
+    }
+    ,
+    
     "git-githubissuelabel": {
         "title": "Github Label별 의미",
             "author": "ykkim97",
@@ -222,15 +231,6 @@ into the {body} of the default.hbs template -->
             "category": "",
             "content": "CSS는 다음과 같이 구성되어 있습니다.     CSS의 의미와 적용방법    block과 inline의 차이점block과 inline의 차이오늘은 block과 inline에 대해서 알아보겠습니다.display값으로 여러가지가 있지만 이번글에서는 block과 inline에 대해서만 알아볼 것입니다.display : block먼저 block인데,block은 무조건 한 줄을 모두 차지합니다. 따라서 다음 요소는 줄바꿈이 되게됩니다.div태그가 대표적인 예시입니다.display : inlineinline은 한줄 전체를 차지하는 것이 아니라 해당 텍스트만큼만 자리를 차지합니다. 예로 span태그가 있습니다.inline 태그는 width와 height를 명시할 수 없습니다. 그리고 margin은 위아래엔 적용되지 않고 좌우만 적용됩니다.또한 padding도 보기에는 상하좌우 모두 적용되는 것처럼보이나, 위아래공간은 사실 차지하지 않습니다.display : inline-block마지막으로 inline-block은 inline속성과 block속성을 모두가진 속성입니다. 줄바꿈없이 한 줄에 다른 요소들을 배치할 수 있는 특징이 있고, width, height, margin-top, margin-bottom을 적용할 수 있습니다.End.",
         "url": "/css-blockinline"
-    }
-    ,
-    
-    "javascript-varletconst": {
-        "title": "var, let, const의 특징",
-            "author": "ykkim97",
-            "category": "",
-            "content": "JavaScript은 다음과 같이 구성되어 있습니다.     var, let, const의 특징    var, let, const의 특징1. var의 문제점이전 es5 까지만하더라도 var만이 존재했었고 이것으로만 변수를 선언할 수 있었습니다.하지만 var는 문제가 많았습니다.var a = 'korea';console.log(a);var a = 'USA';console.log(a);a라는 변수가 이미 선언이 되었는데도 불구하고 다시 a라는 이름으로 변수를 선언해도 에러가 나지 않고 정상적으로 출력됩니다.유연하다고 생각할 수 있지만 이는 혼란을 줄 수 있습니다.2. let과 const의 등장es6이후로 let과 const가 추가되었습니다.var를 사용하는 것을 권장하지 않고 이제 let과 const를 사용하는 것을 권장하고 있습니다.let과 const는 var처럼 변수이름을 중복하여 선언할 수 없습니다. 그러면 이 둘의 차이는 무엇일까요?// letlet a = 1;a = 2;console.log(a);let을 사용하여 변수를 선언하고 2라는 값을 재할당할 경우 에러가 발생하지 않고 정상적으로 동작합니다.// constconst a = 1;a = 2;console.log(a);하지만 const를 사용하여 변수를 선언하고 2라는 값을 재할당 해주었더니 에러가 발생했습니다. 이처럼 let과 const는 Mutable, Immutable의 특성을 각각 가지고 있습니다.Mutable은 변할 수 있는 값, Immutable은 변하지 않는 값을 뜻합니다. 이렇게 계속 변하는 값을 정의할 때는 let을 이용하여 선언하고, 변하지 않는 값을 정의할 떄는 const를 사용합니다.End.",
-        "url": "/javascript-varletconst"
     }
     ,
     
