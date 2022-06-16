@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/javascript-hoisting.html</loc>
+        
+        <lastmod>2022-06-14T04:22:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/javascript-eventloop.html</loc>
         
         <lastmod>2022-06-14T01:22:00+09:00</lastmod>

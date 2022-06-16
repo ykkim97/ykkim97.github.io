@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-16T17:31:25+09:00</updated>
+  <updated>2022-06-17T00:07:44+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -32,6 +32,99 @@
 
   
     <entry>
+      <title type="html">호이스팅이란 , var, let, const 차이</title>
+      <link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" />
+      <published>2022-06-14T04:22:00+09:00</published>
+      <updated>2022-06-14T04:22:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-hoisting</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;호이스팅에-대해서&quot;&gt;호이스팅에 대해서&lt;/h2&gt;
+
+&lt;p&gt;“hoisting”의 사전적 의미는 “끌어올리기”라는 뜻이다. 일단 hoisting은 함수가 실행되기전에 안에 있는 변수들을 그 유효범위의 
+최상단으로 끌어올리는 것을 의미합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;var-키워드의-문제점&quot;&gt;var 키워드의 문제점?&lt;/h3&gt;
+
+&lt;p&gt;ES6 이전까지는 변수를 선언할 때 var 키워드만 사용할 수 있었습니다. 하지만 var 키워드는 문제점이 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;1) 변수의 중복 선언 허용 문제&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;x라는 동일한 이름의 변수가 선언된 것을 확인할 수 있는데, 먼저 선언된 x의 값이 변경되버리는 문제가 발생합니다.&lt;/p&gt;
+
+&lt;p&gt;2) 함수 레벨 스코프&lt;/p&gt;
+
+&lt;p&gt;var 키워드로 선언한 변수는 함수의 코드블록만 지역 스코프로 인정합니다. 함수를 제외하고 if나 for문안에 var 키워드를 사용하여 변수를 
+선언했다면? 지역변수로 취급을 하지않고 전역변수로 취급됩니다. 따라서 함수레벨스코프는 전역변수를 남발할 가능성을 높입니다.&lt;/p&gt;
+
+&lt;p&gt;3) 변수 호이스팅&lt;/p&gt;
+
+&lt;p&gt;var 키워드로 변수를 선언하면 변수 호이스팅에 의해 그 선언문이 범위의 최상단으로 끌어 올려진 것처럼 동작합니다. 변수 선언문 이전에 그 
+변수를 참조할 수 있다는 것인데, 에러를 발생시키지 않지만 가독성을 떨어뜨리고 오류를 발생시킬 여지를 남기는 문제가 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;let과-const의-등장&quot;&gt;let과 const의 등장&lt;/h3&gt;
+
+&lt;p&gt;이런 var의 문제를 해결하고자 ES6에서 let과 const를 도입하였습니다. 
+let 키워드부터 살펴보겠습니다.&lt;br /&gt;
+&lt;br /&gt;
+let은 변수 중복 선언을 금지하고, 함수의 코드블록만 지역스코프로 인정하는 var와 달리 모든 코드블록을 지역스코프로 인정하는 블록레벨스코프를 따릅니다.
+또한 let키워드로 선언한 변수는 “선언”과 “초기화”단계가 분리되어 진행됩니다. 런타임 이전에 자바스크립트 엔진에 의해 선언단계가 먼저 진행되지만 초기화
+단계는 실제 변수 선언문에 도달했을 때 실행됩니다.&lt;br /&gt;
+&lt;br /&gt;
+let 키워드로 선언한 변수는 스코프의 시작부터 초기화단계가 시작되는 시점(변수 선언문)까지 변수를 참조할 수 없습니다. 이 구간을 일시적 사각지대(Temporal Dead Zone)
+라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+이번엔 const 키워드를 알아보겠습니다.&lt;br /&gt;
+&lt;br /&gt;
+const 키워드는 상수를 선언하기 위해서 사용되는데, 꼭 상수만을 위해 사용하는 것은 아닙니다.&lt;br /&gt;
+const는 대부분 let과 동일하지만 const 키워드로 선언된 변수는 꼭 선언과 동시에 초기화를 해주어야하고 변수의 재할당이 불가능합니다. 
+주의해야할 점이 있는데, const로 선언된 변수에 원시값을 할당한 경우는 값을 변경하지 못하는게 맞지만 const로 선언된 변수에 객체를 할당한
+경우 값을 변경할 수 있습니다. const는 재할당을 금지하는 것이지 불변을 의미하는 것이 아닙니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;그럼-무엇을-보통-쓸까&quot;&gt;그럼 무엇을 보통 쓸까?&lt;/h3&gt;
+
+&lt;p&gt;변수 선언은 기본적으로 const를 사용하는 것이 좋고 let은 재할당이 필요할 때 사용하는 것이 좋습니다. 
+추가적으로 var는 권장하지 않는 방법입니다.&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">JS Event Loop, 자바스크립트 동작 원리</title>
       <link href="https://ykkim97.github.io/javascript-eventloop" rel="alternate" type="text/html" title="JS Event Loop, 자바스크립트 동작 원리" />
       <published>2022-06-14T01:22:00+09:00</published>
@@ -40,6 +133,7 @@
       <content type="html" xml:base="https://ykkim97.github.io/javascript-eventloop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
     
 &lt;/ul&gt;
 
@@ -100,7 +194,7 @@ Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행�
       
 
       
-        <summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리</summary>
+        <summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이</summary>
       
 
       
@@ -889,85 +983,6 @@ End.&lt;/p&gt;</content>
 
       
         <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">TypeScript - tuple 타입</title>
-      <link href="https://ykkim97.github.io/typescript-tupletype" rel="alternate" type="text/html" title="TypeScript - tuple 타입" />
-      <published>2022-04-05T04:53:00+09:00</published>
-      <updated>2022-04-05T04:53:00+09:00</updated>
-      <id>https://ykkim97.github.io/typescript-tupletype</id>
-      <content type="html" xml:base="https://ykkim97.github.io/typescript-tupletype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;TypeScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basic&quot;&gt;TypeScript란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-basicsyntax&quot;&gt;TypeScript - 기본 타입 작성법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-uniontype&quot;&gt;TypeScript - Union Type, any, unknown&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-narrowing&quot;&gt;Type Narrowing&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-typekeyword&quot;&gt;Type 키워드로 타입을 변수에 담기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-asconst&quot;&gt;as const에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-interface&quot;&gt;TypeScript - interface에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-nevertype&quot;&gt;TypeScript - never타입?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./typescript-tupletype&quot;&gt;TypeScript - tuple타입?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tuple-타입&quot;&gt;tuple 타입&lt;/h2&gt;
-
-&lt;h3 id=&quot;tuple타입-지정하기&quot;&gt;tuple타입 지정하기&lt;/h3&gt;
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;food&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;김치&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;food라는 array가 있습니다. array의 타입지정은 위와 같이 할 수 있습니다.
-string타입와 boolean타입이 들어갈 수 있는 것입니다. 
-여기서 첫번째값은 string, 두번째값은 boolean타입만 오도록 타입지정을 더 엄격하게 하고 싶다면 어떻게 할까요? 이럴 때 tuple타입을 쓰면 됩니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;food&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;김치&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;대괄호안에 그 위치에 맞는 타입을 넣으면 됩니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;rest-parameter---tuple타입&quot;&gt;rest parameter - tuple타입&lt;/h3&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Lee&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;rest parameter도 위와 같이 동일하게 tuple타입을 적용할 수 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;array를-spread-연산자로-합칠-때&quot;&gt;array를 spread 연산자로 합칠 때&lt;/h3&gt;
-
-&lt;div class=&quot;language-typescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;array를 spread 연산자로 합칠 때는 위와 같이 타입지정하면 됩니다.&lt;/p&gt;
-
-&lt;p&gt;tuple타입은 더 정확한 타입지정을 도와줍니다.&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="typescript" />
-      
-
-      
-        <summary type="html">TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입?</summary>
       
 
       
