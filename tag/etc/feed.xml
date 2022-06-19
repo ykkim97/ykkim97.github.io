@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://ykkim97.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-06-19T19:36:05+09:00</updated>
+  <id>https://ykkim97.github.io/tag/etc/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">YoungGwon’s IT Tech Blog | </title>
+  
+
+  
+    <subtitle>IT 기술 블로그입니다.</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Firebase DB에서 값을 불러올 수 없는 문제 해결</title>
+      <link href="https://ykkim97.github.io/etc-firebasedbrules" rel="alternate" type="text/html" title="Firebase DB에서 값을 불러올 수 없는 문제 해결" />
+      <published>2022-06-19T03:32:00+09:00</published>
+      <updated>2022-06-19T03:32:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-firebasedbrules</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-firebasedbrules">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;firebase-db에서-값을-불러올-수-없는-문제-해결&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/h2&gt;
+
+&lt;p&gt;진행 중에 있는 프로젝트의 버그를 수정하기 위해 확인을 했는데 갑자기 문제가 발생했다…&lt;br /&gt;
+Firebase의 Realtime Database, Storage에 있는 데이터를 불러오지 못하는 문제였다. 처음에는 코드를 잘못만진게 아닌가 싶었는데,
+그런 이유는 아니었고 Firebase와 연동 자체가 안되는 문제였다. 갑작스러웠지만 인터넷 검색을 통해 문제를 해결하려고 노력했다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/174476085-c42fc32e-20f6-4e0f-b9ad-0a1b412263e9.JPG&quot; alt=&quot;보안규칙안내메세지캡처&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;firebase 알림에 위와 같은 메세지가 와있는 것을 발견했는데, 보안규칙을 업데이트 해야한다는 것을 알았다.&lt;/p&gt;
+
+&lt;p&gt;처음 데이터베이스를 사용할 때 잠금모드와 테스트모드중 테스트모드를 선택했는데 생각해보니 테스트모드는 30일이 지나면 데이터베이스에서 읽을 수 없도록 되어있었다.
+계속 유지하려면 보안 규칙설정을 해줘야한다.
+&lt;br /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/174476457-bd2bab62-6e45-41f7-b56d-f7c43ac15167.JPG&quot; alt=&quot;보안규칙캡처&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위처럼 보안규칙을 바꿔주었더니 다시 정상적으로 동작했다.
+물론 보안 규칙이 공개로 정의되어 있어 누구나 데이터베이스의 데이터를 도용, 수정, 삭제할 수 있지만 아직은 개발단계이기 때문에 일단 이렇게 수정해놓고 사용하기로 했다.
+&lt;br /&gt;
+&lt;br /&gt;
+Firebase 공식 문서 참조&lt;br /&gt;
+https://firebase.google.com/docs/rules/insecure-rules#database 
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
