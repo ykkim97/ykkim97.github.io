@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/html/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-19T19:36:05+09:00</updated>
+  <updated>2022-06-20T15:03:27+09:00</updated>
   <id>https://ykkim97.github.io/tag/html/feed.xml</id>
 
   
@@ -32,6 +32,63 @@
 
   
     <entry>
+      <title type="html">DOCTYPE의 의미?</title>
+      <link href="https://ykkim97.github.io/html-doctype" rel="alternate" type="text/html" title="DOCTYPE의 의미?" />
+      <published>2022-06-19T23:24:00+09:00</published>
+      <updated>2022-06-19T23:24:00+09:00</updated>
+      <id>https://ykkim97.github.io/html-doctype</id>
+      <content type="html" xml:base="https://ykkim97.github.io/html-doctype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+DOCTYPE의 의미가 무엇일까? &lt;br /&gt;
+DOCTYPE은 Document Type의 약어로 문서의 유형을 정의하기 위해 사용하는 선언문(DTD, Documnet Type Definition)입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 
+    ......
+ --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위처럼 html 문서 맨 처음에 선언하는데 이는 웹문서의 시작을 알려주고 웹 브라우저에서 처리할 문서가 html이며 어떤 버전으로 사용하였으니
+해당 방식으로 해석하라는 의미를 갖습니다. 
+&lt;br /&gt;&lt;br /&gt;
+HTML5 이전에는 DOCTYPE을 선언하는 코드가 까다로웠지만 HTML5 부터는 간단하게 할 수 있게 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="html" />
+      
+
+      
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미?</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">웹의 기본중의 기본! HTML에 대해서 알아보자</title>
       <link href="https://ykkim97.github.io/html-basic" rel="alternate" type="text/html" title="웹의 기본중의 기본! HTML에 대해서 알아보자" />
       <published>2022-03-20T08:12:00+09:00</published>
@@ -41,6 +98,7 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -81,7 +139,7 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미?</summary>
       
 
       
@@ -98,6 +156,7 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;html-기본-태그들&quot;&gt;HTML 기본 태그들&lt;/h1&gt;
@@ -207,7 +266,7 @@ h 뒤의 숫자가 커질수록 글씨 크기가 작아집니다.
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미?</summary>
       
 
       
