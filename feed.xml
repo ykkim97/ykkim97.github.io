@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-06-20T15:03:27+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">DOCTYPE의 의미?</title><link href="https://ykkim97.github.io/html-doctype" rel="alternate" type="text/html" title="DOCTYPE의 의미?" /><published>2022-06-19T23:24:00+09:00</published><updated>2022-06-19T23:24:00+09:00</updated><id>https://ykkim97.github.io/html-doctype</id><content type="html" xml:base="https://ykkim97.github.io/html-doctype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-03T22:04:52+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Three.js에 대해서</title><link href="https://ykkim97.github.io/javascript-AboutThreejs" rel="alternate" type="text/html" title="Three.js에 대해서" /><published>2022-07-02T06:22:00+09:00</published><updated>2022-07-02T06:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-AboutThreejs</id><content type="html" xml:base="https://ykkim97.github.io/javascript-AboutThreejs">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 
+관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 
+그래서 배우면서 알게된 내용을 정리해 나가려고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;threejs-&quot;&gt;Three.js ?&lt;/h2&gt;
+
+&lt;p&gt;먼저 WebGL이라는 것에 대해서 알아볼 필요가 있다. WebGL은 웹 상에서 그래픽을 나타낼 수 있는 라이브러리다.
+그런데 이 WebGL API 자체가 완전 로우 레벨이라서 처음부터 하나하나 개발해 나가야 하고 코드양도 많으며 복잡하다고 한다.
+Three.js는 이 WebGL을 조금 더 쉽고 간편하게 사용할 수 있도록 도와주는 라이브러리인 것이다.&lt;/p&gt;
+
+&lt;p&gt;공식사이트는 다음과 같다.
+&lt;br /&gt;
+&lt;a href=&quot;https://threejs.org/&quot;&gt;Threejs.org&lt;/a&gt;.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;물론 Three.js 말고도 다른 라이브러리들이 있지만 현재는 Three.js가 가장 인기가 많다고 한다.
+&lt;br /&gt;
+저 공식사이트에는 이것을 활용하여 만들어진 사이트들을 확인할 수 있다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/177040641-0f736e4a-c6f6-4896-a22d-43b5fc973eee.png&quot; alt=&quot;image&quot; width=&quot;840&quot; height=&quot;500&quot; /&gt;
+&lt;a href=&quot;https://eyes.nasa.gov/apps/mars2020/&quot;&gt;https://eyes.nasa.gov/apps/mars2020/&lt;/a&gt;.
+&lt;br /&gt;
+위 이미지에서 볼 수 있듯이 웹 상에서 화성을 표현하고 우주를 표현하는 등 멋진 표현을 웹사이트에 적용할 수 있는 것이다.
+three.js는 공식사이트에서 다운받거나 npm을 통해서 설치하는데 보통은 npm으로 다운받는 편이다.
+다음 글에서 three.js에 대해서 좀더 자세히 정리해보도록 하겠다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary></entry><entry><title type="html">DOCTYPE의 의미?</title><link href="https://ykkim97.github.io/html-doctype" rel="alternate" type="text/html" title="DOCTYPE의 의미?" /><published>2022-06-19T23:24:00+09:00</published><updated>2022-06-19T23:24:00+09:00</updated><id>https://ykkim97.github.io/html-doctype</id><content type="html" xml:base="https://ykkim97.github.io/html-doctype">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
@@ -50,10 +84,11 @@ Firebase 공식 문서 참조&lt;br /&gt;
 https://firebase.google.com/docs/rules/insecure-rules#database 
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결</summary></entry><entry><title type="html">호이스팅이란 , var, let, const 차이</title><link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" /><published>2022-06-14T04:22:00+09:00</published><updated>2022-06-14T04:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-hoisting</id><content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결</summary></entry><entry><title type="html">호이스팅이란 , var, let, const 차이</title><link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" /><published>2022-06-14T04:22:00+09:00</published><updated>2022-06-14T04:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-hoisting</id><content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     
 &lt;/ul&gt;
 
@@ -109,10 +144,11 @@ const는 대부분 let과 동일하지만 const 키워드로 선언된 변수는
 &lt;p&gt;변수 선언은 기본적으로 const를 사용하는 것이 좋고 let은 재할당이 필요할 때 사용하는 것이 좋습니다. 
 추가적으로 var는 권장하지 않는 방법입니다.&lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이</summary></entry><entry><title type="html">JS Event Loop, 자바스크립트 동작 원리</title><link href="https://ykkim97.github.io/javascript-eventloop" rel="alternate" type="text/html" title="JS Event Loop, 자바스크립트 동작 원리" /><published>2022-06-14T01:22:00+09:00</published><updated>2022-06-14T01:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-eventloop</id><content type="html" xml:base="https://ykkim97.github.io/javascript-eventloop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary></entry><entry><title type="html">JS Event Loop, 자바스크립트 동작 원리</title><link href="https://ykkim97.github.io/javascript-eventloop" rel="alternate" type="text/html" title="JS Event Loop, 자바스크립트 동작 원리" /><published>2022-06-14T01:22:00+09:00</published><updated>2022-06-14T01:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-eventloop</id><content type="html" xml:base="https://ykkim97.github.io/javascript-eventloop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     
 &lt;/ul&gt;
 
@@ -152,7 +188,7 @@ Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행�
 거쳐서 처리가 되는 것입니다.
 &lt;br /&gt;
 &lt;br /&gt;
- End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이</summary></entry><entry><title type="html">Github Label별 의미</title><link href="https://ykkim97.github.io/git-githubissuelabel" rel="alternate" type="text/html" title="Github Label별 의미" /><published>2022-06-10T07:32:00+09:00</published><updated>2022-06-10T07:32:00+09:00</updated><id>https://ykkim97.github.io/git-githubissuelabel</id><content type="html" xml:base="https://ykkim97.github.io/git-githubissuelabel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary></entry><entry><title type="html">Github Label별 의미</title><link href="https://ykkim97.github.io/git-githubissuelabel" rel="alternate" type="text/html" title="Github Label별 의미" /><published>2022-06-10T07:32:00+09:00</published><updated>2022-06-10T07:32:00+09:00</updated><id>https://ykkim97.github.io/git-githubissuelabel</id><content type="html" xml:base="https://ykkim97.github.io/git-githubissuelabel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
 
@@ -427,52 +463,4 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css
 pathname을 인식하게 하기위해 꼭 컴포넌트를 라우터 내부에 넣어야한다고 한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary></entry><entry><title type="html">React Bootstrap 사용하기</title><link href="https://ykkim97.github.io/react-bootstrapguide" rel="alternate" type="text/html" title="React Bootstrap 사용하기" /><published>2022-04-27T08:32:00+09:00</published><updated>2022-04-27T08:32:00+09:00</updated><id>https://ykkim97.github.io/react-bootstrapguide</id><content type="html" xml:base="https://ykkim97.github.io/react-bootstrapguide">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;react에서-bootstrap사용하기&quot;&gt;React에서 Bootstrap사용하기&lt;/h2&gt;
-
-&lt;p&gt;React에서 Bootstrap을 사용하는 방법을 알아보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;일단 Bootstrap을 설치합니다.
-터미널에 다음과 같이 입력하여 설치합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;npm install react-bootstrap bootstrap
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그 다음 최상단 파일인 index.js 또는 App.js에 css를 import해주면됩니다.&lt;/p&gt;
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;bootstrap/dist/css/bootstrap.min.css&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;또는 index.html파일에 다음을 link시켜주면됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&quot;&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;React에서 Bootstrap을 사용할 때 주의할 점은 이후에 부트스트랩 컴포넌트를 복사붙여넣기하고 바로 확인해보면 에러가 발생합니다.
-추가적으로 해야할 것은 붙여넣은 컴포넌트를 따로 import해주어야한다는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-예시 :&lt;/p&gt;
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Navbar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Nav&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;NavDropdown&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-bootstrap&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 import하면 정상적으로 사용이 가능합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;End!&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary></entry></feed>
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary></entry></feed>

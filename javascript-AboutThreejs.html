@@ -14,7 +14,7 @@
 
 
 
-    <title>React - 페이지 이동시 최상단 스크롤 방법</title>
+    <title>Three.js에 대해서</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/react-scrolltotop" />
+    <link rel="canonical" href="https://ykkim97.github.io/javascript-AboutThreejs" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="React - 페이지 이동시 최상단 스크롤 방법" />
-    <meta property="og:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 React에서 페이지 이동시 최상단 스크롤 방법 프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에 전환된 페이지의" />
-    <meta property="og:url" content="https://ykkim97.github.io/react-scrolltotop" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
+    <meta property="og:title" content="Three.js에 대해서" />
+    <meta property="og:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 그래서 배우면서 알게된 내용을 정리해 나가려고 한다." />
+    <meta property="og:url" content="https://ykkim97.github.io/javascript-AboutThreejs" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/threejs-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-05-02T01:43:00+09:00" />
-    <meta property="article:modified_time" content="2022-05-02T01:43:00+09:00" />
-    <meta property="article:tag" content="React" />
+    <meta property="article:published_time" content="2022-07-02T06:22:00+09:00" />
+    <meta property="article:modified_time" content="2022-07-02T06:22:00+09:00" />
+    <meta property="article:tag" content="Javascript" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="React - 페이지 이동시 최상단 스크롤 방법" />
-    <meta name="twitter:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 React에서 페이지 이동시 최상단 스크롤 방법 프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에 전환된 페이지의" />
+    <meta name="twitter:title" content="Three.js에 대해서" />
+    <meta name="twitter:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 그래서 배우면서 알게된 내용을 정리해 나가려고 한다." />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/threejs-logo.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="React" />
+    <meta name="twitter:data2" content="Javascript" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/react-scrolltotop",
+    "url": "https://ykkim97.github.io/javascript-AboutThreejs",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/react-logo.jpg",
+        "url": "https://ykkim97.github.io/assets/built/images/threejs-logo.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/react-scrolltotop"
+        "@id": "https://ykkim97.github.io/javascript-AboutThreejs"
     },
-    "description": "React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 React에서 페이지 이동시 최상단 스크롤 방법 프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에 전환된 페이지의"
+    "description": "JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 그래서 배우면서 알게된 내용을 정리해 나가려고 한다."
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="React - 페이지 이동시 최상단 스크롤 방법" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Three.js에 대해서" href="/feed.xml" />
 
 
 </head>
@@ -177,80 +177,67 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-react post tag-react ">
+        <article class="post-full  tag-javascript post tag-js ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 2 May 2022"> 2 May 2022</time>
+                    <time class="post-full-meta-date" datetime=" 2 July 2022"> 2 July 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/react/'>REACT</a>
+                                <a href='/tag/javascript/'>JAVASCRIPT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">React - 페이지 이동시 최상단 스크롤 방법</h1>
+                <h1 class="post-full-title">Three.js에 대해서</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/react-logo.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/threejs-logo.png)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">React은 다음과 같이 구성되어 있습니다. </span></p>
+                    <p><span class="table-of-contents-list">JavaScript 관련 글입니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./react-basic">React란?</a></li>
-    <li><a href="./react-mkcomponent">React 컴포넌트 만들기</a></li>
-    <li><a href="./react-usestate">useState에 대해</a></li>
-    <li><a href="./react-gugudan">React로 간단한 구구단게임 만들기!</a></li>
-    <li><a href="./react-contextapi">props가 번거로울 때 Context API를 사용해보자</a></li>
-    <li><a href="./react-bootstrapguide">React에서 Bootstrap사용하기</a></li>
-    <li><a href="./react-scrolltotop">React 페이지 이동시 최상단 스크롤 방법</a></li>
-    <li><a href="./react-lazysuspense">React - lazy, Suspense에 대해</a></li>
+    <li><a href="./javascript-eventloop">JS Event Loop, 자바스크립트 동작 원리</a></li>
+    <li><a href="./javascript-hoisting">호이스팅이란 , var, let, const 차이</a></li>
+    <li><a href="./javascript-AboutThreejs">Three.js에 대해</a></li>
+    
 </ul>
 
-<h2 id="react에서-페이지-이동시-최상단-스크롤-방법">React에서 페이지 이동시 최상단 스크롤 방법</h2>
+<p><br /><br /><br />
+요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 
+관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 
+그래서 배우면서 알게된 내용을 정리해 나가려고 한다.</p>
 
-<p>프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에
-전환된 페이지의 스크롤 위치가 전 페이지의 스크롤 위치와 동일해지는 문제를 발견
-하였다. 구글에 검색해본 결과 해결방법이 잘 나와있었다.</p>
+<h2 id="threejs-">Three.js ?</h2>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">useLocation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
+<p>먼저 WebGL이라는 것에 대해서 알아볼 필요가 있다. WebGL은 웹 상에서 그래픽을 나타낼 수 있는 라이브러리다.
+그런데 이 WebGL API 자체가 완전 로우 레벨이라서 처음부터 하나하나 개발해 나가야 하고 코드양도 많으며 복잡하다고 한다.
+Three.js는 이 WebGL을 조금 더 쉽고 간편하게 사용할 수 있도록 도와주는 라이브러리인 것이다.</p>
 
-<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">ScrollToTop</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="p">{</span> <span class="nx">pathname</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+<p>공식사이트는 다음과 같다.
+<br />
+<a href="https://threejs.org/">Threejs.org</a>.
+<br /></p>
 
-    <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="p">},</span> <span class="p">[</span><span class="nx">pathname</span><span class="p">]);</span>
-
-    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<p>다음과 같은 코드에 해당하는 ScrollToTop이라는 컴포넌트를 만들고</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">ScrollToTop</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./components/common/ScrollToTop</span><span class="dl">"</span><span class="p">;</span>
-
-<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-  <span class="p">&lt;</span><span class="nc">BrowserRouter</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nc">ScrollToTop</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;</span>
-  <span class="p">&lt;/</span><span class="nc">BrowserRouter</span><span class="p">&gt;,</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div></div>
-<p>ScrollToTop 컴포넌트를 라우터 내부에 넣어주면 된다.
-pathname을 인식하게 하기위해 꼭 컴포넌트를 라우터 내부에 넣어야한다고 한다.</p>
-
-<p><br />
+<p>물론 Three.js 말고도 다른 라이브러리들이 있지만 현재는 Three.js가 가장 인기가 많다고 한다.
+<br />
+저 공식사이트에는 이것을 활용하여 만들어진 사이트들을 확인할 수 있다.
+<img src="https://user-images.githubusercontent.com/17917009/177040641-0f736e4a-c6f6-4896-a22d-43b5fc973eee.png" alt="image" width="840" height="500" />
+<a href="https://eyes.nasa.gov/apps/mars2020/">https://eyes.nasa.gov/apps/mars2020/</a>.
+<br />
+위 이미지에서 볼 수 있듯이 웹 상에서 화성을 표현하고 우주를 표현하는 등 멋진 표현을 웹사이트에 적용할 수 있는 것이다.
+three.js는 공식사이트에서 다운받거나 npm을 통해서 설치하는데 보통은 npm으로 다운받는 편이다.
+다음 글에서 three.js에 대해서 좀더 자세히 정리해보도록 하겠다.
+<br />
 End.</p>
+
 
                 </div>
             </section>
@@ -315,9 +302,9 @@ End.</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/react-scrolltotop';
-                            var this_page_identifier = '/react-scrolltotop';
-                            var this_page_title = 'React - 페이지 이동시 최상단 스크롤 방법';
+                            var this_page_url = 'https://ykkim97.github.io/javascript-AboutThreejs';
+                            var this_page_identifier = '/javascript-AboutThreejs';
+                            var this_page_title = 'Three.js에 대해서';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -351,7 +338,7 @@ End.</p>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/react/">React</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/javascript/">Javascript</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -361,11 +348,7 @@ End.</p>
                                 
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
+                                        
                                     
                                 
                                     
@@ -376,7 +359,7 @@ End.</p>
                                         
                                             
                                             
-                                                <li><a href="/react-usestate">useState에 대해</a></li>
+                                                <li><a href="/javascript-hoisting">호이스팅이란 , var, let, const 차이</a></li>
                                             
                                         
                                     
@@ -385,36 +368,7 @@ End.</p>
                                         
                                             
                                             
-                                                <li><a href="/react-lazysuspense">React - lazy, Suspense에 대해</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/react-bootstrapguide">React Bootstrap 사용하기</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
+                                                <li><a href="/javascript-eventloop">JS Event Loop, 자바스크립트 동작 원리</a></li>
                                             
                                         
                                     
@@ -440,10 +394,13 @@ End.</p>
                                     
                                 
                                     
-                                        
-                                            
-                                            
-                                        
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
                                     
                                 
                                     
@@ -453,18 +410,21 @@ End.</p>
                                     
                                 
                                     
-                                        
-                                            
-                                            
-                                        
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
                                     
                                 
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/react/">
+                            <a href="/tag/javascript/">
                                 
-                                    See all 7 posts  →
+                                    See all 2 posts  →
                                 
                             </a>
                         </footer>
@@ -474,61 +434,6 @@ End.</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/css-blockinline">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/css-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/css-blockinline">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Css</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">block과 inline의 차이점</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>CSS는 다음과 같이 구성되어 있습니다. 
-
-    CSS의 의미와 적용방법
-    block과 inline의 차이점
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -536,26 +441,33 @@ End.</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/react-bootstrapguide">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/react-logo.jpg)"></div>
+            <a class="post-card-image-link" href="/html-doctype">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/html-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/react-bootstrapguide">
+            <a class="post-card-content-link" href="/html-doctype">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">React</span>
+                                <span class="post-card-tags">Html</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">React Bootstrap 사용하기</h2>
+                    <h2 class="post-card-title">DOCTYPE의 의미?</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에</p>
+                        <p>HTML은 다음과 같이 구성되어 있습니다. 
+
+    웹의 기본중의 기본! HTML에 대해서 알아보자
+    HTML 기본 태그들
+    DOCTYPE의 의미?
+
+
+</p>
                     
                 </section>
             </a>
@@ -595,18 +507,18 @@ End.</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">React - 페이지 이동시 최상단 스크롤 방법</div>
+    <div class="floating-header-title">Three.js에 대해서</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=React+-+%ED%8E%98%EC%9D%B4%EC%A7%80+%EC%9D%B4%EB%8F%99%EC%8B%9C+%EC%B5%9C%EC%83%81%EB%8B%A8+%EC%8A%A4%ED%81%AC%EB%A1%A4+%EB%B0%A9%EB%B2%95&amp;url=https://ykkim97.github.io/react-scrolltotop"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Three.js%EC%97%90+%EB%8C%80%ED%95%B4%EC%84%9C&amp;url=https://ykkim97.github.io/javascript-AboutThreejs"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/react-scrolltotop"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-AboutThreejs"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

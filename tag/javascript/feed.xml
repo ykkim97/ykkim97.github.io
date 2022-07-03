@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-20T15:03:27+09:00</updated>
+  <updated>2022-07-03T22:04:52+09:00</updated>
   <id>https://ykkim97.github.io/tag/javascript/feed.xml</id>
 
   
@@ -32,15 +32,84 @@
 
   
     <entry>
+      <title type="html">Three.js에 대해서</title>
+      <link href="https://ykkim97.github.io/javascript-AboutThreejs" rel="alternate" type="text/html" title="Three.js에 대해서" />
+      <published>2022-07-02T06:22:00+09:00</published>
+      <updated>2022-07-02T06:22:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-AboutThreejs</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-AboutThreejs">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 
+관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 
+그래서 배우면서 알게된 내용을 정리해 나가려고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;threejs-&quot;&gt;Three.js ?&lt;/h2&gt;
+
+&lt;p&gt;먼저 WebGL이라는 것에 대해서 알아볼 필요가 있다. WebGL은 웹 상에서 그래픽을 나타낼 수 있는 라이브러리다.
+그런데 이 WebGL API 자체가 완전 로우 레벨이라서 처음부터 하나하나 개발해 나가야 하고 코드양도 많으며 복잡하다고 한다.
+Three.js는 이 WebGL을 조금 더 쉽고 간편하게 사용할 수 있도록 도와주는 라이브러리인 것이다.&lt;/p&gt;
+
+&lt;p&gt;공식사이트는 다음과 같다.
+&lt;br /&gt;
+&lt;a href=&quot;https://threejs.org/&quot;&gt;Threejs.org&lt;/a&gt;.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;물론 Three.js 말고도 다른 라이브러리들이 있지만 현재는 Three.js가 가장 인기가 많다고 한다.
+&lt;br /&gt;
+저 공식사이트에는 이것을 활용하여 만들어진 사이트들을 확인할 수 있다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/177040641-0f736e4a-c6f6-4896-a22d-43b5fc973eee.png&quot; alt=&quot;image&quot; width=&quot;840&quot; height=&quot;500&quot; /&gt;
+&lt;a href=&quot;https://eyes.nasa.gov/apps/mars2020/&quot;&gt;https://eyes.nasa.gov/apps/mars2020/&lt;/a&gt;.
+&lt;br /&gt;
+위 이미지에서 볼 수 있듯이 웹 상에서 화성을 표현하고 우주를 표현하는 등 멋진 표현을 웹사이트에 적용할 수 있는 것이다.
+three.js는 공식사이트에서 다운받거나 npm을 통해서 설치하는데 보통은 npm으로 다운받는 편이다.
+다음 글에서 three.js에 대해서 좀더 자세히 정리해보도록 하겠다.
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">호이스팅이란 , var, let, const 차이</title>
       <link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" />
       <published>2022-06-14T04:22:00+09:00</published>
       <updated>2022-06-14T04:22:00+09:00</updated>
       <id>https://ykkim97.github.io/javascript-hoisting</id>
-      <content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     
 &lt;/ul&gt;
 
@@ -117,7 +186,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary>
       
 
       
@@ -130,10 +199,11 @@ End.&lt;/p&gt;</content>
       <published>2022-06-14T01:22:00+09:00</published>
       <updated>2022-06-14T01:22:00+09:00</updated>
       <id>https://ykkim97.github.io/javascript-eventloop</id>
-      <content type="html" xml:base="https://ykkim97.github.io/javascript-eventloop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-eventloop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     
 &lt;/ul&gt;
 
@@ -194,7 +264,7 @@ Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행�
       
 
       
-        <summary type="html">JavaScript은 다음과 같이 구성되어 있습니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary>
       
 
       
