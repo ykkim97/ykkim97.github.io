@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-03T22:04:52+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Three.js에 대해서</title><link href="https://ykkim97.github.io/javascript-AboutThreejs" rel="alternate" type="text/html" title="Three.js에 대해서" /><published>2022-07-02T06:22:00+09:00</published><updated>2022-07-02T06:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-AboutThreejs</id><content type="html" xml:base="https://ykkim97.github.io/javascript-AboutThreejs">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-06T00:09:15+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">브라우저의 동작 원리</title><link href="https://ykkim97.github.io/etc-browser" rel="alternate" type="text/html" title="브라우저의 동작 원리" /><published>2022-07-04T10:20:00+09:00</published><updated>2022-07-04T10:20:00+09:00</updated><id>https://ykkim97.github.io/etc-browser</id><content type="html" xml:base="https://ykkim97.github.io/etc-browser">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;브라우저의-동작-원리&quot;&gt;브라우저의 동작 원리&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다.
+브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게 되는 것일까요?&lt;/p&gt;
+
+&lt;h3 id=&quot;브라우저의-종류&quot;&gt;브라우저의 종류&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+브라우저는 크롬, 사파리, 파이어폭스, 오페라, 인터넷 익스플로러, 네이버웨일 등 여러가지가 있습니다. 현재는 크롬이 가장 많이 사용되고 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;브라우저의-주-기능&quot;&gt;브라우저의 주 기능&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+브라우저의 주 기능은 사용자가 선택한 자원을 서버에 요청하고 브라우저화면에 표시하는 것입니다. 여기서 자원은 보통 HTML문서이고 PDF나 이미지 등 
+다른형태도 포함될 수 있습니다. 자원의 주소는 URL에 의하여 정해집니다.&lt;/p&gt;
+
+&lt;p&gt;브라우저는 HTML, CSS 명세에 따라서 HTML파일을 해석하고 표시합니다. 이 명세는 웹표준화기구(W3C)에 정하는데 과거에는 여러 브라우저가 각각 다른 방법으로
+확장했고 이는 호환성의 문제를 발생시켰습니다. 하지만 현재는 거의 대부분의 브라우저들이 표준화된 명세를 따르게 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;브라우저의 UI는 일반적으로 다음과 같이 구성되어있습니다.
+&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;주소 표시줄&lt;/li&gt;
+  &lt;li&gt;뒤로가기,앞으로가기&lt;/li&gt;
+  &lt;li&gt;중지, 새로고침&lt;/li&gt;
+  &lt;li&gt;홈버튼&lt;/li&gt;
+  &lt;li&gt;북마크
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;브라우저의 UI는 표준 명세가 없음에도 계속해서 브라우저들끼리 서로를 모방하면서 거의 비슷한 UI를 가지게 되었습니다. 물론 특정한 브라우저가 가지고 있는
+기능도 있긴합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;브라우저의-기본-구조&quot;&gt;브라우저의 기본 구조&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;사용자 인터페이스 - 주소 표시줄, 뒤로가기, 앞으로가기, 중지, 새로고침, 홈버튼, 북마크 등&lt;/li&gt;
+  &lt;li&gt;브라우저 엔진 - 사용자 인터페이스와 렌더링 엔진 사이의 동작을 제어&lt;/li&gt;
+  &lt;li&gt;렌더링 엔진 - 요청한 컨텐츠를 표시함.&lt;/li&gt;
+  &lt;li&gt;통신 - HTTP 요청과 같은 네트워크 호출에 사용됨.&lt;/li&gt;
+  &lt;li&gt;UI 백엔드 - 콤보 박스와 창 같은 기본적인 장치를 그림. 플랫폼에서 명시하지 않은 일반적인 인터페이스로서, OS 사용자 인터페이스 체계를 사용.&lt;/li&gt;
+  &lt;li&gt;자바스크립트 해석기 - 자바스크립트 코드를 해석하고 실행함.&lt;/li&gt;
+  &lt;li&gt;자료저장소 - 자료를 저장하는 계층.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;렌더링-엔진&quot;&gt;렌더링 엔진&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+렌더링엔진은 요청한 컨텐츠를 표시하는 녀석입니다. 파이어폭스의 경우 “개코”엔진, 사파리나 크롬은 “웹킷”엔진을 사용합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;동작-과정에-대해&quot;&gt;동작 과정에 대해&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+렌더링엔진은 통신으로부터 요청한 문서의 내용을 얻는데 보통 문서내용은 8KB 단위로 전송됩니다.
+자, 렌더링엔진의 기본 동작 과정은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;HTML문서를 파싱하여 DOM트리를 구축&lt;/li&gt;
+  &lt;li&gt;CSS파일과 같은 스타일 요소를 파싱(CSSOM트리 구축)&lt;/li&gt;
+  &lt;li&gt;이 둘을 합쳐서 렌더트리를 구축 (렌더트리는 문서를 시각적인 구성 요소로 만들어 주는 역할을 함)&lt;/li&gt;
+  &lt;li&gt;렌더 트리 각 노드에 대해서 화면 상에 배치할 곳을 결정&lt;/li&gt;
+  &lt;li&gt;UI 백엔드에서 렌더 트리의 각 노드를 그림.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;정리하면 브라우저가 서버로 부터 HTML문서를 전달받아서 HTML파서를 통해서 파싱하고 DOM트리를 생성합니다. 또한 CSS파일과 같은 스타일요소도 파싱되어 CSSOM트리를 
+생성합니다. 그다음에 DOM과 CSSOM이 합쳐져서 렌더트리를 구축하거 렌더트리를 배치합니다. 여기서 렌더트리는 위치와 크기를 가지고 있지 않기 때문에 어느 공간에
+위치해야할지 각 객체들에게 위치와 크기를 결정해줍니다. 이어서 렌더트리가 만들어져 레이아웃이 구성됬으면 UI 백엔드가 동작하여 렌더 트리의 각 객체를 화면의 픽셀값으로
+나타냅니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;자바스크립트는&quot;&gt;자바스크립트는?&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+HTML과 CSS는 렌더링엔진에서 처리가되는데 자바스크립트는 어떨까요?&lt;br /&gt;
+자바스크립트는 렌더링엔진에서 처리가 되는 것이 아니라 자바스크립트 엔진이 처리하는 것입니다. HTML파서가 &lt;script&gt;태그를 만나면 자바스크립트코드를 실행하기 위해 
+DOM 생성 프로세스를 중지하고 자바스크립트엔진에게 권한을 넘기게 됩니다. 넘겨받은 자바스크립트엔진이 &lt;script&gt;태그 내의 자바스크립트 코드를 로드하고 파싱하여 실행합니다.
+실행이 완료되면 다시 HTML파서로 제어 권한을 넘겨서 중지했던 시점으로 넘어가 DOM 생성을 재개하게 되는 것입니다.
+&lt;br /&gt;
+브라우저는 HTML, CSS, JS를 동기적으로 처리합니다. 그런데 자바스크립트 엔진에 제어 권한이 있는 상태에서 자바스크립트 코드가 아직 완성지 않은 DOM을 조작하게 되면 어떻게 될까요?
+당연히 에러가 발생할 겁니다. 그래서 자바스크립트 코드를 &amp;lt;body&amp;gt;태그 하단에 위치시키는 것입니다.&lt;/script&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+End.
+&lt;br /&gt;
+&lt;br /&gt;
+참조한 자료 :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bbangson.tistory.com/87&quot;&gt;https://bbangson.tistory.com/87&lt;/a&gt;.&lt;br /&gt;
+&lt;a href=&quot;https://d2.naver.com/helloworld/59361&quot;&gt;https://d2.naver.com/helloworld/59361&lt;/a&gt;.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리</summary></entry><entry><title type="html">Three.js에 대해서</title><link href="https://ykkim97.github.io/javascript-AboutThreejs" rel="alternate" type="text/html" title="Three.js에 대해서" /><published>2022-07-02T06:22:00+09:00</published><updated>2022-07-02T06:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-AboutThreejs</id><content type="html" xml:base="https://ykkim97.github.io/javascript-AboutThreejs">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -58,6 +149,7 @@ HTML5 이전에는 DOCTYPE을 선언하는 코드가 까다로웠지만 HTML5 �
 End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미?</summary></entry><entry><title type="html">Firebase DB에서 값을 불러올 수 없는 문제 해결</title><link href="https://ykkim97.github.io/etc-firebasedbrules" rel="alternate" type="text/html" title="Firebase DB에서 값을 불러올 수 없는 문제 해결" /><published>2022-06-19T03:32:00+09:00</published><updated>2022-06-19T03:32:00+09:00</updated><id>https://ykkim97.github.io/etc-firebasedbrules</id><content type="html" xml:base="https://ykkim97.github.io/etc-firebasedbrules">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
     
 &lt;/ul&gt;
 
@@ -84,7 +176,7 @@ Firebase 공식 문서 참조&lt;br /&gt;
 https://firebase.google.com/docs/rules/insecure-rules#database 
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결</summary></entry><entry><title type="html">호이스팅이란 , var, let, const 차이</title><link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" /><published>2022-06-14T04:22:00+09:00</published><updated>2022-06-14T04:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-hoisting</id><content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리</summary></entry><entry><title type="html">호이스팅이란 , var, let, const 차이</title><link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" /><published>2022-06-14T04:22:00+09:00</published><updated>2022-06-14T04:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-hoisting</id><content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -415,52 +507,4 @@ inline 태그는 width와 height를 명시할 수 없습니다. 그리고 margin
 &lt;p&gt;마지막으로 inline-block은 inline속성과 block속성을 모두가진 속성입니다. &lt;br /&gt;
 줄바꿈없이 한 줄에 다른 요소들을 배치할 수 있는 특징이 있고, width, height, margin-top, margin-bottom을 적용할 수 있습니다.
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점</summary></entry><entry><title type="html">React - 페이지 이동시 최상단 스크롤 방법</title><link href="https://ykkim97.github.io/react-scrolltotop" rel="alternate" type="text/html" title="React - 페이지 이동시 최상단 스크롤 방법" /><published>2022-05-02T01:43:00+09:00</published><updated>2022-05-02T01:43:00+09:00</updated><id>https://ykkim97.github.io/react-scrolltotop</id><content type="html" xml:base="https://ykkim97.github.io/react-scrolltotop">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;react에서-페이지-이동시-최상단-스크롤-방법&quot;&gt;React에서 페이지 이동시 최상단 스크롤 방법&lt;/h2&gt;
-
-&lt;p&gt;프로젝트를 진행하던 도중 useNavigate()를 사용해서 페이지를 전환하던 도중에
-전환된 페이지의 스크롤 위치가 전 페이지의 스크롤 위치와 동일해지는 문제를 발견
-하였다. 구글에 검색해본 결과 해결방법이 잘 나와있었다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useLocation&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollToTop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scrollTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;다음과 같은 코드에 해당하는 ScrollToTop이라는 컴포넌트를 만들고&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ScrollToTop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./components/common/ScrollToTop&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ScrollToTop&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserRouter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;,&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;ScrollToTop 컴포넌트를 라우터 내부에 넣어주면 된다.
-pathname을 인식하게 하기위해 꼭 컴포넌트를 라우터 내부에 넣어야한다고 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="react" /><summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해</summary></entry></feed>
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점</summary></entry></feed>
