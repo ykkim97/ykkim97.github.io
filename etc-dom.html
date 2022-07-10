@@ -59,7 +59,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="DOM이란?" />
-    <meta property="og:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다. 그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다. DOM ? DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다. 그냥 문서 객체 모델? 로" />
+    <meta property="og:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다. 그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다. DOM ? DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다. 그냥 문서" />
     <meta property="og:url" content="https://ykkim97.github.io/etc-dom" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/browserImage.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,7 +69,7 @@
     <meta property="article:tag" content="Etc" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="DOM이란?" />
-    <meta name="twitter:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다. 그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다. DOM ? DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다. 그냥 문서 객체 모델? 로" />
+    <meta name="twitter:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다. 그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다. DOM ? DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다. 그냥 문서" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/browserImage.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -101,7 +101,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/etc-dom"
     },
-    "description": "기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다. 그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다. DOM ? DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다. 그냥 문서 객체 모델? 로"
+    "description": "기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다. 그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다. DOM ? DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다. 그냥 문서"
 }
     </script>
 
@@ -207,6 +207,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./etc-firebasedbrules">Firebase DB에서 값을 불러올 수 없는 문제 해결</a></li>
     <li><a href="./etc-browser">브라우저 동작 원리</a></li>
     <li><a href="./etc-dom">DOM이란?</a></li>
+    <li><a href="./etc-bubbling">이벤트 버블링과 캡처링</a></li>
 </ul>
 
 <p><br /><br /><br />
@@ -354,6 +355,15 @@ End.</p>
                                 
                                     
                                         
+                                            
+                                            
+                                                <li><a href="/etc-bubbling">이벤트 버블링과 캡처링</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
                                     
                                 
                                     
@@ -433,7 +443,7 @@ End.</p>
                         <footer class="read-next-card-footer">
                             <a href="/tag/etc/">
                                 
-                                    See all 2 posts  →
+                                    See all 3 posts  →
                                 
                             </a>
                         </footer>
@@ -442,6 +452,63 @@ End.</p>
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/etc-bubbling">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/browserImage.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/etc-bubbling">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Etc</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">이벤트 버블링과 캡처링</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>기타 포스팅입니다. 
+
+    Firebase DB에서 값을 불러올 수 없는 문제 해결
+    브라우저 동작 원리
+    DOM이란?
+    이벤트 버블링과 캡처링
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/ykkim97/">ykkim97</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
@@ -474,6 +541,7 @@ End.</p>
     Firebase DB에서 값을 불러올 수 없는 문제 해결
     브라우저 동작 원리
     DOM이란?
+    이벤트 버블링과 캡처링
 
 
 </p>
