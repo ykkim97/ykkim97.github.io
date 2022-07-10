@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/react/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-07-10T16:15:36+09:00</updated>
+  <updated>2022-07-10T16:28:51+09:00</updated>
   <id>https://ykkim97.github.io/tag/react/feed.xml</id>
 
   
@@ -875,7 +875,7 @@ End.&lt;/p&gt;</content>
 
 &lt;h2 id=&quot;5-jsx&quot;&gt;5. JSX&lt;/h2&gt;
 
-&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript를 확장한 문법이라고 보면 된다.&lt;/p&gt;</content>
+&lt;p&gt;React는 JSX문법을 사용할 수 있는데 Javascript에 XML을 추가한 확장한 문법이라고 보면 된다.&lt;/p&gt;</content>
 
       
       
