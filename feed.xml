@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-13T13:59:07+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">번들링이 뭔데?</title><link href="https://ykkim97.github.io/etc-whatisbundle" rel="alternate" type="text/html" title="번들링이 뭔데?" /><published>2022-07-10T07:20:00+09:00</published><updated>2022-07-10T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-whatisbundle</id><content type="html" xml:base="https://ykkim97.github.io/etc-whatisbundle">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-13T23:32:01+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">프로세스와 쓰레드의 차이점</title><link href="https://ykkim97.github.io/etc-processandthread" rel="alternate" type="text/html" title="프로세스와 쓰레드의 차이점" /><published>2022-07-12T07:20:00+09:00</published><updated>2022-07-12T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-processandthread</id><content type="html" xml:base="https://ykkim97.github.io/etc-processandthread">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;오늘은 프로세스와 쓰레드에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로세스-쓰레드&quot;&gt;프로세스? 쓰레드?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+프로세스는 한마디로 실행중인 프로그램이라고 할 수 있습니다. &lt;br /&gt;
+여기서또 프로그램과 프로세스를 혼동할 수 있는데 프로그램은 실행가능한 명령어들의 집합입니다.
+&lt;br /&gt;
+&lt;br /&gt;
+그러면 쓰레드는 뭘까요?
+&lt;br /&gt;
+그 프로세스 내에서 동작되는 여러 실행의 흐름입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;둘의-차이점&quot;&gt;둘의 차이점&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+프로세스는 최소 하나의 쓰레드를 보유하고 있고 각각 별도의 주소공간을 할당받습니다. 독립적이죠.
+그런데 쓰레드는 Stack을 제외하고 Code, Data, Heap의 나머지 영역을 서로 공유합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프로세스-메모리-영역&quot;&gt;프로세스 메모리 영역&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+잠깐 프로세스 메모리 영역에 대해서 알아보겠습니다.
+&lt;br /&gt;&lt;br /&gt;
+커널 메모리 안에서 관리되는 PCB(Process Control Block) 정보외에 유저가 사용하는 메모리안의 프로세스 정보는 4가지가 있는데, Code, Data, Heap, Stack이 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Code: 프로그램의 실제 코드 저장&lt;/li&gt;
+  &lt;li&gt;Data: 프로세스가 실행될 때 정의된 전역 변수. Static 변수들을 저장&lt;/li&gt;
+  &lt;li&gt;Heap: 프로세스 런타임 중 동적할당 변수들을 저장&lt;/li&gt;
+  &lt;li&gt;Stack: 호출된 함수의 수행을 마치고 복귀할 주소 및 데이터(지역변수, 매개변수, 리턴값 등)를 임시로 저장하는 공간이고 함수 호출 시에 기록하고 끝나면 사라진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;멀티프로세스-vs-멀티쓰레드&quot;&gt;멀티프로세스 vs 멀티쓰레드&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+멀티프로세스는 하나의 프로그램을 여러개의 프로세스로 구성하여 각각의 프로세스가 하나의 작업을 처리하는 것이고 멀티쓰레드는, 하나의 프로그램을 여러개의 쓰레드로 구성하고 각 쓰레드가 하나의 작업을 처리하는 것입니다. 자세한 차이점은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;멀티프로세스는 각 프로세스가 독립적이고 쓰레드는 서로 긴밀하게 연결되어있습니다.&lt;/li&gt;
+  &lt;li&gt;멀티프로세스는 IPC를 사용한 통신을 해야하는데, 쓰레드는 공유된 자원으로 통신비용이 절감됩니다.&lt;/li&gt;
+  &lt;li&gt;멀티프로세스는 개별 메모리를 차지하는데 쓰레드는 자원을 공유하기 때문에 좀더 효율적입니다.&lt;/li&gt;
+  &lt;li&gt;멀티프로세스는 Context Switching 비용이 멀티쓰레드보다 비효율적입니다.&lt;/li&gt;
+  &lt;li&gt;멀티프로세스는 동기화작업이 필요하지 않고, 멀티쓰레드는 공유자원을 관리해야 합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데?</summary></entry><entry><title type="html">번들링이 뭔데?</title><link href="https://ykkim97.github.io/etc-whatisbundle" rel="alternate" type="text/html" title="번들링이 뭔데?" /><published>2022-07-10T07:20:00+09:00</published><updated>2022-07-10T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-whatisbundle</id><content type="html" xml:base="https://ykkim97.github.io/etc-whatisbundle">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -474,65 +530,4 @@ Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행�
 거쳐서 처리가 되는 것입니다.
 &lt;br /&gt;
 &lt;br /&gt;
- End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary></entry><entry><title type="html">Github Label별 의미</title><link href="https://ykkim97.github.io/git-githubissuelabel" rel="alternate" type="text/html" title="Github Label별 의미" /><published>2022-06-10T07:32:00+09:00</published><updated>2022-06-10T07:32:00+09:00</updated><id>https://ykkim97.github.io/git-githubissuelabel</id><content type="html" xml:base="https://ykkim97.github.io/git-githubissuelabel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
-
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;github-기본-label들&quot;&gt;Github 기본 Label들&lt;/h2&gt;
-
-&lt;p&gt;프로젝트를 하면서 많은 이슈가 발생하게 되고 이런것을 관리하는 것의 필요성을 느끼고 이슈관리에 대해서 공부하던 중 
-이슈에 라벨이라는 것을 달 수 있게 되어있었다. 여러가지가 있었는데 다음과 같다.
-&lt;br /&gt;
-&lt;br /&gt;
-깃허브의 이슈, PR(Pull Request)에 Label을 지정할 수 있다. 제공되는 라벨은 다음과 같다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;라벨&lt;/th&gt;
-      &lt;th&gt;의미&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;bug&lt;/td&gt;
-      &lt;td&gt;예기치 않은 문제 또는 의도하지 않은 동작(버그)을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;documentation&lt;/td&gt;
-      &lt;td&gt;문서를 개선하거나 추가 할 필요가 있음을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;duplicate&lt;/td&gt;
-      &lt;td&gt;해당이슈 또는 PR이 기존에 있음을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;enhancement&lt;/td&gt;
-      &lt;td&gt;새로운 기능 요청을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;good first issue&lt;/td&gt;
-      &lt;td&gt;처음 기여해볼 사람에게 좋은 문제를 나타냅니다&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;help wanted&lt;/td&gt;
-      &lt;td&gt;관리자가 문제 또는 PR 요청에 대한 도움을 원함을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;invalid&lt;/td&gt;
-      &lt;td&gt;이슈 또는 PR 요청이 더 이상 관련이 없음을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;question&lt;/td&gt;
-      &lt;td&gt;이슈 또는 풀 요청에 추가 정보가 필요함을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;wontfix&lt;/td&gt;
-      &lt;td&gt;문제 나 PR 요청에서 작업이 계속되지 않음을 나타냅니다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미</summary></entry></feed>
+ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary></entry></feed>
