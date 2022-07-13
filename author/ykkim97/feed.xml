@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-07-11T17:38:42+09:00</updated>
+  <updated>2022-07-13T13:59:07+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -407,12 +407,12 @@ End.&lt;/p&gt;</content>
 &lt;h3 id=&quot;자바스크립트는&quot;&gt;자바스크립트는?&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;
 HTML과 CSS는 렌더링엔진에서 처리가되는데 자바스크립트는 어떨까요?&lt;br /&gt;
-자바스크립트는 렌더링엔진에서 처리가 되는 것이 아니라 자바스크립트 엔진이 처리하는 것입니다. HTML파서가 &lt;script&gt;태그를 만나면 자바스크립트코드를 실행하기 위해 
-DOM 생성 프로세스를 중지하고 자바스크립트엔진에게 권한을 넘기게 됩니다. 넘겨받은 자바스크립트엔진이 &lt;script&gt;태그 내의 자바스크립트 코드를 로드하고 파싱하여 실행합니다.
+자바스크립트는 렌더링엔진에서 처리가 되는 것이 아니라 자바스크립트 엔진이 처리하는 것입니다. HTML파서가 script태그를 만나면 자바스크립트코드를 실행하기 위해 
+DOM 생성 프로세스를 중지하고 자바스크립트엔진에게 권한을 넘기게 됩니다. 넘겨받은 자바스크립트엔진이 script태그 내의 자바스크립트 코드를 로드하고 파싱하여 실행합니다.
 실행이 완료되면 다시 HTML파서로 제어 권한을 넘겨서 중지했던 시점으로 넘어가 DOM 생성을 재개하게 되는 것입니다.
 &lt;br /&gt;
 브라우저는 HTML, CSS, JS를 동기적으로 처리합니다. 그런데 자바스크립트 엔진에 제어 권한이 있는 상태에서 자바스크립트 코드가 아직 완성지 않은 DOM을 조작하게 되면 어떻게 될까요?
-당연히 에러가 발생할 겁니다. 그래서 자바스크립트 코드를 &amp;lt;body&amp;gt;태그 하단에 위치시키는 것입니다.&lt;/script&gt;&lt;/script&gt;&lt;/p&gt;
+당연히 에러가 발생할 겁니다. 그래서 자바스크립트 코드를 &amp;lt;body&amp;gt;태그 하단에 위치시키는 것입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
