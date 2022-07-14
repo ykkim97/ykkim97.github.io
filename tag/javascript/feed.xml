@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-07-13T23:45:12+09:00</updated>
+  <updated>2022-07-14T22:43:08+09:00</updated>
   <id>https://ykkim97.github.io/tag/javascript/feed.xml</id>
 
   
@@ -32,6 +32,87 @@
 
   
     <entry>
+      <title type="html">script, script async, script defer의 차이</title>
+      <link href="https://ykkim97.github.io/javascript-scripttag" rel="alternate" type="text/html" title="script, script async, script defer의 차이" />
+      <published>2022-07-13T06:45:00+09:00</published>
+      <updated>2022-07-13T06:45:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-scripttag</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-scripttag">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 script 태그에 대해서 알아보겠습니다.
+script태그는 자바스크립트를 정의할 때 사용합니다. 문서파일에 자바스크립트를 추가하는 방법이 3가지가 있는데, 각각 특징이 다릅니다.
+이것에 대해서 정리해 보도록 하겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;script-script-async-script-defer-의-차이&quot;&gt;script, script async, script defer 의 차이&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;script
+&lt;br /&gt;
+그냥 일반적인 방법입니다. HTML을 파싱하는 중에 이 script태그를 만나면 HTML파싱을 중지하고 스크립트를 다운받아 파싱하고 실행합니다.
+이것이 완료되면 다시 HTML을 파싱합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;script async
+&lt;br /&gt;
+async 속성이 붙은 경우입니다. 이것은 HTML파싱을 하면서 script태그를 만나면 문서를 파싱하면서 스크립트를 다운받습니다. 
+다운이 완료되는 즉시 HTML 파싱을 멈추고 스크립트를 실행합니다. 실행이 끝나면 남은 HTML 문서를 분석합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;script defer
+&lt;br /&gt;
+defer 속성이 붙은 경우는 async 처럼 script태그를 만났을 때 스크립트를 다운받는데, HTML파싱이 모두 완료되면 받아놓은 자바스크립트를 실행하게 됩니다.
+HTML을 파싱하는 동안 필요한 자바스크립트파일을 받아놓고 HTML을 모두 파싱해서 사용자에게 페이지를 먼저 보여준 후 바로 이어서 자바스크립트를 실행합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;script 태그 : HTML 파싱중에 script 태그 만남 -&amp;gt; HTML파싱을 중지하고 스크립트 다운,파싱,실행 -&amp;gt; 끝나면 다시 HTML파싱&lt;/li&gt;
+  &lt;li&gt;script async 태그 : HTML 파싱중에 script 태그 만남 -&amp;gt; 아직 HTML 파싱을 중지시키지 않고 스크립트 다운 -&amp;gt; 다운완료되면 그때서야 HTML파싱 중지 후 스크립트 실행 -&amp;gt; 끝나면 다시 HTML파싱&lt;/li&gt;
+  &lt;li&gt;script defer 태그 : HTML 파싱중에 script 태그 만남  -&amp;gt; HTML파싱을 중지시키지 않고 스크립트를 다운받음 -&amp;gt; 다운완료되어도 HTML파싱을 모두 완료한 후에야 스크립트를 실행함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Three.js에 대해서</title>
       <link href="https://ykkim97.github.io/javascript-AboutThreejs" rel="alternate" type="text/html" title="Three.js에 대해서" />
       <published>2022-07-02T06:22:00+09:00</published>
@@ -42,7 +123,7 @@
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
-    
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -92,7 +173,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이</summary>
       
 
       
@@ -110,7 +191,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
-    
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;호이스팅에-대해서&quot;&gt;호이스팅에 대해서&lt;/h2&gt;
@@ -186,7 +267,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이</summary>
       
 
       
@@ -204,7 +285,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
-    
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;js-event-loop에-대해서&quot;&gt;JS Event Loop에 대해서&lt;/h2&gt;
@@ -264,7 +345,7 @@ Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행�
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이</summary>
       
 
       
