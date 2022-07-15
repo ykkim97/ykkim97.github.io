@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/javascript-aboutajax.html</loc>
+        
+        <lastmod>2022-07-14T04:45:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/javascript-scripttag.html</loc>
         
         <lastmod>2022-07-13T06:45:00+09:00</lastmod>
