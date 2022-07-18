@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-15T23:16:38+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">AJAX가 무엇일까?</title><link href="https://ykkim97.github.io/javascript-aboutajax" rel="alternate" type="text/html" title="AJAX가 무엇일까?" /><published>2022-07-14T04:45:00+09:00</published><updated>2022-07-14T04:45:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutajax</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutajax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-18T18:17:58+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">git add , commit, 그리고 staging</title><link href="https://ykkim97.github.io/git-gitaddcommit" rel="alternate" type="text/html" title="git add , commit, 그리고 staging" /><published>2022-07-17T03:32:00+09:00</published><updated>2022-07-17T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitaddcommit</id><content type="html" xml:base="https://ykkim97.github.io/git-gitaddcommit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+git은 변경사항을 추적하고 여러 명의 사용자들 간에 파일의 작업을 조율하기 위한 “버전 관리”소프트웨어 입니다.
+오늘은 git 명령중에 git add, commit 명령에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-add--commit-그리고-staging&quot;&gt;git add , commit, 그리고 staging&lt;/h2&gt;
+
+&lt;p&gt;작업폴더에 “test.txt”라는 파일을 생성해서 작성했다고 가정해보겠습니다.
+이때 “test.txt”파일을 기록하고 싶습니다. 일단, “git add test.txt”라는 명령을 터미널에 입력해주면 됩니다.&lt;/p&gt;
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;git add test.txt
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;말 그대로 추가하는 겁니다. 그런데, 어디에 추가하는 걸까요? 바로 리포지토리에 추가가 되는 걸까요?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+“git add 파일명”이라는 명령은 일단은 Staging Area라는 곳에 파일을 넣어둡니다. &lt;br /&gt;
+Staging Area는 커밋하기전에 커밋할 파일을 골라놓는 곳이고 이런 행위를 스테이징한다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+이제 여기서 커밋명령을 해주어야합니다.
+커밋을 해주면 repository에 기록됩니다. 파일 버전을 모아둔다고 말을 합니다.
+아 물론, 작업폴더안의 전체 파일을 기록하고싶다면 “git add .”을 입력하면됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;git add .
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+커밋을 하는 방법은 ‘ git commit -m “쓰고싶은 메세지” ‘를 터미널에 입력해주는 것입니다. 메세지는 현재 커밋하는 내용이 어떤 내용인지 알 수 있게 적어주면됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;git commit -m &quot;테스트용 파일 추가&quot;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+정리해보면 커밋하기전에 커밋할 파일을 골라놓는 곳인 “Staging Area”에 “git add”를 통해 파일을 넣어주고, 커밋된 파일버전을 모아놓는 곳인 “repository”에 
+“git commit”을 통해 커밋합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging</summary></entry><entry><title type="html">AJAX가 무엇일까?</title><link href="https://ykkim97.github.io/javascript-aboutajax" rel="alternate" type="text/html" title="AJAX가 무엇일까?" /><published>2022-07-14T04:45:00+09:00</published><updated>2022-07-14T04:45:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutajax</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutajax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -503,37 +542,4 @@ DOCTYPE은 Document Type의 약어로 문서의 유형을 정의하기 위해 �
 HTML5 이전에는 DOCTYPE을 선언하는 코드가 까다로웠지만 HTML5 부터는 간단하게 할 수 있게 되었습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미?</summary></entry><entry><title type="html">Firebase DB에서 값을 불러올 수 없는 문제 해결</title><link href="https://ykkim97.github.io/etc-firebasedbrules" rel="alternate" type="text/html" title="Firebase DB에서 값을 불러올 수 없는 문제 해결" /><published>2022-06-19T03:32:00+09:00</published><updated>2022-06-19T03:32:00+09:00</updated><id>https://ykkim97.github.io/etc-firebasedbrules</id><content type="html" xml:base="https://ykkim97.github.io/etc-firebasedbrules">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;firebase-db에서-값을-불러올-수-없는-문제-해결&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/h2&gt;
-
-&lt;p&gt;진행 중에 있는 프로젝트의 버그를 수정하기 위해 확인을 했는데 갑자기 문제가 발생했다…&lt;br /&gt;
-Firebase의 Realtime Database, Storage에 있는 데이터를 불러오지 못하는 문제였다. 처음에는 코드를 잘못만진게 아닌가 싶었는데,
-그런 이유는 아니었고 Firebase와 연동 자체가 안되는 문제였다. 갑작스러웠지만 인터넷 검색을 통해 문제를 해결하려고 노력했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/174476085-c42fc32e-20f6-4e0f-b9ad-0a1b412263e9.JPG&quot; alt=&quot;보안규칙안내메세지캡처&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;firebase 알림에 위와 같은 메세지가 와있는 것을 발견했는데, 보안규칙을 업데이트 해야한다는 것을 알았다.&lt;/p&gt;
-
-&lt;p&gt;처음 데이터베이스를 사용할 때 잠금모드와 테스트모드중 테스트모드를 선택했는데 생각해보니 테스트모드는 30일이 지나면 데이터베이스에서 읽을 수 없도록 되어있었다.
-계속 유지하려면 보안 규칙설정을 해줘야한다.
-&lt;br /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/174476457-bd2bab62-6e45-41f7-b56d-f7c43ac15167.JPG&quot; alt=&quot;보안규칙캡처&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위처럼 보안규칙을 바꿔주었더니 다시 정상적으로 동작했다.
-물론 보안 규칙이 공개로 정의되어 있어 누구나 데이터베이스의 데이터를 도용, 수정, 삭제할 수 있지만 아직은 개발단계이기 때문에 일단 이렇게 수정해놓고 사용하기로 했다.
-&lt;br /&gt;
-&lt;br /&gt;
-Firebase 공식 문서 참조&lt;br /&gt;
-https://firebase.google.com/docs/rules/insecure-rules#database 
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary></entry></feed>
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미?</summary></entry></feed>
