@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/css/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-07-18T18:17:58+09:00</updated>
+  <updated>2022-07-20T23:33:49+09:00</updated>
   <id>https://ykkim97.github.io/tag/css/feed.xml</id>
 
   
@@ -32,6 +32,106 @@
 
   
     <entry>
+      <title type="html">em과 rem의 차이</title>
+      <link href="https://ykkim97.github.io/css-emAndRem" rel="alternate" type="text/html" title="em과 rem의 차이" />
+      <published>2022-07-19T23:35:00+09:00</published>
+      <updated>2022-07-19T23:35:00+09:00</updated>
+      <id>https://ykkim97.github.io/css-emAndRem</id>
+      <content type="html" xml:base="https://ykkim97.github.io/css-emAndRem">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 css에서 사용되는 em, rem의 차이에 대해서 알아보겠습니다.
+기본적으로 폰트 크기나, 마진, 패딩과 같은 크기값을 지정할 때 픽셀(px)값으로 지정할 수 있지만,
+em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이를 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;rem&quot;&gt;rem&lt;/h1&gt;
+&lt;p&gt;rem은 기준이 되는 값의 배수로 변환한 값입니다. 2rem이라면 기준이 되는 값의 2배라는 것이죠.
+그러면 기준이 되는 값이 뭘까요? &lt;br /&gt;
+바로 최상위요소(보통은 html)에서 지정된 값이 기준이 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.5rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 예시를 보면 html의 font-size가 14px로 지정되어 있고 p태그의 font-size는 1.5rem으로 지정되어있습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;p의 font-size는 1.5rem이므로 최상위 요소에 지정된 14px의 1.5배 값이 되어 21px이 되는 것입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;em&quot;&gt;em&lt;/h1&gt;
+
+&lt;p&gt;em도 기준이 되는 값의 배수로 변환한 값인데, 기준이 되는 값이 다릅니다. &lt;br /&gt;
+바로 이것은 현재 지정요소의 값이 기준이 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.5rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 예시를 보면은 div의 font-size값이 16px로 지정되어있고, 바로 밑에 1.5rem 값이 지정되어있습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면 16 * 1.5인 24px이 적용이 되는 것이죠.&lt;/p&gt;
+
+&lt;p&gt;만약에 지정된 기준값이 없다면 어떻게 될까요?
+&lt;br /&gt;&lt;br /&gt;
+해당요소는 부모요소의 지정된 값을 상속받습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;content의 font-size는 2em 이니까, 10px * 2 * 2 = 40px이 되는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="css" />
+      
+
+      
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">block과 inline의 차이점</title>
       <link href="https://ykkim97.github.io/css-blockinline" rel="alternate" type="text/html" title="block과 inline의 차이점" />
       <published>2022-05-17T23:00:00+09:00</published>
@@ -41,6 +141,7 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
@@ -87,7 +188,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이</summary>
       
 
       

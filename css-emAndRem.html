@@ -14,7 +14,7 @@
 
 
 
-    <title>브라우저의 동작 원리</title>
+    <title>em과 rem의 차이</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/etc-browser" />
+    <link rel="canonical" href="https://ykkim97.github.io/css-emAndRem" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="브라우저의 동작 원리" />
-    <meta property="og:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 브라우저의 동작 원리 브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다. 브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게" />
-    <meta property="og:url" content="https://ykkim97.github.io/etc-browser" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/browserImage.png" />
+    <meta property="og:title" content="em과 rem의 차이" />
+    <meta property="og:description" content="CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 오늘은 css에서 사용되는 em, rem의 차이에 대해서 알아보겠습니다. 기본적으로 폰트 크기나, 마진, 패딩과 같은 크기값을 지정할 때 픽셀(px)값으로 지정할 수 있지만, em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이를 정리해보겠습니다. rem rem은 기준이 되는 값의" />
+    <meta property="og:url" content="https://ykkim97.github.io/css-emAndRem" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/css-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-07-04T10:20:00+09:00" />
-    <meta property="article:modified_time" content="2022-07-04T10:20:00+09:00" />
-    <meta property="article:tag" content="Etc" />
+    <meta property="article:published_time" content="2022-07-19T23:35:00+09:00" />
+    <meta property="article:modified_time" content="2022-07-19T23:35:00+09:00" />
+    <meta property="article:tag" content="Css" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="브라우저의 동작 원리" />
-    <meta name="twitter:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 브라우저의 동작 원리 브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다. 브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게" />
+    <meta name="twitter:title" content="em과 rem의 차이" />
+    <meta name="twitter:description" content="CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 오늘은 css에서 사용되는 em, rem의 차이에 대해서 알아보겠습니다. 기본적으로 폰트 크기나, 마진, 패딩과 같은 크기값을 지정할 때 픽셀(px)값으로 지정할 수 있지만, em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이를 정리해보겠습니다. rem rem은 기준이 되는 값의" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/browserImage.png" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/css-logo.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Etc" />
+    <meta name="twitter:data2" content="Css" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/etc-browser",
+    "url": "https://ykkim97.github.io/css-emAndRem",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/browserImage.png",
+        "url": "https://ykkim97.github.io/assets/built/images/css-logo.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/etc-browser"
+        "@id": "https://ykkim97.github.io/css-emAndRem"
     },
-    "description": "기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 브라우저의 동작 원리 브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다. 브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게"
+    "description": "CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 오늘은 css에서 사용되는 em, rem의 차이에 대해서 알아보겠습니다. 기본적으로 폰트 크기나, 마진, 패딩과 같은 크기값을 지정할 때 픽셀(px)값으로 지정할 수 있지만, em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이를 정리해보겠습니다. rem rem은 기준이 되는 값의"
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="브라우저의 동작 원리" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="em과 rem의 차이" href="/feed.xml" />
 
 
 </head>
@@ -177,126 +177,98 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-etc post tag-etc ">
+        <article class="post-full  tag-css post tag-css ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 4 July 2022"> 4 July 2022</time>
+                    <time class="post-full-meta-date" datetime="19 July 2022">19 July 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/etc/'>ETC</a>
+                                <a href='/tag/css/'>CSS</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">브라우저의 동작 원리</h1>
+                <h1 class="post-full-title">em과 rem의 차이</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/browserImage.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/css-logo.png)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">기타 포스팅입니다. </span></p>
+                    <p><span class="table-of-contents-list">CSS는 다음과 같이 구성되어 있습니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./etc-firebasedbrules">Firebase DB에서 값을 불러올 수 없는 문제 해결</a></li>
-    <li><a href="./etc-browser">브라우저 동작 원리</a></li>
-    <li><a href="./etc-dom">DOM이란?</a></li>
-    <li><a href="./etc-bubbling">이벤트 버블링과 캡처링</a></li>
-    <li><a href="./etc-whatisbundle">번들링이 뭔데?</a></li>
-    <li><a href="./etc-processandthread">프로세스와 쓰레드의 차이점</a></li>
+    <li><a href="./css-basic">CSS의 의미와 적용방법</a></li>
+    <li><a href="./css-blockinline">block과 inline의 차이점</a></li>
+    <li><a href="./css-emAndRem">em과 rem의 차이</a></li>
 </ul>
 
-<h2 id="브라우저의-동작-원리">브라우저의 동작 원리</h2>
-<p><br />
-브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다.
-브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게 되는 것일까요?</p>
+<p><br /><br /><br />
+오늘은 css에서 사용되는 em, rem의 차이에 대해서 알아보겠습니다.
+기본적으로 폰트 크기나, 마진, 패딩과 같은 크기값을 지정할 때 픽셀(px)값으로 지정할 수 있지만,
+em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이를 정리해보겠습니다.</p>
 
-<h3 id="브라우저의-종류">브라우저의 종류</h3>
-<p><br />
-브라우저는 크롬, 사파리, 파이어폭스, 오페라, 인터넷 익스플로러, 네이버웨일 등 여러가지가 있습니다. 현재는 크롬이 가장 많이 사용되고 있습니다.</p>
+<h1 id="rem">rem</h1>
+<p>rem은 기준이 되는 값의 배수로 변환한 값입니다. 2rem이라면 기준이 되는 값의 2배라는 것이죠.
+그러면 기준이 되는 값이 뭘까요? <br />
+바로 최상위요소(보통은 html)에서 지정된 값이 기준이 됩니다.</p>
 
-<h3 id="브라우저의-주-기능">브라우저의 주 기능</h3>
-<p><br />
-브라우저의 주 기능은 사용자가 선택한 자원을 서버에 요청하고 브라우저화면에 표시하는 것입니다. 여기서 자원은 보통 HTML문서이고 PDF나 이미지 등 
-다른형태도 포함될 수 있습니다. 자원의 주소는 URL에 의하여 정해집니다.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">font-size</span> <span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<p>브라우저는 HTML, CSS 명세에 따라서 HTML파일을 해석하고 표시합니다. 이 명세는 웹표준화기구(W3C)에 정하는데 과거에는 여러 브라우저가 각각 다른 방법으로
-확장했고 이는 호환성의 문제를 발생시켰습니다. 하지만 현재는 거의 대부분의 브라우저들이 표준화된 명세를 따르게 되었습니다.</p>
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">font-size</span> <span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<p>브라우저의 UI는 일반적으로 다음과 같이 구성되어있습니다.
-<br /></p>
-<ol>
-  <li>주소 표시줄</li>
-  <li>뒤로가기,앞으로가기</li>
-  <li>중지, 새로고침</li>
-  <li>홈버튼</li>
-  <li>북마크
-<br /></li>
-</ol>
+<p>위의 예시를 보면 html의 font-size가 14px로 지정되어 있고 p태그의 font-size는 1.5rem으로 지정되어있습니다. <br /><br /></p>
 
-<p>브라우저의 UI는 표준 명세가 없음에도 계속해서 브라우저들끼리 서로를 모방하면서 거의 비슷한 UI를 가지게 되었습니다. 물론 특정한 브라우저가 가지고 있는
-기능도 있긴합니다.</p>
+<p>p의 font-size는 1.5rem이므로 최상위 요소에 지정된 14px의 1.5배 값이 되어 21px이 되는 것입니다.</p>
 
-<h3 id="브라우저의-기본-구조">브라우저의 기본 구조</h3>
-<p><br /></p>
+<h1 id="em">em</h1>
 
-<ol>
-  <li>사용자 인터페이스 - 주소 표시줄, 뒤로가기, 앞으로가기, 중지, 새로고침, 홈버튼, 북마크 등</li>
-  <li>브라우저 엔진 - 사용자 인터페이스와 렌더링 엔진 사이의 동작을 제어</li>
-  <li>렌더링 엔진 - 요청한 컨텐츠를 표시함.</li>
-  <li>통신 - HTTP 요청과 같은 네트워크 호출에 사용됨.</li>
-  <li>UI 백엔드 - 콤보 박스와 창 같은 기본적인 장치를 그림. 플랫폼에서 명시하지 않은 일반적인 인터페이스로서, OS 사용자 인터페이스 체계를 사용.</li>
-  <li>자바스크립트 해석기 - 자바스크립트 코드를 해석하고 실행함.</li>
-  <li>자료저장소 - 자료를 저장하는 계층.</li>
-</ol>
+<p>em도 기준이 되는 값의 배수로 변환한 값인데, 기준이 되는 값이 다릅니다. <br />
+바로 이것은 현재 지정요소의 값이 기준이 됩니다.</p>
 
-<h3 id="렌더링-엔진">렌더링 엔진</h3>
-<p><br />
-렌더링엔진은 요청한 컨텐츠를 표시하는 녀석입니다. 파이어폭스의 경우 “개코”엔진, 사파리나 크롬은 “웹킷”엔진을 사용합니다.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">font-size</span> <span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<h3 id="동작-과정에-대해">동작 과정에 대해</h3>
-<p><br />
-렌더링엔진은 통신으로부터 요청한 문서의 내용을 얻는데 보통 문서내용은 8KB 단위로 전송됩니다.
-자, 렌더링엔진의 기본 동작 과정은 다음과 같습니다.</p>
+<span class="nt">div</span> <span class="p">{</span>
+    <span class="nl">font-size</span> <span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+<span class="p">}</span>
 
-<ol>
-  <li>HTML문서를 파싱하여 DOM트리를 구축</li>
-  <li>CSS파일과 같은 스타일 요소를 파싱(CSSOM트리 구축)</li>
-  <li>이 둘을 합쳐서 렌더트리를 구축 (렌더트리는 문서를 시각적인 구성 요소로 만들어 주는 역할을 함)</li>
-  <li>렌더 트리 각 노드에 대해서 화면 상에 배치할 곳을 결정</li>
-  <li>UI 백엔드에서 렌더 트리의 각 노드를 그림.</li>
-</ol>
+<span class="nt">div</span> <span class="p">{</span>
+    <span class="nl">font-size</span> <span class="p">:</span> <span class="m">1.5rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<p>정리하면 브라우저가 서버로 부터 HTML문서를 전달받아서 HTML파서를 통해서 파싱하고 DOM트리를 생성합니다. 또한 CSS파일과 같은 스타일요소도 파싱되어 CSSOM트리를 
-생성합니다. 그다음에 DOM과 CSSOM이 합쳐져서 렌더트리를 구축하거 렌더트리를 배치합니다. 여기서 렌더트리는 위치와 크기를 가지고 있지 않기 때문에 어느 공간에
-위치해야할지 각 객체들에게 위치와 크기를 결정해줍니다. 이어서 렌더트리가 만들어져 레이아웃이 구성됬으면 UI 백엔드가 동작하여 렌더 트리의 각 객체를 화면의 픽셀값으로
-나타냅니다.</p>
+<p>위의 예시를 보면은 div의 font-size값이 16px로 지정되어있고, 바로 밑에 1.5rem 값이 지정되어있습니다. <br /><br /></p>
 
-<h3 id="자바스크립트는">자바스크립트는?</h3>
-<p><br />
-HTML과 CSS는 렌더링엔진에서 처리가되는데 자바스크립트는 어떨까요?<br />
-자바스크립트는 렌더링엔진에서 처리가 되는 것이 아니라 자바스크립트 엔진이 처리하는 것입니다. HTML파서가 script태그를 만나면 자바스크립트코드를 실행하기 위해 
-DOM 생성 프로세스를 중지하고 자바스크립트엔진에게 권한을 넘기게 됩니다. 넘겨받은 자바스크립트엔진이 script태그 내의 자바스크립트 코드를 로드하고 파싱하여 실행합니다.
-실행이 완료되면 다시 HTML파서로 제어 권한을 넘겨서 중지했던 시점으로 넘어가 DOM 생성을 재개하게 되는 것입니다.
-<br />
-브라우저는 HTML, CSS, JS를 동기적으로 처리합니다. 그런데 자바스크립트 엔진에 제어 권한이 있는 상태에서 자바스크립트 코드가 아직 완성지 않은 DOM을 조작하게 되면 어떻게 될까요?
-당연히 에러가 발생할 겁니다. 그래서 자바스크립트 코드를 &lt;body&gt;태그 하단에 위치시키는 것입니다.</p>
+<p>그러면 16 * 1.5인 24px이 적용이 되는 것이죠.</p>
 
-<p><br />
-<br />
-End.
-<br />
-<br />
-참조한 자료 :</p>
+<p>만약에 지정된 기준값이 없다면 어떻게 될까요?
+<br /><br />
+해당요소는 부모요소의 지정된 값을 상속받습니다.</p>
 
-<p><a href="https://bbangson.tistory.com/87">https://bbangson.tistory.com/87</a>.<br />
-<a href="https://d2.naver.com/helloworld/59361">https://d2.naver.com/helloworld/59361</a>.</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">div</span><span class="nc">.content</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>content의 font-size는 2em 이니까, 10px * 2 * 2 = 40px이 되는 것입니다.</p>
+
+<p><br /><br /></p>
+
+<p>End.</p>
 
                 </div>
             </section>
@@ -361,9 +333,9 @@ End.
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/etc-browser';
-                            var this_page_identifier = '/etc-browser';
-                            var this_page_title = '브라우저의 동작 원리';
+                            var this_page_url = 'https://ykkim97.github.io/css-emAndRem';
+                            var this_page_identifier = '/css-emAndRem';
+                            var this_page_title = 'em과 rem의 차이';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -397,7 +369,7 @@ End.
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/etc/">Etc</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/css/">Css</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -407,59 +379,6 @@ End.
                                 
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/etc-processandthread">프로세스와 쓰레드의 차이점</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/etc-whatisbundle">번들링이 뭔데?</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/etc-bubbling">이벤트 버블링과 캡처링</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
                                         
                                     
                                 
@@ -496,6 +415,19 @@ End.
                                     
                                 
                                     
+                                        
+                                            
+                                            
+                                                <li><a href="/css-blockinline">block과 inline의 차이점</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
                                 
                                     
                                 
@@ -505,6 +437,29 @@ End.
                                 
                                     
                                 
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                                <li><a href="/css-basic">CSS의 의미와 적용방법</a></li>
+                                            
+                                        
                                     
                                 
                                     
@@ -516,9 +471,9 @@ End.
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/etc/">
+                            <a href="/tag/css/">
                                 
-                                    See all 5 posts  →
+                                    See all 2 posts  →
                                 
                             </a>
                         </footer>
@@ -528,65 +483,6 @@ End.
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/etc-dom">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/browserImage.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/etc-dom">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Etc</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">DOM이란?</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>기타 포스팅입니다. 
-
-    Firebase DB에서 값을 불러올 수 없는 문제 해결
-    브라우저 동작 원리
-    DOM이란?
-    이벤트 버블링과 캡처링
-    번들링이 뭔데?
-    프로세스와 쓰레드의 차이점
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -594,32 +490,29 @@ End.
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/javascript-AboutThreejs">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/threejs-logo.png)"></div>
+            <a class="post-card-image-link" href="/git-gitaddcommit">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/github-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/javascript-AboutThreejs">
+            <a class="post-card-content-link" href="/git-gitaddcommit">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Javascript</span>
+                                <span class="post-card-tags">Git</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Three.js에 대해서</h2>
+                    <h2 class="post-card-title">git add , commit, 그리고 staging</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>JavaScript 관련 글입니다. 
+                        <p>Git은 다음과 같이 구성되어 있습니다. 
 
-    JS Event Loop, 자바스크립트 동작 원리
-    호이스팅이란 , var, let, const 차이
-    Three.js에 대해
-    script, script async, script defer의 차이
-    AJAX가 무엇일까?
+    Github Label별 의미
+    git add , commit, 그리고 staging
 
 
 </p>
@@ -662,18 +555,18 @@ End.
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">브라우저의 동작 원리</div>
+    <div class="floating-header-title">em과 rem의 차이</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98+%EB%8F%99%EC%9E%91+%EC%9B%90%EB%A6%AC&amp;url=https://ykkim97.github.io/etc-browser"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=em%EA%B3%BC+rem%EC%9D%98+%EC%B0%A8%EC%9D%B4&amp;url=https://ykkim97.github.io/css-emAndRem"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/etc-browser"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/css-emAndRem"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
