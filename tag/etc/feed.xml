@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-07-20T23:33:49+09:00</updated>
+  <updated>2022-07-22T23:07:42+09:00</updated>
   <id>https://ykkim97.github.io/tag/etc/feed.xml</id>
 
   
@@ -32,6 +32,86 @@
 
   
     <entry>
+      <title type="html">CSR, SSR, SSG의 차이</title>
+      <link href="https://ykkim97.github.io/etc-csrssrssg" rel="alternate" type="text/html" title="CSR, SSR, SSG의 차이" />
+      <published>2022-07-21T23:10:00+09:00</published>
+      <updated>2022-07-21T23:10:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-csrssrssg</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-csrssrssg">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 CSR, SSR, SSG 방식의 차이를 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;csr&quot;&gt;CSR&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+CSR(Client-Side-Rendering)은 클라이언트 사이드 렌더링의 약자입니다. 말그대로 클라이언트 쪽에서 렌더링을 하는 것을 말하는 것입니다.&lt;br /&gt;
+빈 HTML을 서버로부터 클라이언트가 받게되고, 추가적으로 어플리케이션에서 필요한 자바스크립트파일을 다운받게 됩니다. 이 파일은 어플리케이션에서
+필요한 로직들과 어플리케이션을 구동하는 프레임워크와 라이브러리의 소스코드들이 포함되어있습니다. 이것들은 파일사이즈가 커서 다운로드 받는데 시간이
+오래걸릴 수 있습니다. 추가로 필요한 데이터가 있으면 서버에 요청해서 데이터를 받아오며, 이것들을 기반으로 동적으로 HTML을 생성하게 됩니다. 
+&lt;br /&gt;&lt;br /&gt;
+CSR은 필요한 부분만 요청하고 응답하기 때문에 서버의 부하가 적고, 초기 로딩이후 속도가 빠릅니다.  그리고TTV와 TTI의 간극이 없어 페이지가 무응답하지 않고 잘 동작합니다. &lt;br /&gt;&lt;br /&gt;
+하지만, 단점도 존재합니다. &lt;br /&gt;
+이런 CSR(클라이언트 사이드 렌더링)의 문제점은 뭐가 있을까요?
+일단 사용자가 웹사이트의 처음화면을 보기까지 오래걸릴 수 있다는 것이고, 좋지 않은 SEO가 있겠습니다.&lt;br /&gt;
+검색엔진들이 서버에 등록된 웹사이트들을 하나하나 분석하여, 검색시에 웹사이트를 빠르게 검색할 수 있도록 도와줍니다. CSR방식의 HTML은 대부분 비어져있기 때문에,
+검색엔진들이 사이트를 분석하기 어려워합니다. 구글에서는 개선이 되었다고는 하지만 여전히 SEO가 좋지 못합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;ssr&quot;&gt;SSR&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+SSR(Server Side Rendering)은 서버 사이드 렌더링의 약자입니다. 서버측에서 렌더링하는 것이겠지요.&lt;br /&gt;
+클라이언트의 요청을 받은 즉시, 서버는 화면에 표시하는데 필요한 데이터를 모두 받아와서 HTML을 모두 구성한 다음 브라우저로 전송하는 것입니다.&lt;br /&gt;
+브라우저는 받은 페이지를 바로 화면에 보여주게 됩니다.&lt;br /&gt;
+&lt;br /&gt;
+SSR의 장점은, CSR을 사용했을 때 보다 첫 페이지로딩이 빨라지게 되고, 모든 컨텐츠가 HTML에 담겨져 있기 떄문에 좀 더 효율적인 SEO를 할 수 있습니다.&lt;br /&gt;&lt;br /&gt;
+하지만 장점만 있는 것이 아닙니다. 요청시마다 새로고침되기 때문에 깜빡임 이슈가 존재합니다. 또한 TTV와 TTI의 간격이 있다는 것입니다. 페이지는 잘 보일지 몰라도 자바스크립트가
+아직 적용되지 않은 시간동안에는 페이지가 반응을 하지 못하는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;ssg&quot;&gt;SSG&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+SSG라는 것도 존재합니다. &lt;br /&gt;
+SSG(Static Site Generation)은 자주 업데이트되지 않는 사이트에 좋은데, SSR처럼 서버에서 완성된 HTML을 받아오는 것은 맞지만, HTML 파일의 생성이 빌드타임에서 생성됩니다.&lt;br /&gt;&lt;br /&gt;
+그러니까 SSR은 요청이 들어오는 즉시 HTML를 만들어서 응답하고, SSG는 빌드시점에 HTML을 미리 만들어두었다가 요청이 들어오면 만들어둔 완성된 HTML을 보내주는 것에 차이가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">프로세스와 쓰레드의 차이점</title>
       <link href="https://ykkim97.github.io/etc-processandthread" rel="alternate" type="text/html" title="프로세스와 쓰레드의 차이점" />
       <published>2022-07-12T07:20:00+09:00</published>
@@ -45,6 +125,7 @@
     &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -115,7 +196,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
       
 
       
@@ -136,6 +217,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -193,7 +275,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
       
 
       
@@ -214,6 +296,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -269,7 +352,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
       
 
       
@@ -290,6 +373,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -410,7 +494,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
       
 
       
@@ -431,6 +515,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;브라우저의-동작-원리&quot;&gt;브라우저의 동작 원리&lt;/h2&gt;
@@ -538,7 +623,7 @@ End.
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
       
 
       
@@ -559,6 +644,7 @@ End.
     &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;firebase-db에서-값을-불러올-수-없는-문제-해결&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/h2&gt;
@@ -605,7 +691,7 @@ https://firebase.google.com/docs/rules/insecure-rules#database
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary>
       
 
       
