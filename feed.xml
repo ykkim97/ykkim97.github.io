@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-22T23:07:42+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">CSR, SSR, SSG의 차이</title><link href="https://ykkim97.github.io/etc-csrssrssg" rel="alternate" type="text/html" title="CSR, SSR, SSG의 차이" /><published>2022-07-21T23:10:00+09:00</published><updated>2022-07-21T23:10:00+09:00</updated><id>https://ykkim97.github.io/etc-csrssrssg</id><content type="html" xml:base="https://ykkim97.github.io/etc-csrssrssg">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-23T22:00:36+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">라이브러리와 프레임워크</title><link href="https://ykkim97.github.io/etc-libraryandframework" rel="alternate" type="text/html" title="라이브러리와 프레임워크" /><published>2022-07-22T22:20:00+09:00</published><updated>2022-07-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/etc-libraryandframework</id><content type="html" xml:base="https://ykkim97.github.io/etc-libraryandframework">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -7,6 +7,40 @@
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 라이브러리와 프레임워크에 대해서 간단히 정리해보겠습니다.&lt;br /&gt;
+개발을 하다보면 이러한 라이브러리를 가져와서 사용한다, 혹은 OO 프레임워크를 사용한다, 뭐 이런 말들을 자주 들어봤을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;뭔가 비슷한거같은데 차이점이 뭘까요?&lt;/p&gt;
+
+&lt;h2 id=&quot;라이브러리&quot;&gt;라이브러리&lt;/h2&gt;
+
+&lt;p&gt;라이브러리는 단순하게 활용가능한 도구들의 집합이라고 할 수 있습니다. 개발자가 필요할 때 라이브러리를 호출해서 사용합니다. 
+개발자가 원할 때 함수나 기능의 모음인 라이브러리를 가져다 쓰는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;프레임워크&quot;&gt;프레임워크&lt;/h2&gt;
+
+&lt;p&gt;프레임워크는 뼈대, 기반구조이며 “소프트웨어의 특정 문제를 해결하기 위해서 상호 협력하는 클래스와 인터페이스의 집합”입니다. 뭔가 와닿지는 않을 것입니다. 어떤 완성된 어플리케이션이 아니라 개발자가 이 프레임워크를 가지고 프레임워크만의 규칙에 맞게 코드를 프레임워크안에 짜넣어서 개발한다고 보면 되겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
+
+&lt;p&gt;쉽게 정리하자면, &lt;br /&gt;
+필요할 때 개발자가 호출해서 가져다 쓴다면? 👉🏼 라이브러리&lt;br /&gt;
+개발자가 프레임워크에 맞춰서 코드를 작성하고 사용한다면? 👉🏼 프레임워크&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">CSR, SSR, SSG의 차이</title><link href="https://ykkim97.github.io/etc-csrssrssg" rel="alternate" type="text/html" title="CSR, SSR, SSG의 차이" /><published>2022-07-21T23:10:00+09:00</published><updated>2022-07-21T23:10:00+09:00</updated><id>https://ykkim97.github.io/etc-csrssrssg</id><content type="html" xml:base="https://ykkim97.github.io/etc-csrssrssg">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -44,7 +78,7 @@ SSG(Static Site Generation)은 자주 업데이트되지 않는 사이트에 좋
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary></entry><entry><title type="html">em과 rem의 차이</title><link href="https://ykkim97.github.io/css-emAndRem" rel="alternate" type="text/html" title="em과 rem의 차이" /><published>2022-07-19T23:35:00+09:00</published><updated>2022-07-19T23:35:00+09:00</updated><id>https://ykkim97.github.io/css-emAndRem</id><content type="html" xml:base="https://ykkim97.github.io/css-emAndRem">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">em과 rem의 차이</title><link href="https://ykkim97.github.io/css-emAndRem" rel="alternate" type="text/html" title="em과 rem의 차이" /><published>2022-07-19T23:35:00+09:00</published><updated>2022-07-19T23:35:00+09:00</updated><id>https://ykkim97.github.io/css-emAndRem</id><content type="html" xml:base="https://ykkim97.github.io/css-emAndRem">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
@@ -261,6 +295,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -310,7 +345,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary></entry><entry><title type="html">번들링이 뭔데?</title><link href="https://ykkim97.github.io/etc-whatisbundle" rel="alternate" type="text/html" title="번들링이 뭔데?" /><published>2022-07-10T07:20:00+09:00</published><updated>2022-07-10T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-whatisbundle</id><content type="html" xml:base="https://ykkim97.github.io/etc-whatisbundle">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">번들링이 뭔데?</title><link href="https://ykkim97.github.io/etc-whatisbundle" rel="alternate" type="text/html" title="번들링이 뭔데?" /><published>2022-07-10T07:20:00+09:00</published><updated>2022-07-10T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-whatisbundle</id><content type="html" xml:base="https://ykkim97.github.io/etc-whatisbundle">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -319,6 +354,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -355,7 +391,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary></entry><entry><title type="html">DOM이란?</title><link href="https://ykkim97.github.io/etc-dom" rel="alternate" type="text/html" title="DOM이란?" /><published>2022-07-07T07:20:00+09:00</published><updated>2022-07-07T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-dom</id><content type="html" xml:base="https://ykkim97.github.io/etc-dom">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">이벤트 버블링과 캡처링</title><link href="https://ykkim97.github.io/etc-bubbling" rel="alternate" type="text/html" title="이벤트 버블링과 캡처링" /><published>2022-07-07T07:20:00+09:00</published><updated>2022-07-07T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-bubbling</id><content type="html" xml:base="https://ykkim97.github.io/etc-bubbling">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -364,49 +400,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다.
-그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;dom-&quot;&gt;DOM ?&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다.
-그냥 문서 객체 모델? 로 해석하려고 하면 잘 이해가 되지 않습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-쉽게 정리하면 DOM은 HTML 코드를 해석해서 요소들을 트리형태로 구조화해 표현하는 형식입니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-그러니까 브라우저가 HTML 코드를 해석해서 트리 형태로 구조화해서 표현하는 문서(데이터)를 생성하게 되는데 이게 DOM인 것입니다. 브라우저는 DOM을 통해서 화면에 웹 컨텐츠를 렌더링합니다.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dom의-목적&quot;&gt;DOM의 목적&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-HTML코드를 해석해서 그대로 브라우저에 렌더링해주는 것이 브라우저의 역할인데 왜 중간에 DOM을 형성하는 걸까요?
-&lt;br /&gt;
-&lt;br /&gt;
-자바스크립트를 사용해서 이 문서에 대한 스크립트를 작성할 수 있게 해주는 데 목적이 있기 때문입니다.
-&lt;br /&gt;
-&lt;br /&gt;
-DOM은 자바스크립트를 사용해서 웹 컨텐츠를 추가, 수정, 삭제, 이벤트 처리 등을 정의할 수 있도록 제공되는
-프로그래밍 인터페이스입니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-자바스크립트가 어떤 동작을 구현하면 DOM에 그 결과가 반영되어 웹브라우저 화면이 다시 렌더링됩니다. HTML 코드는 정적인데, 화면이 사용자와 동적인 상호작용을 하는데 DOM이 그 역할을 해주는 것입니다.
-&lt;br /&gt;
-&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary></entry><entry><title type="html">이벤트 버블링과 캡처링</title><link href="https://ykkim97.github.io/etc-bubbling" rel="alternate" type="text/html" title="이벤트 버블링과 캡처링" /><published>2022-07-07T07:20:00+09:00</published><updated>2022-07-07T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-bubbling</id><content type="html" xml:base="https://ykkim97.github.io/etc-bubbling">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -506,7 +500,7 @@ div를 클릭하게 되면 위의 이벤트 흐름에 따라서 다음과 같이
 이렇게 이벤트 캡처링과 버블링에 대해서 정리해보았습니다.
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary></entry><entry><title type="html">브라우저의 동작 원리</title><link href="https://ykkim97.github.io/etc-browser" rel="alternate" type="text/html" title="브라우저의 동작 원리" /><published>2022-07-04T10:20:00+09:00</published><updated>2022-07-04T10:20:00+09:00</updated><id>https://ykkim97.github.io/etc-browser</id><content type="html" xml:base="https://ykkim97.github.io/etc-browser">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">DOM이란?</title><link href="https://ykkim97.github.io/etc-dom" rel="alternate" type="text/html" title="DOM이란?" /><published>2022-07-07T07:20:00+09:00</published><updated>2022-07-07T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-dom</id><content type="html" xml:base="https://ykkim97.github.io/etc-dom">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -515,90 +509,39 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;브라우저의-동작-원리&quot;&gt;브라우저의 동작 원리&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다.
+그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;dom-&quot;&gt;DOM ?&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;
-브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다.
-브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게 되는 것일까요?&lt;/p&gt;
-
-&lt;h3 id=&quot;브라우저의-종류&quot;&gt;브라우저의 종류&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-브라우저는 크롬, 사파리, 파이어폭스, 오페라, 인터넷 익스플로러, 네이버웨일 등 여러가지가 있습니다. 현재는 크롬이 가장 많이 사용되고 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;브라우저의-주-기능&quot;&gt;브라우저의 주 기능&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-브라우저의 주 기능은 사용자가 선택한 자원을 서버에 요청하고 브라우저화면에 표시하는 것입니다. 여기서 자원은 보통 HTML문서이고 PDF나 이미지 등 
-다른형태도 포함될 수 있습니다. 자원의 주소는 URL에 의하여 정해집니다.&lt;/p&gt;
-
-&lt;p&gt;브라우저는 HTML, CSS 명세에 따라서 HTML파일을 해석하고 표시합니다. 이 명세는 웹표준화기구(W3C)에 정하는데 과거에는 여러 브라우저가 각각 다른 방법으로
-확장했고 이는 호환성의 문제를 발생시켰습니다. 하지만 현재는 거의 대부분의 브라우저들이 표준화된 명세를 따르게 되었습니다.&lt;/p&gt;
-
-&lt;p&gt;브라우저의 UI는 일반적으로 다음과 같이 구성되어있습니다.
+DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다.
+그냥 문서 객체 모델? 로 해석하려고 하면 잘 이해가 되지 않습니다.
+&lt;br /&gt;
+&lt;br /&gt;
+쉽게 정리하면 DOM은 HTML 코드를 해석해서 요소들을 트리형태로 구조화해 표현하는 형식입니다. 
+&lt;br /&gt;
+&lt;br /&gt;
+그러니까 브라우저가 HTML 코드를 해석해서 트리 형태로 구조화해서 표현하는 문서(데이터)를 생성하게 되는데 이게 DOM인 것입니다. 브라우저는 DOM을 통해서 화면에 웹 컨텐츠를 렌더링합니다.
+&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;주소 표시줄&lt;/li&gt;
-  &lt;li&gt;뒤로가기,앞으로가기&lt;/li&gt;
-  &lt;li&gt;중지, 새로고침&lt;/li&gt;
-  &lt;li&gt;홈버튼&lt;/li&gt;
-  &lt;li&gt;북마크
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;p&gt;브라우저의 UI는 표준 명세가 없음에도 계속해서 브라우저들끼리 서로를 모방하면서 거의 비슷한 UI를 가지게 되었습니다. 물론 특정한 브라우저가 가지고 있는
-기능도 있긴합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;브라우저의-기본-구조&quot;&gt;브라우저의 기본 구조&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;사용자 인터페이스 - 주소 표시줄, 뒤로가기, 앞으로가기, 중지, 새로고침, 홈버튼, 북마크 등&lt;/li&gt;
-  &lt;li&gt;브라우저 엔진 - 사용자 인터페이스와 렌더링 엔진 사이의 동작을 제어&lt;/li&gt;
-  &lt;li&gt;렌더링 엔진 - 요청한 컨텐츠를 표시함.&lt;/li&gt;
-  &lt;li&gt;통신 - HTTP 요청과 같은 네트워크 호출에 사용됨.&lt;/li&gt;
-  &lt;li&gt;UI 백엔드 - 콤보 박스와 창 같은 기본적인 장치를 그림. 플랫폼에서 명시하지 않은 일반적인 인터페이스로서, OS 사용자 인터페이스 체계를 사용.&lt;/li&gt;
-  &lt;li&gt;자바스크립트 해석기 - 자바스크립트 코드를 해석하고 실행함.&lt;/li&gt;
-  &lt;li&gt;자료저장소 - 자료를 저장하는 계층.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;렌더링-엔진&quot;&gt;렌더링 엔진&lt;/h3&gt;
+&lt;h2 id=&quot;dom의-목적&quot;&gt;DOM의 목적&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;
-렌더링엔진은 요청한 컨텐츠를 표시하는 녀석입니다. 파이어폭스의 경우 “개코”엔진, 사파리나 크롬은 “웹킷”엔진을 사용합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;동작-과정에-대해&quot;&gt;동작 과정에 대해&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-렌더링엔진은 통신으로부터 요청한 문서의 내용을 얻는데 보통 문서내용은 8KB 단위로 전송됩니다.
-자, 렌더링엔진의 기본 동작 과정은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;HTML문서를 파싱하여 DOM트리를 구축&lt;/li&gt;
-  &lt;li&gt;CSS파일과 같은 스타일 요소를 파싱(CSSOM트리 구축)&lt;/li&gt;
-  &lt;li&gt;이 둘을 합쳐서 렌더트리를 구축 (렌더트리는 문서를 시각적인 구성 요소로 만들어 주는 역할을 함)&lt;/li&gt;
-  &lt;li&gt;렌더 트리 각 노드에 대해서 화면 상에 배치할 곳을 결정&lt;/li&gt;
-  &lt;li&gt;UI 백엔드에서 렌더 트리의 각 노드를 그림.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;정리하면 브라우저가 서버로 부터 HTML문서를 전달받아서 HTML파서를 통해서 파싱하고 DOM트리를 생성합니다. 또한 CSS파일과 같은 스타일요소도 파싱되어 CSSOM트리를 
-생성합니다. 그다음에 DOM과 CSSOM이 합쳐져서 렌더트리를 구축하거 렌더트리를 배치합니다. 여기서 렌더트리는 위치와 크기를 가지고 있지 않기 때문에 어느 공간에
-위치해야할지 각 객체들에게 위치와 크기를 결정해줍니다. 이어서 렌더트리가 만들어져 레이아웃이 구성됬으면 UI 백엔드가 동작하여 렌더 트리의 각 객체를 화면의 픽셀값으로
-나타냅니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;자바스크립트는&quot;&gt;자바스크립트는?&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-HTML과 CSS는 렌더링엔진에서 처리가되는데 자바스크립트는 어떨까요?&lt;br /&gt;
-자바스크립트는 렌더링엔진에서 처리가 되는 것이 아니라 자바스크립트 엔진이 처리하는 것입니다. HTML파서가 script태그를 만나면 자바스크립트코드를 실행하기 위해 
-DOM 생성 프로세스를 중지하고 자바스크립트엔진에게 권한을 넘기게 됩니다. 넘겨받은 자바스크립트엔진이 script태그 내의 자바스크립트 코드를 로드하고 파싱하여 실행합니다.
-실행이 완료되면 다시 HTML파서로 제어 권한을 넘겨서 중지했던 시점으로 넘어가 DOM 생성을 재개하게 되는 것입니다.
-&lt;br /&gt;
-브라우저는 HTML, CSS, JS를 동기적으로 처리합니다. 그런데 자바스크립트 엔진에 제어 권한이 있는 상태에서 자바스크립트 코드가 아직 완성지 않은 DOM을 조작하게 되면 어떻게 될까요?
-당연히 에러가 발생할 겁니다. 그래서 자바스크립트 코드를 &amp;lt;body&amp;gt;태그 하단에 위치시키는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-End.
+HTML코드를 해석해서 그대로 브라우저에 렌더링해주는 것이 브라우저의 역할인데 왜 중간에 DOM을 형성하는 걸까요?
 &lt;br /&gt;
 &lt;br /&gt;
-참조한 자료 :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bbangson.tistory.com/87&quot;&gt;https://bbangson.tistory.com/87&lt;/a&gt;.&lt;br /&gt;
-&lt;a href=&quot;https://d2.naver.com/helloworld/59361&quot;&gt;https://d2.naver.com/helloworld/59361&lt;/a&gt;.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이</summary></entry></feed>
+자바스크립트를 사용해서 이 문서에 대한 스크립트를 작성할 수 있게 해주는 데 목적이 있기 때문입니다.
+&lt;br /&gt;
+&lt;br /&gt;
+DOM은 자바스크립트를 사용해서 웹 컨텐츠를 추가, 수정, 삭제, 이벤트 처리 등을 정의할 수 있도록 제공되는
+프로그래밍 인터페이스입니다. 
+&lt;br /&gt;
+&lt;br /&gt;
+자바스크립트가 어떤 동작을 구현하면 DOM에 그 결과가 반영되어 웹브라우저 화면이 다시 렌더링됩니다. HTML 코드는 정적인데, 화면이 사용자와 동적인 상호작용을 하는데 DOM이 그 역할을 해주는 것입니다.
+&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry></feed>
