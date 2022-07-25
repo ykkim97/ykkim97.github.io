@@ -14,7 +14,7 @@
 
 
 
-    <title>AJAX가 무엇일까?</title>
+    <title>Sass - CSS 전처리기</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/javascript-aboutajax" />
+    <link rel="canonical" href="https://ykkim97.github.io/css-sass" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="AJAX가 무엇일까?" />
-    <meta property="og:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 오늘은 AJAX에 대해서 간단히 정리해보겠습니다. AJAX? AJAX는 “Asynchronous Javascript And XML” 의 약자로 서버와 비동기적으로 데이터를 주고 받는 자바스크립트 기술입니다. AJAX는 웹페이지 전체를 새로고침하지 않아도" />
-    <meta property="og:url" content="https://ykkim97.github.io/javascript-aboutajax" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
+    <meta property="og:title" content="Sass - CSS 전처리기" />
+    <meta property="og:description" content="CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 오늘은 Sass가 뭔지 정리해보겠습니다. CSS는 스타일을 넣어주는 역할을 합니다. 개발을 하다보면 코드가 길어지게되고 그만큼 CSS코드도 많아집니다. 또한 스타일지정이 반복되는 경우도 많고 관리하기도 힘들어집니다. 이런 문제들을 해결할 수 있는 CSS Preprocessor(전처리기)라는 것이 있습니다." />
+    <meta property="og:url" content="https://ykkim97.github.io/css-sass" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/css-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-07-14T04:45:00+09:00" />
-    <meta property="article:modified_time" content="2022-07-14T04:45:00+09:00" />
-    <meta property="article:tag" content="Javascript" />
+    <meta property="article:published_time" content="2022-07-24T15:35:00+09:00" />
+    <meta property="article:modified_time" content="2022-07-24T15:35:00+09:00" />
+    <meta property="article:tag" content="Css" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AJAX가 무엇일까?" />
-    <meta name="twitter:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 오늘은 AJAX에 대해서 간단히 정리해보겠습니다. AJAX? AJAX는 “Asynchronous Javascript And XML” 의 약자로 서버와 비동기적으로 데이터를 주고 받는 자바스크립트 기술입니다. AJAX는 웹페이지 전체를 새로고침하지 않아도" />
+    <meta name="twitter:title" content="Sass - CSS 전처리기" />
+    <meta name="twitter:description" content="CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 오늘은 Sass가 뭔지 정리해보겠습니다. CSS는 스타일을 넣어주는 역할을 합니다. 개발을 하다보면 코드가 길어지게되고 그만큼 CSS코드도 많아집니다. 또한 스타일지정이 반복되는 경우도 많고 관리하기도 힘들어집니다. 이런 문제들을 해결할 수 있는 CSS Preprocessor(전처리기)라는 것이 있습니다." />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/css-logo.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Javascript" />
+    <meta name="twitter:data2" content="Css" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/javascript-aboutajax",
+    "url": "https://ykkim97.github.io/css-sass",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/javascript-logo.jpg",
+        "url": "https://ykkim97.github.io/assets/built/images/css-logo.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/javascript-aboutajax"
+        "@id": "https://ykkim97.github.io/css-sass"
     },
-    "description": "JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 오늘은 AJAX에 대해서 간단히 정리해보겠습니다. AJAX? AJAX는 “Asynchronous Javascript And XML” 의 약자로 서버와 비동기적으로 데이터를 주고 받는 자바스크립트 기술입니다. AJAX는 웹페이지 전체를 새로고침하지 않아도"
+    "description": "CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 오늘은 Sass가 뭔지 정리해보겠습니다. CSS는 스타일을 넣어주는 역할을 합니다. 개발을 하다보면 코드가 길어지게되고 그만큼 CSS코드도 많아집니다. 또한 스타일지정이 반복되는 경우도 많고 관리하기도 힘들어집니다. 이런 문제들을 해결할 수 있는 CSS Preprocessor(전처리기)라는 것이 있습니다."
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="AJAX가 무엇일까?" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Sass - CSS 전처리기" href="/feed.xml" />
 
 
 </head>
@@ -177,87 +177,175 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-javascript post tag-js ">
+        <article class="post-full  tag-css post tag-css ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="14 July 2022">14 July 2022</time>
+                    <time class="post-full-meta-date" datetime="24 July 2022">24 July 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/javascript/'>JAVASCRIPT</a>
+                                <a href='/tag/css/'>CSS</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">AJAX가 무엇일까?</h1>
+                <h1 class="post-full-title">Sass - CSS 전처리기</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/css-logo.png)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">JavaScript 관련 글입니다. </span></p>
+                    <p><span class="table-of-contents-list">CSS는 다음과 같이 구성되어 있습니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./javascript-eventloop">JS Event Loop, 자바스크립트 동작 원리</a></li>
-    <li><a href="./javascript-hoisting">호이스팅이란 , var, let, const 차이</a></li>
-    <li><a href="./javascript-AboutThreejs">Three.js에 대해</a></li>
-    <li><a href="./javascript-scripttag">script, script async, script defer의 차이</a></li>
-    <li><a href="./javascript-aboutajax">AJAX가 무엇일까?</a></li>
+    <li><a href="./css-basic">CSS의 의미와 적용방법</a></li>
+    <li><a href="./css-blockinline">block과 inline의 차이점</a></li>
+    <li><a href="./css-emAndRem">em과 rem의 차이</a></li>
+    <li><a href="./css-sass">Sass - CSS 전처리기</a></li>
 </ul>
 
 <p><br /><br /><br />
-오늘은 AJAX에 대해서 간단히 정리해보겠습니다.</p>
+오늘은 Sass가 뭔지 정리해보겠습니다.<br /></p>
 
-<h2 id="ajax">AJAX?</h2>
+<p>CSS는 스타일을 넣어주는 역할을 합니다. 개발을 하다보면 코드가 길어지게되고 그만큼 CSS코드도 많아집니다.
+또한 스타일지정이 반복되는 경우도 많고 관리하기도 힘들어집니다. <br /></p>
+
+<p>이런 문제들을 해결할 수 있는 CSS Preprocessor(전처리기)라는 것이 있습니다. 그중에 하나가 Sass입니다. 
+Sass는 CSS와 동일하게 코드를 작성할 수 있는데 추가적으로 프로그래밍적인 문법이 추가된 것입니다.
+예를 들어서 조건문이나 반복문, 변수 같은 것을 쓸 수 있는 것입니다.</p>
+
+<h2 id="환경세팅">환경세팅</h2>
 <p><br />
-AJAX는 “Asynchronous Javascript And XML” 의 약자로 서버와 비동기적으로 데이터를 주고 받는 자바스크립트 기술입니다. 
-AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부만 갱신할 수 있습니다.
+VSCode 기준으로 익스텐션에서 “Live Sass Compiler”를 검색해서 설치해주시면 됩니다.
+<img src="https://user-images.githubusercontent.com/17917009/180705785-224e4ce3-7fb7-486c-9a0c-77c5396612fe.png" alt="image" />
 <br />
-<br />
-이전에는 웹페이지의 작은 일부가 변해도 새로운 페이지 전체를 다시 로드해야했습니다. 그래서 화면이 깜빡이는 현상이 있었고, 이것은 시간적으로나 자원적으로나 낭비입니다.
-하지만 AJAX를 이용하면 페이지 전체가 아니라, 일부분만 갱신할 수 있습니다. 따라서 깜빡임 현상도 일어나지않고 새로고침없이 화면이 부드럽게 전환됩니다.</p>
+이후에는 일반 css사용하는 것과 똑같은데 .css확장자가 아니라 .scss라는 확장자로 파일을 만들어서 코드를 작성합니다. 물론 브라우저는 이 css파일만 읽을 수 있습니다. 그래서 scss파일을 css로 바꿔줘야하기 때문에 
+“Live Sass Compiler” 익스텐션을 설치한 것입니다. 
+<br /><br />
+참고로 .sass라는 확장자로 파일을 만들 수도 있는데 .sass파일은 css를 작성할 때 중괄호를 쓰지 않는다는 점이 다르고 거의 차이가 없습니다. 개인적으로는 중괄호를 쓰는게 더 편하기 때문에 .scss확장자를 사용하는게 편하다고 봅니다.</p>
 
-<h2 id="ajax의-장단점">AJAX의 장단점</h2>
+<p><img src="https://user-images.githubusercontent.com/17917009/180707384-0e50f2eb-8be7-4695-a948-3fc099763a74.png" alt="image" /></p>
+
+<p>scss파일에 코드를 작성했다면 vscode 하단에 다음과 같이 “Watch Sass” 버튼을 눌러주시면 됩니다.
+그러면 알아서 변환된 css파일이 생성이 될 것이고, 그 변환된 css파일을 가져다 사용하면 됩니다.</p>
+
+<h2 id="sass에서-변수사용하기">Sass에서 변수사용하기</h2>
 <p><br /></p>
-<ul>
-  <li>장점</li>
-</ul>
 
-<ol>
-  <li>웹페이지의 전체를 재로딩하지 않아도, 일부분만 갱신가능하다.</li>
-  <li>불필요한 데이터 요청을 최소화할 수 있고 많은 일이 클라이언트 웹 브라우저에서 처리가능</li>
-</ol>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$big-size</span> <span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="nv">$middle-size</span> <span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="nv">$small-size</span> <span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
 
-<ul>
-  <li>단점</li>
-</ul>
+<span class="nc">.content</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$middle-size</span> <span class="o">+</span> <span class="m">3px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<ol>
-  <li>보안에 주의해야한다.</li>
-  <li>연속해서 데이터를 요청을 남발하면 서버 부하가 생길 수 있다.</li>
-</ol>
+<p>이렇게 size를 $기호와 함께 변수로 저장해두고 그 값을 가져다 쓸 수 있습니다.
+또한 사칙연산도 가능합니다.</p>
 
-<p>이외에도 장단점이 있겠지만 크게는 이렇습니다.
-<br />
-<br /></p>
+<p>물론 sass를 쓰지 않아도 var()를 사용해서 변수를 만들 수 있고, 사칙연산도 calc()를 사용하면 연산이 가능하지만, 개인적으로는 sass를 쓰는 게 더 편한 것 같습니다.</p>
 
-<h2 id="사용법">사용법</h2>
+<h2 id="nesting">Nesting</h2>
+<p><br /></p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.content</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.content</span> <span class="nc">.btn</span> <span class="p">{</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>.content 안에 p태그와 “btn” 클래스를 가진 버튼이 있다고 가정해보겠습니다. p와 버튼태그에 접근하려면 위의 코드처럼 접근해야합니다. 위의 코드는 간단한 코드이기 때문에 상관없을 수 있지만, 코드가 길어지면 복잡해보일 수 있습니다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.content</span> <span class="p">{</span>
+    <span class="nt">p</span> <span class="p">{</span> 
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nc">.btn</span> <span class="p">{</span>
+        <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>그래서 sass를 사용해서 네스팅을 할 수 있습니다. 이전 코드보다 눈으로 보기에도 훨씬 좋아졌고 관리하기도 쉬워집니다.</p>
+
+<h2 id="extend로-확장하기">@extend로 확장하기</h2>
+<p><br /></p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">%button</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.yellow-button</span> <span class="p">{</span>
+    <span class="k">@extend</span> <span class="nv">%button</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.black-button</span> <span class="p">{</span>
+    <span class="k">@extend</span> <span class="nv">%button</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>노란색버튼과 검은색버튼을 만들고 싶다고 가정해보면, 중복되는 코드를 “%”를 사용해서 위처럼 임시클래스로 정의해두고 각 버튼에 “@extend”를 사용하여 불러올 수 있습니다. 이렇게 하면 귀찮은 반복을 줄일 수 있는 장점이 있습니다.<br />
+참고로 %를 사용해서 정의한 임시클래스만 정의해놓으면 그 임시클래스는 컴파일되지 않습니다.</p>
+
+<h2 id="mixin--include">@Mixin &amp; @include</h2>
 <p><br />
-사용법은 여러 방법이 있는데 간단히 정리해보자면 다음과 같습니다. (전통적인 방법은 제외)</p>
+위의 @extend와 유사하게 사용할 수 있는게 있습니다.</p>
 
-<ol>
-  <li>fetch함수 사용</li>
-  <li>jQuery의 ajax()함수 사용</li>
-  <li>리액트나 뷰와 같은 환경에서는 axios 라이브러리 설치하여 사용</li>
-</ol>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">buttonDesign</span><span class="p">(</span><span class="nv">$bgColor</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$bgColor</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$color</span><span class="p">;</span>
+<span class="p">}</span> 
 
-<p>End.</p>
+<span class="nc">.yellow-button</span> <span class="p">{</span>
+    <span class="k">@include</span> <span class="nd">buttonDesign</span><span class="p">(</span><span class="no">yellow</span><span class="o">,</span> <span class="no">black</span><span class="p">);</span> 
+    <span class="c1">// 함수처럼 사용이 가능함</span>
+    <span class="c1">// 인자로 배경색은 노란색, 글자색은 검은색을 줌.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>함수를 정의하고 호출하듯이 사용할 수 있는 것이 @Mixin 입니다.<br />
+“@extend”에서 만든 것처럼 노란색 버튼을 위처럼 만들 수 있습니다.<br />
+“@mixin”을 붙인후 함수처럼 위와 같이 정의해준 후, 그 함수를 불러오듯이 “@include”로 가져오면 됩니다.
+“@extend”와의 차이는 위처럼 매개변수를 넣을 수 있다는 것입니다.</p>
+
+<h2 id="use">@use</h2>
+
+<p>외부 css코드를 가져오고 싶을 때 @use를 사용할 수 있습니다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@use</span> <span class="s1">'_init.scss";</span><span class="err">
+</span></code></pre></div></div>
+
+<p>일반적으로 import하는 것과 같다고 볼 수 있습니다. <br />
+“@use”와 함께 경로를 써주면 됩니다. 확장자는 생략가능합니다.</p>
+
+<p>외부에서 불러온 css파일에서 정의된 변수를 사용하고 싶다면 “파일이름.$변수이름”으로 접근할 수 있습니다.<br /></p>
+
+<p>추가로, 종속되는 파일과 같이 단독으로는 컴파일할 필요가 없는 파일들은 파일명 앞에 “_“를 붙여서 컴파일을 하지 않도록 할 수 있습니다.</p>
+
+<p><br /><br /><br />
+End.</p>
 
                 </div>
             </section>
@@ -322,9 +410,9 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/javascript-aboutajax';
-                            var this_page_identifier = '/javascript-aboutajax';
-                            var this_page_title = 'AJAX가 무엇일까?';
+                            var this_page_url = 'https://ykkim97.github.io/css-sass';
+                            var this_page_identifier = '/css-sass';
+                            var this_page_title = 'Sass - CSS 전처리기';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -358,7 +446,7 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/javascript/">Javascript</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/css/">Css</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -368,44 +456,6 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
                                 
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/javascript-scripttag">script, script async, script defer의 차이</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/javascript-AboutThreejs">Three.js에 대해서</a></li>
-                                            
                                         
                                     
                                 
@@ -417,14 +467,7 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
                                         
                                             
                                             
-                                                <li><a href="/javascript-hoisting">호이스팅이란 , var, let, const 차이</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
+                                                <li><a href="/css-emAndRem">em과 rem의 차이</a></li>
                                             
                                         
                                     
@@ -462,11 +505,51 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
                                     
                                 
                                     
+                                        
+                                            
+                                            
+                                                <li><a href="/css-blockinline">block과 inline의 차이점</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
                                 
                                     
                                 
                                     
                                 
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                                <li><a href="/css-basic">CSS의 의미와 적용방법</a></li>
+                                            
+                                        
                                     
                                 
                                     
@@ -478,9 +561,9 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/javascript/">
+                            <a href="/tag/css/">
                                 
-                                    See all 4 posts  →
+                                    See all 3 posts  →
                                 
                             </a>
                         </footer>
@@ -490,61 +573,6 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/git-gitaddcommit">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/github-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/git-gitaddcommit">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Git</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">git add , commit, 그리고 staging</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Git은 다음과 같이 구성되어 있습니다. 
-
-    Github Label별 의미
-    git add , commit, 그리고 staging
-
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -552,32 +580,35 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/javascript-scripttag">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)"></div>
+            <a class="post-card-image-link" href="/etc-libraryandframework">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/library.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/javascript-scripttag">
+            <a class="post-card-content-link" href="/etc-libraryandframework">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Javascript</span>
+                                <span class="post-card-tags">Etc</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">script, script async, script defer의 차이</h2>
+                    <h2 class="post-card-title">라이브러리와 프레임워크</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>JavaScript 관련 글입니다. 
+                        <p>기타 포스팅입니다. 
 
-    JS Event Loop, 자바스크립트 동작 원리
-    호이스팅이란 , var, let, const 차이
-    Three.js에 대해
-    script, script async, script defer의 차이
-    AJAX가 무엇일까?
+    Firebase DB에서 값을 불러올 수 없는 문제 해결
+    브라우저 동작 원리
+    DOM이란?
+    이벤트 버블링과 캡처링
+    번들링이 뭔데?
+    프로세스와 쓰레드의 차이점
+    CSR, SSR, SSG의 차이
+    라이브러리와 프레임워크
 
 
 </p>
@@ -620,18 +651,18 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">AJAX가 무엇일까?</div>
+    <div class="floating-header-title">Sass - CSS 전처리기</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=AJAX%EA%B0%80+%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C%3F&amp;url=https://ykkim97.github.io/javascript-aboutajax"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Sass+-+CSS+%EC%A0%84%EC%B2%98%EB%A6%AC%EA%B8%B0&amp;url=https://ykkim97.github.io/css-sass"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-aboutajax"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/css-sass"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

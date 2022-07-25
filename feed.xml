@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-23T22:00:36+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">라이브러리와 프레임워크</title><link href="https://ykkim97.github.io/etc-libraryandframework" rel="alternate" type="text/html" title="라이브러리와 프레임워크" /><published>2022-07-22T22:20:00+09:00</published><updated>2022-07-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/etc-libraryandframework</id><content type="html" xml:base="https://ykkim97.github.io/etc-libraryandframework">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-07-25T16:19:41+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Sass - CSS 전처리기</title><link href="https://ykkim97.github.io/css-sass" rel="alternate" type="text/html" title="Sass - CSS 전처리기" /><published>2022-07-24T15:35:00+09:00</published><updated>2022-07-24T15:35:00+09:00</updated><id>https://ykkim97.github.io/css-sass</id><content type="html" xml:base="https://ykkim97.github.io/css-sass">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 Sass가 뭔지 정리해보겠습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;CSS는 스타일을 넣어주는 역할을 합니다. 개발을 하다보면 코드가 길어지게되고 그만큼 CSS코드도 많아집니다.
+또한 스타일지정이 반복되는 경우도 많고 관리하기도 힘들어집니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이런 문제들을 해결할 수 있는 CSS Preprocessor(전처리기)라는 것이 있습니다. 그중에 하나가 Sass입니다. 
+Sass는 CSS와 동일하게 코드를 작성할 수 있는데 추가적으로 프로그래밍적인 문법이 추가된 것입니다.
+예를 들어서 조건문이나 반복문, 변수 같은 것을 쓸 수 있는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;환경세팅&quot;&gt;환경세팅&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+VSCode 기준으로 익스텐션에서 “Live Sass Compiler”를 검색해서 설치해주시면 됩니다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/180705785-224e4ce3-7fb7-486c-9a0c-77c5396612fe.png&quot; alt=&quot;image&quot; /&gt;
+&lt;br /&gt;
+이후에는 일반 css사용하는 것과 똑같은데 .css확장자가 아니라 .scss라는 확장자로 파일을 만들어서 코드를 작성합니다. 물론 브라우저는 이 css파일만 읽을 수 있습니다. 그래서 scss파일을 css로 바꿔줘야하기 때문에 
+“Live Sass Compiler” 익스텐션을 설치한 것입니다. 
+&lt;br /&gt;&lt;br /&gt;
+참고로 .sass라는 확장자로 파일을 만들 수도 있는데 .sass파일은 css를 작성할 때 중괄호를 쓰지 않는다는 점이 다르고 거의 차이가 없습니다. 개인적으로는 중괄호를 쓰는게 더 편하기 때문에 .scss확장자를 사용하는게 편하다고 봅니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/180707384-0e50f2eb-8be7-4695-a948-3fc099763a74.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;scss파일에 코드를 작성했다면 vscode 하단에 다음과 같이 “Watch Sass” 버튼을 눌러주시면 됩니다.
+그러면 알아서 변환된 css파일이 생성이 될 것이고, 그 변환된 css파일을 가져다 사용하면 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;sass에서-변수사용하기&quot;&gt;Sass에서 변수사용하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$big-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$middle-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$small-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$middle-size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 size를 $기호와 함께 변수로 저장해두고 그 값을 가져다 쓸 수 있습니다.
+또한 사칙연산도 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;물론 sass를 쓰지 않아도 var()를 사용해서 변수를 만들 수 있고, 사칙연산도 calc()를 사용하면 연산이 가능하지만, 개인적으로는 sass를 쓰는 게 더 편한 것 같습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;nesting&quot;&gt;Nesting&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;.content 안에 p태그와 “btn” 클래스를 가진 버튼이 있다고 가정해보겠습니다. p와 버튼태그에 접근하려면 위의 코드처럼 접근해야합니다. 위의 코드는 간단한 코드이기 때문에 상관없을 수 있지만, 코드가 길어지면 복잡해보일 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그래서 sass를 사용해서 네스팅을 할 수 있습니다. 이전 코드보다 눈으로 보기에도 훨씬 좋아졌고 관리하기도 쉬워집니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;extend로-확장하기&quot;&gt;@extend로 확장하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;%button&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.yellow-button&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;@extend&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;yellow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.black-button&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;@extend&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;노란색버튼과 검은색버튼을 만들고 싶다고 가정해보면, 중복되는 코드를 “%”를 사용해서 위처럼 임시클래스로 정의해두고 각 버튼에 “@extend”를 사용하여 불러올 수 있습니다. 이렇게 하면 귀찮은 반복을 줄일 수 있는 장점이 있습니다.&lt;br /&gt;
+참고로 %를 사용해서 정의한 임시클래스만 정의해놓으면 그 임시클래스는 컴파일되지 않습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;mixin--include&quot;&gt;@Mixin &amp;amp; @include&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+위의 @extend와 유사하게 사용할 수 있는게 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@mixin&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonDesign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$bgColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$bgColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+
+&lt;span class=&quot;nc&quot;&gt;.yellow-button&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;@include&lt;/span&gt; &lt;span class=&quot;nd&quot;&gt;buttonDesign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;yellow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;c1&quot;&gt;// 함수처럼 사용이 가능함&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 인자로 배경색은 노란색, 글자색은 검은색을 줌.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;함수를 정의하고 호출하듯이 사용할 수 있는 것이 @Mixin 입니다.&lt;br /&gt;
+“@extend”에서 만든 것처럼 노란색 버튼을 위처럼 만들 수 있습니다.&lt;br /&gt;
+“@mixin”을 붙인후 함수처럼 위와 같이 정의해준 후, 그 함수를 불러오듯이 “@include”로 가져오면 됩니다.
+“@extend”와의 차이는 위처럼 매개변수를 넣을 수 있다는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;use&quot;&gt;@use&lt;/h2&gt;
+
+&lt;p&gt;외부 css코드를 가져오고 싶을 때 @use를 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@use&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_init.scss&quot;;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;일반적으로 import하는 것과 같다고 볼 수 있습니다. &lt;br /&gt;
+“@use”와 함께 경로를 써주면 됩니다. 확장자는 생략가능합니다.&lt;/p&gt;
+
+&lt;p&gt;외부에서 불러온 css파일에서 정의된 변수를 사용하고 싶다면 “파일이름.$변수이름”으로 접근할 수 있습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;추가로, 종속되는 파일과 같이 단독으로는 컴파일할 필요가 없는 파일들은 파일명 앞에 “_“를 붙여서 컴파일을 하지 않도록 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary></entry><entry><title type="html">라이브러리와 프레임워크</title><link href="https://ykkim97.github.io/etc-libraryandframework" rel="alternate" type="text/html" title="라이브러리와 프레임워크" /><published>2022-07-22T22:20:00+09:00</published><updated>2022-07-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/etc-libraryandframework</id><content type="html" xml:base="https://ykkim97.github.io/etc-libraryandframework">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -83,6 +226,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -144,7 +288,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이</summary></entry><entry><title type="html">git add , commit, 그리고 staging</title><link href="https://ykkim97.github.io/git-gitaddcommit" rel="alternate" type="text/html" title="git add , commit, 그리고 staging" /><published>2022-07-17T03:32:00+09:00</published><updated>2022-07-17T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitaddcommit</id><content type="html" xml:base="https://ykkim97.github.io/git-gitaddcommit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary></entry><entry><title type="html">git add , commit, 그리고 staging</title><link href="https://ykkim97.github.io/git-gitaddcommit" rel="alternate" type="text/html" title="git add , commit, 그리고 staging" /><published>2022-07-17T03:32:00+09:00</published><updated>2022-07-17T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitaddcommit</id><content type="html" xml:base="https://ykkim97.github.io/git-gitaddcommit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
@@ -498,50 +642,6 @@ div를 클릭하게 되면 위의 이벤트 흐름에 따라서 다음과 같이
 &lt;br /&gt;
 &lt;br /&gt;
 이렇게 이벤트 캡처링과 버블링에 대해서 정리해보았습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">DOM이란?</title><link href="https://ykkim97.github.io/etc-dom" rel="alternate" type="text/html" title="DOM이란?" /><published>2022-07-07T07:20:00+09:00</published><updated>2022-07-07T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-dom</id><content type="html" xml:base="https://ykkim97.github.io/etc-dom">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다.
-그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;dom-&quot;&gt;DOM ?&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다.
-그냥 문서 객체 모델? 로 해석하려고 하면 잘 이해가 되지 않습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-쉽게 정리하면 DOM은 HTML 코드를 해석해서 요소들을 트리형태로 구조화해 표현하는 형식입니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-그러니까 브라우저가 HTML 코드를 해석해서 트리 형태로 구조화해서 표현하는 문서(데이터)를 생성하게 되는데 이게 DOM인 것입니다. 브라우저는 DOM을 통해서 화면에 웹 컨텐츠를 렌더링합니다.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dom의-목적&quot;&gt;DOM의 목적&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-HTML코드를 해석해서 그대로 브라우저에 렌더링해주는 것이 브라우저의 역할인데 왜 중간에 DOM을 형성하는 걸까요?
-&lt;br /&gt;
-&lt;br /&gt;
-자바스크립트를 사용해서 이 문서에 대한 스크립트를 작성할 수 있게 해주는 데 목적이 있기 때문입니다.
-&lt;br /&gt;
-&lt;br /&gt;
-DOM은 자바스크립트를 사용해서 웹 컨텐츠를 추가, 수정, 삭제, 이벤트 처리 등을 정의할 수 있도록 제공되는
-프로그래밍 인터페이스입니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-자바스크립트가 어떤 동작을 구현하면 DOM에 그 결과가 반영되어 웹브라우저 화면이 다시 렌더링됩니다. HTML 코드는 정적인데, 화면이 사용자와 동적인 상호작용을 하는데 DOM이 그 역할을 해주는 것입니다.
 &lt;br /&gt;
 &lt;br /&gt;
 End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry></feed>
