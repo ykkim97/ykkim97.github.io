@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-07-26T23:47:59+09:00</updated>
+  <updated>2022-08-06T21:03:46+09:00</updated>
   <id>https://ykkim97.github.io/tag/javascript/feed.xml</id>
 
   
@@ -32,6 +32,117 @@
 
   
     <entry>
+      <title type="html">함수선언식과 함수표현식</title>
+      <link href="https://ykkim97.github.io/javascript-functionExpression" rel="alternate" type="text/html" title="함수선언식과 함수표현식" />
+      <published>2022-08-04T06:02:00+09:00</published>
+      <updated>2022-08-04T06:02:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-functionExpression</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-functionExpression">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 함수선언식과 함수표현식에 대해서 간단히 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;함수선언식&quot;&gt;함수선언식&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+함수선언식이란 “function” 키워드를 사용해서 함수를 정의하는 방법입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그냥 우리가 기본적으로 알고있는 방식입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;함수-표현식&quot;&gt;함수 표현식&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+함수표현식은 별도의 변수에 함수를 할당하는 방식입니다.
+자바스크립트에서는 함수도 하나의 값으로 취급될 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위처럼 hello라는 변수에 함수를 할당합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;보통은 익명함수를 사용하며 화살표함수를 많이 사용합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;차이점&quot;&gt;차이점&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+함수선언식과 함수표현식의 차이점은 무엇일까요?
+이는 호이스팅에 영향을 받는지에 차이가 있습니다.
+&lt;br /&gt;&lt;br /&gt;
+함수선언식은 호이스팅에 영향을 받고, 함수표현식은 호이스팅에 영향을 받지 않습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;hello함수를 호출하고 이후 함수선언식을 통해서 hello함수를 선언하면 호이스팅이 되기 때문에 에러가 발생하지 않고 정상적으로 실행됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;반면 위처럼 함수표현식형태로 했을 경우 호이스팅이 되지 않기 떄문에 에러가 발생하게 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;함수선언식이란 “function” 키워드를 사용해서 함수를 정의하는 방법입니다.&lt;/li&gt;
+  &lt;li&gt;함수표현식은 별도의 변수에 함수를 할당하는 방식입니다.&lt;/li&gt;
+  &lt;li&gt;함수선언식은 호이스팅에 영향을 받고, 함수표현식은 호이스팅에 영향을 받지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">AJAX가 무엇일까?</title>
       <link href="https://ykkim97.github.io/javascript-aboutajax" rel="alternate" type="text/html" title="AJAX가 무엇일까?" />
       <published>2022-07-14T04:45:00+09:00</published>
@@ -44,6 +155,7 @@
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -113,7 +225,7 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까?</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
       
 
       
@@ -133,6 +245,7 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -195,7 +308,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까?</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
       
 
       
@@ -215,6 +328,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -264,7 +378,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까?</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
       
 
       
@@ -284,6 +398,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;호이스팅에-대해서&quot;&gt;호이스팅에 대해서&lt;/h2&gt;
@@ -359,7 +474,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까?</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
       
 
       
@@ -379,6 +494,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;js-event-loop에-대해서&quot;&gt;JS Event Loop에 대해서&lt;/h2&gt;
@@ -438,7 +554,7 @@ Call Stack에 새로운 프레임이 생기고, push되고 메소드의 실행�
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까?</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
       
 
       
