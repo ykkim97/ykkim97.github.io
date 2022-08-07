@@ -190,6 +190,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "git-gitflow": {
+        "title": "Git Flow 전략에 대해(브랜치 관리 전략)",
+            "author": "ykkim97",
+            "category": "",
+            "content": "Git은 다음과 같이 구성되어 있습니다.     Github Label별 의미    git add , commit, 그리고 staging    Git Flow 전략에 대해(브랜치 관리 전략)개발한 코드를 git으로 관리할 때 그냥 main(master)브랜치에 관리하는 것은 좋지 않을 수 있습니다. 특히나 규모가 큰 프로젝트에서 말이죠.물론 상황에 따라서 다를 수 있습니다.오늘은 많이 사용하는 브랜치 전략인 git Flow 전략을 정리해보겠습니다.Git Flow 전략제가 그린 것을 보고 정리해보겠습니다.일단 현재 배포중인 최종본은 Main(Master)브랜치에서 관리합니다.이후에 개발을 할 때 git flow 전략은 이 Main 브랜치에서 develop 브랜치를 하나 생성하여 개발을 진행합니다.   이후 신규 기능을 개발할 때, 이 develop브랜치에서 feature브랜치를 추가로 생성합니다. 만약 로그인 기능을 개발하는 브랜치라면 “feature/login” 과 같은 이름으로 브랜치를 생성합니다.기능 개발을 완료하고 정상적으로 작동하는지 검토한 후 에 develop브랜치와 이 브랜치를 병합합니다.  새로운 기능이 추가된 develop브랜치를 바로 Main브랜치와 합치기 전에 release 브랜치를 생성하는데, 이것은 이번 출시 버전을 준비하는 브랜치로, 배포전 최종적으로 확인하기위한 브랜치입니다.  이후 최종테스트를 마친 후에, Main으로 배포하게 됩니다. 물론 release 브랜치는 Main브랜치 뿐만 아니라 develop브랜치와도 병합합니다.  배포 버전에서 갑작스러운 버그가 발생하여 급하게 수정해야하는 경우도 있을 것입니다. 이런 경우에는 Main브랜치에서 바로 hotfix라는 브랜치를 생성하여 버그를 수정한 후 바로 Main과 병합하여 배포하게 됩니다. (develop브랜치와도 병합)장점이 git flow 전략의 장점이 뭘까요?신중하게 관리하는 전략이기 때문에 안정적인 배포가 가능하다는 점입니다.정리하기크게 5가지 브랜치로 관리한다.  (main)master : 배포중인 브랜치  develop : 다음 출시 버전 개발하는 브랜치  feature : 기능을 개발하는 브랜치  release : 이번 출시 버전 준비하는 브랜치  hotfix : 출시중인 버전에서 발생한 버그를 수정하는 브랜치End.",
+        "url": "/git-gitflow"
+    }
+    ,
+    
     "javascript-functionexpression": {
         "title": "함수선언식과 함수표현식",
             "author": "ykkim97",
@@ -239,7 +248,7 @@ into the {body} of the default.hbs template -->
         "title": "git add , commit, 그리고 staging",
             "author": "ykkim97",
             "category": "",
-            "content": "Git은 다음과 같이 구성되어 있습니다.     Github Label별 의미    git add , commit, 그리고 staginggit은 변경사항을 추적하고 여러 명의 사용자들 간에 파일의 작업을 조율하기 위한 “버전 관리”소프트웨어 입니다.오늘은 git 명령중에 git add, commit 명령에 대해서 정리해보겠습니다.git add , commit, 그리고 staging작업폴더에 “test.txt”라는 파일을 생성해서 작성했다고 가정해보겠습니다.이때 “test.txt”파일을 기록하고 싶습니다. 일단, “git add test.txt”라는 명령을 터미널에 입력해주면 됩니다.git add test.txt말 그대로 추가하는 겁니다. 그런데, 어디에 추가하는 걸까요? 바로 리포지토리에 추가가 되는 걸까요?“git add 파일명”이라는 명령은 일단은 Staging Area라는 곳에 파일을 넣어둡니다. Staging Area는 커밋하기전에 커밋할 파일을 골라놓는 곳이고 이런 행위를 스테이징한다고 합니다.이제 여기서 커밋명령을 해주어야합니다.커밋을 해주면 repository에 기록됩니다. 파일 버전을 모아둔다고 말을 합니다.아 물론, 작업폴더안의 전체 파일을 기록하고싶다면 “git add .”을 입력하면됩니다.git add .커밋을 하는 방법은 ‘ git commit -m “쓰고싶은 메세지” ‘를 터미널에 입력해주는 것입니다. 메세지는 현재 커밋하는 내용이 어떤 내용인지 알 수 있게 적어주면됩니다.git commit -m \"테스트용 파일 추가\"정리해보면 커밋하기전에 커밋할 파일을 골라놓는 곳인 “Staging Area”에 “git add”를 통해 파일을 넣어주고, 커밋된 파일버전을 모아놓는 곳인 “repository”에 “git commit”을 통해 커밋합니다.End.",
+            "content": "Git은 다음과 같이 구성되어 있습니다.     Github Label별 의미    git add , commit, 그리고 staging    Git Flow 전략에 대해(브랜치 관리 전략)git은 변경사항을 추적하고 여러 명의 사용자들 간에 파일의 작업을 조율하기 위한 “버전 관리”소프트웨어 입니다.오늘은 git 명령중에 git add, commit 명령에 대해서 정리해보겠습니다.git add , commit, 그리고 staging작업폴더에 “test.txt”라는 파일을 생성해서 작성했다고 가정해보겠습니다.이때 “test.txt”파일을 기록하고 싶습니다. 일단, “git add test.txt”라는 명령을 터미널에 입력해주면 됩니다.git add test.txt말 그대로 추가하는 겁니다. 그런데, 어디에 추가하는 걸까요? 바로 리포지토리에 추가가 되는 걸까요?“git add 파일명”이라는 명령은 일단은 Staging Area라는 곳에 파일을 넣어둡니다. Staging Area는 커밋하기전에 커밋할 파일을 골라놓는 곳이고 이런 행위를 스테이징한다고 합니다.이제 여기서 커밋명령을 해주어야합니다.커밋을 해주면 repository에 기록됩니다. 파일 버전을 모아둔다고 말을 합니다.아 물론, 작업폴더안의 전체 파일을 기록하고싶다면 “git add .”을 입력하면됩니다.git add .커밋을 하는 방법은 ‘ git commit -m “쓰고싶은 메세지” ‘를 터미널에 입력해주는 것입니다. 메세지는 현재 커밋하는 내용이 어떤 내용인지 알 수 있게 적어주면됩니다.git commit -m \"테스트용 파일 추가\"정리해보면 커밋하기전에 커밋할 파일을 골라놓는 곳인 “Staging Area”에 “git add”를 통해 파일을 넣어주고, 커밋된 파일버전을 모아놓는 곳인 “repository”에 “git commit”을 통해 커밋합니다.End.",
         "url": "/git-gitaddcommit"
     }
     ,
@@ -356,7 +365,7 @@ into the {body} of the default.hbs template -->
         "title": "Github Label별 의미",
             "author": "ykkim97",
             "category": "",
-            "content": "Git은 다음과 같이 구성되어 있습니다.     Github Label별 의미    git add , commit, 그리고 stagingGithub 기본 Label들프로젝트를 하면서 많은 이슈가 발생하게 되고 이런것을 관리하는 것의 필요성을 느끼고 이슈관리에 대해서 공부하던 중 이슈에 라벨이라는 것을 달 수 있게 되어있었다. 여러가지가 있었는데 다음과 같다.깃허브의 이슈, PR(Pull Request)에 Label을 지정할 수 있다. 제공되는 라벨은 다음과 같다.            라벨      의미                  bug      예기치 않은 문제 또는 의도하지 않은 동작(버그)을 나타냅니다.              documentation      문서를 개선하거나 추가 할 필요가 있음을 나타냅니다.              duplicate      해당이슈 또는 PR이 기존에 있음을 나타냅니다.              enhancement      새로운 기능 요청을 나타냅니다.              good first issue      처음 기여해볼 사람에게 좋은 문제를 나타냅니다              help wanted      관리자가 문제 또는 PR 요청에 대한 도움을 원함을 나타냅니다.              invalid      이슈 또는 PR 요청이 더 이상 관련이 없음을 나타냅니다.              question      이슈 또는 풀 요청에 추가 정보가 필요함을 나타냅니다.              wontfix      문제 나 PR 요청에서 작업이 계속되지 않음을 나타냅니다.      End.",
+            "content": "Git은 다음과 같이 구성되어 있습니다.     Github Label별 의미    git add , commit, 그리고 staging    Git Flow 전략에 대해(브랜치 관리 전략)Github 기본 Label들프로젝트를 하면서 많은 이슈가 발생하게 되고 이런것을 관리하는 것의 필요성을 느끼고 이슈관리에 대해서 공부하던 중 이슈에 라벨이라는 것을 달 수 있게 되어있었다. 여러가지가 있었는데 다음과 같다.깃허브의 이슈, PR(Pull Request)에 Label을 지정할 수 있다. 제공되는 라벨은 다음과 같다.            라벨      의미                  bug      예기치 않은 문제 또는 의도하지 않은 동작(버그)을 나타냅니다.              documentation      문서를 개선하거나 추가 할 필요가 있음을 나타냅니다.              duplicate      해당이슈 또는 PR이 기존에 있음을 나타냅니다.              enhancement      새로운 기능 요청을 나타냅니다.              good first issue      처음 기여해볼 사람에게 좋은 문제를 나타냅니다              help wanted      관리자가 문제 또는 PR 요청에 대한 도움을 원함을 나타냅니다.              invalid      이슈 또는 PR 요청이 더 이상 관련이 없음을 나타냅니다.              question      이슈 또는 풀 요청에 추가 정보가 필요함을 나타냅니다.              wontfix      문제 나 PR 요청에서 작업이 계속되지 않음을 나타냅니다.      End.",
         "url": "/git-githubissuelabel"
     }
     ,

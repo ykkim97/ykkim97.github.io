@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-06T21:03:46+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">함수선언식과 함수표현식</title><link href="https://ykkim97.github.io/javascript-functionExpression" rel="alternate" type="text/html" title="함수선언식과 함수표현식" /><published>2022-08-04T06:02:00+09:00</published><updated>2022-08-04T06:02:00+09:00</updated><id>https://ykkim97.github.io/javascript-functionExpression</id><content type="html" xml:base="https://ykkim97.github.io/javascript-functionExpression">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-07T23:01:42+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Git Flow 전략에 대해(브랜치 관리 전략)</title><link href="https://ykkim97.github.io/git-gitflow" rel="alternate" type="text/html" title="Git Flow 전략에 대해(브랜치 관리 전략)" /><published>2022-08-06T03:32:00+09:00</published><updated>2022-08-06T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitflow</id><content type="html" xml:base="https://ykkim97.github.io/git-gitflow">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitflow&quot;&gt;Git Flow 전략에 대해(브랜치 관리 전략)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+개발한 코드를 git으로 관리할 때 그냥 main(master)브랜치에 관리하는 것은 좋지 않을 수 있습니다. 특히나 규모가 큰 프로젝트에서 말이죠.
+물론 상황에 따라서 다를 수 있습니다.
+&lt;br /&gt;&lt;br /&gt;
+오늘은 많이 사용하는 브랜치 전략인 git Flow 전략을 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-flow-전략&quot;&gt;Git Flow 전략&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/183293592-2d3ed3f0-556e-490a-b709-8b83294c14f4.JPG&quot; alt=&quot;git flow 전략&quot; width=&quot;840&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;제가 그린 것을 보고 정리해보겠습니다.&lt;br /&gt;
+&lt;br /&gt;
+일단 현재 배포중인 최종본은 Main(Master)브랜치에서 관리합니다.
+이후에 개발을 할 때 git flow 전략은 이 Main 브랜치에서 develop 브랜치를 하나 생성하여 개발을 진행합니다. 
+&lt;br /&gt; 
+&lt;br /&gt; 
+이후 신규 기능을 개발할 때, 이 develop브랜치에서 feature브랜치를 추가로 생성합니다. 만약 로그인 기능을 개발하는 브랜치라면 “feature/login” 과 같은 이름으로 브랜치를 생성합니다.
+기능 개발을 완료하고 정상적으로 작동하는지 검토한 후 에 develop브랜치와 이 브랜치를 병합합니다.
+&lt;br /&gt; 
+&lt;br /&gt; 
+새로운 기능이 추가된 develop브랜치를 바로 Main브랜치와 합치기 전에 release 브랜치를 생성하는데, 이것은 이번 출시 버전을 준비하는 브랜치로, 배포전 최종적으로 확인하기위한 브랜치입니다.
+&lt;br /&gt; 
+&lt;br /&gt; 
+이후 최종테스트를 마친 후에, Main으로 배포하게 됩니다. 물론 release 브랜치는 Main브랜치 뿐만 아니라 develop브랜치와도 병합합니다.
+&lt;br /&gt; 
+&lt;br /&gt; 
+배포 버전에서 갑작스러운 버그가 발생하여 급하게 수정해야하는 경우도 있을 것입니다. 이런 경우에는 Main브랜치에서 바로 hotfix라는 브랜치를 생성하여 버그를 수정한 후 바로 Main과 병합하여 배포하게 됩니다. (develop브랜치와도 병합)&lt;/p&gt;
+
+&lt;h2 id=&quot;장점&quot;&gt;장점&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+이 git flow 전략의 장점이 뭘까요?&lt;br /&gt;
+신중하게 관리하는 전략이기 때문에 안정적인 배포가 가능하다는 점입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;정리하기&quot;&gt;정리하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+크게 5가지 브랜치로 관리한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(main)master : 배포중인 브랜치&lt;/li&gt;
+  &lt;li&gt;develop : 다음 출시 버전 개발하는 브랜치&lt;/li&gt;
+  &lt;li&gt;feature : 기능을 개발하는 브랜치&lt;/li&gt;
+  &lt;li&gt;release : 이번 출시 버전 준비하는 브랜치&lt;/li&gt;
+  &lt;li&gt;hotfix : 출시중인 버전에서 발생한 버그를 수정하는 브랜치&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging Git Flow 전략에 대해(브랜치 관리 전략)</summary></entry><entry><title type="html">함수선언식과 함수표현식</title><link href="https://ykkim97.github.io/javascript-functionExpression" rel="alternate" type="text/html" title="함수선언식과 함수표현식" /><published>2022-08-04T06:02:00+09:00</published><updated>2022-08-04T06:02:00+09:00</updated><id>https://ykkim97.github.io/javascript-functionExpression</id><content type="html" xml:base="https://ykkim97.github.io/javascript-functionExpression">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -369,6 +423,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitflow&quot;&gt;Git Flow 전략에 대해(브랜치 관리 전략)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -404,7 +459,7 @@ Staging Area는 커밋하기전에 커밋할 파일을 골라놓는 곳이고 �
 “git commit”을 통해 커밋합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging</summary></entry><entry><title type="html">AJAX가 무엇일까?</title><link href="https://ykkim97.github.io/javascript-aboutajax" rel="alternate" type="text/html" title="AJAX가 무엇일까?" /><published>2022-07-14T04:45:00+09:00</published><updated>2022-07-14T04:45:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutajax</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutajax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging Git Flow 전략에 대해(브랜치 관리 전략)</summary></entry><entry><title type="html">AJAX가 무엇일까?</title><link href="https://ykkim97.github.io/javascript-aboutajax" rel="alternate" type="text/html" title="AJAX가 무엇일까?" /><published>2022-07-14T04:45:00+09:00</published><updated>2022-07-14T04:45:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutajax</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutajax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -568,50 +623,4 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">번들링이 뭔데?</title><link href="https://ykkim97.github.io/etc-whatisbundle" rel="alternate" type="text/html" title="번들링이 뭔데?" /><published>2022-07-10T07:20:00+09:00</published><updated>2022-07-10T07:20:00+09:00</updated><id>https://ykkim97.github.io/etc-whatisbundle</id><content type="html" xml:base="https://ykkim97.github.io/etc-whatisbundle">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;오늘은 번들링이 무엇인지, 번들링을 하는 이유가 뭔지 간단히 알아보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;번들링에-대해&quot;&gt;번들링에 대해&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-우리가 웹사이트를 만들다보면 자바스크립트, CSS, 이미지와 같은 정말 많은 파일들이 생겨나게 됩니다.
-그래서 웹사이트를 로딩해보면 그 수많은 파일들이 다운로드되는 것을 확인할 수 있는데, 이는 서버와의 접속이 많아지게 되고 어플리케이션이 느려지게 됩니다. 
-&lt;br /&gt;
-또한 여러 많은 JS패키지를 사용하다보면 각각의 패키지들이 서로 같은 변수명, 함수명을 사용하여 예상치 못한 충돌이 발생할 수도 있습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-이러한 문제를 해결할 수 있는 것이 “번들러”입니다. 어플리케이션을 구성하는 여러 파일들을 하나의 파일로 병합해주는 과정을 번들링이라고 하고 그걸을 하는 것이 번들러입니다.
-대표적으로 Webpack이 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;번들링의-장점&quot;&gt;번들링의 장점&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;번들링하지 않은 경우는 각 파일마다 서버에 요청해서 자원을 얻어와야했는데, 번들링하면 하나의 파일로 만들어지기 때문에 페이지 로딩이 빨라지고 네트워크 접속의 부담을 줄일 수 있습니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Webpack에서는 로더(Loader)를 통해 바벨이라는 ES6+ 문법을 ES5로 변환할 수 있도록하는 트랜스파일러를 사용할 수 있습니다. 오래된 브라우저에서도 동작할 수 있도록 해주는 장점이 있습니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;번들러는 자바스크립트 파일을 기능 단위로 모듈화 하고 이것을 묶어 관리할 수 있게 합니다. 번들러를 사용함으로써 소스 코드를 모듈별로 작성할 수 있고 모듈간 혹은 외부 라이브러리의 의존성을 쉽게 관리 할 수 있습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-이외에도 많은 장점이 있을 수 있지만 3가지 정도만 정리해봤습니다.
-&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry></feed>
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry></feed>

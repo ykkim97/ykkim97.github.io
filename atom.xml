@@ -8,6 +8,26 @@
     
       
       <item>
+        <title>Git Flow 전략에 대해(브랜치 관리 전략)</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitflow&quot;&gt;Git Flow 전략에 대해(브랜치 관리 전략)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sat, 06 Aug 2022 03:32:00 +0900</pubDate>
+        <link>
+        https://ykkim97.github.io/git-gitflow</link>
+        <guid isPermaLink="true">https://ykkim97.github.io/git-gitflow</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>함수선언식과 함수표현식</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
@@ -129,6 +149,7 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitflow&quot;&gt;Git Flow 전략에 대해(브랜치 관리 전략)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -433,6 +454,7 @@
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./git-gitflow&quot;&gt;Git Flow 전략에 대해(브랜치 관리 전략)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
