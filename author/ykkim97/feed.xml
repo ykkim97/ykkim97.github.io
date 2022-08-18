@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-08-07T23:01:42+09:00</updated>
+  <updated>2022-08-18T20:21:29+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -30,6 +30,82 @@
   
   
 
+  
+    <entry>
+      <title type="html">시맨틱 태그?</title>
+      <link href="https://ykkim97.github.io/html-semanticTag" rel="alternate" type="text/html" title="시맨틱 태그?" />
+      <published>2022-08-17T06:12:00+09:00</published>
+      <updated>2022-08-17T06:12:00+09:00</updated>
+      <id>https://ykkim97.github.io/html-semanticTag</id>
+      <content type="html" xml:base="https://ykkim97.github.io/html-semanticTag">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+이번 글에서는 시맨틱태그(Semantic Tag)에 대해서 정리해보겠습니다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;시맨틱-태그&quot;&gt;시맨틱 태그?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+시맨틱 태그라는 것은 의미를 가진 태그라는 의미입니다. &lt;br /&gt;
+예를 들어, “&amp;lt;h1&amp;gt;“태그는 제목태그라는 의미를 가지고 있는 것이고, “&amp;lt;header&amp;gt;“태그는 헤더의 의미를 가지고 있는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;사실 이런 태그를 사용하지 않고도 “&amp;lt;div&amp;gt;“태그만으로 영역을 나누어서 스타일링해도 충분히 웹사이트를 만들 수 있습니다. 
+그러면 왜 시맨틱 태그를 사용해야 할까요?&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;시맨틱태그는 일단 개발자가 더 편하게 웹사이트를 유지보수하는데 도움을 줍니다. 단순하게 “&amp;lt;div&amp;gt;“태그 투성이인 것보다, 태그에 의미를 가지고 있다면 한눈에 파악하기도 좋을 것입니다.
+그리고 SEO(검색 엔진 최적화)에 도움을 줍니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;일반적인-구조&quot;&gt;일반적인 구조&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;“&amp;lt;header&amp;gt;” : 웹사이트 페이지의 제목이나 소개, 로고와 같은 것을 포함합니다.&lt;/li&gt;
+  &lt;li&gt;“&amp;lt;nav&amp;gt;” : “&amp;lt;header&amp;gt;“안에 만약 여러가지 메뉴가 있을 때 보통 “&amp;lt;nav&amp;gt;“를 사용합니다.&lt;/li&gt;
+  &lt;li&gt;“&amp;lt;main&amp;gt;” : 메인 컨텐츠가 담기는 곳에 사용합니다.&lt;/li&gt;
+  &lt;li&gt;“&amp;lt;aside&amp;gt;” : main안에서 직접적으로 관련이 없는 경우에 사용합니다.&lt;/li&gt;
+  &lt;li&gt;“&amp;lt;section&amp;gt;, &amp;lt;article&amp;gt;” : “&amp;lt;section&amp;gt;, &amp;lt;article&amp;gt;“을 사용하여 main안의 컨텐츠를 구분합니다.&lt;/li&gt;
+  &lt;li&gt;“&amp;lt;footer&amp;gt;” : 웹사이트의 맨 밑부분의 부가적인 정보 등에 사용합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section과-article의-차이&quot;&gt;&amp;lt;section&amp;gt;과 &amp;lt;article&amp;gt;의 차이?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+article태그는 신문기사에서 기사 하나하나를 의미합니다. 그 자체로 독립적입니다.
+그리고 section은 서로 연관된 부분을 묶어줄 때 보통 사용합니다. 한개의 페이지에 여러 내용들이 있다면 하나의 section안에 여러 article들이 있을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="html" />
+      
+
+      
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그?</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Git Flow 전략에 대해(브랜치 관리 전략)</title>
@@ -897,99 +973,6 @@ End.&lt;/p&gt;</content>
 
       
         <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">프로세스와 쓰레드의 차이점</title>
-      <link href="https://ykkim97.github.io/etc-processandthread" rel="alternate" type="text/html" title="프로세스와 쓰레드의 차이점" />
-      <published>2022-07-12T07:20:00+09:00</published>
-      <updated>2022-07-12T07:20:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-processandthread</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-processandthread">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;오늘은 프로세스와 쓰레드에 대해서 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;프로세스-쓰레드&quot;&gt;프로세스? 쓰레드?&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-프로세스는 한마디로 실행중인 프로그램이라고 할 수 있습니다. &lt;br /&gt;
-여기서또 프로그램과 프로세스를 혼동할 수 있는데 프로그램은 실행가능한 명령어들의 집합입니다.
-&lt;br /&gt;
-&lt;br /&gt;
-그러면 쓰레드는 뭘까요?
-&lt;br /&gt;
-그 프로세스 내에서 동작되는 여러 실행의 흐름입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;둘의-차이점&quot;&gt;둘의 차이점&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-프로세스는 최소 하나의 쓰레드를 보유하고 있고 각각 별도의 주소공간을 할당받습니다. 독립적이죠.
-그런데 쓰레드는 Stack을 제외하고 Code, Data, Heap의 나머지 영역을 서로 공유합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;프로세스-메모리-영역&quot;&gt;프로세스 메모리 영역&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-잠깐 프로세스 메모리 영역에 대해서 알아보겠습니다.
-&lt;br /&gt;&lt;br /&gt;
-커널 메모리 안에서 관리되는 PCB(Process Control Block) 정보외에 유저가 사용하는 메모리안의 프로세스 정보는 4가지가 있는데, Code, Data, Heap, Stack이 있습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Code: 프로그램의 실제 코드 저장&lt;/li&gt;
-  &lt;li&gt;Data: 프로세스가 실행될 때 정의된 전역 변수. Static 변수들을 저장&lt;/li&gt;
-  &lt;li&gt;Heap: 프로세스 런타임 중 동적할당 변수들을 저장&lt;/li&gt;
-  &lt;li&gt;Stack: 호출된 함수의 수행을 마치고 복귀할 주소 및 데이터(지역변수, 매개변수, 리턴값 등)를 임시로 저장하는 공간이고 함수 호출 시에 기록하고 끝나면 사라진다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;멀티프로세스-vs-멀티쓰레드&quot;&gt;멀티프로세스 vs 멀티쓰레드&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-멀티프로세스는 하나의 프로그램을 여러개의 프로세스로 구성하여 각각의 프로세스가 하나의 작업을 처리하는 것이고 멀티쓰레드는, 하나의 프로그램을 여러개의 쓰레드로 구성하고 각 쓰레드가 하나의 작업을 처리하는 것입니다. 자세한 차이점은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;멀티프로세스는 각 프로세스가 독립적이고 쓰레드는 서로 긴밀하게 연결되어있습니다.&lt;/li&gt;
-  &lt;li&gt;멀티프로세스는 IPC를 사용한 통신을 해야하는데, 쓰레드는 공유된 자원으로 통신비용이 절감됩니다.&lt;/li&gt;
-  &lt;li&gt;멀티프로세스는 개별 메모리를 차지하는데 쓰레드는 자원을 공유하기 때문에 좀더 효율적입니다.&lt;/li&gt;
-  &lt;li&gt;멀티프로세스는 Context Switching 비용이 멀티쓰레드보다 비효율적입니다.&lt;/li&gt;
-  &lt;li&gt;멀티프로세스는 동기화작업이 필요하지 않고, 멀티쓰레드는 공유자원을 관리해야 합니다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary>
       
 
       
