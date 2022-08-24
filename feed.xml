@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-22T20:28:06+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">null과 undefined의 차이 간단정리</title><link href="https://ykkim97.github.io/javascript-nullUndefined" rel="alternate" type="text/html" title="null과 undefined의 차이 간단정리" /><published>2022-08-21T06:00:00+09:00</published><updated>2022-08-21T06:00:00+09:00</updated><id>https://ykkim97.github.io/javascript-nullUndefined</id><content type="html" xml:base="https://ykkim97.github.io/javascript-nullUndefined">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-24T22:23:14+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">CSS margin과 padding의 차이</title><link href="https://ykkim97.github.io/css-marginPadding" rel="alternate" type="text/html" title="CSS margin과 padding의 차이" /><published>2022-08-22T22:20:00+09:00</published><updated>2022-08-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/css-marginPadding</id><content type="html" xml:base="https://ykkim97.github.io/css-marginPadding">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 CSS에서 margin(마진)과 paddin(패딩)의 차이에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;margin과-padding&quot;&gt;margin과 padding&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+제가 간단하게 그린 그림입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/186427148-6295a082-dfe7-4aca-befc-70ec43c27f21.JPG&quot; alt=&quot;마진과 패딩&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;content는 말 그대로 컨텐츠, 내용이고 border는 그 내용을 감싸는 테두리를 의미합니다. &lt;br /&gt;
+이 border를 기준으로 바깥쪽 여백을 margin이라고 하고, 안쪽 여백을 padding이라고 하는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;margin과-padding-값-설정하기&quot;&gt;margin과 padding 값 설정하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+css코드에서 margin과 padding값을 주고 싶을 때 어떻게 할까요?&lt;br /&gt;
+예시를 통해서 쉽게 알아보겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;margin : 10px 1px 1px 5px;&lt;/li&gt;
+  &lt;li&gt;margin : 10px 3px 1px;&lt;/li&gt;
+  &lt;li&gt;margin : 5px;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;1번 예시는 4개의 값을 margin값으로 주었습니다. &lt;br /&gt;
+이는 왼쪽부터 상 ➡ 우 ➡ 하 ➡ 좌 순으로 값을 지정합니다. 시계 반대 방향이라고 생각하면 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;2번 예시는 3개의 값을 주었는데, 상 10px, 좌우 3px, 하 1px을 의미합니다.&lt;/li&gt;
+  &lt;li&gt;3번 예시는 상우하좌 모두 동일하게 5px로 지정된 것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry><entry><title type="html">null과 undefined의 차이 간단정리</title><link href="https://ykkim97.github.io/javascript-nullUndefined" rel="alternate" type="text/html" title="null과 undefined의 차이 간단정리" /><published>2022-08-21T06:00:00+09:00</published><updated>2022-08-21T06:00:00+09:00</updated><id>https://ykkim97.github.io/javascript-nullUndefined</id><content type="html" xml:base="https://ykkim97.github.io/javascript-nullUndefined">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -216,6 +260,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -353,7 +398,7 @@ VSCode 기준으로 익스텐션에서 “Live Sass Compiler”를 검색해서 
 &lt;p&gt;추가로, 종속되는 파일과 같이 단독으로는 컴파일할 필요가 없는 파일들은 파일명 앞에 “_“를 붙여서 컴파일을 하지 않도록 할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary></entry><entry><title type="html">라이브러리와 프레임워크</title><link href="https://ykkim97.github.io/etc-libraryandframework" rel="alternate" type="text/html" title="라이브러리와 프레임워크" /><published>2022-07-22T22:20:00+09:00</published><updated>2022-07-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/etc-libraryandframework</id><content type="html" xml:base="https://ykkim97.github.io/etc-libraryandframework">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry><entry><title type="html">라이브러리와 프레임워크</title><link href="https://ykkim97.github.io/etc-libraryandframework" rel="alternate" type="text/html" title="라이브러리와 프레임워크" /><published>2022-07-22T22:20:00+09:00</published><updated>2022-07-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/etc-libraryandframework</id><content type="html" xml:base="https://ykkim97.github.io/etc-libraryandframework">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -439,6 +484,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -500,7 +546,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary></entry><entry><title type="html">git add , commit, 그리고 staging</title><link href="https://ykkim97.github.io/git-gitaddcommit" rel="alternate" type="text/html" title="git add , commit, 그리고 staging" /><published>2022-07-17T03:32:00+09:00</published><updated>2022-07-17T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitaddcommit</id><content type="html" xml:base="https://ykkim97.github.io/git-gitaddcommit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry><entry><title type="html">git add , commit, 그리고 staging</title><link href="https://ykkim97.github.io/git-gitaddcommit" rel="alternate" type="text/html" title="git add , commit, 그리고 staging" /><published>2022-07-17T03:32:00+09:00</published><updated>2022-07-17T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitaddcommit</id><content type="html" xml:base="https://ykkim97.github.io/git-gitaddcommit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
@@ -540,61 +586,4 @@ Staging Area는 커밋하기전에 커밋할 파일을 골라놓는 곳이고 �
 “git commit”을 통해 커밋합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging Git Flow 전략에 대해(브랜치 관리 전략)</summary></entry><entry><title type="html">AJAX가 무엇일까?</title><link href="https://ykkim97.github.io/javascript-aboutajax" rel="alternate" type="text/html" title="AJAX가 무엇일까?" /><published>2022-07-14T04:45:00+09:00</published><updated>2022-07-14T04:45:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutajax</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutajax">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-오늘은 AJAX에 대해서 간단히 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;ajax&quot;&gt;AJAX?&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-AJAX는 “Asynchronous Javascript And XML” 의 약자로 서버와 비동기적으로 데이터를 주고 받는 자바스크립트 기술입니다. 
-AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부만 갱신할 수 있습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-이전에는 웹페이지의 작은 일부가 변해도 새로운 페이지 전체를 다시 로드해야했습니다. 그래서 화면이 깜빡이는 현상이 있었고, 이것은 시간적으로나 자원적으로나 낭비입니다.
-하지만 AJAX를 이용하면 페이지 전체가 아니라, 일부분만 갱신할 수 있습니다. 따라서 깜빡임 현상도 일어나지않고 새로고침없이 화면이 부드럽게 전환됩니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;ajax의-장단점&quot;&gt;AJAX의 장단점&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;장점&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;웹페이지의 전체를 재로딩하지 않아도, 일부분만 갱신가능하다.&lt;/li&gt;
-  &lt;li&gt;불필요한 데이터 요청을 최소화할 수 있고 많은 일이 클라이언트 웹 브라우저에서 처리가능&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;단점&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;보안에 주의해야한다.&lt;/li&gt;
-  &lt;li&gt;연속해서 데이터를 요청을 남발하면 서버 부하가 생길 수 있다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이외에도 장단점이 있겠지만 크게는 이렇습니다.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-사용법은 여러 방법이 있는데 간단히 정리해보자면 다음과 같습니다. (전통적인 방법은 제외)&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;fetch함수 사용&lt;/li&gt;
-  &lt;li&gt;jQuery의 ajax()함수 사용&lt;/li&gt;
-  &lt;li&gt;리액트나 뷰와 같은 환경에서는 axios 라이브러리 설치하여 사용&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리</summary></entry></feed>
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging Git Flow 전략에 대해(브랜치 관리 전략)</summary></entry></feed>

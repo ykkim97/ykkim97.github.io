@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/css/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-08-22T20:28:06+09:00</updated>
+  <updated>2022-08-24T22:23:14+09:00</updated>
   <id>https://ykkim97.github.io/tag/css/feed.xml</id>
 
   
@@ -32,6 +32,84 @@
 
   
     <entry>
+      <title type="html">CSS margin과 padding의 차이</title>
+      <link href="https://ykkim97.github.io/css-marginPadding" rel="alternate" type="text/html" title="CSS margin과 padding의 차이" />
+      <published>2022-08-22T22:20:00+09:00</published>
+      <updated>2022-08-22T22:20:00+09:00</updated>
+      <id>https://ykkim97.github.io/css-marginPadding</id>
+      <content type="html" xml:base="https://ykkim97.github.io/css-marginPadding">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 CSS에서 margin(마진)과 paddin(패딩)의 차이에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;margin과-padding&quot;&gt;margin과 padding&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+제가 간단하게 그린 그림입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/186427148-6295a082-dfe7-4aca-befc-70ec43c27f21.JPG&quot; alt=&quot;마진과 패딩&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;content는 말 그대로 컨텐츠, 내용이고 border는 그 내용을 감싸는 테두리를 의미합니다. &lt;br /&gt;
+이 border를 기준으로 바깥쪽 여백을 margin이라고 하고, 안쪽 여백을 padding이라고 하는 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;margin과-padding-값-설정하기&quot;&gt;margin과 padding 값 설정하기&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+css코드에서 margin과 padding값을 주고 싶을 때 어떻게 할까요?&lt;br /&gt;
+예시를 통해서 쉽게 알아보겠습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;margin : 10px 1px 1px 5px;&lt;/li&gt;
+  &lt;li&gt;margin : 10px 3px 1px;&lt;/li&gt;
+  &lt;li&gt;margin : 5px;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;1번 예시는 4개의 값을 margin값으로 주었습니다. &lt;br /&gt;
+이는 왼쪽부터 상 ➡ 우 ➡ 하 ➡ 좌 순으로 값을 지정합니다. 시계 반대 방향이라고 생각하면 됩니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;2번 예시는 3개의 값을 주었는데, 상 10px, 좌우 3px, 하 1px을 의미합니다.&lt;/li&gt;
+  &lt;li&gt;3번 예시는 상우하좌 모두 동일하게 5px로 지정된 것입니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="css" />
+      
+
+      
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Sass - CSS 전처리기</title>
       <link href="https://ykkim97.github.io/css-sass" rel="alternate" type="text/html" title="Sass - CSS 전처리기" />
       <published>2022-07-24T15:35:00+09:00</published>
@@ -43,6 +121,7 @@
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -201,7 +280,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
       
 
       
@@ -220,6 +299,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -302,7 +382,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
       
 
       
@@ -321,6 +401,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
@@ -367,7 +448,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
       
 
       
@@ -380,7 +461,16 @@ End.&lt;/p&gt;</content>
       <published>2022-03-20T23:00:00+09:00</published>
       <updated>2022-03-20T23:00:00+09:00</updated>
       <id>https://ykkim97.github.io/css-basic</id>
-      <content type="html" xml:base="https://ykkim97.github.io/css-basic">&lt;h1 id=&quot;1-css란&quot;&gt;1. CSS란?&lt;/h1&gt;
+      <content type="html" xml:base="https://ykkim97.github.io/css-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;1-css란&quot;&gt;1. CSS란?&lt;/h1&gt;
 
 &lt;p&gt;CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다.
 CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다.&lt;/p&gt;
@@ -467,7 +557,7 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
       
 
       
-        <summary type="html">1. CSS란?</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
       
 
       

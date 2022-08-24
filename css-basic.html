@@ -59,7 +59,7 @@
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CSS의 의미와 적용방법" />
-    <meta property="og:description" content="1. CSS란? CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다. CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다. 2. 내부 스타일시트 내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다. 아래처럼 head태그안에 style태그를 입력하고 그 안에 css 스타일링을 해주면 됩니다. 간편하게 사용할 수 있는 장점이 있습니다. &lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8"&gt;" />
+    <meta property="og:description" content="CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 1. CSS란? CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다. CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다. 2. 내부 스타일시트 내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다. 아래처럼" />
     <meta property="og:url" content="https://ykkim97.github.io/css-basic" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/css-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,7 +69,7 @@
     <meta property="article:tag" content="Css" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CSS의 의미와 적용방법" />
-    <meta name="twitter:description" content="1. CSS란? CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다. CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다. 2. 내부 스타일시트 내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다. 아래처럼 head태그안에 style태그를 입력하고 그 안에 css 스타일링을 해주면 됩니다. 간편하게 사용할 수 있는 장점이 있습니다. &lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8"&gt;" />
+    <meta name="twitter:description" content="CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 1. CSS란? CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다. CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다. 2. 내부 스타일시트 내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다. 아래처럼" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/css-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -101,7 +101,7 @@
         "@type": "WebPage",
         "@id": "https://ykkim97.github.io/css-basic"
     },
-    "description": "1. CSS란? CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다. CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다. 2. 내부 스타일시트 내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다. 아래처럼 head태그안에 style태그를 입력하고 그 안에 css 스타일링을 해주면 됩니다. 간편하게 사용할 수 있는 장점이 있습니다. &lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="UTF-8"&gt;"
+    "description": "CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 1. CSS란? CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다. CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다. 2. 내부 스타일시트 내부 스타일시트는 말 그대로 html문서 내부에 css를 직접 작성하는 방법입니다. 아래처럼"
 }
     </script>
 
@@ -202,7 +202,16 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="1-css란">1. CSS란?</h1>
+                    <p><span class="table-of-contents-list">CSS는 다음과 같이 구성되어 있습니다. </span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./css-basic">CSS의 의미와 적용방법</a></li>
+    <li><a href="./css-blockinline">block과 inline의 차이점</a></li>
+    <li><a href="./css-emAndRem">em과 rem의 차이</a></li>
+    <li><a href="./css-sass">Sass - CSS 전처리기</a></li>
+    <li><a href="./css-marginPadding">CSS margin과 padding의 차이</a></li>
+</ul>
+
+<h1 id="1-css란">1. CSS란?</h1>
 
 <p>CSS는 Cascading Style Sheets 라는 의미로, html에 스타일을 지정할 때 사용하는 언어입니다.
 CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트가 있습니다.</p>
@@ -379,6 +388,15 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
                                 
                                 
                                     
+                                        
+                                            
+                                            
+                                                <li><a href="/css-marginPadding">CSS margin과 padding의 차이</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
                                 
                                     
                                 
@@ -444,8 +462,6 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
                                         
                                             
                                             
-                                                <li><a href="/css-blockinline">block과 inline의 차이점</a></li>
-                                            
                                         
                                     
                                 
@@ -494,7 +510,7 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
                         <footer class="read-next-card-footer">
                             <a href="/tag/css/">
                                 
-                                    See all 3 posts  →
+                                    See all 4 posts  →
                                 
                             </a>
                         </footer>
