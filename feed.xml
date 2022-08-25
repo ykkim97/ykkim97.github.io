@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-24T22:23:14+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">CSS margin과 padding의 차이</title><link href="https://ykkim97.github.io/css-marginPadding" rel="alternate" type="text/html" title="CSS margin과 padding의 차이" /><published>2022-08-22T22:20:00+09:00</published><updated>2022-08-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/css-marginPadding</id><content type="html" xml:base="https://ykkim97.github.io/css-marginPadding">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-25T11:09:20+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">setTimeout과 setInterval 요약</title><link href="https://ykkim97.github.io/javascript-setTimeout" rel="alternate" type="text/html" title="setTimeout과 setInterval 요약" /><published>2022-08-23T14:12:00+09:00</published><updated>2022-08-23T14:12:00+09:00</updated><id>https://ykkim97.github.io/javascript-setTimeout</id><content type="html" xml:base="https://ykkim97.github.io/javascript-setTimeout">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;settimeout&quot;&gt;setTimeout&lt;/h2&gt;
+
+&lt;p&gt;setTimeout은 특정 시간이후에 함수를 실행시켜줍니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 종료 시에&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;clearTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 예시는 2000(2초)뒤에 콘솔에 ‘setTimeout’ 이라는 문자열을 출력해줍니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;setinterval&quot;&gt;setInterval&lt;/h2&gt;
+
+&lt;p&gt;setInterval은 특정 시간동안 반복해서 함수를 실행시켜줍니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 종료 시에&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 예시는 3000(3초)마다 콘솔에 ‘setInterval’ 이라는 문자열을 출력합니다.&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약</summary></entry><entry><title type="html">CSS margin과 padding의 차이</title><link href="https://ykkim97.github.io/css-marginPadding" rel="alternate" type="text/html" title="CSS margin과 padding의 차이" /><published>2022-08-22T22:20:00+09:00</published><updated>2022-08-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/css-marginPadding</id><content type="html" xml:base="https://ykkim97.github.io/css-marginPadding">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
@@ -51,6 +89,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -80,7 +119,7 @@ null은 어떤 값이 명시적으로 비어져있음을 의미합니다.&lt;br 
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리</summary></entry><entry><title type="html">시맨틱 태그?</title><link href="https://ykkim97.github.io/html-semanticTag" rel="alternate" type="text/html" title="시맨틱 태그?" /><published>2022-08-17T06:12:00+09:00</published><updated>2022-08-17T06:12:00+09:00</updated><id>https://ykkim97.github.io/html-semanticTag</id><content type="html" xml:base="https://ykkim97.github.io/html-semanticTag">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약</summary></entry><entry><title type="html">시맨틱 태그?</title><link href="https://ykkim97.github.io/html-semanticTag" rel="alternate" type="text/html" title="시맨틱 태그?" /><published>2022-08-17T06:12:00+09:00</published><updated>2022-08-17T06:12:00+09:00</updated><id>https://ykkim97.github.io/html-semanticTag</id><content type="html" xml:base="https://ykkim97.github.io/html-semanticTag">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
@@ -185,6 +224,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -254,7 +294,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리</summary></entry><entry><title type="html">Sass - CSS 전처리기</title><link href="https://ykkim97.github.io/css-sass" rel="alternate" type="text/html" title="Sass - CSS 전처리기" /><published>2022-07-24T15:35:00+09:00</published><updated>2022-07-24T15:35:00+09:00</updated><id>https://ykkim97.github.io/css-sass</id><content type="html" xml:base="https://ykkim97.github.io/css-sass">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약</summary></entry><entry><title type="html">Sass - CSS 전처리기</title><link href="https://ykkim97.github.io/css-sass" rel="alternate" type="text/html" title="Sass - CSS 전처리기" /><published>2022-07-24T15:35:00+09:00</published><updated>2022-07-24T15:35:00+09:00</updated><id>https://ykkim97.github.io/css-sass</id><content type="html" xml:base="https://ykkim97.github.io/css-sass">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
@@ -546,44 +586,4 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry><entry><title type="html">git add , commit, 그리고 staging</title><link href="https://ykkim97.github.io/git-gitaddcommit" rel="alternate" type="text/html" title="git add , commit, 그리고 staging" /><published>2022-07-17T03:32:00+09:00</published><updated>2022-07-17T03:32:00+09:00</updated><id>https://ykkim97.github.io/git-gitaddcommit</id><content type="html" xml:base="https://ykkim97.github.io/git-gitaddcommit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Git은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./git-githubissuelabel&quot;&gt;Github Label별 의미&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./git-gitaddcommit&quot;&gt;git add , commit, 그리고 staging&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./git-gitflow&quot;&gt;Git Flow 전략에 대해(브랜치 관리 전략)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-git은 변경사항을 추적하고 여러 명의 사용자들 간에 파일의 작업을 조율하기 위한 “버전 관리”소프트웨어 입니다.
-오늘은 git 명령중에 git add, commit 명령에 대해서 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;git-add--commit-그리고-staging&quot;&gt;git add , commit, 그리고 staging&lt;/h2&gt;
-
-&lt;p&gt;작업폴더에 “test.txt”라는 파일을 생성해서 작성했다고 가정해보겠습니다.
-이때 “test.txt”파일을 기록하고 싶습니다. 일단, “git add test.txt”라는 명령을 터미널에 입력해주면 됩니다.&lt;/p&gt;
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;git add test.txt
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;말 그대로 추가하는 겁니다. 그런데, 어디에 추가하는 걸까요? 바로 리포지토리에 추가가 되는 걸까요?&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-“git add 파일명”이라는 명령은 일단은 Staging Area라는 곳에 파일을 넣어둡니다. &lt;br /&gt;
-Staging Area는 커밋하기전에 커밋할 파일을 골라놓는 곳이고 이런 행위를 스테이징한다고 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-이제 여기서 커밋명령을 해주어야합니다.
-커밋을 해주면 repository에 기록됩니다. 파일 버전을 모아둔다고 말을 합니다.
-아 물론, 작업폴더안의 전체 파일을 기록하고싶다면 “git add .”을 입력하면됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;git add .
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;
-커밋을 하는 방법은 ‘ git commit -m “쓰고싶은 메세지” ‘를 터미널에 입력해주는 것입니다. 메세지는 현재 커밋하는 내용이 어떤 내용인지 알 수 있게 적어주면됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;git commit -m &quot;테스트용 파일 추가&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;
-정리해보면 커밋하기전에 커밋할 파일을 골라놓는 곳인 “Staging Area”에 “git add”를 통해 파일을 넣어주고, 커밋된 파일버전을 모아놓는 곳인 “repository”에 
-“git commit”을 통해 커밋합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="git" /><summary type="html">Git은 다음과 같이 구성되어 있습니다. Github Label별 의미 git add , commit, 그리고 staging Git Flow 전략에 대해(브랜치 관리 전략)</summary></entry></feed>
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry></feed>
