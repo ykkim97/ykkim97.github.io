@@ -14,7 +14,7 @@
 
 
 
-    <title>React 컴포넌트 만들기</title>
+    <title>쿠키와 웹스토리지에 대해</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/react-mkcomponent" />
+    <link rel="canonical" href="https://ykkim97.github.io/etc-webstorage" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="React 컴포넌트 만들기" />
-    <meta property="og:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? import './App.css'; function App()" />
-    <meta property="og:url" content="https://ykkim97.github.io/react-mkcomponent" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
+    <meta property="og:title" content="쿠키와 웹스토리지에 대해" />
+    <meta property="og:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 이번 글에서는 쿠키와 웹스토리지(로컬스토리지, 세션스토리지)에 대해서 정리해보겠습니다. 배경 HTTP는 클라이언트와 서버간에 소통을 할 때 지켜야할 통신규약입니다. 먼저 클라이언트가 서버에게" />
+    <meta property="og:url" content="https://ykkim97.github.io/etc-webstorage" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/browserImage.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-03-21T21:34:00+09:00" />
-    <meta property="article:modified_time" content="2022-03-21T21:34:00+09:00" />
-    <meta property="article:tag" content="React" />
+    <meta property="article:published_time" content="2022-08-25T23:20:00+09:00" />
+    <meta property="article:modified_time" content="2022-08-25T23:20:00+09:00" />
+    <meta property="article:tag" content="Etc" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="React 컴포넌트 만들기" />
-    <meta name="twitter:description" content="React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? import './App.css'; function App()" />
+    <meta name="twitter:title" content="쿠키와 웹스토리지에 대해" />
+    <meta name="twitter:description" content="기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 이번 글에서는 쿠키와 웹스토리지(로컬스토리지, 세션스토리지)에 대해서 정리해보겠습니다. 배경 HTTP는 클라이언트와 서버간에 소통을 할 때 지켜야할 통신규약입니다. 먼저 클라이언트가 서버에게" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/react-logo.jpg" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/browserImage.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="React" />
+    <meta name="twitter:data2" content="Etc" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/react-mkcomponent",
+    "url": "https://ykkim97.github.io/etc-webstorage",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/react-logo.jpg",
+        "url": "https://ykkim97.github.io/assets/built/images/browserImage.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/react-mkcomponent"
+        "@id": "https://ykkim97.github.io/etc-webstorage"
     },
-    "description": "React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 React 컴포넌트 만들기 React의 본질은 사용자 정의 태그를 만드는 것입니다. 1. 왜? import './App.css'; function App()"
+    "description": "기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 이번 글에서는 쿠키와 웹스토리지(로컬스토리지, 세션스토리지)에 대해서 정리해보겠습니다. 배경 HTTP는 클라이언트와 서버간에 소통을 할 때 지켜야할 통신규약입니다. 먼저 클라이언트가 서버에게"
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="React 컴포넌트 만들기" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="쿠키와 웹스토리지에 대해" href="/feed.xml" />
 
 
 </head>
@@ -177,145 +177,88 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-react post tag-react ">
+        <article class="post-full  tag-etc post tag-etc ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="21 March 2022">21 March 2022</time>
+                    <time class="post-full-meta-date" datetime="25 August 2022">25 August 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/react/'>REACT</a>
+                                <a href='/tag/etc/'>ETC</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">React 컴포넌트 만들기</h1>
+                <h1 class="post-full-title">쿠키와 웹스토리지에 대해</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/react-logo.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/browserImage.png)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">React은 다음과 같이 구성되어 있습니다. </span></p>
+                    <p><span class="table-of-contents-list">기타 포스팅입니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./react-basic">React란?</a></li>
-    <li><a href="./react-mkcomponent">React 컴포넌트 만들기</a></li>
-    <li><a href="./react-usestate">useState에 대해</a></li>
-    <li><a href="./react-gugudan">React로 간단한 구구단게임 만들기!</a></li>
-    <li><a href="./react-contextapi">props가 번거로울 때 Context API를 사용해보자</a></li>
-    <li><a href="./react-bootstrapguide">React에서 Bootstrap사용하기</a></li>
-    <li><a href="./react-scrolltotop">React 페이지 이동시 최상단 스크롤 방법</a></li>
-    <li><a href="./react-lazysuspense">React - lazy, Suspense에 대해</a></li>
+    <li><a href="./etc-firebasedbrules">Firebase DB에서 값을 불러올 수 없는 문제 해결</a></li>
+    <li><a href="./etc-browser">브라우저 동작 원리</a></li>
+    <li><a href="./etc-dom">DOM이란?</a></li>
+    <li><a href="./etc-bubbling">이벤트 버블링과 캡처링</a></li>
+    <li><a href="./etc-whatisbundle">번들링이 뭔데?</a></li>
+    <li><a href="./etc-processandthread">프로세스와 쓰레드의 차이점</a></li>
+    <li><a href="./etc-csrssrssg">CSR, SSR, SSG의 차이</a></li>
+    <li><a href="./etc-libraryandframework">라이브러리와 프레임워크</a></li>
+    <li><a href="./etc-webstorage">쿠키와 웹스토리지에 대해</a></li>
 </ul>
 
-<h1 id="react-컴포넌트-만들기">React 컴포넌트 만들기</h1>
+<p><br /><br /><br />
+이번 글에서는 쿠키와 웹스토리지(로컬스토리지, 세션스토리지)에 대해서 정리해보겠습니다.</p>
 
-<p>React의 본질은 사용자 정의 태그를 만드는 것입니다.</p>
+<h2 id="배경">배경</h2>
+<p><br />
+HTTP는 클라이언트와 서버간에 소통을 할 때 지켜야할 통신규약입니다. 먼저 클라이언트가 서버에게 요청을 보내고 서버는 그에 맞는 응답을 보낸 후 접속을 종료합니다.
+통신이 끝나면 상태정보를 유지하지 않는 특징이 있습니다. 예를 들어 인증에 필요한 상태정보를 말이죠. 그래서 통신을 할 때마다 새로 연결을 해주어야 합니다. <br /></p>
 
-<h1 id="1-왜">1. 왜?</h1>
+<p>물론 지속적으로 통신을 연결하지 않는 것은 자원을 낭비하지 않는 장점이 있을 수 있지만, 통신을 할 때마다 인증을 해주어야 합니다.<br />
+이런 경우 반복적인 인증작업이 필요한데 이런 면에서 비효율적이게 됩니다. 유저도 불편하겠죠. <br /></p>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span><span class="p">;</span>
+<p>그래서 이런 정보를 따로 저장해두기위한 것이 브라우저 저장소입니다. 브라우저 저장소에는 쿠키와 웹 스토리지가 있습니다.</p>
 
-<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">'app'</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/'</span><span class="p">&gt;</span>WEB<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>css<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>javascript<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-        Hello, WEB
-      <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
+<h2 id="쿠키">쿠키</h2>
+<p><br />
+쿠키는 서버가 클라이언트에게 전송하는 작은 데이터 파일이며 이름, 값, 도메인정보, 경로정보, 만료일 등으로 구성됩니다.
+쿠키특징은 다음과 같은 것들이 있습니다.<br /></p>
 
-<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
+<ul>
+  <li>모든브라우저에서 지원함.</li>
+  <li>매번 서버에 전송되고 저장 용량이 작음. (하나의 쿠키는 4KB까지 저장 가능)</li>
+  <li>보안에 취약함.</li>
+  <li>클라이언트에 총 300개의 쿠키를 저장할 수 있고 하나의 도메인 당 20개의 쿠키를 가질 수 있음.</li>
+</ul>
 
-<p>위의 예시의 경우에는 코드 라인 수가 짧은 편이지만, 규모가 커져 백만 줄, 천만 줄…. 이상으로 라인 수가 길어진다면 한눈에 보기힘들어 가독성이 떨어지고 복잡해집니다. 이로 인해서 코드를 수정하기도 힘들어지게 되겠죠… React의 본질은 사용자 정의 태그를 만드는 것입니다.</p>
+<h2 id="웹-스토리지">웹 스토리지</h2>
+<p><br />
+HTML5부터 쿠키의 단점을 보완하여 등장한 것이 웹 스토리지(Web Storage)가 주로 사용됩니다.
+웹 스토리지는 쿠키와 기능은 유사하지만, 서버로 전송되지 않고 클라이언트에 저장합니다. 데이터를 저장할 때는 key와 value값으로 저장합니다. 
+<br /><br />
+웹 스토리지는 데이터의 지속성에 따라 Local Storage(로컬 스토리지)와 Session Storage(세션 스토리지)로 나눌 수 있습니다.
+차이점은 다음과 같습니다.</p>
 
-<h1 id="2-방법">2. 방법</h1>
+<ul>
+  <li>Local Storage(로컬 스토리지) : 브라우저 자체에 반영구적으로 데이터를 저장하며 브라우저를 닫아도 데이터가 유지되는 특징</li>
+  <li>Session Storage(세션 스토리지) : 윈도우나 브라우저 탭을 닫을 경우에 데이터가 삭제됩니다.</li>
+</ul>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">'app'</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nc">Header</span> <span class="p">/&gt;</span>
-      <span class="p">&lt;</span><span class="nc">Nav</span> <span class="p">/&gt;</span>
-      <span class="p">&lt;</span><span class="nc">Article</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>간단해진 App 컴포넌트</p>
-
-<p>위와 같이 &lt;Header&gt; , &lt;Nav&gt; , &lt;Article&gt;로 코드를 짧게 줄일 수 있습니다.</p>
-
-<p>아래와 같이 각각 함수로 만들어 주면 됩니다.</p>
-
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Header</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/'</span><span class="p">&gt;</span>WEB<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">Nav</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>css<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="p">=</span><span class="s">'/read/1'</span><span class="p">&gt;</span>javascript<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">Article</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Welcome<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-      Hello, WEB
-    <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">'app'</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nc">Header</span> <span class="p">/&gt;</span>
-      <span class="p">&lt;</span><span class="nc">Nav</span> <span class="p">/&gt;</span>
-      <span class="p">&lt;</span><span class="nc">Article</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>함수로 만들 때 주의할 사항은 함수명(컴포넌트)은 항상 대문자로 시작해야 한다는 것입니다.</p>
-
-<p>일반 html태그와 차이를 주는 것입니다.</p>
-
-<p>함수를 만들고 App컴포넌트에 일반 태그 쓰듯이 붙여주면 됩니다.</p>
-
-<p>이렇게 하면 코드의 가독성도 좋고 코드를 반복해서 사용할 필요없이 계속해서 컴포넌트를 독립된 부품처럼 가져다 쓸 수 있습니다.</p>
-
-<p>또한 컴포넌트를 공유할 수 있으므로 생산성도 높아집니다.</p>
+<h2 id="무엇을-사용하는게-좋은가">무엇을 사용하는게 좋은가?</h2>
+<p><br />
+이는 각 브라우저 저장소의 특징에 맞게 상황에 따라 사용합니다.<br />
+예를 들어 비로그인 유저 장바구니 기능은 세션스토리지, 자동로그인기능은 로컬스토리지, “일주일간 다시 보지 않기” 창 같은 경우는 쿠키를 사용하면 좋을 것 같습니다.
+<br /><br />
+End.</p>
 
                 </div>
             </section>
@@ -380,9 +323,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/react-mkcomponent';
-                            var this_page_identifier = '/react-mkcomponent';
-                            var this_page_title = 'React 컴포넌트 만들기';
+                            var this_page_url = 'https://ykkim97.github.io/etc-webstorage';
+                            var this_page_identifier = '/etc-webstorage';
+                            var this_page_title = '쿠키와 웹스토리지에 대해';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -416,7 +359,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/react/">React</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/etc/">Etc</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -426,39 +369,7 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
+                                        
                                     
                                 
                                     
@@ -479,7 +390,7 @@ into the {body} of the default.hbs template -->
                                         
                                             
                                             
-                                                <li><a href="/react-usestate">useState에 대해</a></li>
+                                                <li><a href="/etc-libraryandframework">라이브러리와 프레임워크</a></li>
                                             
                                         
                                     
@@ -488,7 +399,7 @@ into the {body} of the default.hbs template -->
                                         
                                             
                                             
-                                                <li><a href="/react-lazysuspense">React - lazy, Suspense에 대해</a></li>
+                                                <li><a href="/etc-csrssrssg">CSR, SSR, SSG의 차이</a></li>
                                             
                                         
                                     
@@ -496,10 +407,23 @@ into the {body} of the default.hbs template -->
                                     
                                 
                                     
+                                
+                                    
+                                
+                                    
+                                
+                                    
                                         
                                             
                                             
-                                                <li><a href="/react-scrolltotop">React - 페이지 이동시 최상단 스크롤 방법</a></li>
+                                                <li><a href="/etc-processandthread">프로세스와 쓰레드의 차이점</a></li>
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
+                                            
                                             
                                         
                                     
@@ -530,44 +454,68 @@ into the {body} of the default.hbs template -->
                                     
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
                                         
                                             
                                             
                                         
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
                                     
                                 
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/react/">
+                            <a href="/tag/etc/">
                                 
-                                    See all 7 posts  →
+                                    See all 8 posts  →
                                 
                             </a>
                         </footer>
@@ -577,55 +525,6 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/typescript-basic">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/typescript-basic">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Typescript</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">TypeScript란?</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -633,35 +532,26 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/css-basic">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/css-logo.png)"></div>
+            <a class="post-card-image-link" href="/javascript-setTimeout">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/css-basic">
+            <a class="post-card-content-link" href="/javascript-setTimeout">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Css</span>
+                                <span class="post-card-tags">Javascript</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">CSS의 의미와 적용방법</h2>
+                    <h2 class="post-card-title">setTimeout과 setInterval 요약</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>CSS는 다음과 같이 구성되어 있습니다. 
-
-    CSS의 의미와 적용방법
-    block과 inline의 차이점
-    em과 rem의 차이
-    Sass - CSS 전처리기
-    CSS margin과 padding의 차이
-
-
-</p>
+                        <p>JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval</p>
                     
                 </section>
             </a>
@@ -701,18 +591,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">React 컴포넌트 만들기</div>
+    <div class="floating-header-title">쿠키와 웹스토리지에 대해</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=React+%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8+%EB%A7%8C%EB%93%A4%EA%B8%B0&amp;url=https://ykkim97.github.io/react-mkcomponent"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%BF%A0%ED%82%A4%EC%99%80+%EC%9B%B9%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80%EC%97%90+%EB%8C%80%ED%95%B4&amp;url=https://ykkim97.github.io/etc-webstorage"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/react-mkcomponent"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/etc-webstorage"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

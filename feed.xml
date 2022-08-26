@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-25T11:09:20+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">setTimeout과 setInterval 요약</title><link href="https://ykkim97.github.io/javascript-setTimeout" rel="alternate" type="text/html" title="setTimeout과 setInterval 요약" /><published>2022-08-23T14:12:00+09:00</published><updated>2022-08-23T14:12:00+09:00</updated><id>https://ykkim97.github.io/javascript-setTimeout</id><content type="html" xml:base="https://ykkim97.github.io/javascript-setTimeout">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-08-26T22:53:39+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">쿠키와 웹스토리지에 대해</title><link href="https://ykkim97.github.io/etc-webstorage" rel="alternate" type="text/html" title="쿠키와 웹스토리지에 대해" /><published>2022-08-25T23:20:00+09:00</published><updated>2022-08-25T23:20:00+09:00</updated><id>https://ykkim97.github.io/etc-webstorage</id><content type="html" xml:base="https://ykkim97.github.io/etc-webstorage">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+이번 글에서는 쿠키와 웹스토리지(로컬스토리지, 세션스토리지)에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;배경&quot;&gt;배경&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+HTTP는 클라이언트와 서버간에 소통을 할 때 지켜야할 통신규약입니다. 먼저 클라이언트가 서버에게 요청을 보내고 서버는 그에 맞는 응답을 보낸 후 접속을 종료합니다.
+통신이 끝나면 상태정보를 유지하지 않는 특징이 있습니다. 예를 들어 인증에 필요한 상태정보를 말이죠. 그래서 통신을 할 때마다 새로 연결을 해주어야 합니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;물론 지속적으로 통신을 연결하지 않는 것은 자원을 낭비하지 않는 장점이 있을 수 있지만, 통신을 할 때마다 인증을 해주어야 합니다.&lt;br /&gt;
+이런 경우 반복적인 인증작업이 필요한데 이런 면에서 비효율적이게 됩니다. 유저도 불편하겠죠. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그래서 이런 정보를 따로 저장해두기위한 것이 브라우저 저장소입니다. 브라우저 저장소에는 쿠키와 웹 스토리지가 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;쿠키&quot;&gt;쿠키&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+쿠키는 서버가 클라이언트에게 전송하는 작은 데이터 파일이며 이름, 값, 도메인정보, 경로정보, 만료일 등으로 구성됩니다.
+쿠키특징은 다음과 같은 것들이 있습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;모든브라우저에서 지원함.&lt;/li&gt;
+  &lt;li&gt;매번 서버에 전송되고 저장 용량이 작음. (하나의 쿠키는 4KB까지 저장 가능)&lt;/li&gt;
+  &lt;li&gt;보안에 취약함.&lt;/li&gt;
+  &lt;li&gt;클라이언트에 총 300개의 쿠키를 저장할 수 있고 하나의 도메인 당 20개의 쿠키를 가질 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;웹-스토리지&quot;&gt;웹 스토리지&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+HTML5부터 쿠키의 단점을 보완하여 등장한 것이 웹 스토리지(Web Storage)가 주로 사용됩니다.
+웹 스토리지는 쿠키와 기능은 유사하지만, 서버로 전송되지 않고 클라이언트에 저장합니다. 데이터를 저장할 때는 key와 value값으로 저장합니다. 
+&lt;br /&gt;&lt;br /&gt;
+웹 스토리지는 데이터의 지속성에 따라 Local Storage(로컬 스토리지)와 Session Storage(세션 스토리지)로 나눌 수 있습니다.
+차이점은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Local Storage(로컬 스토리지) : 브라우저 자체에 반영구적으로 데이터를 저장하며 브라우저를 닫아도 데이터가 유지되는 특징&lt;/li&gt;
+  &lt;li&gt;Session Storage(세션 스토리지) : 윈도우나 브라우저 탭을 닫을 경우에 데이터가 삭제됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;무엇을-사용하는게-좋은가&quot;&gt;무엇을 사용하는게 좋은가?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+이는 각 브라우저 저장소의 특징에 맞게 상황에 따라 사용합니다.&lt;br /&gt;
+예를 들어 비로그인 유저 장바구니 기능은 세션스토리지, 자동로그인기능은 로컬스토리지, “일주일간 다시 보지 않기” 창 같은 경우는 쿠키를 사용하면 좋을 것 같습니다.
+&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary></entry><entry><title type="html">setTimeout과 setInterval 요약</title><link href="https://ykkim97.github.io/javascript-setTimeout" rel="alternate" type="text/html" title="setTimeout과 setInterval 요약" /><published>2022-08-23T14:12:00+09:00</published><updated>2022-08-23T14:12:00+09:00</updated><id>https://ykkim97.github.io/javascript-setTimeout</id><content type="html" xml:base="https://ykkim97.github.io/javascript-setTimeout">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -448,6 +504,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -471,7 +528,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css
 필요할 때 개발자가 호출해서 가져다 쓴다면? 👉🏼 라이브러리&lt;br /&gt;
 개발자가 프레임워크에 맞춰서 코드를 작성하고 사용한다면? 👉🏼 프레임워크&lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">CSR, SSR, SSG의 차이</title><link href="https://ykkim97.github.io/etc-csrssrssg" rel="alternate" type="text/html" title="CSR, SSR, SSG의 차이" /><published>2022-07-21T23:10:00+09:00</published><updated>2022-07-21T23:10:00+09:00</updated><id>https://ykkim97.github.io/etc-csrssrssg</id><content type="html" xml:base="https://ykkim97.github.io/etc-csrssrssg">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary></entry><entry><title type="html">CSR, SSR, SSG의 차이</title><link href="https://ykkim97.github.io/etc-csrssrssg" rel="alternate" type="text/html" title="CSR, SSR, SSG의 차이" /><published>2022-07-21T23:10:00+09:00</published><updated>2022-07-21T23:10:00+09:00</updated><id>https://ykkim97.github.io/etc-csrssrssg</id><content type="html" xml:base="https://ykkim97.github.io/etc-csrssrssg">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -481,6 +538,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -518,72 +576,4 @@ SSG(Static Site Generation)은 자주 업데이트되지 않는 사이트에 좋
 
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크</summary></entry><entry><title type="html">em과 rem의 차이</title><link href="https://ykkim97.github.io/css-emAndRem" rel="alternate" type="text/html" title="em과 rem의 차이" /><published>2022-07-19T23:35:00+09:00</published><updated>2022-07-19T23:35:00+09:00</updated><id>https://ykkim97.github.io/css-emAndRem</id><content type="html" xml:base="https://ykkim97.github.io/css-emAndRem">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-오늘은 css에서 사용되는 em, rem의 차이에 대해서 알아보겠습니다.
-기본적으로 폰트 크기나, 마진, 패딩과 같은 크기값을 지정할 때 픽셀(px)값으로 지정할 수 있지만,
-em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이를 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;rem&quot;&gt;rem&lt;/h1&gt;
-&lt;p&gt;rem은 기준이 되는 값의 배수로 변환한 값입니다. 2rem이라면 기준이 되는 값의 2배라는 것이죠.
-그러면 기준이 되는 값이 뭘까요? &lt;br /&gt;
-바로 최상위요소(보통은 html)에서 지정된 값이 기준이 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.5rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위의 예시를 보면 html의 font-size가 14px로 지정되어 있고 p태그의 font-size는 1.5rem으로 지정되어있습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;p의 font-size는 1.5rem이므로 최상위 요소에 지정된 14px의 1.5배 값이 되어 21px이 되는 것입니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;em&quot;&gt;em&lt;/h1&gt;
-
-&lt;p&gt;em도 기준이 되는 값의 배수로 변환한 값인데, 기준이 되는 값이 다릅니다. &lt;br /&gt;
-바로 이것은 현재 지정요소의 값이 기준이 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.5rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위의 예시를 보면은 div의 font-size값이 16px로 지정되어있고, 바로 밑에 1.5rem 값이 지정되어있습니다. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그러면 16 * 1.5인 24px이 적용이 되는 것이죠.&lt;/p&gt;
-
-&lt;p&gt;만약에 지정된 기준값이 없다면 어떻게 될까요?
-&lt;br /&gt;&lt;br /&gt;
-해당요소는 부모요소의 지정된 값을 상속받습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;content의 font-size는 2em 이니까, 10px * 2 * 2 = 40px이 되는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry></feed>
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary></entry></feed>
