@@ -14,7 +14,7 @@
 
 
 
-    <title>TypeScript - interface에 대해</title>
+    <title>Spread Operator(...)?</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,30 +52,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/typescript-interface" />
+    <link rel="canonical" href="https://ykkim97.github.io/javascript-SpreadOperator" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="TypeScript - interface에 대해" />
-    <meta property="og:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입? interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할" />
-    <meta property="og:url" content="https://ykkim97.github.io/typescript-interface" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
+    <meta property="og:title" content="Spread Operator(...)?" />
+    <meta property="og:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? 이번 글에서는 Spread Operator(스프레드 연산자)에 대해서 정리해보도록 하겠습니다. … 의 활용" />
+    <meta property="og:url" content="https://ykkim97.github.io/javascript-SpreadOperator" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-04-03T02:27:00+09:00" />
-    <meta property="article:modified_time" content="2022-04-03T02:27:00+09:00" />
-    <meta property="article:tag" content="Typescript" />
+    <meta property="article:published_time" content="2022-09-01T19:22:00+09:00" />
+    <meta property="article:modified_time" content="2022-09-01T19:22:00+09:00" />
+    <meta property="article:tag" content="Javascript" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TypeScript - interface에 대해" />
-    <meta name="twitter:description" content="TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입? interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할" />
+    <meta name="twitter:title" content="Spread Operator(...)?" />
+    <meta name="twitter:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? 이번 글에서는 Spread Operator(스프레드 연산자)에 대해서 정리해보도록 하겠습니다. … 의 활용" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/typeScript-logo.png" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Typescript" />
+    <meta name="twitter:data2" content="Javascript" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -90,18 +90,18 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/typescript-interface",
+    "url": "https://ykkim97.github.io/javascript-SpreadOperator",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/typeScript-logo.png",
+        "url": "https://ykkim97.github.io/assets/built/images/javascript-logo.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/typescript-interface"
+        "@id": "https://ykkim97.github.io/javascript-SpreadOperator"
     },
-    "description": "TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript - never타입? TypeScript - tuple타입? interface문법 1. interface사용법 type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. “interface”라는 것으로도 할"
+    "description": "JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? 이번 글에서는 Spread Operator(스프레드 연산자)에 대해서 정리해보도록 하겠습니다. … 의 활용"
 }
     </script>
 
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="TypeScript - interface에 대해" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Spread Operator(...)?" href="/feed.xml" />
 
 
 </head>
@@ -177,102 +177,120 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-typescript post tag-typescipt ">
+        <article class="post-full  tag-javascript post tag-js ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 3 April 2022"> 3 April 2022</time>
+                    <time class="post-full-meta-date" datetime=" 1 September 2022"> 1 September 2022</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                                <a href='/tag/typescript/'>TYPESCRIPT</a>
+                                <a href='/tag/javascript/'>JAVASCRIPT</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">TypeScript - interface에 대해</h1>
+                <h1 class="post-full-title">Spread Operator(...)?</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/typeScript-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><span class="table-of-contents-list">TypeScript은 다음과 같이 구성되어 있습니다. </span></p>
+                    <p><span class="table-of-contents-list">JavaScript 관련 글입니다. </span></p>
 <ul class="table-of-contents-list">
-    <li><a href="./typescript-basic">TypeScript란?</a></li>
-    <li><a href="./typescript-basicsyntax">TypeScript - 기본 타입 작성법</a></li>
-    <li><a href="./typescript-uniontype">TypeScript - Union Type, any, unknown</a></li>
-    <li><a href="./typescript-narrowing">Type Narrowing</a></li>
-    <li><a href="./typescript-typekeyword">Type 키워드로 타입을 변수에 담기</a></li>
-    <li><a href="./typescript-asconst">as const에 대해</a></li>
-    <li><a href="./typescript-interface">TypeScript - interface에 대해</a></li>
-    <li><a href="./typescript-nevertype">TypeScript - never타입?</a></li>
-    <li><a href="./typescript-tupletype">TypeScript - tuple타입?</a></li>
+    <li><a href="./javascript-eventloop">JS Event Loop, 자바스크립트 동작 원리</a></li>
+    <li><a href="./javascript-hoisting">호이스팅이란 , var, let, const 차이</a></li>
+    <li><a href="./javascript-AboutThreejs">Three.js에 대해</a></li>
+    <li><a href="./javascript-scripttag">script, script async, script defer의 차이</a></li>
+    <li><a href="./javascript-aboutajax">AJAX가 무엇일까?</a></li>
+    <li><a href="./javascript-functionExpression">함수선언식과 함수표현식</a></li>
+    <li><a href="./javascript-nullUndefined">null과 undefined의 차이 간단정리</a></li>
+    <li><a href="./javascript-setTimeout">setTimeout과 setInterval 요약</a></li>
+    <li><a href="./javascript-aboutThis">this의 여러가지 의미</a></li>
+    <li><a href="./javascript-SpreadOperator">Spread Operator(...)?</a></li>
 </ul>
 
-<h2 id="interface문법">interface문법</h2>
+<p><br /><br /><br /></p>
 
-<h3 id="1-interface사용법">1. interface사용법</h3>
+<p>이번 글에서는 Spread Operator(스프레드 연산자)에 대해서 정리해보도록 하겠습니다.</p>
 
-<p>type키워드를 통해서 타입을 변수처럼 작성할 수 있었습니다. 
-“interface”라는 것으로도 할 수 있습니다.</p>
+<h2 id="-의-활용">… 의 활용</h2>
+<p><br />
+…은 상황에 따라 2가지로 활용될 수 있습니다.<br /></p>
 
-<p>interface를 사용하면 Object의 타입을 편하게 지정할 수 있습니다.</p>
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">Line</span> <span class="p">{</span>
-    <span class="nl">color</span> <span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
-    <span class="nx">width</span> <span class="p">:</span> <span class="kr">number</span><span class="p">,</span>
-<span class="p">}</span>
+<ol>
+  <li>Rest parameter</li>
+  <li>Spread Operator</li>
+</ol>
 
-<span class="kd">let</span> <span class="nx">greenLine</span> <span class="p">:</span> <span class="nx">Line</span> <span class="o">=</span> <span class="p">{</span> <span class="na">color</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">green</span><span class="dl">"</span><span class="p">,</span> <span class="na">width</span> <span class="p">:</span> <span class="mi">30</span> <span class="p">}</span>
+<p>첫번째로 Rest 파라미터로 사용되는 경우입니다. 이 경우는 함수 파라미터에 ‘…‘이 붙는 경우에 사용됩니다.
+그 나머지 경우는 Spread Operator로 사용됩니다. 이번 글에서는 Spread Operator만 다뤄볼 것입니다.</p>
+
+<h2 id="spread-operator">Spread Operator</h2>
+<p><br /></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>“Line”이라고 하는 interface명을 지정하고 Object처럼 비슷하게 interface를 정의하면 됩니다.
-주의할 점은 인터페이스명은 대문자로 시작하여 작명합니다.</p>
+<p>위처럼 ‘…‘을 붙여서 사용하면 Array안의 요소가 모두 출력됩니다. 괄호가 제거된다고 생각해도 무방할 것 같습니다.</p>
 
-<h3 id="2-interface의-확장성">2. interface의 확장성</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">word</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">;</span>
 
-<p>interface는 extends, 즉 확장이 가능합니다.
-만약 Animal interface &amp; Dog interface가 필요하다고 가정하면..</p>
-
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">Animal</span> <span class="p">{</span>
-    <span class="nl">name</span> <span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kr">interface</span> <span class="nx">Dog</span> <span class="kd">extends</span> <span class="nx">Animal</span><span class="p">{</span> 
-    <span class="nl">age</span> <span class="p">:</span> <span class="kr">number</span><span class="p">,</span>
-<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(...</span><span class="nx">word</span><span class="p">)</span> <span class="p">;</span>
 </code></pre></div></div>
 
-<p>Dog interface 옆에 extends Animal이라고 작성했습니다. 이렇게 되면 Dog interface는 Animal interface를 상속받습니다.
-Dog interface는 부모의 “name : string”도 가지고 있는 동시에 “age : number”도 가지고 있게 되는 것입니다.</p>
+<p>문자에서도 …을 앞에 붙여줄 수 있는데, 이렇게 되면 한글자씩 해체가 됩니다. (a p p l e)</p>
 
-<h3 id="3-type와-interface의-차이점">3. type와 interface의 차이점?</h3>
-
-<p>type과 interface의 차이점이 무엇일까요?
-extends하는 법이 조금 다릅니다.
-interface의 경우는 위에서 처럼 “extends”를 쓰면됩니다.</p>
-
+<h2 id="활용">활용</h2>
 <p><br />
-type의 경우는 “&amp;”을 사용하여 두 object를 합칠 수 있습니다.</p>
+보통 Spread Operator는 Array나 Object를 합치거나 그대로 복사하고 싶을 때 사용합니다.</p>
 
-<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Animal</span> <span class="o">=</span> <span class="p">{</span> 
-  <span class="na">name</span> <span class="p">:</span><span class="kr">string</span> 
-<span class="p">}</span> 
-<span class="kd">type</span> <span class="nx">Dog</span> <span class="o">=</span> <span class="nx">Animal</span> <span class="o">&amp;</span> <span class="p">{</span> <span class="na">age</span> <span class="p">:</span> <span class="kr">number</span> <span class="p">}</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">b</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">);</span>
 </code></pre></div></div>
-<p>그런데 사실 interface의 경우도 “&amp;”기호로 합칠 수 있습니다..<br />
-주의할점이 있다면 extends를 사용하면 타입끼리 중복속성이 발견될 경우 에러를 내주는데 &amp; 쓰면 때에 따라 아닐 수도 있다는 것입니다.</p>
+
+<p>Array a와 Array b가 있을 때, sum이라는 새로운 Array를 위처럼 만들 수 있습니다. 
+출력해보면 Array sum은 ‘[1,2,3,4,5]’ 가 출력이 됩니다. 이렇게 두 개를 합치는 경우에 사용할 수 있고…</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>이렇게 그대로 복사하는 경우에도 사용할 수 있습니다. 그냥 arr2 = arr1하면 되는 거 아닌가? 할 수 있지만, Array나 Object는 reference data type이기 때문에
+arr1이 변경되었을 때 arr2도 같이 변경되기 때문에 직접적으로 복사하면 영향을 받습니다.</p>
 
 <p><br />
-또한 interface는 타입명이 중복되는 것을 허용해주지만, type의 경우 중복선언을 허용하지 않습니다. 엄격하죠.
-interface는 중복이 될 경우 extends한 것처럼 합쳐집니다. 물론 속성이 중복되면 에러가 나고 type도 마찬가지로 에러가 발생합니다.</p>
+마지막으로 함수 파라미터를 넣을 때 사용하기도 합니다.</p>
 
-<p><br />
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span> <span class="o">+</span> <span class="nx">d</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">];</span>
+<span class="nx">sum</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="nx">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="nx">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>sum 함수에는 각 Array의 값들이 들어가고 있습니다. 그런데 만약 Array의 값들이 엄청 많다면 일일히 인자로 넣는 것는 힘들고 귀찮습니다.
+그래서 다음과 같이 간단하게 사용할 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">sum</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>이렇게 Spread Operator를 사용하면 간편해집니다.</p>
+
+<p><br /><br /><br />
 End.</p>
 
                 </div>
@@ -338,9 +356,9 @@ End.</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/typescript-interface';
-                            var this_page_identifier = '/typescript-interface';
-                            var this_page_title = 'TypeScript - interface에 대해';
+                            var this_page_url = 'https://ykkim97.github.io/javascript-SpreadOperator';
+                            var this_page_identifier = '/javascript-SpreadOperator';
+                            var this_page_title = 'Spread Operator(...)?';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -374,7 +392,7 @@ End.</p>
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; YoungGwon's IT Tech Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/typescript/">Typescript</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/javascript/">Javascript</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -384,67 +402,38 @@ End.</p>
                                 
                                 
                                     
+                                        
+                                    
                                 
+                                    
+                                        
+                                            
+                                            
+                                                <li><a href="/javascript-aboutThis">this의 여러가지 의미</a></li>
+                                            
+                                        
                                     
                                 
                                     
                                 
                                     
-                                
+                                        
+                                            
+                                            
+                                                <li><a href="/javascript-setTimeout">setTimeout과 setInterval 요약</a></li>
+                                            
+                                        
                                     
                                 
                                     
                                 
                                     
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
+                                        
+                                            
+                                            
+                                                <li><a href="/javascript-nullUndefined">null과 undefined의 차이 간단정리</a></li>
+                                            
+                                        
                                     
                                 
                                     
@@ -455,38 +444,15 @@ End.</p>
                                         
                                             
                                             
-                                                <li><a href="/typescript-tupletype">TypeScript - tuple 타입</a></li>
-                                            
                                         
                                     
                                 
                                     
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-nevertype">TypeScript - never타입?</a></li>
-                                            
-                                        
+                                
                                     
                                 
                                     
-                                        
-                                    
                                 
-                                    
-                                        
-                                            
-                                            
-                                                <li><a href="/typescript-uniontype">TypeScript - Union Type, any, unknown</a></li>
-                                            
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
                                     
                                 
                                     
@@ -506,6 +472,27 @@ End.</p>
                                     
                                 
                                     
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
                                         
                                             
                                             
@@ -517,6 +504,42 @@ End.</p>
                                             
                                             
                                         
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
                                     
                                 
                                     
@@ -532,9 +555,9 @@ End.</p>
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/typescript/">
+                            <a href="/tag/javascript/">
                                 
-                                    See all 8 posts  →
+                                    See all 9 posts  →
                                 
                             </a>
                         </footer>
@@ -544,55 +567,6 @@ End.</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/typescript-nevertype">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/typescript-nevertype">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Typescript</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">TypeScript - never타입?</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -600,26 +574,26 @@ End.</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/typescript-uniontype">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/typeScript-logo.png)"></div>
+            <a class="post-card-image-link" href="/javascript-aboutThis">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/typescript-uniontype">
+            <a class="post-card-content-link" href="/javascript-aboutThis">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Typescript</span>
+                                <span class="post-card-tags">Javascript</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">TypeScript - Union Type, any, unknown</h2>
+                    <h2 class="post-card-title">this의 여러가지 의미</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>TypeScript은 다음과 같이 구성되어 있습니다. TypeScript란? TypeScript - 기본 타입 작성법 TypeScript - Union Type, any, unknown Type Narrowing Type 키워드로 타입을 변수에 담기 as const에 대해 TypeScript - interface에 대해 TypeScript -</p>
+                        <p>JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval</p>
                     
                 </section>
             </a>
@@ -659,18 +633,18 @@ End.</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">TypeScript - interface에 대해</div>
+    <div class="floating-header-title">Spread Operator(...)?</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=TypeScript+-+interface%EC%97%90+%EB%8C%80%ED%95%B4&amp;url=https://ykkim97.github.io/typescript-interface"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Spread+Operator%28...%29%3F&amp;url=https://ykkim97.github.io/javascript-SpreadOperator"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/typescript-interface"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-SpreadOperator"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
