@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-09-05T22:06:12+09:00</updated>
+  <updated>2022-09-06T21:52:20+09:00</updated>
   <id>https://ykkim97.github.io/tag/javascript/feed.xml</id>
 
   
@@ -32,6 +32,138 @@
 
   
     <entry>
+      <title type="html">ES6 Destructuring Syntax</title>
+      <link href="https://ykkim97.github.io/javascript-Destructuring" rel="alternate" type="text/html" title="ES6 Destructuring Syntax" />
+      <published>2022-09-04T22:02:00+09:00</published>
+      <updated>2022-09-04T22:02:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-Destructuring</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-Destructuring">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이번 글에서는 ES6의 Destructuring 에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;destructuring&quot;&gt;Destructuring&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;arr라는 array가 있고 1,2,3 이라는 값을 가지고 있습니다. 이 값들을 각각 a, b, c에 저장하고 싶습니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면… 위 처럼 인덱스를 이용해서 값을 저장하면 됩니다. 그런데 이 방법이 귀찮을 수 있습니다. 그래서 추가된 것이 Destructuring입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// const [a, b, c] = arr;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;우측에 array를 쓰고 좌측에 우측과 대응하여 위와 같이 작성하면 됩니다.&lt;br /&gt;
+그러면 a, b, c는 각각 1, 2, 3이 됩니다. 더 편하지 않나요?&lt;/p&gt;
+
+&lt;h2 id=&quot;default값-지정하기&quot;&gt;default값 지정하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 예시처럼 개수가 서로 맞지 않으면 어떻게 될까요? a와 b에는 각각 1, 2가 저장되지만 c는 undefined가 됩니다.
+그래서 c에 기본값(default 값)을 지정해놓을 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 ‘c = 10’ 으로 지정해두면 c에 대응되는 것이 없을 때 기본값으로 10이 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;object에서도-가능하다&quot;&gt;Object에서도 가능하다.&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Lee&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Object에서도 Destructuring 문법을 적용할 수 있습니다. name은 ‘Lee’가 되고, age는 26 이됩니다. 여기서는 각각의 key값으로 지정해야합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이름&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;나이&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Lee&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;key값으로 변수명을 지정해야하지만, 위와 같이 ‘이름’, ‘나이’ 처럼 다른 변수명을 써주면 변수명을 바꿀 수 있습니다.
+(이름 = Lee, 나이 = 26)&lt;/p&gt;
+
+&lt;h2 id=&quot;변수를-오브젝트에-넣기&quot;&gt;변수를 오브젝트에 넣기&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Lee&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;obj에 위의 name, age 변수를 각각 저장하려면 위와 같이 작성하면됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// const obj = { name : name, age : age } 처럼 key와 value가 동일한 이름이면 축약할 수 있다.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그런데 key와 value가 동일한 이름이면 축약하여 위처럼 작성할 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;함수의-parameter에도-적용가능하다&quot;&gt;함수의 parameter에도 적용가능하다.&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Lee&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;함수의 파라미터 자리에도 위와 같이 적용할 수 있습니다. (Array형태도 가능)&lt;br /&gt;
+함수를 실행했을 때 콘솔창에 name과 age값이 각각 ‘Lee’, 26이 출력될 것 입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">JS class 만들기</title>
       <link href="https://ykkim97.github.io/javascript-ClassConstructor" rel="alternate" type="text/html" title="JS class 만들기" />
       <published>2022-09-04T21:52:00+09:00</published>
@@ -50,6 +182,7 @@
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -152,7 +285,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -178,6 +311,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -276,7 +410,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -302,6 +436,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -381,7 +516,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -407,6 +542,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -456,7 +592,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -482,6 +618,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -532,7 +669,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -558,6 +695,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -648,7 +786,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -674,6 +812,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -743,7 +882,7 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -769,6 +908,7 @@ AJAX는 웹페이지 전체를 새로고침하지 않아도 페이지의 일부�
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -831,7 +971,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
@@ -857,6 +997,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -906,108 +1047,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">호이스팅이란 , var, let, const 차이</title>
-      <link href="https://ykkim97.github.io/javascript-hoisting" rel="alternate" type="text/html" title="호이스팅이란 , var, let, const 차이" />
-      <published>2022-06-14T04:22:00+09:00</published>
-      <updated>2022-06-14T04:22:00+09:00</updated>
-      <id>https://ykkim97.github.io/javascript-hoisting</id>
-      <content type="html" xml:base="https://ykkim97.github.io/javascript-hoisting">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;호이스팅에-대해서&quot;&gt;호이스팅에 대해서&lt;/h2&gt;
-
-&lt;p&gt;“hoisting”의 사전적 의미는 “끌어올리기”라는 뜻이다. 일단 hoisting은 함수가 실행되기전에 안에 있는 변수들을 그 유효범위의 
-최상단으로 끌어올리는 것을 의미합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;var-키워드의-문제점&quot;&gt;var 키워드의 문제점?&lt;/h3&gt;
-
-&lt;p&gt;ES6 이전까지는 변수를 선언할 때 var 키워드만 사용할 수 있었습니다. 하지만 var 키워드는 문제점이 있었습니다.&lt;/p&gt;
-
-&lt;p&gt;1) 변수의 중복 선언 허용 문제&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;x라는 동일한 이름의 변수가 선언된 것을 확인할 수 있는데, 먼저 선언된 x의 값이 변경되버리는 문제가 발생합니다.&lt;/p&gt;
-
-&lt;p&gt;2) 함수 레벨 스코프&lt;/p&gt;
-
-&lt;p&gt;var 키워드로 선언한 변수는 함수의 코드블록만 지역 스코프로 인정합니다. 함수를 제외하고 if나 for문안에 var 키워드를 사용하여 변수를 
-선언했다면? 지역변수로 취급을 하지않고 전역변수로 취급됩니다. 따라서 함수레벨스코프는 전역변수를 남발할 가능성을 높입니다.&lt;/p&gt;
-
-&lt;p&gt;3) 변수 호이스팅&lt;/p&gt;
-
-&lt;p&gt;var 키워드로 변수를 선언하면 변수 호이스팅에 의해 그 선언문이 범위의 최상단으로 끌어 올려진 것처럼 동작합니다. 변수 선언문 이전에 그 
-변수를 참조할 수 있다는 것인데, 에러를 발생시키지 않지만 가독성을 떨어뜨리고 오류를 발생시킬 여지를 남기는 문제가 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;let과-const의-등장&quot;&gt;let과 const의 등장&lt;/h3&gt;
-
-&lt;p&gt;이런 var의 문제를 해결하고자 ES6에서 let과 const를 도입하였습니다. 
-let 키워드부터 살펴보겠습니다.&lt;br /&gt;
-&lt;br /&gt;
-let은 변수 중복 선언을 금지하고, 함수의 코드블록만 지역스코프로 인정하는 var와 달리 모든 코드블록을 지역스코프로 인정하는 블록레벨스코프를 따릅니다.
-또한 let키워드로 선언한 변수는 “선언”과 “초기화”단계가 분리되어 진행됩니다. 런타임 이전에 자바스크립트 엔진에 의해 선언단계가 먼저 진행되지만 초기화
-단계는 실제 변수 선언문에 도달했을 때 실행됩니다.&lt;br /&gt;
-&lt;br /&gt;
-let 키워드로 선언한 변수는 스코프의 시작부터 초기화단계가 시작되는 시점(변수 선언문)까지 변수를 참조할 수 없습니다. 이 구간을 일시적 사각지대(Temporal Dead Zone)
-라고 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-이번엔 const 키워드를 알아보겠습니다.&lt;br /&gt;
-&lt;br /&gt;
-const 키워드는 상수를 선언하기 위해서 사용되는데, 꼭 상수만을 위해 사용하는 것은 아닙니다.&lt;br /&gt;
-const는 대부분 let과 동일하지만 const 키워드로 선언된 변수는 꼭 선언과 동시에 초기화를 해주어야하고 변수의 재할당이 불가능합니다. 
-주의해야할 점이 있는데, const로 선언된 변수에 원시값을 할당한 경우는 값을 변경하지 못하는게 맞지만 const로 선언된 변수에 객체를 할당한
-경우 값을 변경할 수 있습니다. const는 재할당을 금지하는 것이지 불변을 의미하는 것이 아닙니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;그럼-무엇을-보통-쓸까&quot;&gt;그럼 무엇을 보통 쓸까?&lt;/h3&gt;
-
-&lt;p&gt;변수 선언은 기본적으로 const를 사용하는 것이 좋고 let은 재할당이 필요할 때 사용하는 것이 좋습니다. 
-추가적으로 var는 권장하지 않는 방법입니다.&lt;br /&gt;
-&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="javascript" />
-      
-
-      
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax</summary>
       
 
       
