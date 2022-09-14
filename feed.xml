@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-09-12T12:51:29+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Optional Chaining (?.)</title><link href="https://ykkim97.github.io/javascript-optionalChaining" rel="alternate" type="text/html" title="Optional Chaining (?.)" /><published>2022-09-11T23:52:00+09:00</published><updated>2022-09-11T23:52:00+09:00</updated><id>https://ykkim97.github.io/javascript-optionalChaining</id><content type="html" xml:base="https://ykkim97.github.io/javascript-optionalChaining">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-09-14T22:45:51+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">프로미스(Promise)에 대해서</title><link href="https://ykkim97.github.io/javascript-Promise1" rel="alternate" type="text/html" title="프로미스(Promise)에 대해서" /><published>2022-09-13T22:50:00+09:00</published><updated>2022-09-13T22:50:00+09:00</updated><id>https://ykkim97.github.io/javascript-Promise1</id><content type="html" xml:base="https://ykkim97.github.io/javascript-Promise1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -15,6 +15,122 @@
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이번 글에서는 Promise에 대해서 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;promise&quot;&gt;Promise&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+프로미스는 다음과 같이 new 키워드를 통해서 만들 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 promise옆에 .then()을 붙일 수 있습니다. 이것에 대해서 더 알아보도록 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;성공!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;실패!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;프로미스 옆에 .then()이나 .catch(), 그리고 .finally()를 붙여서 코드를 작성할 수 있습니다. &lt;br /&gt;
+각각의 의미는 다음과 같습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;then() 안에는 어떤 코드가 성공했을 경우 실행할 함수를 넣습니다. 성공 시에 실행되는 코드를 담으면 됩니다.&lt;/li&gt;
+  &lt;li&gt;catch() 안에는 어떤 코드가 실패했을 경우 실행할 함수를 넣습니다. 실패 시에 실행할 코드를 담습니다.&lt;/li&gt;
+  &lt;li&gt;finally()는 성공이나 실패 여부에 상관 없이 무조건 실행되는 코드를 담습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+자, ‘성공시에는 이러한 코드, 실패시에는 이러한 코드를 실행시켜주는 구나.’ 라는 것은 알겠는데 성공할 지 실패할 지 어떻게 판단할까요?&lt;br /&gt;
+바로 Promise가 성공과 실패를 판정하는 역할을 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// 이 곳에 resolve(); 또는 reject();를 쓰면 각각 성공과 실패가 판정됩니다.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;성공!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;실패!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 코드에서 new Promise()안에 함수를 넣을 수 있고, 파라미터는 resolve(성공), reject(실패)를 가지게 됩니다. 
+이후 resolve()를 써주면 성공, reject()를 쓰면 실패가 판정됩니다.&lt;/p&gt;
+
+&lt;p&gt;간단한 활용 예시를 더 알아보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;promise&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;성공!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;실패!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Promise안에서 a 라는 변수에 2 + 2 연산을 하고 저장하였습니다. a의 값은 4가 될 것입니다.&lt;br /&gt;
+그 밑에 if를 사용하여 연산값인 a가 3 이상일 경우 resolve(a); 그렇지 않다면 reject(a);를 하게 만들었습니다.&lt;br /&gt;
+a의 값은 4고, 3보다 크기 때문에 resolve(a);가 실행되어 ‘성공’이 판정됩니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+따라서 then()안에서 정의했듯, 콘솔에 ‘성공!’ 이라는 메세지가 출력되게됩니다.
+&lt;br /&gt;&lt;br /&gt;
+정리하자면, Promise는 성공/실패를 판정해주는 데 사용하며, then()과 catch()를 통해서 이후의 코드를 실행해주는 일종의 디자인 패턴입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;promise의-상태&quot;&gt;Promise의 상태&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+Promise는 상태라는 것을 가집니다.&lt;br /&gt;
+new Promise()로 생성된 변수를 출력해보면 현재 ‘상태’를 알 수 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;성공/실패 판정 전에는 &lt;pending&gt; 상태 (대기)&lt;/pending&gt;&lt;/li&gt;
+  &lt;li&gt;성공 이후에는 &lt;resolved&gt; 상태 (성공)&lt;/resolved&gt;&lt;/li&gt;
+  &lt;li&gt;실패 이후에는 &lt;rejected&gt; 상태 (실패)&lt;/rejected&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;실제로 Promise를 출력해보면 현재 상태를 알수 있습니다. &lt;br /&gt;
+&lt;br /&gt;
+정리하면 프로미스 오브젝트는 3가지 상태(pending, resolved, rejected)를 가집니다. 참고로 성공을 실패나 대기 상태로 되돌릴 수는 없습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">Optional Chaining (?.)</title><link href="https://ykkim97.github.io/javascript-optionalChaining" rel="alternate" type="text/html" title="Optional Chaining (?.)" /><published>2022-09-11T23:52:00+09:00</published><updated>2022-09-11T23:52:00+09:00</updated><id>https://ykkim97.github.io/javascript-optionalChaining</id><content type="html" xml:base="https://ykkim97.github.io/javascript-optionalChaining">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -68,7 +184,7 @@ null이거나 undefined인 경우에 . 을 이용해서 자료를 찾으면 에�
 물론 근본적으로 에러를 해결해주는 것은 아니며 에러가 발생하지 않도록 숨겨주는 역할을 하는 것이 ?. 입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">import / export 를 사용한 모듈식 개발방법</title><link href="https://ykkim97.github.io/javascript-module" rel="alternate" type="text/html" title="import / export 를 사용한 모듈식 개발방법" /><published>2022-09-06T23:52:00+09:00</published><updated>2022-09-06T23:52:00+09:00</updated><id>https://ykkim97.github.io/javascript-module</id><content type="html" xml:base="https://ykkim97.github.io/javascript-module">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">import / export 를 사용한 모듈식 개발방법</title><link href="https://ykkim97.github.io/javascript-module" rel="alternate" type="text/html" title="import / export 를 사용한 모듈식 개발방법" /><published>2022-09-06T23:52:00+09:00</published><updated>2022-09-06T23:52:00+09:00</updated><id>https://ykkim97.github.io/javascript-module</id><content type="html" xml:base="https://ykkim97.github.io/javascript-module">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -85,6 +201,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -170,7 +287,7 @@ type=’module’ 을 붙여주는 것인데, 이렇게하면 특정 파일안�
 &lt;p&gt;위와 같이 ‘as 변수명’의 형태로 써주면 새롭게 변수명을 지어줄 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">default 파라미터 알아보기</title><link href="https://ykkim97.github.io/javascript-defaultParameter" rel="alternate" type="text/html" title="default 파라미터 알아보기" /><published>2022-09-06T19:40:00+09:00</published><updated>2022-09-06T19:40:00+09:00</updated><id>https://ykkim97.github.io/javascript-defaultParameter</id><content type="html" xml:base="https://ykkim97.github.io/javascript-defaultParameter">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">default 파라미터 알아보기</title><link href="https://ykkim97.github.io/javascript-defaultParameter" rel="alternate" type="text/html" title="default 파라미터 알아보기" /><published>2022-09-06T19:40:00+09:00</published><updated>2022-09-06T19:40:00+09:00</updated><id>https://ykkim97.github.io/javascript-defaultParameter</id><content type="html" xml:base="https://ykkim97.github.io/javascript-defaultParameter">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -187,6 +304,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -236,7 +354,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
 &lt;p&gt;b의 기본값을 a * a로 해줬더니, sum(2)의 결과가 2 + 2*2 로 6이 출력되었습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">ES6 Destructuring Syntax</title><link href="https://ykkim97.github.io/javascript-Destructuring" rel="alternate" type="text/html" title="ES6 Destructuring Syntax" /><published>2022-09-04T22:02:00+09:00</published><updated>2022-09-04T22:02:00+09:00</updated><id>https://ykkim97.github.io/javascript-Destructuring</id><content type="html" xml:base="https://ykkim97.github.io/javascript-Destructuring">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">ES6 Destructuring Syntax</title><link href="https://ykkim97.github.io/javascript-Destructuring" rel="alternate" type="text/html" title="ES6 Destructuring Syntax" /><published>2022-09-04T22:02:00+09:00</published><updated>2022-09-04T22:02:00+09:00</updated><id>https://ykkim97.github.io/javascript-Destructuring</id><content type="html" xml:base="https://ykkim97.github.io/javascript-Destructuring">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -253,6 +371,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -337,7 +456,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
 함수를 실행했을 때 콘솔창에 name과 age값이 각각 ‘Lee’, 26이 출력될 것 입니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">JS class 만들기</title><link href="https://ykkim97.github.io/javascript-ClassConstructor" rel="alternate" type="text/html" title="JS class 만들기" /><published>2022-09-04T21:52:00+09:00</published><updated>2022-09-04T21:52:00+09:00</updated><id>https://ykkim97.github.io/javascript-ClassConstructor</id><content type="html" xml:base="https://ykkim97.github.io/javascript-ClassConstructor">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">JS class 만들기</title><link href="https://ykkim97.github.io/javascript-ClassConstructor" rel="alternate" type="text/html" title="JS class 만들기" /><published>2022-09-04T21:52:00+09:00</published><updated>2022-09-04T21:52:00+09:00</updated><id>https://ykkim97.github.io/javascript-ClassConstructor</id><content type="html" xml:base="https://ykkim97.github.io/javascript-ClassConstructor">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -354,6 +473,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -435,7 +555,7 @@ Animal을 이용하여 dog1 오브젝트를 생성하였습니다.&lt;/p&gt;
 super안의 파라미터는 부모의 constructor에 들어가는 파라미터랑 동일한 값이 들어갑니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">Spread Operator(…)?</title><link href="https://ykkim97.github.io/javascript-SpreadOperator" rel="alternate" type="text/html" title="Spread Operator(…)?" /><published>2022-09-01T19:22:00+09:00</published><updated>2022-09-01T19:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-SpreadOperator</id><content type="html" xml:base="https://ykkim97.github.io/javascript-SpreadOperator">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">Spread Operator(…)?</title><link href="https://ykkim97.github.io/javascript-SpreadOperator" rel="alternate" type="text/html" title="Spread Operator(…)?" /><published>2022-09-01T19:22:00+09:00</published><updated>2022-09-01T19:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-SpreadOperator</id><content type="html" xml:base="https://ykkim97.github.io/javascript-SpreadOperator">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -452,6 +572,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -529,7 +650,7 @@ arr1이 변경되었을 때 arr2도 같이 변경되기 때문에 직접적으�
 &lt;p&gt;이렇게 Spread Operator를 사용하면 간편해집니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">this의 여러가지 의미</title><link href="https://ykkim97.github.io/javascript-aboutThis" rel="alternate" type="text/html" title="this의 여러가지 의미" /><published>2022-08-30T21:22:00+09:00</published><updated>2022-08-30T21:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutThis</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutThis">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">this의 여러가지 의미</title><link href="https://ykkim97.github.io/javascript-aboutThis" rel="alternate" type="text/html" title="this의 여러가지 의미" /><published>2022-08-30T21:22:00+09:00</published><updated>2022-08-30T21:22:00+09:00</updated><id>https://ykkim97.github.io/javascript-aboutThis</id><content type="html" xml:base="https://ykkim97.github.io/javascript-aboutThis">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
@@ -546,6 +667,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -604,7 +726,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="jav
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">쿠키와 웹스토리지에 대해</title><link href="https://ykkim97.github.io/etc-webstorage" rel="alternate" type="text/html" title="쿠키와 웹스토리지에 대해" /><published>2022-08-25T23:20:00+09:00</published><updated>2022-08-25T23:20:00+09:00</updated><id>https://ykkim97.github.io/etc-webstorage</id><content type="html" xml:base="https://ykkim97.github.io/etc-webstorage">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry><entry><title type="html">쿠키와 웹스토리지에 대해</title><link href="https://ykkim97.github.io/etc-webstorage" rel="alternate" type="text/html" title="쿠키와 웹스토리지에 대해" /><published>2022-08-25T23:20:00+09:00</published><updated>2022-08-25T23:20:00+09:00</updated><id>https://ykkim97.github.io/etc-webstorage</id><content type="html" xml:base="https://ykkim97.github.io/etc-webstorage">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -677,6 +799,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
     &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -705,48 +828,4 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc
 
 &lt;p&gt;위의 예시는 3000(3초)마다 콘솔에 ‘setInterval’ 이라는 문자열을 출력합니다.&lt;/p&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.)</summary></entry><entry><title type="html">CSS margin과 padding의 차이</title><link href="https://ykkim97.github.io/css-marginPadding" rel="alternate" type="text/html" title="CSS margin과 padding의 차이" /><published>2022-08-22T22:20:00+09:00</published><updated>2022-08-22T22:20:00+09:00</updated><id>https://ykkim97.github.io/css-marginPadding</id><content type="html" xml:base="https://ykkim97.github.io/css-marginPadding">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-오늘은 CSS에서 margin(마진)과 paddin(패딩)의 차이에 대해서 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;margin과-padding&quot;&gt;margin과 padding&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-제가 간단하게 그린 그림입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/186427148-6295a082-dfe7-4aca-befc-70ec43c27f21.JPG&quot; alt=&quot;마진과 패딩&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;content는 말 그대로 컨텐츠, 내용이고 border는 그 내용을 감싸는 테두리를 의미합니다. &lt;br /&gt;
-이 border를 기준으로 바깥쪽 여백을 margin이라고 하고, 안쪽 여백을 padding이라고 하는 것입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;margin과-padding-값-설정하기&quot;&gt;margin과 padding 값 설정하기&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-css코드에서 margin과 padding값을 주고 싶을 때 어떻게 할까요?&lt;br /&gt;
-예시를 통해서 쉽게 알아보겠습니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;margin : 10px 1px 1px 5px;&lt;/li&gt;
-  &lt;li&gt;margin : 10px 3px 1px;&lt;/li&gt;
-  &lt;li&gt;margin : 5px;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;1번 예시는 4개의 값을 margin값으로 주었습니다. &lt;br /&gt;
-이는 왼쪽부터 상 ➡ 우 ➡ 하 ➡ 좌 순으로 값을 지정합니다. 시계 반대 방향이라고 생각하면 됩니다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;2번 예시는 3개의 값을 주었는데, 상 10px, 좌우 3px, 하 1px을 의미합니다.&lt;/li&gt;
-  &lt;li&gt;3번 예시는 상우하좌 모두 동일하게 5px로 지정된 것입니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="css" /><summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary></entry></feed>
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="javascript" /><summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서</summary></entry></feed>
