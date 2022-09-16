@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-09-15T12:58:02+09:00</updated>
+  <updated>2022-09-16T19:47:51+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -32,6 +32,126 @@
 
   
     <entry>
+      <title type="html">Symbol 자료형?</title>
+      <link href="https://ykkim97.github.io/javascript-symbol" rel="alternate" type="text/html" title="Symbol 자료형?" />
+      <published>2022-09-15T20:20:00+09:00</published>
+      <updated>2022-09-15T20:20:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-symbol</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-symbol">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;이번 글에서는 Symbol이라는 자료형에 대해서 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;symbol&quot;&gt;Symbol&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+ES6에서 Symbol이라는 자료형이 추가되었는데 이 자료형을 만드는 법을 알아보겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;symbol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Symbol 입니다.&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그냥 Symbol()을 사용하여 만들고 괄호안에 이 Symbol의 설명을 써주면 됩니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;symbol은-어디에-사용되나&quot;&gt;Symbol은 어디에 사용되나?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+Symbol은 도대체 어디에 사용되는 걸까요?&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Symbol은 Object에 숨기고 싶은 비밀의 key값을 주고싶을 때 사용합니다.
+&lt;br /&gt;
+원래 Object의 key값은 문자만 입력할 수 있었습니다. 하지만 문자가 아닌 것을 입력하더라도 문자로 바뀌며, ES6부터 Symbol도 key값으로 할 수 있게 되었습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;client1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;phoneNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;핸드폰 번호&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;client1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;phoneNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;010-0000-0000&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;client1이라는 object가 있을 때 핸드폰 번호를 직접적으로 넣지않고 숨겨서 등록하고 싶습니다.&lt;br /&gt;
+이럴 경우 Symbol을 이용할 수 있습니다. phoneNumber라는 변수에 Symbol을 생성하여 넣고, 위의 예시처럼 []를 이용하여 client1에 등록하면 Symbol의 형태로 Object에 등록할 수 있습니다.
+실제로 client1을 출력해보면 Symbol의 형태로 등록이 되어있습니다.
+&lt;br /&gt;&lt;br /&gt;
+Symbol은 for문에 등장하지 않습니다. 즉 Symbol로 등록한 것은 반복문을 돌릴 때 감지하지 못합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;symbol을-직접적으로-등록하는-방법&quot;&gt;Symbol을 직접적으로 등록하는 방법&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;client1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;kim&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;phoneNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;010-0000-0000&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Symbol은 그냥 Object안에서 직접 등록할 수도 있는데, 역시 []를 이용하여 등록하면 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;symbol의-특징&quot;&gt;Symbol의 특징&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;심볼&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;심볼&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Symbol을 만들 때 괄호안에 Symbol의 설명을 쓰는데, 이 설명이 같다고 하더라도 위와 같이 a와 b는 서로 같은 Symbol이 아닙니다.
+실제로 출력해보면 false가 출력됩니다.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;심볼&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;심볼&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Symbol옆에 for()를 붙여서 Symbol을 만들 수도 있는데, 이 Symbol들은 전역 Symbol이 됩니다.
+이러한 경우 a와 b는 서로 같은 Symbol이며, true가 출력됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">ES8 - async / await</title>
       <link href="https://ykkim97.github.io/javascript-asyncawait" rel="alternate" type="text/html" title="ES8 - async / await" />
       <published>2022-09-14T14:20:00+09:00</published>
@@ -56,6 +176,7 @@
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -144,7 +265,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -176,6 +297,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -294,7 +416,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -326,6 +448,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -400,7 +523,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -432,6 +555,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -538,7 +662,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -570,6 +694,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -640,7 +765,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -672,6 +797,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -777,7 +903,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -809,6 +935,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -911,7 +1038,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -943,6 +1070,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1041,7 +1169,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
@@ -1073,6 +1201,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -1152,97 +1281,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">쿠키와 웹스토리지에 대해</title>
-      <link href="https://ykkim97.github.io/etc-webstorage" rel="alternate" type="text/html" title="쿠키와 웹스토리지에 대해" />
-      <published>2022-08-25T23:20:00+09:00</published>
-      <updated>2022-08-25T23:20:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-webstorage</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-webstorage">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-이번 글에서는 쿠키와 웹스토리지(로컬스토리지, 세션스토리지)에 대해서 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;배경&quot;&gt;배경&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-HTTP는 클라이언트와 서버간에 소통을 할 때 지켜야할 통신규약입니다. 먼저 클라이언트가 서버에게 요청을 보내고 서버는 그에 맞는 응답을 보낸 후 접속을 종료합니다.
-통신이 끝나면 상태정보를 유지하지 않는 특징이 있습니다. 예를 들어 인증에 필요한 상태정보를 말이죠. 그래서 통신을 할 때마다 새로 연결을 해주어야 합니다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;물론 지속적으로 통신을 연결하지 않는 것은 자원을 낭비하지 않는 장점이 있을 수 있지만, 통신을 할 때마다 인증을 해주어야 합니다.&lt;br /&gt;
-이런 경우 반복적인 인증작업이 필요한데 이런 면에서 비효율적이게 됩니다. 유저도 불편하겠죠. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;그래서 이런 정보를 따로 저장해두기위한 것이 브라우저 저장소입니다. 브라우저 저장소에는 쿠키와 웹 스토리지가 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;쿠키&quot;&gt;쿠키&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-쿠키는 서버가 클라이언트에게 전송하는 작은 데이터 파일이며 이름, 값, 도메인정보, 경로정보, 만료일 등으로 구성됩니다.
-쿠키특징은 다음과 같은 것들이 있습니다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;모든브라우저에서 지원함.&lt;/li&gt;
-  &lt;li&gt;매번 서버에 전송되고 저장 용량이 작음. (하나의 쿠키는 4KB까지 저장 가능)&lt;/li&gt;
-  &lt;li&gt;보안에 취약함.&lt;/li&gt;
-  &lt;li&gt;클라이언트에 총 300개의 쿠키를 저장할 수 있고 하나의 도메인 당 20개의 쿠키를 가질 수 있음.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;웹-스토리지&quot;&gt;웹 스토리지&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-HTML5부터 쿠키의 단점을 보완하여 등장한 것이 웹 스토리지(Web Storage)가 주로 사용됩니다.
-웹 스토리지는 쿠키와 기능은 유사하지만, 서버로 전송되지 않고 클라이언트에 저장합니다. 데이터를 저장할 때는 key와 value값으로 저장합니다. 
-&lt;br /&gt;&lt;br /&gt;
-웹 스토리지는 데이터의 지속성에 따라 Local Storage(로컬 스토리지)와 Session Storage(세션 스토리지)로 나눌 수 있습니다.
-차이점은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Local Storage(로컬 스토리지) : 브라우저 자체에 반영구적으로 데이터를 저장하며 브라우저를 닫아도 데이터가 유지되는 특징&lt;/li&gt;
-  &lt;li&gt;Session Storage(세션 스토리지) : 윈도우나 브라우저 탭을 닫을 경우에 데이터가 삭제됩니다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;무엇을-사용하는게-좋은가&quot;&gt;무엇을 사용하는게 좋은가?&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-이는 각 브라우저 저장소의 특징에 맞게 상황에 따라 사용합니다.&lt;br /&gt;
-예를 들어 비로그인 유저 장바구니 기능은 세션스토리지, 자동로그인기능은 로컬스토리지, “일주일간 다시 보지 않기” 창 같은 경우는 쿠키를 사용하면 좋을 것 같습니다.
-&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형?</summary>
       
 
       
