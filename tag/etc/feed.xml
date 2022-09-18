@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-09-17T23:35:54+09:00</updated>
+  <updated>2022-09-18T22:33:24+09:00</updated>
   <id>https://ykkim97.github.io/tag/etc/feed.xml</id>
 
   
@@ -32,6 +32,84 @@
 
   
     <entry>
+      <title type="html">크로스 브라우징이란?</title>
+      <link href="https://ykkim97.github.io/etc-crossbrowsing" rel="alternate" type="text/html" title="크로스 브라우징이란?" />
+      <published>2022-09-17T22:33:00+09:00</published>
+      <updated>2022-09-17T22:33:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-crossbrowsing</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-crossbrowsing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+이번 글에서는 크로스 브라우징에 대해서 간단히 정리해보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;크로스-브라우징&quot;&gt;크로스 브라우징&lt;/h2&gt;
+
+&lt;p&gt;크로스 브라우징(Cross Browsing)이란 표준 웹 기술을 채용하여 다른 기기 또는 플랫폼에 따라 다르게 구현되는 기술을 비슷하게 만들고, 
+동시에 어느 한쪽에 치우치지 않도록 공통요소를 사용하여 웹페이지를 제작하는 것을 말합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+브라우저의 종류는 여러가지가 있습니다. 인터넷 익스플로러, 크롬, 파이어폭스, 사파이, 오페라, 엣지 등의 여러가지 브라우저가 있죠. 
+개발자가 만든 웹페이지는 브라우저를 통해서 화면에 보여지는데 브라우저의 종류에 따라서 각각 다르게 보여질 수도 있습니다. 
+그러니까 서로 다른 브라우저들끼리 잘 호환될 수 있도록 하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+하지만 웹페이지가 모든 브라우저에서 100% 똑같이 보여져야한다, 똑같이 웹페이지를 만들어야한다는 의미가 아닙니다.
+기기나 플랫폼들이 너무나 다양하고, 브라우저마다 사용하는 렌더링엔진도 각기 다르게 때문에 모두 똑같이 보이도록 만들기는 사실상 어렵습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+대신, 어떤 브라우저에서 접근하던, 최대한 호환되고 그 웹페이지에서 제공하는 정보와 기능을 모두 제공받을 수 있도록 고려해야합니다. 즉 일관된 정보와 기능을 제공할 수 있어야하는 것이죠.&lt;/p&gt;
+
+&lt;h2 id=&quot;크로스-브라우징의-기준&quot;&gt;크로스 브라우징의 기준&lt;/h2&gt;
+
+&lt;p&gt;그러면 크로스 브라우징의 기준, 범위는 무엇일까요?&lt;br /&gt;
+바로 서비스 하는 대상, 고객에 따라서 달라져야할 것입니다. 어떤 브라우저를 많이 사용하는지 브라우저 점유율에 따라서 크로스 브라우징의 범위가 결정되곤 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
+&lt;p&gt;크로스 브라우징은 모든 브라우저에서 동일하게 보여지는 것이 아니라, 어떤 브라우저에서도 일관된 서비스를 제공하게 하는 것.&lt;br /&gt;
+크로스 브라우징을 위해 모든 브라우저에서 어떻게 보여지는지 직접 테스트해볼 필요가 있고, 처음 웹페이지를 만들기전 기획단계에서 어떤 브라우저를 기준으로 삼을 것인지, 브라우저 버전은 어떻게 할것인지 등을 고려할 필요가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">쿠키와 웹스토리지에 대해</title>
       <link href="https://ykkim97.github.io/etc-webstorage" rel="alternate" type="text/html" title="쿠키와 웹스토리지에 대해" />
       <published>2022-08-25T23:20:00+09:00</published>
@@ -48,6 +126,7 @@
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -114,7 +193,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -138,6 +217,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -182,7 +262,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -206,6 +286,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -264,7 +345,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -288,6 +369,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -358,7 +440,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -382,6 +464,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -439,7 +522,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -463,6 +546,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -518,7 +602,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -542,6 +626,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -662,7 +747,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -686,6 +771,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;브라우저의-동작-원리&quot;&gt;브라우저의 동작 원리&lt;/h2&gt;
@@ -793,7 +879,7 @@ End.
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       
@@ -817,6 +903,7 @@ End.
     &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;firebase-db에서-값을-불러올-수-없는-문제-해결&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/h2&gt;
@@ -863,7 +950,7 @@ https://firebase.google.com/docs/rules/insecure-rules#database
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
       
 
       

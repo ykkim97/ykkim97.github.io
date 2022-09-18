@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/etc-crossbrowsing.html</loc>
+        
+        <lastmod>2022-09-17T22:33:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/javascript-forInforOf.html</loc>
         
         <lastmod>2022-09-15T22:20:00+09:00</lastmod>
