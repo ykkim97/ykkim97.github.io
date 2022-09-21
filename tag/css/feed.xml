@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/css/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-09-18T22:33:24+09:00</updated>
+  <updated>2022-09-21T23:38:52+09:00</updated>
   <id>https://ykkim97.github.io/tag/css/feed.xml</id>
 
   
@@ -32,6 +32,86 @@
 
   
     <entry>
+      <title type="html">sticky 를 알아보자</title>
+      <link href="https://ykkim97.github.io/css-sticky" rel="alternate" type="text/html" title="sticky 를 알아보자" />
+      <published>2022-09-19T23:20:00+09:00</published>
+      <updated>2022-09-19T23:20:00+09:00</updated>
+      <id>https://ykkim97.github.io/css-sticky</id>
+      <content type="html" xml:base="https://ykkim97.github.io/css-sticky">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 요소를 화면에 고정시키는데 사용하는 position : sticky 에 대해서 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;position--sticky-와-position--fixed의-차이&quot;&gt;position : sticky 와 position : fixed의 차이&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+화면에 고정시키는데는 대표적으로 position : fixed를 사용할 수 있습니다.
+position : sticky도 비슷한 특징을 가지고 있습니다. 하지만 이 둘의 차이점이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;position : fixed의 경우에는 항상 화면에 요소가 고정이 되는 특징이 있고, 
+position : sticky의 경우에는 스크롤 시에 해당 요소가 등장할 경우에 화면에 고정됩니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fixed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/191527577-102b2f1b-1f48-4c5b-a7ef-e8febb210a42.gif&quot; alt=&quot;fixed예시&quot; width=&quot;80%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;sticky&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/191533433-a3cb3a01-42b4-492b-b5e4-b6f5492638ef.gif&quot; alt=&quot;sticky예시3&quot; width=&quot;80%&quot; height=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
+
+&lt;p&gt;position : sticky와 함께 맨 위에서 부터 어느 위치에 고정시킬지 정의해주면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.sticky&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sticky&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 해주면 요소가 스크롤되어 보여질 때 맨 위에서부터 200px 만큼의 위치에 고정되어 보여집니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="css" />
+      
+
+      
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">CSS margin과 padding의 차이</title>
       <link href="https://ykkim97.github.io/css-marginPadding" rel="alternate" type="text/html" title="CSS margin과 padding의 차이" />
       <published>2022-08-22T22:20:00+09:00</published>
@@ -44,6 +124,7 @@
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -102,7 +183,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
       
 
       
@@ -122,6 +203,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -280,7 +362,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
       
 
       
@@ -300,6 +382,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -382,7 +465,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
       
 
       
@@ -402,6 +485,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
@@ -448,7 +532,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
       
 
       
@@ -468,6 +552,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;1-css란&quot;&gt;1. CSS란?&lt;/h1&gt;
@@ -557,7 +642,7 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
       
 
       
