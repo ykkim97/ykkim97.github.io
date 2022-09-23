@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/html/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T23:38:52+09:00</updated>
+  <updated>2022-09-23T14:15:54+09:00</updated>
   <id>https://ykkim97.github.io/tag/html/feed.xml</id>
 
   
@@ -78,6 +78,15 @@
 &lt;p&gt;&lt;br /&gt;
 article태그는 신문기사에서 기사 하나하나를 의미합니다. 그 자체로 독립적입니다.
 그리고 section은 서로 연관된 부분을 묶어줄 때 보통 사용합니다. 한개의 페이지에 여러 내용들이 있다면 하나의 section안에 여러 article들이 있을 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;시맨틱-마크업의-특징&quot;&gt;시맨틱 마크업의 특징&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+시맨틱 마크업이란 시맨틱하게, 의미를 잘 전달할 수 있도록 HTML문서를 작성하는 것을 말합니다. 시맨틱 마크업은 다음과 같은 특징이 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;검색엔진이 시맨틱태그를 중요 키워드라고 판단하므로 SEO에 유리함&lt;/li&gt;
+  &lt;li&gt;단순하게 div와 같은 태그를 사용하는 것보다 가독성이 좋아 의미를 파악하기 쉽습니다.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;End.&lt;/p&gt;</content>
 
