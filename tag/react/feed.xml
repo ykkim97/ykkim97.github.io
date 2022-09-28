@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/react/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-09-28T17:48:19+09:00</updated>
+  <updated>2022-09-28T17:53:31+09:00</updated>
   <id>https://ykkim97.github.io/tag/react/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Context API 란?</title>
       <link href="https://ykkim97.github.io/react-ContextAPI" rel="alternate" type="text/html" title="Context API 란?" />
-      <published>2022-09-28T05:00:00+09:00</published>
-      <updated>2022-09-28T05:00:00+09:00</updated>
+      <published>2022-09-27T18:00:00+09:00</published>
+      <updated>2022-09-27T18:00:00+09:00</updated>
       <id>https://ykkim97.github.io/react-ContextAPI</id>
       <content type="html" xml:base="https://ykkim97.github.io/react-ContextAPI">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
