@@ -22,15 +22,15 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
-        <pubDate>Mon, 26 Sep 2022 18:00:00 +0900</pubDate>
+        <pubDate>Tue, 27 Sep 2022 22:03:00 +0900</pubDate>
         <link>
-        https://ykkim97.github.io/react-ContextAPI</link>
-        <guid isPermaLink="true">https://ykkim97.github.io/react-ContextAPI</guid>
+        https://ykkim97.github.io/react-contextapi</link>
+        <guid isPermaLink="true">https://ykkim97.github.io/react-contextapi</guid>
       </item>
       
     
@@ -50,7 +50,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -78,7 +78,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1254,7 +1254,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1282,7 +1282,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1333,7 +1333,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1361,7 +1361,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1389,7 +1389,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1417,7 +1417,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1699,7 +1699,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1792,7 +1792,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

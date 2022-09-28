@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-09-28T18:37:50+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Context API 란?</title><link href="https://ykkim97.github.io/react-ContextAPI" rel="alternate" type="text/html" title="Context API 란?" /><published>2022-09-26T18:00:00+09:00</published><updated>2022-09-26T18:00:00+09:00</updated><id>https://ykkim97.github.io/react-ContextAPI</id><content type="html" xml:base="https://ykkim97.github.io/react-ContextAPI">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-09-28T21:53:29+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">Context API 란?</title><link href="https://ykkim97.github.io/react-contextapi" rel="alternate" type="text/html" title="Context API 란?" /><published>2022-09-27T22:03:00+09:00</published><updated>2022-09-27T22:03:00+09:00</updated><id>https://ykkim97.github.io/react-contextapi</id><content type="html" xml:base="https://ykkim97.github.io/react-contextapi">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
@@ -10,7 +10,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -101,7 +101,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="rea
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -161,7 +161,7 @@ End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="rea
     &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-ContextAPI&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
