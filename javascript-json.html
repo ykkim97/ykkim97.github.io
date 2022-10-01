@@ -14,7 +14,7 @@
 
 
 
-    <title>Three.js에 대해서</title>
+    <title>JSON형식 변환 방법 - JSON.parse(), JSON.stringify()</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,26 +52,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/javascript-AboutThreejs" />
+    <link rel="canonical" href="https://ykkim97.github.io/javascript-json" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Three.js에 대해서" />
+    <meta property="og:title" content="JSON형식 변환 방법 - JSON.parse(), JSON.stringify()" />
     <meta property="og:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import /" />
-    <meta property="og:url" content="https://ykkim97.github.io/javascript-AboutThreejs" />
-    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/threejs-logo.png" />
+    <meta property="og:url" content="https://ykkim97.github.io/javascript-json" />
+    <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-07-02T06:22:00+09:00" />
-    <meta property="article:modified_time" content="2022-07-02T06:22:00+09:00" />
+    <meta property="article:published_time" content="2022-09-30T21:40:00+09:00" />
+    <meta property="article:modified_time" content="2022-09-30T21:40:00+09:00" />
     <meta property="article:tag" content="Javascript" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Three.js에 대해서" />
+    <meta name="twitter:title" content="JSON형식 변환 방법 - JSON.parse(), JSON.stringify()" />
     <meta name="twitter:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import /" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
-    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/threejs-logo.png" />
+    <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="YoungGwon's IT Tech Blog" />
     <meta name="twitter:label2" content="Filed under" />
@@ -90,16 +90,16 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/javascript-AboutThreejs",
+    "url": "https://ykkim97.github.io/javascript-json",
     "image": {
         "@type": "ImageObject",
-        "url": "https://ykkim97.github.io/assets/built/images/threejs-logo.png",
+        "url": "https://ykkim97.github.io/assets/built/images/javascript-logo.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/javascript-AboutThreejs"
+        "@id": "https://ykkim97.github.io/javascript-json"
     },
     "description": "JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import /"
 }
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Three.js에 대해서" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="JSON형식 변환 방법 - JSON.parse(), JSON.stringify()" href="/feed.xml" />
 
 
 </head>
@@ -181,7 +181,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 2 July 2022"> 2 July 2022</time>
+                    <time class="post-full-meta-date" datetime="30 September 2022">30 September 2022</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -191,11 +191,11 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">Three.js에 대해서</h1>
+                <h1 class="post-full-title">JSON형식 변환 방법 - JSON.parse(), JSON.stringify()</h1>
             </header>
 
             <!-- 
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/threejs-logo.png)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)">
             </figure>
              -->
             <!-- 포스팅 글 처음에 커버이미지를 둘 수 있음. -->
@@ -226,34 +226,37 @@ into the {body} of the default.hbs template -->
     <li><a href="./javascript-json">JSON형식 변환 방법 - JSON.parse(), JSON.stringify()</a></li>
 </ul>
 
-<p><br /><br /><br />
-요즘 새로 배워보고 싶은 것이 하나 생겼다. 그것은 바로 Three.js이다. 뭔가 웹사이트를 만들 때 조금 더 멋있고 인터렉티브하게 만들고 싶었고, 
-관련정보를 찾아보다가 이 three.js에 대해서 알게되었다. 
-그래서 배우면서 알게된 내용을 정리해 나가려고 한다.</p>
+<p><br /><br /><br /></p>
 
-<h2 id="threejs-">Three.js ?</h2>
+<p>이번 글에서는 JSON형식 변환에 대해서 알아보겠습니다.</p>
 
-<p>먼저 WebGL이라는 것에 대해서 알아볼 필요가 있다. WebGL은 웹 상에서 그래픽을 나타낼 수 있는 라이브러리다.
-그런데 이 WebGL API 자체가 완전 로우 레벨이라서 처음부터 하나하나 개발해 나가야 하고 코드양도 많으며 복잡하다고 한다.
-Three.js는 이 WebGL을 조금 더 쉽고 간편하게 사용할 수 있도록 도와주는 라이브러리인 것이다.</p>
+<h2 id="json">JSON</h2>
 
-<p>공식사이트는 다음과 같다.
-<br />
-<a href="https://threejs.org/">Threejs.org</a>.
-<br /></p>
+<p>JSON은 Javascript Object Notation의 약자로 하나의 데이터 포맷입니다.<br />
+JSON형식은 사람, 기계가 모두 이해하기 쉽고 저용량으로, 최근 JSON이 XML을 대체하여 데이터 전송에 많이 사용합니다.
+key-value 형태이며 key값과 value값은 쌍따옴표로 표시하고 사이에 콜론(:)이 있습니다.</p>
 
-<p>물론 Three.js 말고도 다른 라이브러리들이 있지만 현재는 Three.js가 가장 인기가 많다고 한다.
-<br />
-저 공식사이트에는 이것을 활용하여 만들어진 사이트들을 확인할 수 있다.
-<img src="https://user-images.githubusercontent.com/17917009/177040641-0f736e4a-c6f6-4896-a22d-43b5fc973eee.png" alt="image" width="840" height="500" />
-<a href="https://eyes.nasa.gov/apps/mars2020/">https://eyes.nasa.gov/apps/mars2020/</a>.
-<br />
-위 이미지에서 볼 수 있듯이 웹 상에서 화성을 표현하고 우주를 표현하는 등 멋진 표현을 웹사이트에 적용할 수 있는 것이다.
-three.js는 공식사이트에서 다운받거나 npm을 통해서 설치하는데 보통은 npm으로 다운받는 편이다.
-다음 글에서 three.js에 대해서 좀더 자세히 정리해보도록 하겠다.
-<br />
+<h2 id="jsonparse">JSON.parse()</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// JSON형식</span>
+<span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">{"name" : "kim", "age" : "26"}</span><span class="dl">'</span>
+
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</code></pre></div></div>
+<p>위와 같이 a라는 변수에 JSON형식의 텍스트를 저장하였습니다. JSON.parse()를 사용하면 {name: ‘kim’, age: ‘26’}, 즉 Object로 변환시킬 수 있습니다.</p>
+
+<h2 id="jsonstringify">JSON.stringify()</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// JSON형식</span>
+<span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">kim</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="dl">'</span><span class="s1">26</span><span class="dl">'</span><span class="p">};</span>
+
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</code></pre></div></div>
+<p>반대로 JSON.stringify()를 사용하면 Object를 JSON 텍스트로 변환시킬 수 있습니다.
+{name: ‘kim’, age: ‘26’} 가 ‘{“name”:”kim”,”age”:”26”}’로 변환됩니다.</p>
+
+<p><br /><br />
 End.</p>
-
 
                 </div>
             </section>
@@ -318,9 +321,9 @@ End.</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/javascript-AboutThreejs';
-                            var this_page_identifier = '/javascript-AboutThreejs';
-                            var this_page_title = 'Three.js에 대해서';
+                            var this_page_url = 'https://ykkim97.github.io/javascript-json';
+                            var this_page_identifier = '/javascript-json';
+                            var this_page_title = 'JSON형식 변환 방법 - JSON.parse(), JSON.stringify()';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -365,11 +368,6 @@ End.</p>
                                 
                                     
                                         
-                                            
-                                            
-                                                <li><a href="/javascript-json">JSON형식 변환 방법 - JSON.parse(), JSON.stringify()</a></li>
-                                            
-                                        
                                     
                                 
                                     
@@ -406,12 +404,7 @@ End.</p>
                                         
                                             
                                             
-                                        
-                                    
-                                
-                                    
-                                        
-                                            
+                                                <li><a href="/javascript-asyncawait">ES8 - async / await</a></li>
                                             
                                         
                                     
@@ -466,8 +459,6 @@ End.</p>
                                     
                                 
                                     
-                                
-                                    
                                         
                                             
                                             
@@ -486,8 +477,6 @@ End.</p>
                                     
                                 
                                     
-                                
-                                    
                                         
                                             
                                             
@@ -496,19 +485,6 @@ End.</p>
                                 
                                     
                                 
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                                    
-                                        
-                                            
-                                            
-                                        
                                     
                                 
                                     
@@ -529,6 +505,33 @@ End.</p>
                                     
                                 
                                     
+                                        
+                                            
+                                            
+                                        
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
+                                        
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        
+                                            
+                                            
                                         
                                     
                                 
@@ -611,55 +614,6 @@ End.</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/etc-browser">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/browserImage.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/etc-browser">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Etc</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">브라우저의 동작 원리</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -667,34 +621,26 @@ End.</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/html-doctype">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/html-logo.png)"></div>
+            <a class="post-card-image-link" href="/react-reactbootstrap">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/react-logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/html-doctype">
+            <a class="post-card-content-link" href="/react-reactbootstrap">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Html</span>
+                                <span class="post-card-tags">React</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">DOCTYPE의 의미?</h2>
+                    <h2 class="post-card-title">React에서 Bootstrap 사용하기</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>HTML은 다음과 같이 구성되어 있습니다. 
-
-    웹의 기본중의 기본! HTML에 대해서 알아보자
-    HTML 기본 태그들
-    DOCTYPE의 의미?
-    시맨틱 태그?
-
-
-</p>
+                        <p>React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에</p>
                     
                 </section>
             </a>
@@ -734,18 +680,18 @@ End.</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Three.js에 대해서</div>
+    <div class="floating-header-title">JSON형식 변환 방법 - JSON.parse(), JSON.stringify()</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Three.js%EC%97%90+%EB%8C%80%ED%95%B4%EC%84%9C&amp;url=https://ykkim97.github.io/javascript-AboutThreejs"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=JSON%ED%98%95%EC%8B%9D+%EB%B3%80%ED%99%98+%EB%B0%A9%EB%B2%95+-+JSON.parse%28%29%2C+JSON.stringify%28%29&amp;url=https://ykkim97.github.io/javascript-json"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-AboutThreejs"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-json"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
