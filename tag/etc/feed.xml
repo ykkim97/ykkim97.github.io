@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-01T21:30:09+09:00</updated>
+  <updated>2022-10-03T20:39:52+09:00</updated>
   <id>https://ykkim97.github.io/tag/etc/feed.xml</id>
 
   
@@ -32,6 +32,108 @@
 
   
     <entry>
+      <title type="html">알면 유용한 vscode 단축키들</title>
+      <link href="https://ykkim97.github.io/etc-vscodekey" rel="alternate" type="text/html" title="알면 유용한 vscode 단축키들" />
+      <published>2022-10-02T21:00:00+09:00</published>
+      <updated>2022-10-02T21:00:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-vscodekey</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-vscodekey">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+알면 유용한 vscode 단축키들을 정리해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;1) ctrl + /&lt;/p&gt;
+
+&lt;p&gt;주석 처리&lt;/p&gt;
+
+&lt;p&gt;2) ctrl + B&lt;/p&gt;
+
+&lt;p&gt;왼쪽 사이드바 토글 ( 파일목록창 숨기기/보이기 )&lt;/p&gt;
+
+&lt;p&gt;3) ctrl + shift + F&lt;/p&gt;
+
+&lt;p&gt;프로젝트 폴더 전체를 대상으로 검색할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;4) ctrl + D&lt;/p&gt;
+
+&lt;p&gt;커서가 위치하는 단어와 일치하는 단어를 선택&lt;/p&gt;
+
+&lt;p&gt;5) ctrl + G&lt;/p&gt;
+
+&lt;p&gt;빠른 행 이동
+(명령 후 이동하고싶은 코드라인 입력)&lt;/p&gt;
+
+&lt;p&gt;6) alt + 마우스 좌클릭&lt;/p&gt;
+
+&lt;p&gt;커서 추가하기(부분 선택)&lt;/p&gt;
+
+&lt;p&gt;7) ctrl + X&lt;/p&gt;
+
+&lt;p&gt;잘라내기 (코드 한 줄을 빠르게 삭제할 때 사용하면 좋음)&lt;/p&gt;
+
+&lt;p&gt;8) ctrl + Enter&lt;/p&gt;
+
+&lt;p&gt;다음 행 커서 이동(어중간하게 커서가 위치할 경우 유용)&lt;/p&gt;
+
+&lt;p&gt;9) ctrl + `&lt;/p&gt;
+
+&lt;p&gt;터미널 열기&lt;/p&gt;
+
+&lt;p&gt;10) ctrl + 페이지업다운(PGUP/PGDN)&lt;/p&gt;
+
+&lt;p&gt;열려있는 코드 탭을 이동할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;11) alt + shift + 위아래 방향키&lt;/p&gt;
+
+&lt;p&gt;커서가 위치한 코드 라인을 방향키 방향으로 복제해준다.&lt;/p&gt;
+
+&lt;p&gt;12) alt + 위아래 방향키&lt;/p&gt;
+
+&lt;p&gt;커서가 위치한 코드 라인을 이동시켜준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">크로스 브라우징이란?</title>
       <link href="https://ykkim97.github.io/etc-crossbrowsing" rel="alternate" type="text/html" title="크로스 브라우징이란?" />
       <published>2022-09-17T22:33:00+09:00</published>
@@ -49,6 +151,7 @@
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -102,7 +205,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -127,6 +230,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -193,7 +297,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -218,6 +322,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -262,7 +367,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -287,6 +392,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -345,7 +451,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -370,6 +476,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -440,7 +547,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -465,6 +572,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -522,7 +630,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -547,6 +655,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -602,7 +711,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -627,6 +736,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -747,7 +857,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
@@ -772,6 +882,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;브라우저의-동작-원리&quot;&gt;브라우저의 동작 원리&lt;/h2&gt;
@@ -879,78 +990,7 @@ End.
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Firebase DB에서 값을 불러올 수 없는 문제 해결</title>
-      <link href="https://ykkim97.github.io/etc-firebasedbrules" rel="alternate" type="text/html" title="Firebase DB에서 값을 불러올 수 없는 문제 해결" />
-      <published>2022-06-19T03:32:00+09:00</published>
-      <updated>2022-06-19T03:32:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-firebasedbrules</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-firebasedbrules">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;firebase-db에서-값을-불러올-수-없는-문제-해결&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/h2&gt;
-
-&lt;p&gt;진행 중에 있는 프로젝트의 버그를 수정하기 위해 확인을 했는데 갑자기 문제가 발생했다…&lt;br /&gt;
-Firebase의 Realtime Database, Storage에 있는 데이터를 불러오지 못하는 문제였다. 처음에는 코드를 잘못만진게 아닌가 싶었는데,
-그런 이유는 아니었고 Firebase와 연동 자체가 안되는 문제였다. 갑작스러웠지만 인터넷 검색을 통해 문제를 해결하려고 노력했다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/174476085-c42fc32e-20f6-4e0f-b9ad-0a1b412263e9.JPG&quot; alt=&quot;보안규칙안내메세지캡처&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;firebase 알림에 위와 같은 메세지가 와있는 것을 발견했는데, 보안규칙을 업데이트 해야한다는 것을 알았다.&lt;/p&gt;
-
-&lt;p&gt;처음 데이터베이스를 사용할 때 잠금모드와 테스트모드중 테스트모드를 선택했는데 생각해보니 테스트모드는 30일이 지나면 데이터베이스에서 읽을 수 없도록 되어있었다.
-계속 유지하려면 보안 규칙설정을 해줘야한다.
-&lt;br /&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/174476457-bd2bab62-6e45-41f7-b56d-f7c43ac15167.JPG&quot; alt=&quot;보안규칙캡처&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;위처럼 보안규칙을 바꿔주었더니 다시 정상적으로 동작했다.
-물론 보안 규칙이 공개로 정의되어 있어 누구나 데이터베이스의 데이터를 도용, 수정, 삭제할 수 있지만 아직은 개발단계이기 때문에 일단 이렇게 수정해놓고 사용하기로 했다.
-&lt;br /&gt;
-&lt;br /&gt;
-Firebase 공식 문서 참조&lt;br /&gt;
-https://firebase.google.com/docs/rules/insecure-rules#database 
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란?</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       
