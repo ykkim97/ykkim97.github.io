@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/html/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-03T20:39:52+09:00</updated>
+  <updated>2022-10-04T23:40:24+09:00</updated>
   <id>https://ykkim97.github.io/tag/html/feed.xml</id>
 
   
@@ -30,6 +30,58 @@
   
   
 
+  
+    <entry>
+      <title type="html">img태그에서 srcset속성을 사용하는 이유</title>
+      <link href="https://ykkim97.github.io/html-srcset" rel="alternate" type="text/html" title="img태그에서 srcset속성을 사용하는 이유" />
+      <published>2022-10-03T08:55:00+09:00</published>
+      <updated>2022-10-03T08:55:00+09:00</updated>
+      <id>https://ykkim97.github.io/html-srcset</id>
+      <content type="html" xml:base="https://ykkim97.github.io/html-srcset">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+이번 글에서는 img태그에서 srcset 속성을 사용하는 이유를 간단히 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;img태그에서-srcset-속성을-사용하는-이유&quot;&gt;img태그에서 srcset 속성을 사용하는 이유&lt;/h2&gt;
+
+&lt;p&gt;srcset 속성은 사용자의 디스플레이에 따라서 다른 해상도의 이미지를 제공하기 위해 사용합니다.
+사용자가 고사양의 디스플레이라면 고품질의 이미지를, 저사양의 디스플레이라면 저품질의 이미지를 제공하기 위함입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;srcset-속성&quot;&gt;srcset 속성&lt;/h2&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="html" />
+      
+
+      
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그?</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">시맨틱 태그?</title>
