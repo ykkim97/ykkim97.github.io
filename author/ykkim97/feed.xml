@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-04T23:40:24+09:00</updated>
+  <updated>2022-10-05T00:21:57+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -43,10 +43,10 @@
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-이번 글에서는 img태그에서 srcset 속성을 사용하는 이유를 간단히 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;img태그에서-srcset-속성을-사용하는-이유&quot;&gt;img태그에서 srcset 속성을 사용하는 이유&lt;/h2&gt;
 
@@ -54,6 +54,14 @@
 사용자가 고사양의 디스플레이라면 고품질의 이미지를, 저사양의 디스플레이라면 저품질의 이미지를 제공하기 위함입니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;srcset-속성&quot;&gt;srcset 속성&lt;/h2&gt;
+
+&lt;p&gt;같은 비율의 다양한 크기를 가지는 동일 이미지들을 최소 2개 이상 명시하는 속성&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srcset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;small.jpg 500w, medium.jpg 1000w, large.jpg 2000w&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위처럼 해주면 small.jpg는 뷰포트 너비가 500px 이하일 때, medium.jpg는 뷰포트 너비가 501px~1000px일때 , 
+medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt;
 
 &lt;p&gt;End.&lt;/p&gt;</content>
 
@@ -76,7 +84,7 @@
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그?</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary>
       
 
       

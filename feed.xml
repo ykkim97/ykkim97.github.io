@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-10-04T23:40:24+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">img태그에서 srcset속성을 사용하는 이유</title><link href="https://ykkim97.github.io/html-srcset" rel="alternate" type="text/html" title="img태그에서 srcset속성을 사용하는 이유" /><published>2022-10-03T08:55:00+09:00</published><updated>2022-10-03T08:55:00+09:00</updated><id>https://ykkim97.github.io/html-srcset</id><content type="html" xml:base="https://ykkim97.github.io/html-srcset">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2022-10-05T00:21:57+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">img태그에서 srcset속성을 사용하는 이유</title><link href="https://ykkim97.github.io/html-srcset" rel="alternate" type="text/html" title="img태그에서 srcset속성을 사용하는 이유" /><published>2022-10-03T08:55:00+09:00</published><updated>2022-10-03T08:55:00+09:00</updated><id>https://ykkim97.github.io/html-srcset</id><content type="html" xml:base="https://ykkim97.github.io/html-srcset">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-이번 글에서는 img태그에서 srcset 속성을 사용하는 이유를 간단히 알아보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;img태그에서-srcset-속성을-사용하는-이유&quot;&gt;img태그에서 srcset 속성을 사용하는 이유&lt;/h2&gt;
 
@@ -16,7 +16,15 @@
 
 &lt;h2 id=&quot;srcset-속성&quot;&gt;srcset 속성&lt;/h2&gt;
 
-&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그?</summary></entry><entry><title type="html">알면 유용한 vscode 단축키들</title><link href="https://ykkim97.github.io/etc-vscodekey" rel="alternate" type="text/html" title="알면 유용한 vscode 단축키들" /><published>2022-10-02T21:00:00+09:00</published><updated>2022-10-02T21:00:00+09:00</updated><id>https://ykkim97.github.io/etc-vscodekey</id><content type="html" xml:base="https://ykkim97.github.io/etc-vscodekey">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;같은 비율의 다양한 크기를 가지는 동일 이미지들을 최소 2개 이상 명시하는 속성&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srcset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;small.jpg 500w, medium.jpg 1000w, large.jpg 2000w&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위처럼 해주면 small.jpg는 뷰포트 너비가 500px 이하일 때, medium.jpg는 뷰포트 너비가 501px~1000px일때 , 
+medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt;
+
+&lt;p&gt;End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="html" /><summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary></entry><entry><title type="html">알면 유용한 vscode 단축키들</title><link href="https://ykkim97.github.io/etc-vscodekey" rel="alternate" type="text/html" title="알면 유용한 vscode 단축키들" /><published>2022-10-02T21:00:00+09:00</published><updated>2022-10-02T21:00:00+09:00</updated><id>https://ykkim97.github.io/etc-vscodekey</id><content type="html" xml:base="https://ykkim97.github.io/etc-vscodekey">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
