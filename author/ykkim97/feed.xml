@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-06T00:28:28+09:00</updated>
+  <updated>2022-10-07T00:41:46+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -32,6 +32,120 @@
 
   
     <entry>
+      <title type="html">useTransition에 대해서</title>
+      <link href="https://ykkim97.github.io/react-useTransition" rel="alternate" type="text/html" title="useTransition에 대해서" />
+      <published>2022-10-05T03:07:00+09:00</published>
+      <updated>2022-10-05T03:07:00+09:00</updated>
+      <id>https://ykkim97.github.io/react-useTransition</id>
+      <content type="html" xml:base="https://ykkim97.github.io/react-useTransition">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+React 18버전 부터 추가된 useTransition에 대해서 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;usetransition&quot;&gt;useTransition&lt;/h2&gt;
+
+&lt;p&gt;만약에 렌더링되는데 오래걸리는 컴포넌트가 있고, 버튼을 클릭할 경우 이 컴포넌트가 렌더링이 될 때, 컴포넌트의 렌더링속도가 오래걸리기 때문에 버벅일 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;arr라는 변수에 0으로 가득찬 10000개의 공간을 가진 Array를 저장하여 이를 이용해서 map()으로 input창에 입력한 값인 input을 출력하고 있습니다.
+input창에 타이핑할때마다 만개의 input값이 출력되므로 버벅이게 될 것입니다.
+물론 이러한 예시처럼 코드를 짜는 것 자체가 바람직하지 않지만 불가피하다면 useTransition을 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useTransition&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isPending&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;startTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;startTransition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;setInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 useTransition을 import하고,&lt;br /&gt;
+‘const [isPending, startTransition] = useTransition();’ 을 해준 후, 
+성능저하를 일으키는 setInput()을 startTransition으로 감싸주게되면 setInput(e.target.value)를 다른 코드보다 늦게 처리시켜줍니다.
+input창에 입력하는 것과 같이 즉각적으로 반응해야하는 일을 우선적으로 처리한 후, setInput()을 늦게 처리해주어 성능을 높여줍니다.
+실제로 input창에 입력해보면 이전 코드보다 속도가 향상된 것을 느낄 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+그리고 isPending은 startTransiton으로 감싼 코드가 아직 처리중일 경우, true를 반환하는 함수입니다.
+이를 이용해서 isPending이 true일 경우 Loading메시지와 같은 것을 보여주는 등의 코드를 작성할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="react" />
+      
+
+      
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">useMemo 사용</title>
       <link href="https://ykkim97.github.io/react-useMemo" rel="alternate" type="text/html" title="useMemo 사용" />
       <published>2022-10-05T01:07:00+09:00</published>
@@ -52,6 +166,7 @@
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -137,7 +252,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서</summary>
       
 
       
@@ -415,6 +530,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -482,7 +598,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서</summary>
       
 
       
@@ -510,6 +626,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -609,103 +726,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Link와 useNavigate</title>
-      <link href="https://ykkim97.github.io/react-Link" rel="alternate" type="text/html" title="Link와 useNavigate" />
-      <published>2022-09-25T07:03:00+09:00</published>
-      <updated>2022-09-25T07:03:00+09:00</updated>
-      <id>https://ykkim97.github.io/react-Link</id>
-      <content type="html" xml:base="https://ykkim97.github.io/react-Link">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-오늘은 React에서 페이지 이동에 사용되는 Link와 useNavigate에 대해서 알아보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
-
-&lt;p&gt;일단 react-router-dom을 설치합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;npm install react-router-dom@6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;react-router-dom을 설치한 후,&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// .....&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Home&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/detail&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Detail&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 Link를 import하고 &lt;link to=&quot;&quot; /&gt;를 사용하면 됩니다. 그러면 링크가 만들어지고 링크는 해당 경로로 이동합니다.&lt;br /&gt;
-클릭 시에 바로 이동하는 로직을 구현할 경우 유용합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;usenavigate&quot;&gt;useNavigate&lt;/h2&gt;
-
-&lt;p&gt;Link말고도 useNavigate라는 훅을 사용하여 페이지를 이동시킬 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useNavigate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useNavigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/detail&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Detail로 이동하기&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 useNavigate()를 사용하면 페이지 이동을 할 수 있는 함수가 반환됩니다. &lt;br /&gt;
-그것을 navigate변수에 저장하고 navigate()안에 인자로 경로를 지정하면 해당 경로로 이동할 수 있습니다.&lt;br /&gt;
-Link와 다른점은 특정한 조건을 주고 조건에 따라서 페이지 이동을 하게할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="react" />
-      
-
-      
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서</summary>
       
 
       
@@ -733,6 +754,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -836,7 +858,104 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용</summary>
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Link와 useNavigate</title>
+      <link href="https://ykkim97.github.io/react-Link" rel="alternate" type="text/html" title="Link와 useNavigate" />
+      <published>2022-09-25T07:03:00+09:00</published>
+      <updated>2022-09-25T07:03:00+09:00</updated>
+      <id>https://ykkim97.github.io/react-Link</id>
+      <content type="html" xml:base="https://ykkim97.github.io/react-Link">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+오늘은 React에서 페이지 이동에 사용되는 Link와 useNavigate에 대해서 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;p&gt;일단 react-router-dom을 설치합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;npm install react-router-dom@6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;react-router-dom을 설치한 후,&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// .....&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Home&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/detail&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Detail&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 Link를 import하고 &lt;link to=&quot;&quot; /&gt;를 사용하면 됩니다. 그러면 링크가 만들어지고 링크는 해당 경로로 이동합니다.&lt;br /&gt;
+클릭 시에 바로 이동하는 로직을 구현할 경우 유용합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;usenavigate&quot;&gt;useNavigate&lt;/h2&gt;
+
+&lt;p&gt;Link말고도 useNavigate라는 훅을 사용하여 페이지를 이동시킬 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useNavigate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useNavigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/detail&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Detail로 이동하기&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위와 같이 useNavigate()를 사용하면 페이지 이동을 할 수 있는 함수가 반환됩니다. &lt;br /&gt;
+그것을 navigate변수에 저장하고 navigate()안에 인자로 경로를 지정하면 해당 경로로 이동할 수 있습니다.&lt;br /&gt;
+Link와 다른점은 특정한 조건을 주고 조건에 따라서 페이지 이동을 하게할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="react" />
+      
+
+      
+        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서</summary>
       
 
       
@@ -917,85 +1036,6 @@ End.&lt;/p&gt;</content>
 
       
         <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">크로스 브라우징이란?</title>
-      <link href="https://ykkim97.github.io/etc-crossbrowsing" rel="alternate" type="text/html" title="크로스 브라우징이란?" />
-      <published>2022-09-17T22:33:00+09:00</published>
-      <updated>2022-09-17T22:33:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-crossbrowsing</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-crossbrowsing">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-이번 글에서는 크로스 브라우징에 대해서 간단히 정리해보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;크로스-브라우징&quot;&gt;크로스 브라우징&lt;/h2&gt;
-
-&lt;p&gt;크로스 브라우징(Cross Browsing)이란 표준 웹 기술을 채용하여 다른 기기 또는 플랫폼에 따라 다르게 구현되는 기술을 비슷하게 만들고, 
-동시에 어느 한쪽에 치우치지 않도록 공통요소를 사용하여 웹페이지를 제작하는 것을 말합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-브라우저의 종류는 여러가지가 있습니다. 인터넷 익스플로러, 크롬, 파이어폭스, 사파이, 오페라, 엣지 등의 여러가지 브라우저가 있죠. 
-개발자가 만든 웹페이지는 브라우저를 통해서 화면에 보여지는데 브라우저의 종류에 따라서 각각 다르게 보여질 수도 있습니다. 
-그러니까 서로 다른 브라우저들끼리 잘 호환될 수 있도록 하는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-하지만 웹페이지가 모든 브라우저에서 100% 똑같이 보여져야한다, 똑같이 웹페이지를 만들어야한다는 의미가 아닙니다.
-기기나 플랫폼들이 너무나 다양하고, 브라우저마다 사용하는 렌더링엔진도 각기 다르게 때문에 모두 똑같이 보이도록 만들기는 사실상 어렵습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-대신, 어떤 브라우저에서 접근하던, 최대한 호환되고 그 웹페이지에서 제공하는 정보와 기능을 모두 제공받을 수 있도록 고려해야합니다. 즉 일관된 정보와 기능을 제공할 수 있어야하는 것이죠.&lt;/p&gt;
-
-&lt;h2 id=&quot;크로스-브라우징의-기준&quot;&gt;크로스 브라우징의 기준&lt;/h2&gt;
-
-&lt;p&gt;그러면 크로스 브라우징의 기준, 범위는 무엇일까요?&lt;br /&gt;
-바로 서비스 하는 대상, 고객에 따라서 달라져야할 것입니다. 어떤 브라우저를 많이 사용하는지 브라우저 점유율에 따라서 크로스 브라우징의 범위가 결정되곤 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
-&lt;p&gt;크로스 브라우징은 모든 브라우저에서 동일하게 보여지는 것이 아니라, 어떤 브라우저에서도 일관된 서비스를 제공하게 하는 것.&lt;br /&gt;
-크로스 브라우징을 위해 모든 브라우저에서 어떻게 보여지는지 직접 테스트해볼 필요가 있고, 처음 웹페이지를 만들기전 기획단계에서 어떤 브라우저를 기준으로 삼을 것인지, 브라우저 버전은 어떻게 할것인지 등을 고려할 필요가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
       
 
       

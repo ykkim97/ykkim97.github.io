@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/react-useTransition.html</loc>
+        
+        <lastmod>2022-10-05T03:07:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/react-useMemo.html</loc>
         
         <lastmod>2022-10-05T01:07:00+09:00</lastmod>
