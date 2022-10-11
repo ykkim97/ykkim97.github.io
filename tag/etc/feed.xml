@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-08T00:35:51+09:00</updated>
+  <updated>2022-10-11T22:41:39+09:00</updated>
   <id>https://ykkim97.github.io/tag/etc/feed.xml</id>
 
   
@@ -32,6 +32,129 @@
 
   
     <entry>
+      <title type="html">HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</title>
+      <link href="https://ykkim97.github.io/etc-httphttps" rel="alternate" type="text/html" title="HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점" />
+      <published>2022-10-09T22:40:00+09:00</published>
+      <updated>2022-10-09T22:40:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-httphttps</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-httphttps">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;http&quot;&gt;HTTP&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTTP(&lt;/strong&gt;HyperText Transfer Protocol)로&lt;/p&gt;
+
+&lt;p&gt;HTTP는 인터넷에서 데이터를 주고 받을 수 있는 프로토콜(규칙,규약)입니다.&lt;/p&gt;
+
+&lt;p&gt;서버와 클라이언트가 데이터를 주고받을 때 암호화되지 않은 그대로 데이터가 오고 갑니다. 따라서 개인정보같은 중요한 정보를 중간에 제 3자가 알 수 있어 보안에 취약하다.&lt;/p&gt;
+
+&lt;h2 id=&quot;https&quot;&gt;HTTPS&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;HTTPS(&lt;/strong&gt;HyperText Transfer Protocol Secure)는 HTTP에 Secure가 붙은 것으로, HTTP에 보안 기능이 추가된 형태이다.&lt;/p&gt;
+
+&lt;p&gt;보통은 전자상거래같은데에서 많이 쓰였으나 요즘 구글이 HTTPS가 적용된 웹사이트는 검색결과표시에 있어서 가산점을 줍니다. 대부분 https인 사이트가 많습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;https의-특징&quot;&gt;HTTPS의 특징&lt;/h2&gt;
+
+&lt;p&gt;HTTP웹사이트보다 안전한 것이 HTTPS로 된 사이트입니다. 어떤 웹사이트에 보내는 정보를 누가 훔쳐보지 못하도록 암호화를 한다. 
+예를 들어 네이버에 로그인할 때 ID와 Password를 입력하고 로그인을 하면 네이버 서버에 ID와 Password를가 전송되는데 그냥 HTTP로 보내버리면 이 정보들이 입력한 텍스트 그대로 전송됩니다. 중간에 누군가가 훔쳐보기 딱좋죠. 그런데 HTTPS는 이 정보를 네이버만 알아볼 수 있는 텍스트로 변경해서 보냅니다.
+암호화를 하는 것이죠.&lt;/p&gt;
+
+&lt;p&gt;또한 HTTPS는 접속한 사이트가 신뢰할 수 있는 사이트인지 판별해준다. 네이버와 비슷하게 생긴 피싱사이트가 있다고 가정해보겠습니다. 사용자가 피싱 사이트에 아이디와 비번을 입력하면 피싱사이트가 계정정보를 알게 되겠죠. HTTPS는 이런 피싱 사이트를 걸러낼 수 있도록 함. 기관으로부터 검증된 사이트만 주소에 HTTPS 사용이 허가되고 그냥 HTTP만 사용하는 사이트들은 이제 주소 창에 안전하지 않다는 표시가 뜨게 됩니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;사전-지식&quot;&gt;사전 지식&lt;/h2&gt;
+
+&lt;p&gt;HTTPS의 과정을 알기전에 필요한 사전 지식이 있습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;대칭키 암호화&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;클라이언트와 서버가 동일한 키를 사용해 암호화/복호화를 진행함
+키가 노출되면 매우 위험하지만 연산 속도가 빠름&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;비대칭키 암호화&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1개의 쌍으로 구성된 공개키와 개인키를 암호화/복호화 하는데 사용함
+키가 노출되어도 비교적 안전하지만 연산 속도가 느림&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CA(Certificate Authority)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;해덩 서버에서 뿌린 공개키가 맞는지 인증해주는 역할을 하는 공인된 민간기업들을 의미함. CA는 아무회사나 할 수 있는 것이 아니며 엄격한 인증과정을 거쳐야한다.
+브라우저에는 이 CA들의 목록이 내장되어 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;과정&quot;&gt;과정&lt;/h2&gt;
+
+&lt;p&gt;HTTPS는 대칭키 암호화 방식과 비대칭키 암호화 방식을 모두 사용하고 있습니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;일단 클라이언트 입장에서 네이버 서버와 데이터를 주고받는다고 생각해보겠습니다.&lt;br /&gt;
+클라이언트는 아직 네이버 서버를 신뢰할 수 없습니다. 그래서 서로 탐색하는 과정(handshake)을 실시합니다. 
+먼저 클라이언트에서 한 랜덤 데이터를 생성해서 네이버 서버에 보냅니다. 그러면 그것을 받은 네이버 서버도 역시 랜덤데이터를 생성해서 해당 서버의 인증서와 함께 다시 클라이언트로 보내어 응답합니다. handshake를 한것이죠.&lt;/p&gt;
+
+&lt;p&gt;그다음 클라이언트는 받은 인증서가 진짜인지 브라우저에 내장된 CA들의 정보를 보고 확인합니다. CA의 인증을 받은 인증서들은 해당 CA의 개인키로 암호화되있는데, 인증서가 진짜라면 브라우저에
+저장된 CA의 공개키로 복호화하여 풀 수 있습니다. 만약 CA 정보들 중에 받은 인증서에 해당하는 것이 없으면 브라우저 주소창에 “Not secure”와 같은 경고가 뜨게 됩니다.
+그래서 CA의 공개키로 복호화를 성공으로 마친 인증서에는 네이버 서버의 공개키가 들어있습니다.&lt;/p&gt;
+
+&lt;p&gt;이전에 handshake를 통해서 생성된 두 랜덤데이터를 혼합해서 임시키를 만들고 이 임시키를, 복호화한 인증서 안에 있는 네이버 서버의 공개키로 암호화해서 네이버 서버에 보냅니다. 
+그러면 양쪽에서 일련의 과정을 거쳐 동일한 대칭키가 만들어집니다. 만들어진 대칭키는 해당 네이버서버와 클라이언트만 가지고 있게 됩니다.
+따라서 이 둘만 대칭키를 가지고 있기 때문에 제 3자가 중간에 알아볼 수 없습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;https의-장점&quot;&gt;HTTPS의 장점&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;암호화가 적용되어 HTTP보다 보안이 좋다.&lt;/li&gt;
+  &lt;li&gt;HTTPS가 HTTP보다 더 안전하다고 판단하기 때문에 HTTPS가 더 검색결과표시에 유리하다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">알면 유용한 vscode 단축키들</title>
       <link href="https://ykkim97.github.io/etc-vscodekey" rel="alternate" type="text/html" title="알면 유용한 vscode 단축키들" />
       <published>2022-10-02T21:00:00+09:00</published>
@@ -50,6 +173,7 @@
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -126,7 +250,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -152,6 +276,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -205,7 +330,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -231,6 +356,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -297,7 +423,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -323,6 +449,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -367,7 +494,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -393,6 +520,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -451,7 +579,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -477,6 +605,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -547,7 +676,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -573,6 +702,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -630,7 +760,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -656,6 +786,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -711,7 +842,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
@@ -737,6 +868,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -857,140 +989,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">브라우저의 동작 원리</title>
-      <link href="https://ykkim97.github.io/etc-browser" rel="alternate" type="text/html" title="브라우저의 동작 원리" />
-      <published>2022-07-04T10:20:00+09:00</published>
-      <updated>2022-07-04T10:20:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-browser</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-browser">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;브라우저의-동작-원리&quot;&gt;브라우저의 동작 원리&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-브라우저는 웹사이트를 표시해주는 소프트웨어이며 웹 개발자들에게는 없어서는 안될 존재입니다.
-브라우저는 어떤 원리로 동작하게 되는 것일까요? 주소창에 주소를 입력했을 때 어떤 과정을 거쳐서 웹페이지가 화면에 보이게 되는 것일까요?&lt;/p&gt;
-
-&lt;h3 id=&quot;브라우저의-종류&quot;&gt;브라우저의 종류&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-브라우저는 크롬, 사파리, 파이어폭스, 오페라, 인터넷 익스플로러, 네이버웨일 등 여러가지가 있습니다. 현재는 크롬이 가장 많이 사용되고 있습니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;브라우저의-주-기능&quot;&gt;브라우저의 주 기능&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-브라우저의 주 기능은 사용자가 선택한 자원을 서버에 요청하고 브라우저화면에 표시하는 것입니다. 여기서 자원은 보통 HTML문서이고 PDF나 이미지 등 
-다른형태도 포함될 수 있습니다. 자원의 주소는 URL에 의하여 정해집니다.&lt;/p&gt;
-
-&lt;p&gt;브라우저는 HTML, CSS 명세에 따라서 HTML파일을 해석하고 표시합니다. 이 명세는 웹표준화기구(W3C)에 정하는데 과거에는 여러 브라우저가 각각 다른 방법으로
-확장했고 이는 호환성의 문제를 발생시켰습니다. 하지만 현재는 거의 대부분의 브라우저들이 표준화된 명세를 따르게 되었습니다.&lt;/p&gt;
-
-&lt;p&gt;브라우저의 UI는 일반적으로 다음과 같이 구성되어있습니다.
-&lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;주소 표시줄&lt;/li&gt;
-  &lt;li&gt;뒤로가기,앞으로가기&lt;/li&gt;
-  &lt;li&gt;중지, 새로고침&lt;/li&gt;
-  &lt;li&gt;홈버튼&lt;/li&gt;
-  &lt;li&gt;북마크
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;브라우저의 UI는 표준 명세가 없음에도 계속해서 브라우저들끼리 서로를 모방하면서 거의 비슷한 UI를 가지게 되었습니다. 물론 특정한 브라우저가 가지고 있는
-기능도 있긴합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;브라우저의-기본-구조&quot;&gt;브라우저의 기본 구조&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;사용자 인터페이스 - 주소 표시줄, 뒤로가기, 앞으로가기, 중지, 새로고침, 홈버튼, 북마크 등&lt;/li&gt;
-  &lt;li&gt;브라우저 엔진 - 사용자 인터페이스와 렌더링 엔진 사이의 동작을 제어&lt;/li&gt;
-  &lt;li&gt;렌더링 엔진 - 요청한 컨텐츠를 표시함.&lt;/li&gt;
-  &lt;li&gt;통신 - HTTP 요청과 같은 네트워크 호출에 사용됨.&lt;/li&gt;
-  &lt;li&gt;UI 백엔드 - 콤보 박스와 창 같은 기본적인 장치를 그림. 플랫폼에서 명시하지 않은 일반적인 인터페이스로서, OS 사용자 인터페이스 체계를 사용.&lt;/li&gt;
-  &lt;li&gt;자바스크립트 해석기 - 자바스크립트 코드를 해석하고 실행함.&lt;/li&gt;
-  &lt;li&gt;자료저장소 - 자료를 저장하는 계층.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;렌더링-엔진&quot;&gt;렌더링 엔진&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-렌더링엔진은 요청한 컨텐츠를 표시하는 녀석입니다. 파이어폭스의 경우 “개코”엔진, 사파리나 크롬은 “웹킷”엔진을 사용합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;동작-과정에-대해&quot;&gt;동작 과정에 대해&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-렌더링엔진은 통신으로부터 요청한 문서의 내용을 얻는데 보통 문서내용은 8KB 단위로 전송됩니다.
-자, 렌더링엔진의 기본 동작 과정은 다음과 같습니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;HTML문서를 파싱하여 DOM트리를 구축&lt;/li&gt;
-  &lt;li&gt;CSS파일과 같은 스타일 요소를 파싱(CSSOM트리 구축)&lt;/li&gt;
-  &lt;li&gt;이 둘을 합쳐서 렌더트리를 구축 (렌더트리는 문서를 시각적인 구성 요소로 만들어 주는 역할을 함)&lt;/li&gt;
-  &lt;li&gt;렌더 트리 각 노드에 대해서 화면 상에 배치할 곳을 결정&lt;/li&gt;
-  &lt;li&gt;UI 백엔드에서 렌더 트리의 각 노드를 그림.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;정리하면 브라우저가 서버로 부터 HTML문서를 전달받아서 HTML파서를 통해서 파싱하고 DOM트리를 생성합니다. 또한 CSS파일과 같은 스타일요소도 파싱되어 CSSOM트리를 
-생성합니다. 그다음에 DOM과 CSSOM이 합쳐져서 렌더트리를 구축하거 렌더트리를 배치합니다. 여기서 렌더트리는 위치와 크기를 가지고 있지 않기 때문에 어느 공간에
-위치해야할지 각 객체들에게 위치와 크기를 결정해줍니다. 이어서 렌더트리가 만들어져 레이아웃이 구성됬으면 UI 백엔드가 동작하여 렌더 트리의 각 객체를 화면의 픽셀값으로
-나타냅니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;자바스크립트는&quot;&gt;자바스크립트는?&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;
-HTML과 CSS는 렌더링엔진에서 처리가되는데 자바스크립트는 어떨까요?&lt;br /&gt;
-자바스크립트는 렌더링엔진에서 처리가 되는 것이 아니라 자바스크립트 엔진이 처리하는 것입니다. HTML파서가 script태그를 만나면 자바스크립트코드를 실행하기 위해 
-DOM 생성 프로세스를 중지하고 자바스크립트엔진에게 권한을 넘기게 됩니다. 넘겨받은 자바스크립트엔진이 script태그 내의 자바스크립트 코드를 로드하고 파싱하여 실행합니다.
-실행이 완료되면 다시 HTML파서로 제어 권한을 넘겨서 중지했던 시점으로 넘어가 DOM 생성을 재개하게 되는 것입니다.
-&lt;br /&gt;
-브라우저는 HTML, CSS, JS를 동기적으로 처리합니다. 그런데 자바스크립트 엔진에 제어 권한이 있는 상태에서 자바스크립트 코드가 아직 완성지 않은 DOM을 조작하게 되면 어떻게 될까요?
-당연히 에러가 발생할 겁니다. 그래서 자바스크립트 코드를 &amp;lt;body&amp;gt;태그 하단에 위치시키는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-End.
-&lt;br /&gt;
-&lt;br /&gt;
-참조한 자료 :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://bbangson.tistory.com/87&quot;&gt;https://bbangson.tistory.com/87&lt;/a&gt;.&lt;br /&gt;
-&lt;a href=&quot;https://d2.naver.com/helloworld/59361&quot;&gt;https://d2.naver.com/helloworld/59361&lt;/a&gt;.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
       
 
       
