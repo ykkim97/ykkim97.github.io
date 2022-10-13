@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-11T22:41:39+09:00</updated>
+  <updated>2022-10-13T18:00:32+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -32,6 +32,82 @@
 
   
     <entry>
+      <title type="html">GET과 POST의 특징</title>
+      <link href="https://ykkim97.github.io/etc-getandpost" rel="alternate" type="text/html" title="GET과 POST의 특징" />
+      <published>2022-10-12T19:40:00+09:00</published>
+      <updated>2022-10-12T19:40:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-getandpost</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-getandpost">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;get&quot;&gt;GET&lt;/h2&gt;
+
+&lt;p&gt;GET은 서버로부터 데이터를 가져오도록 요청하는 메소드입니다.&lt;br /&gt;
+예를 들어, 게시물을 조회할 때 사용하는 것이 GET요청입니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;1) GET요청은 캐시가 가능하다.&lt;br /&gt;
+2) GET요청은 브라우저 히스토리에 남는다.&lt;br /&gt;
+3) GET요청은 길이제한이 있다. &lt;br /&gt;
+4) HTTP메세지에 body가 없다.&lt;br /&gt;
+5) 멱등이다. (* 멱등 : 연산을 여러 번 적용하더라도 결과가 달라지지 않는 성질, 데이터를 조회하는 것이니까 여러번 요청해도 똑같은 결과일 것)&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;post&quot;&gt;POST&lt;/h2&gt;
+
+&lt;p&gt;POST는 리소스를 생성하거나 업데이트하기위해 서버에게 데이터를 보내는 데 사용됩니다. &lt;br /&gt;
+예를 들어, 게시물을 작성하는 것이 POST요청입니다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;1) POST요청은 캐시가 안된다.&lt;br /&gt;
+2) POST요청은 브라우저 히스토리에 안남는다.&lt;br /&gt;
+3) POST요청은 데이터 길이제한이 없다.&lt;br /&gt;
+4) HTTP메세지에 body가 있다.&lt;br /&gt;
+5) 멱등이 아니다. (리소스를 새로 생성하거나 업데이트하는 것이기 때문에 멱등이 아니다)&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</title>
       <link href="https://ykkim97.github.io/etc-httphttps" rel="alternate" type="text/html" title="HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점" />
       <published>2022-10-09T22:40:00+09:00</published>
@@ -51,6 +127,7 @@
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -147,7 +224,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
       
 
       
@@ -548,6 +625,7 @@ medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt
     &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -624,7 +702,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
       
 
       
@@ -915,104 +993,6 @@ numbers라는 state를 Detail 컴포넌트에 공유해볼겁니다.&lt;/p&gt;
 
 &lt;p&gt;Context API는 렌더링에 있어 성능 이슈가 존재합니다. state가 변경될 때 마다 구독하는 모든 컴포넌트가 쓸데없이 리렌더링 되기 때문입니다.
 또한 useContext()를 사용하는 컴포넌트를 다른 파일에서 재사용할 경우 Context를 import하는 게 다소 귀찮아질 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="react" />
-      
-
-      
-        <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서 useDeferredValue 사용법</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Link와 useNavigate</title>
-      <link href="https://ykkim97.github.io/react-Link" rel="alternate" type="text/html" title="Link와 useNavigate" />
-      <published>2022-09-25T07:03:00+09:00</published>
-      <updated>2022-09-25T07:03:00+09:00</updated>
-      <id>https://ykkim97.github.io/react-Link</id>
-      <content type="html" xml:base="https://ykkim97.github.io/react-Link">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;React은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-basic&quot;&gt;React란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-mkcomponent&quot;&gt;React 컴포넌트 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-usestate&quot;&gt;useState에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-gugudan&quot;&gt;React로 간단한 구구단게임 만들기!&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;props가 번거로울 때 Context API를 사용해보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-bootstrapguide&quot;&gt;React에서 Bootstrap사용하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-scrolltotop&quot;&gt;React 페이지 이동시 최상단 스크롤 방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-lazysuspense&quot;&gt;React - lazy, Suspense에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-Link&quot;&gt;Link와 useNavigate&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-useEffect&quot;&gt;useEffect 정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-contextapi&quot;&gt;Context API 란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-reactbootstrap&quot;&gt;React에서 Bootstrap 사용하기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-useMemo&quot;&gt;useMemo 사용&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-useTransition&quot;&gt;useTransition에 대해서 &lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./react-useDeferredValue&quot;&gt;useDeferredValue 사용법 &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-오늘은 React에서 페이지 이동에 사용되는 Link와 useNavigate에 대해서 알아보겠습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
-
-&lt;p&gt;일단 react-router-dom을 설치합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-terminal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;npm install react-router-dom@6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;react-router-dom을 설치한 후,&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// .....&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Home&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/detail&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Detail&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 Link를 import하고 &lt;link to=&quot;&quot; /&gt;를 사용하면 됩니다. 그러면 링크가 만들어지고 링크는 해당 경로로 이동합니다.&lt;br /&gt;
-클릭 시에 바로 이동하는 로직을 구현할 경우 유용합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;usenavigate&quot;&gt;useNavigate&lt;/h2&gt;
-
-&lt;p&gt;Link말고도 useNavigate라는 훅을 사용하여 페이지를 이동시킬 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useNavigate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-router-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useNavigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;navigate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;/detail&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Detail로 이동하기&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위와 같이 useNavigate()를 사용하면 페이지 이동을 할 수 있는 함수가 반환됩니다. &lt;br /&gt;
-그것을 navigate변수에 저장하고 navigate()안에 인자로 경로를 지정하면 해당 경로로 이동할 수 있습니다.&lt;br /&gt;
-Link와 다른점은 특정한 조건을 주고 조건에 따라서 페이지 이동을 하게할 수 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
 End.&lt;/p&gt;</content>
