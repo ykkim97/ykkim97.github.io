@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/html-lang.html</loc>
+        
+        <lastmod>2022-11-26T23:55:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/css-classandid.html</loc>
         
         <lastmod>2022-10-13T13:20:00+09:00</lastmod>

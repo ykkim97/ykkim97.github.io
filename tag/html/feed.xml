@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/html/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-10-15T13:47:02+09:00</updated>
+  <updated>2022-11-27T22:50:01+09:00</updated>
   <id>https://ykkim97.github.io/tag/html/feed.xml</id>
 
   
@@ -32,6 +32,70 @@
 
   
     <entry>
+      <title type="html">HTML lang 속성을 명시하는 이유</title>
+      <link href="https://ykkim97.github.io/html-lang" rel="alternate" type="text/html" title="HTML lang 속성을 명시하는 이유" />
+      <published>2022-11-26T23:55:00+09:00</published>
+      <updated>2022-11-26T23:55:00+09:00</updated>
+      <id>https://ykkim97.github.io/html-lang</id>
+      <content type="html" xml:base="https://ykkim97.github.io/html-lang">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;html-lang-속성&quot;&gt;HTML lang 속성&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-HTML&quot;&gt;&amp;lt;html lang=&quot;ko&quot;&amp;gt;
+    ...
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lang속성에 대해서 별 생각이 없었는데 새로 알게된 것이 있다.
+&lt;br /&gt;
+&lt;br /&gt;
+막연하게 어떤 언어로 작성된 문서인지 알려주는 속성이라고만 생각했는데, 웹 접근성과 관련되어 있었다.
+기본적으로 lang속성은 다양한 언어를 식별하는데 사용되는데, &lt;br /&gt; 
+추가로 이 lang 속성을 잘 명시해주어야 스크린리더기가 이 것을 인식해서 자동으로 음성을 변환하거나, 해당 언어에 적합한 발음을 제공해준다고 한다.
+&lt;br /&gt;
+&lt;br /&gt;
+(스크린리더는 컴퓨터의 화면 낭독 소프트웨어를 의미한다.)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="html" />
+      
+
+      
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">img태그에서 srcset속성을 사용하는 이유</title>
       <link href="https://ykkim97.github.io/html-srcset" rel="alternate" type="text/html" title="img태그에서 srcset속성을 사용하는 이유" />
       <published>2022-10-03T08:55:00+09:00</published>
@@ -44,6 +108,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -84,7 +149,7 @@ medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성</summary>
       
 
       
@@ -104,6 +169,7 @@ medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -170,7 +236,7 @@ article태그는 신문기사에서 기사 하나하나를 의미합니다. 그 
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성</summary>
       
 
       
@@ -190,6 +256,7 @@ article태그는 신문기사에서 기사 하나하나를 의미합니다. 그 
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -229,7 +296,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성</summary>
       
 
       
@@ -249,6 +316,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -289,7 +357,7 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성</summary>
       
 
       
@@ -309,6 +377,7 @@ HTML로 기본 구조를 잡고 CSS로 스타일링 하며 기능 및 동작은 
     &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;html-기본-태그들&quot;&gt;HTML 기본 태그들&lt;/h1&gt;
@@ -418,7 +487,7 @@ h 뒤의 숫자가 커질수록 글씨 크기가 작아집니다.
       
 
       
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유</summary>
+        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성</summary>
       
 
       
