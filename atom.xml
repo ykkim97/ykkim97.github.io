@@ -8,6 +8,30 @@
     
       
       <item>
+        <title>HTML태그 - i와 em 그리고 b와 strong의 차이</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 27 Nov 2022 14:55:00 +0900</pubDate>
+        <link>
+        https://ykkim97.github.io/html-iembstrong</link>
+        <guid isPermaLink="true">https://ykkim97.github.io/html-iembstrong</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>HTML lang 속성을 명시하는 이유</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
@@ -18,6 +42,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -221,6 +246,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1028,6 +1054,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1497,6 +1524,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -2170,6 +2198,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -2193,6 +2222,7 @@
     &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
