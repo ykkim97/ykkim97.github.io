@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-11-28T13:26:45+09:00</updated>
+  <updated>2022-12-01T20:10:34+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -30,6 +30,87 @@
   
   
 
+  
+    <entry>
+      <title type="html">자바스크립트 가비지 컬렉션</title>
+      <link href="https://ykkim97.github.io/javascript-garbageCollector" rel="alternate" type="text/html" title="자바스크립트 가비지 컬렉션" />
+      <published>2022-11-30T22:40:00+09:00</published>
+      <updated>2022-11-30T22:40:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-garbageCollector</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-garbageCollector">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-forInforOf&quot;&gt;forEach, for in, for of 알아보기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;가비지-컬렉션&quot;&gt;가비지 컬렉션&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+자바스크립트는 managed language입니다. c언어와 같은 로우레벨 언어들은 unmanaged language로 malloc()이나 free()와 같은 것을 통해서 메모리 라이프사이클을 관리해야 합니다.
+그러나 자바스크립트는 하이레벨언어로, 가비지 컬렉터가 메모리관리를 자동으로 해줍니다. 
+&lt;br /&gt;&lt;br /&gt;
+가비지 컬렉터는 쓸모없는, 즉 더이상 사용하지 않는 메모리를 해제하는 역할을 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;가비지-컬렉션-알고리즘&quot;&gt;가비지 컬렉션 알고리즘&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;1) Mark-and-Sweep&lt;/p&gt;
+
+&lt;p&gt;먼저 루트정보를 수집하고 기억(Mark)한 후 루트가 참조하고 모든 객체를 방문하여 이들을 Mark합니다. 또 Mark된 모든 객체를 방문하여 그 객체들이 참조하는 객체들도 Mark합니다.
+루트에서 시작해서 모든 객체를 방문할 때 까지 이 과정을 반복하고, 탐색이 종료되면 Mark되지 않는 객체들을 메모리에서 해제(sweep)합니다.&lt;/p&gt;
+
+&lt;p&gt;2) Reference-Counting&lt;/p&gt;
+
+&lt;p&gt;‘참조카운팅’이라고 하며 한 요소가 다른 요소에게 몇번 참조되는지를 세서 0이라면 가비지로 판단하는 방식&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">HTML태그 - i와 em 그리고 b와 strong의 차이</title>
@@ -804,110 +885,6 @@ medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt
 
       
         <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성 HTML태그 - i와 em 그리고 b와 strong의 차이</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">알면 유용한 vscode 단축키들</title>
-      <link href="https://ykkim97.github.io/etc-vscodekey" rel="alternate" type="text/html" title="알면 유용한 vscode 단축키들" />
-      <published>2022-10-02T21:00:00+09:00</published>
-      <updated>2022-10-02T21:00:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-vscodekey</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-vscodekey">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-알면 유용한 vscode 단축키들을 정리해보겠습니다.&lt;/p&gt;
-
-&lt;p&gt;1) ctrl + /&lt;/p&gt;
-
-&lt;p&gt;주석 처리&lt;/p&gt;
-
-&lt;p&gt;2) ctrl + B&lt;/p&gt;
-
-&lt;p&gt;왼쪽 사이드바 토글 ( 파일목록창 숨기기/보이기 )&lt;/p&gt;
-
-&lt;p&gt;3) ctrl + shift + F&lt;/p&gt;
-
-&lt;p&gt;프로젝트 폴더 전체를 대상으로 검색할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;4) ctrl + D&lt;/p&gt;
-
-&lt;p&gt;커서가 위치하는 단어와 일치하는 단어를 선택&lt;/p&gt;
-
-&lt;p&gt;5) ctrl + G&lt;/p&gt;
-
-&lt;p&gt;빠른 행 이동
-(명령 후 이동하고싶은 코드라인 입력)&lt;/p&gt;
-
-&lt;p&gt;6) alt + 마우스 좌클릭&lt;/p&gt;
-
-&lt;p&gt;커서 추가하기(부분 선택)&lt;/p&gt;
-
-&lt;p&gt;7) ctrl + X&lt;/p&gt;
-
-&lt;p&gt;잘라내기 (코드 한 줄을 빠르게 삭제할 때 사용하면 좋음)&lt;/p&gt;
-
-&lt;p&gt;8) ctrl + Enter&lt;/p&gt;
-
-&lt;p&gt;다음 행 커서 이동(어중간하게 커서가 위치할 경우 유용)&lt;/p&gt;
-
-&lt;p&gt;9) ctrl + `&lt;/p&gt;
-
-&lt;p&gt;터미널 열기&lt;/p&gt;
-
-&lt;p&gt;10) ctrl + 페이지업다운(PGUP/PGDN)&lt;/p&gt;
-
-&lt;p&gt;열려있는 코드 탭을 이동할 수 있다.&lt;/p&gt;
-
-&lt;p&gt;11) alt + shift + 위아래 방향키&lt;/p&gt;
-
-&lt;p&gt;커서가 위치한 코드 라인을 방향키 방향으로 복제해준다.&lt;/p&gt;
-
-&lt;p&gt;12) alt + 위아래 방향키&lt;/p&gt;
-
-&lt;p&gt;커서가 위치한 코드 라인을 이동시켜준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
       
 
       
