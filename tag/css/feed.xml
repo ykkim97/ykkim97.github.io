@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/css/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-12-01T20:10:34+09:00</updated>
+  <updated>2022-12-06T23:15:56+09:00</updated>
   <id>https://ykkim97.github.io/tag/css/feed.xml</id>
 
   
@@ -32,6 +32,168 @@
 
   
     <entry>
+      <title type="html">CSS Flexbox - 자주 사용되는 것 정리</title>
+      <link href="https://ykkim97.github.io/css-flexbox" rel="alternate" type="text/html" title="CSS Flexbox - 자주 사용되는 것 정리" />
+      <published>2022-12-05T23:20:00+09:00</published>
+      <updated>2022-12-05T23:20:00+09:00</updated>
+      <id>https://ykkim97.github.io/css-flexbox</id>
+      <content type="html" xml:base="https://ykkim97.github.io/css-flexbox">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+Flexbox의 자주 사용되는 것들을 정리해보겠습니다.
+Flexbox는 일단 기본적으로 Container, 각 아이템들을 감싸는 박스에 사용되는 스타일 명령이 있고, &lt;br /&gt;
+item, 각각의 아이템들에 사용되는 스타일 명령이 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;컨테이너에-사용되는-스타일&quot;&gt;컨테이너에 사용되는 스타일&lt;/h2&gt;
+
+&lt;p&gt;1) display : flex;&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;일단 flexbox를 사용하기위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display : flex;&lt;/code&gt;를 선언해줍니다.&lt;/p&gt;
+
+&lt;p&gt;2) flex-direction&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-direction&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* row가 기본값 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;배치 방향을 결정합니다. 기본값은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row&lt;/code&gt;이며 가로로 아이템들이 배치됩니다.
+반대로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column&lt;/code&gt;으로 해주면 세로로 아이템이 배치됩니다. 
+중심축을 결정하는 것입니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row-reverse&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column-reverse&lt;/code&gt;도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;3) flex-wrap&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;기본값은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nowrap&lt;/code&gt;인데 item이 많아질 경우 한줄에 꽉꽉 모두 채워지도록 기본값이 되어있습니다.
+그런데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wrap&lt;/code&gt;을 해준다면 다음줄에 이어서 배치할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;4) flex-flow&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction, flex-wrap&lt;/code&gt;을 같이 쓸 수 있음.&lt;/p&gt;
+
+&lt;p&gt;5) justify-content&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;중심 축에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;justify-content&lt;/code&gt;는 아이템을 어떻게 배치할 것인지 결정합니다.
+예를 들어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;center&lt;/code&gt;로 둔다면 아이템들이 가운데배치될 것입니다. 이외에도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-end, flex-start, space-around, space-between, space-evenly&lt;/code&gt; 등등이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;6) align-items&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;flex 아이템들을 수직방향으로 정렬하는데 사용할 수 있는 녀석입니다.&lt;/p&gt;
+
+&lt;p&gt;7) align-content&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;중심 축의 반대축에서 아이템 배치할때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-content&lt;/code&gt; 를 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;컨테이너-안의-아이템에서-사용되는-스타일&quot;&gt;컨테이너 안의 아이템에서 사용되는 스타일&lt;/h2&gt;
+
+&lt;p&gt;1) flex-grow&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;컨테이너내부에서 아이템의 할당할 공간의 정도를 설정할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;2) flex-shrink&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-shrink&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-shrink&lt;/code&gt;는 컨테이너의 사이즈가 줄었을 때 어느정도로 줄어들게 할 것인지를 결정합니다.&lt;/p&gt;
+
+&lt;p&gt;3) flex-basis&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-basis&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-basis&lt;/code&gt;로 어느정도 공간을 차지할지 결정할 수도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;4) align-self&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-self&lt;/code&gt;로 각각의 아이템에 대해서 위치를 따로 조정할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="css" />
+      
+
+      
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">class와 id의 차이점</title>
       <link href="https://ykkim97.github.io/css-classandid" rel="alternate" type="text/html" title="class와 id의 차이점" />
       <published>2022-10-13T13:20:00+09:00</published>
@@ -46,6 +208,7 @@
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -99,7 +262,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -121,6 +284,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -180,7 +344,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -202,6 +366,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -260,7 +425,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -282,6 +447,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -440,7 +606,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -462,6 +628,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -544,7 +711,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -566,6 +733,7 @@ em과 rem이라는 것을 사용하는 경우가 종종 있습니다. 이 차이
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;block과-inline의-차이&quot;&gt;block과 inline의 차이&lt;/h2&gt;
@@ -612,7 +780,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -634,6 +802,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;1-css란&quot;&gt;1. CSS란?&lt;/h1&gt;
@@ -723,7 +892,7 @@ CSS를 사용하는 방법은 내부 스타일시트, 외부 스타일시트, �
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       

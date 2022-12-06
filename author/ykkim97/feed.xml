@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-12-01T20:10:34+09:00</updated>
+  <updated>2022-12-06T23:15:56+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -30,6 +30,168 @@
   
   
 
+  
+    <entry>
+      <title type="html">CSS Flexbox - 자주 사용되는 것 정리</title>
+      <link href="https://ykkim97.github.io/css-flexbox" rel="alternate" type="text/html" title="CSS Flexbox - 자주 사용되는 것 정리" />
+      <published>2022-12-05T23:20:00+09:00</published>
+      <updated>2022-12-05T23:20:00+09:00</updated>
+      <id>https://ykkim97.github.io/css-flexbox</id>
+      <content type="html" xml:base="https://ykkim97.github.io/css-flexbox">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+Flexbox의 자주 사용되는 것들을 정리해보겠습니다.
+Flexbox는 일단 기본적으로 Container, 각 아이템들을 감싸는 박스에 사용되는 스타일 명령이 있고, &lt;br /&gt;
+item, 각각의 아이템들에 사용되는 스타일 명령이 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;컨테이너에-사용되는-스타일&quot;&gt;컨테이너에 사용되는 스타일&lt;/h2&gt;
+
+&lt;p&gt;1) display : flex;&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;일단 flexbox를 사용하기위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;display : flex;&lt;/code&gt;를 선언해줍니다.&lt;/p&gt;
+
+&lt;p&gt;2) flex-direction&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-direction&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* row가 기본값 */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;배치 방향을 결정합니다. 기본값은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row&lt;/code&gt;이며 가로로 아이템들이 배치됩니다.
+반대로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column&lt;/code&gt;으로 해주면 세로로 아이템이 배치됩니다. 
+중심축을 결정하는 것입니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row-reverse&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;column-reverse&lt;/code&gt;도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;3) flex-wrap&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;기본값은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nowrap&lt;/code&gt;인데 item이 많아질 경우 한줄에 꽉꽉 모두 채워지도록 기본값이 되어있습니다.
+그런데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wrap&lt;/code&gt;을 해준다면 다음줄에 이어서 배치할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;4) flex-flow&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-flow&lt;/code&gt;로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-direction, flex-wrap&lt;/code&gt;을 같이 쓸 수 있음.&lt;/p&gt;
+
+&lt;p&gt;5) justify-content&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;중심 축에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;justify-content&lt;/code&gt;는 아이템을 어떻게 배치할 것인지 결정합니다.
+예를 들어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;center&lt;/code&gt;로 둔다면 아이템들이 가운데배치될 것입니다. 이외에도 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-end, flex-start, space-around, space-between, space-evenly&lt;/code&gt; 등등이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;6) align-items&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;flex 아이템들을 수직방향으로 정렬하는데 사용할 수 있는 녀석입니다.&lt;/p&gt;
+
+&lt;p&gt;7) align-content&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* ... */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;중심 축의 반대축에서 아이템 배치할때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-content&lt;/code&gt; 를 사용할 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;컨테이너-안의-아이템에서-사용되는-스타일&quot;&gt;컨테이너 안의 아이템에서 사용되는 스타일&lt;/h2&gt;
+
+&lt;p&gt;1) flex-grow&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;컨테이너내부에서 아이템의 할당할 공간의 정도를 설정할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;2) flex-shrink&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-shrink&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-shrink&lt;/code&gt;는 컨테이너의 사이즈가 줄었을 때 어느정도로 줄어들게 할 것인지를 결정합니다.&lt;/p&gt;
+
+&lt;p&gt;3) flex-basis&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-basis&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-basis&lt;/code&gt;로 어느정도 공간을 차지할지 결정할 수도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;4) align-self&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;align-self&lt;/code&gt;로 각각의 아이템에 대해서 위치를 따로 조정할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="css" />
+      
+
+      
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">자바스크립트 가비지 컬렉션</title>
@@ -255,6 +417,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -308,7 +471,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점</summary>
+        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
@@ -823,68 +986,6 @@ End.&lt;/p&gt;</content>
 
       
         <summary type="html">React은 다음과 같이 구성되어 있습니다. React란? React 컴포넌트 만들기 useState에 대해 React로 간단한 구구단게임 만들기! props가 번거로울 때 Context API를 사용해보자 React에서 Bootstrap사용하기 React 페이지 이동시 최상단 스크롤 방법 React - lazy, Suspense에 대해 Link와 useNavigate useEffect 정리 Context API 란? React에서 Bootstrap 사용하기 useMemo 사용 useTransition에 대해서 useDeferredValue 사용법</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">img태그에서 srcset속성을 사용하는 이유</title>
-      <link href="https://ykkim97.github.io/html-srcset" rel="alternate" type="text/html" title="img태그에서 srcset속성을 사용하는 이유" />
-      <published>2022-10-03T08:55:00+09:00</published>
-      <updated>2022-10-03T08:55:00+09:00</updated>
-      <id>https://ykkim97.github.io/html-srcset</id>
-      <content type="html" xml:base="https://ykkim97.github.io/html-srcset">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;HTML은 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-basic&quot;&gt;웹의 기본중의 기본! HTML에 대해서 알아보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-basic-tags&quot;&gt;HTML 기본 태그들&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-doctype&quot;&gt;DOCTYPE의 의미?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-semanticTag&quot;&gt;시맨틱 태그?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-srcset&quot;&gt;img태그에서 srcset속성을 사용하는 이유&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-lang&quot;&gt;HTML lang 속성&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./html-iembstrong&quot;&gt;HTML태그 - i와 em 그리고 b와 strong의 차이&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;img태그에서-srcset-속성을-사용하는-이유&quot;&gt;img태그에서 srcset 속성을 사용하는 이유&lt;/h2&gt;
-
-&lt;p&gt;srcset 속성은 사용자의 디스플레이에 따라서 다른 해상도의 이미지를 제공하기 위해 사용합니다.
-사용자가 고사양의 디스플레이라면 고품질의 이미지를, 저사양의 디스플레이라면 저품질의 이미지를 제공하기 위함입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;srcset-속성&quot;&gt;srcset 속성&lt;/h2&gt;
-
-&lt;p&gt;같은 비율의 다양한 크기를 가지는 동일 이미지들을 최소 2개 이상 명시하는 속성&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srcset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;small.jpg 500w, medium.jpg 1000w, large.jpg 2000w&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위처럼 해주면 small.jpg는 뷰포트 너비가 500px 이하일 때, medium.jpg는 뷰포트 너비가 501px~1000px일때 , 
-medium.jpg는 뷰포트 너비가 1001px 이상일 때 사용됩니다.&lt;/p&gt;
-
-&lt;p&gt;End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="html" />
-      
-
-      
-        <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성 HTML태그 - i와 em 그리고 b와 strong의 차이</summary>
       
 
       
