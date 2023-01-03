@@ -14,7 +14,7 @@
 
 
 
-    <title>ES6 Destructuring Syntax</title>
+    <title>JavaScript Array.reduce() 간단히 알아보기</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -52,23 +52,23 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="IT 기술 블로그입니다." />
     <link rel="shortcut icon" href="https://ykkim97.github.io/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="https://ykkim97.github.io/javascript-Destructuring" />
+    <link rel="canonical" href="https://ykkim97.github.io/javascript-reduce" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="YoungGwon's IT Tech Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ES6 Destructuring Syntax" />
+    <meta property="og:title" content="JavaScript Array.reduce() 간단히 알아보기" />
     <meta property="og:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import /" />
-    <meta property="og:url" content="https://ykkim97.github.io/javascript-Destructuring" />
+    <meta property="og:url" content="https://ykkim97.github.io/javascript-reduce" />
     <meta property="og:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-09-04T22:02:00+09:00" />
-    <meta property="article:modified_time" content="2022-09-04T22:02:00+09:00" />
+    <meta property="article:published_time" content="2023-01-02T19:20:00+09:00" />
+    <meta property="article:modified_time" content="2023-01-02T19:20:00+09:00" />
     <meta property="article:tag" content="Javascript" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ES6 Destructuring Syntax" />
+    <meta name="twitter:title" content="JavaScript Array.reduce() 간단히 알아보기" />
     <meta name="twitter:description" content="JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import /" />
     <meta name="twitter:url" content="https://ykkim97.github.io/" />
     <meta name="twitter:image" content="https://ykkim97.github.io/assets/built/images/javascript-logo.jpg" />
@@ -90,7 +90,7 @@
         "name": "YoungGwon's IT Tech Blog",
         "logo": "https://ykkim97.github.io/"
     },
-    "url": "https://ykkim97.github.io/javascript-Destructuring",
+    "url": "https://ykkim97.github.io/javascript-reduce",
     "image": {
         "@type": "ImageObject",
         "url": "https://ykkim97.github.io/assets/built/images/javascript-logo.jpg",
@@ -99,7 +99,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ykkim97.github.io/javascript-Destructuring"
+        "@id": "https://ykkim97.github.io/javascript-reduce"
     },
     "description": "JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import /"
 }
@@ -114,7 +114,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="ES6 Destructuring Syntax" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="JavaScript Array.reduce() 간단히 알아보기" href="/feed.xml" />
 
 
 </head>
@@ -181,7 +181,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime=" 4 September 2022"> 4 September 2022</time>
+                    <time class="post-full-meta-date" datetime=" 2 January 2023"> 2 January 2023</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -191,7 +191,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">ES6 Destructuring Syntax</h1>
+                <h1 class="post-full-title">JavaScript Array.reduce() 간단히 알아보기</h1>
             </header>
 
             <!-- 
@@ -231,86 +231,34 @@ into the {body} of the default.hbs template -->
 
 <p><br /><br /><br /></p>
 
-<p>이번 글에서는 ES6의 Destructuring 에 대해서 정리해보겠습니다.</p>
+<h2 id="arrayreduce">Array.reduce()</h2>
 
-<h2 id="destructuring">Destructuring</h2>
+<p>reduce()는 배열의 모든 값을 돌면서 리듀서 함수를 실행하고 하나의 결과를 리턴합니다.
+리듀서 함수는 4개의 인자를 가지는데 순서대로 누산기(acc), 현재 해당값(cur), 현재 인덱스값(index), 원본 배열(src)입니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<p><br />
+리듀서 함수가 반환한 값은 누산기(acc)에 할당되고 반복 중에 계속 유지됩니다.
+예시를 보면 확 와닿을 것입니다.</p>
 
-<span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="kd">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<h2 id="예시">예시</h2>
+<p>배열의 각 값을 모두 더하는 것이 대표적인 예시가 되겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
+
+<span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span>
+<span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">// 15</span>
 </code></pre></div></div>
 
-<p>arr라는 array가 있고 1,2,3 이라는 값을 가지고 있습니다. 이 값들을 각각 a, b, c에 저장하고 싶습니다. <br /></p>
+<p>배열의 요소를 돌면서 계속해서 값이 누적되어 더해지게 됩니다.</p>
 
-<p>그러면… 위 처럼 인덱스를 이용해서 값을 저장하면 됩니다. 그런데 이 방법이 귀찮을 수 있습니다. 그래서 추가된 것이 Destructuring입니다.</p>
+<p><br /><br />
+추가로, reduce()의 두번째 인자로 initialValue(초기값)을 넣을 수도 있고 안넣을 수도 있는데 넣지 않을 경우 인덱스 1부터 시작해서 콜백함수를 실행하게 됩니다.
+반면 initialValue를 넣어주면 인덱스 0부터 시작하게 되는 차이가 있습니다. 보통은 initialValue를 넣어주는 것이 안전합니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
-
-<span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
-<span class="c1">// const [a, b, c] = arr;</span>
-</code></pre></div></div>
-
-<p>우측에 array를 쓰고 좌측에 우측과 대응하여 위와 같이 작성하면 됩니다.<br />
-그러면 a, b, c는 각각 1, 2, 3이 됩니다. 더 편하지 않나요?</p>
-
-<h2 id="default값-지정하기">default값 지정하기</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
-</code></pre></div></div>
-
-<p>위의 예시처럼 개수가 서로 맞지 않으면 어떻게 될까요? a와 b에는 각각 1, 2가 저장되지만 c는 undefined가 됩니다.
-그래서 c에 기본값(default 값)을 지정해놓을 수 있습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span> <span class="o">=</span> <span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
-</code></pre></div></div>
-
-<p>이렇게 ‘c = 10’ 으로 지정해두면 c에 대응되는 것이 없을 때 기본값으로 10이 됩니다.</p>
-
-<h2 id="object에서도-가능하다">Object에서도 가능하다.</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">age</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">Lee</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span> <span class="p">:</span> <span class="mi">26</span> <span class="p">};</span>
-</code></pre></div></div>
-
-<p>Object에서도 Destructuring 문법을 적용할 수 있습니다. name은 ‘Lee’가 되고, age는 26 이됩니다. 여기서는 각각의 key값으로 지정해야합니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="nx">이름</span><span class="p">,</span> <span class="na">age</span> <span class="p">:</span> <span class="nx">나이</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">Lee</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span> <span class="p">:</span> <span class="mi">26</span> <span class="p">};</span>
-</code></pre></div></div>
-
-<p>key값으로 변수명을 지정해야하지만, 위와 같이 ‘이름’, ‘나이’ 처럼 다른 변수명을 써주면 변수명을 바꿀 수 있습니다.
-(이름 = Lee, 나이 = 26)</p>
-
-<h2 id="변수를-오브젝트에-넣기">변수를 오브젝트에 넣기</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Lee</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="nx">name</span><span class="p">,</span> <span class="na">age</span> <span class="p">:</span> <span class="nx">age</span> <span class="p">}</span>
-</code></pre></div></div>
-
-<p>obj에 위의 name, age 변수를 각각 저장하려면 위와 같이 작성하면됩니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// const obj = { name : name, age : age } 처럼 key와 value가 동일한 이름이면 축약할 수 있다.</span>
-<span class="kd">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">age</span> <span class="p">};</span>
-</code></pre></div></div>
-
-<p>그런데 key와 value가 동일한 이름이면 축약하여 위처럼 작성할 수 있습니다.</p>
-
-<h2 id="함수의-parameter에도-적용가능하다">함수의 parameter에도 적용가능하다.</h2>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">info</span><span class="p">(</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">age</span> <span class="p">}</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">Lee</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span> <span class="p">:</span> <span class="mi">26</span> <span class="p">};</span>
-<span class="nx">info</span><span class="p">(</span><span class="nx">object</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>함수의 파라미터 자리에도 위와 같이 적용할 수 있습니다. (Array형태도 가능)<br />
-함수를 실행했을 때 콘솔창에 name과 age값이 각각 ‘Lee’, 26이 출력될 것 입니다.</p>
-
-<p><br /><br /><br />
+<p><br /><br />
 End.</p>
 
                 </div>
@@ -376,9 +324,9 @@ End.</p>
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://ykkim97.github.io/javascript-Destructuring';
-                            var this_page_identifier = '/javascript-Destructuring';
-                            var this_page_title = 'ES6 Destructuring Syntax';
+                            var this_page_url = 'https://ykkim97.github.io/javascript-reduce';
+                            var this_page_identifier = '/javascript-reduce';
+                            var this_page_title = 'JavaScript Array.reduce() 간단히 알아보기';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -422,11 +370,6 @@ End.</p>
                                 
                                 
                                     
-                                        
-                                            
-                                            
-                                                <li><a href="/javascript-reduce">JavaScript Array.reduce() 간단히 알아보기</a></li>
-                                            
                                         
                                     
                                 
@@ -474,6 +417,8 @@ End.</p>
                                         
                                             
                                             
+                                                <li><a href="/javascript-json">JSON형식 변환 방법 - JSON.parse(), JSON.stringify()</a></li>
+                                            
                                         
                                     
                                 
@@ -539,6 +484,9 @@ End.</p>
                                     
                                 
                                     
+                                        
+                                            
+                                            
                                         
                                     
                                 
@@ -712,55 +660,6 @@ End.</p>
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/javascript-defaultParameter">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/javascript-defaultParameter">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Javascript</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">default 파라미터 알아보기</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpg" alt="ykkim97" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ykkim97/">ykkim97</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
@@ -768,12 +667,12 @@ End.</p>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/javascript-ClassConstructor">
+            <a class="post-card-image-link" href="/javascript-arrowfunVSfun">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/javascript-logo.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/javascript-ClassConstructor">
+            <a class="post-card-content-link" href="/javascript-arrowfunVSfun">
                 <header class="post-card-header">
                     
                         
@@ -783,7 +682,7 @@ End.</p>
                         
                     
 
-                    <h2 class="post-card-title">JS class 만들기</h2>
+                    <h2 class="post-card-title">화살표 함수와 일반함수의 차이</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -827,18 +726,18 @@ End.</p>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">ES6 Destructuring Syntax</div>
+    <div class="floating-header-title">JavaScript Array.reduce() 간단히 알아보기</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=ES6+Destructuring+Syntax&amp;url=https://ykkim97.github.io/javascript-Destructuring"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=JavaScript+Array.reduce%28%29+%EA%B0%84%EB%8B%A8%ED%9E%88+%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0&amp;url=https://ykkim97.github.io/javascript-reduce"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-Destructuring"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://ykkim97.github.io/javascript-reduce"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

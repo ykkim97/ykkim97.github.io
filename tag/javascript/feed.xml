@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-12-29T12:19:07+09:00</updated>
+  <updated>2023-01-03T17:43:10+09:00</updated>
   <id>https://ykkim97.github.io/tag/javascript/feed.xml</id>
 
   
@@ -30,6 +30,97 @@
   
   
 
+  
+    <entry>
+      <title type="html">JavaScript Array.reduce() 간단히 알아보기</title>
+      <link href="https://ykkim97.github.io/javascript-reduce" rel="alternate" type="text/html" title="JavaScript Array.reduce() 간단히 알아보기" />
+      <published>2023-01-02T19:20:00+09:00</published>
+      <updated>2023-01-02T19:20:00+09:00</updated>
+      <id>https://ykkim97.github.io/javascript-reduce</id>
+      <content type="html" xml:base="https://ykkim97.github.io/javascript-reduce">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-forInforOf&quot;&gt;forEach, for in, for of 알아보기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;arrayreduce&quot;&gt;Array.reduce()&lt;/h2&gt;
+
+&lt;p&gt;reduce()는 배열의 모든 값을 돌면서 리듀서 함수를 실행하고 하나의 결과를 리턴합니다.
+리듀서 함수는 4개의 인자를 가지는데 순서대로 누산기(acc), 현재 해당값(cur), 현재 인덱스값(index), 원본 배열(src)입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+리듀서 함수가 반환한 값은 누산기(acc)에 할당되고 반복 중에 계속 유지됩니다.
+예시를 보면 확 와닿을 것입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;예시&quot;&gt;예시&lt;/h2&gt;
+&lt;p&gt;배열의 각 값을 모두 더하는 것이 대표적인 예시가 되겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;acc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cur&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 15&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;배열의 요소를 돌면서 계속해서 값이 누적되어 더해지게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+추가로, reduce()의 두번째 인자로 initialValue(초기값)을 넣을 수도 있고 안넣을 수도 있는데 넣지 않을 경우 인덱스 1부터 시작해서 콜백함수를 실행하게 됩니다.
+반면 initialValue를 넣어주면 인덱스 0부터 시작하게 되는 차이가 있습니다. 보통은 initialValue를 넣어주는 것이 안전합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="javascript" />
+      
+
+      
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">화살표 함수와 일반함수의 차이</title>
@@ -61,6 +152,7 @@
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -139,7 +231,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -176,6 +268,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -221,7 +314,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -258,6 +351,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -311,7 +405,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -348,6 +442,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -461,7 +556,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -498,6 +593,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -585,7 +681,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -622,6 +718,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -710,7 +807,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -747,6 +844,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -865,7 +963,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -902,6 +1000,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -976,7 +1075,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
@@ -1013,6 +1112,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./javascript-reduce&quot;&gt;JavaScript Array.reduce() 간단히 알아보기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1119,114 +1219,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">default 파라미터 알아보기</title>
-      <link href="https://ykkim97.github.io/javascript-defaultParameter" rel="alternate" type="text/html" title="default 파라미터 알아보기" />
-      <published>2022-09-06T19:40:00+09:00</published>
-      <updated>2022-09-06T19:40:00+09:00</updated>
-      <id>https://ykkim97.github.io/javascript-defaultParameter</id>
-      <content type="html" xml:base="https://ykkim97.github.io/javascript-defaultParameter">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;JavaScript 관련 글입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-eventloop&quot;&gt;JS Event Loop, 자바스크립트 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-hoisting&quot;&gt;호이스팅이란 , var, let, const 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-AboutThreejs&quot;&gt;Three.js에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-scripttag&quot;&gt;script, script async, script defer의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-aboutajax&quot;&gt;AJAX가 무엇일까?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-functionExpression&quot;&gt;함수선언식과 함수표현식&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-nullUndefined&quot;&gt;null과 undefined의 차이 간단정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-setTimeout&quot;&gt;setTimeout과 setInterval 요약&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-aboutThis&quot;&gt;this의 여러가지 의미&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-SpreadOperator&quot;&gt;Spread Operator(...)?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-ClassConstructor&quot;&gt;JS class Constructor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-Destructuring&quot;&gt;ES6 Destructuring Syntax&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-defaultParameter&quot;&gt;default 파라미터 알아보기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-module&quot;&gt;import / export 를 사용한 모듈식 개발방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-optionalChaining&quot;&gt;Optional Chaining (?.)&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-Promise1&quot;&gt;프로미스(Promise)에 대해서&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-asyncawait&quot;&gt;ES8 - async / await&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-symbol&quot;&gt;Symbol 자료형?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-forInforOf&quot;&gt;forEach, for in, for of 알아보기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-json&quot;&gt;JSON형식 변환 방법 - JSON.parse(), JSON.stringify()&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-garbageCollector&quot;&gt;자바스크립트 가비지 컬렉션&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./javascript-arrowfunVSfun&quot;&gt;화살표 함수와 일반함수의 차이&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;이번 글에서는 default 파라미터에 대해 정리해보겠습니다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;사실 이 내용은 너무 간단한 내용입니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;default-파라미터&quot;&gt;default 파라미터&lt;/h2&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;예시에서 sum 이라는 함수를 정의하였습니다. a와 b의 두개의 파라미터를 받고 있고 두 값을 더하여 콘솔에 출력해주는 함수입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;함수를 만들어서 테스트해보니 3이라는 결과가 잘 나옵니다.
-그런데 만약 실수로 인자를 하나 넣지 않는다면 어떻게 될까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이렇게 하나의 숫자를 넣고 실행했더니 NaN이 나왔습니다. 이렇게 값을 하나 빼먹었는데도 에러가 발생하지 않고 있습니다.
-이런 경우 파라미터의 default값을 지정할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;파라미터 옆에 등호를 붙여서 0이라는 값을 작성해주면 해당 파라미터의 값이 없을 경우 기본값으로 0을 대입해줄 수 있습니다.
-그래서 sum(1); 과 같이 함수를 실행해도 1 + 0으로 1이 출력되게 할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;default 파라미터는 기본값을 지정할 때 일반적인 값을 지정해줄 수도 있지만, 연산이나 함수도 지정가능합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;b의 기본값을 a * a로 해줬더니, sum(2)의 결과가 2 + 2*2 로 6이 출력되었습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="javascript" />
-      
-
-      
-        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이</summary>
+        <summary type="html">JavaScript 관련 글입니다. JS Event Loop, 자바스크립트 동작 원리 호이스팅이란 , var, let, const 차이 Three.js에 대해 script, script async, script defer의 차이 AJAX가 무엇일까? 함수선언식과 함수표현식 null과 undefined의 차이 간단정리 setTimeout과 setInterval 요약 this의 여러가지 의미 Spread Operator(...)? JS class Constructor ES6 Destructuring Syntax default 파라미터 알아보기 import / export 를 사용한 모듈식 개발방법 Optional Chaining (?.) 프로미스(Promise)에 대해서 ES8 - async / await Symbol 자료형? forEach, for in, for of 알아보기 JSON형식 변환 방법 - JSON.parse(), JSON.stringify() 자바스크립트 가비지 컬렉션 화살표 함수와 일반함수의 차이 JavaScript Array.reduce() 간단히 알아보기</summary>
       
 
       
