@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-01-03T17:43:10+09:00</updated>
+  <updated>2023-01-15T20:38:41+09:00</updated>
   <id>https://ykkim97.github.io/tag/etc/feed.xml</id>
 
   
@@ -32,6 +32,89 @@
 
   
     <entry>
+      <title type="html">LOL 전적검색 개발 - personal key 발급 승인받기</title>
+      <link href="https://ykkim97.github.io/etc-productionkey" rel="alternate" type="text/html" title="LOL 전적검색 개발 - personal key 발급 승인받기" />
+      <published>2023-01-14T22:40:00+09:00</published>
+      <updated>2023-01-14T22:40:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-productionkey</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-productionkey">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;personal-key-발급-승인&quot;&gt;personal key 발급 승인&lt;/h2&gt;
+
+&lt;p&gt;요즘 계속해서 하고있는 프로젝트가 있다. 바로 나만의 리그오브레전드 전적검색사이트를 만드는 것이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/212537915-11b044c5-580a-4bde-88ec-aca63fd83946.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;일단 위에서 볼 수 있듯이 기본적으로 development key를 바로 발급받을 수 있고 이 API키로 테스트하면서 웹사이트를 만들어왔다. 
+하지만 이 development key는 큰 문제가 있다. 바로 만료기간이 있다는 것이다. development key는 24시간동안 유효하며 24시간이 지날 경우 
+매번 KEY를 새로발급받아서 사용해야하는 번거로움이 있고 실제 배포 시에 사용하기 힘들다…&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/212537988-1e0bb5d5-e36e-4595-95c9-47de1851db64.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그래서 계속해서 사용할 수 있는 personal key라는 것을 발급받을 수 있도록 요청을 해야한다. 대략 일주일 전에 key를 발급받을 수 있도록 승인요청을 보냈다.
+3~4일 걸리는 경우도 있고 길게는 한달넘게 걸리는 경우도 있다고 한다. 나같은 경우는 일주일정도 걸린 것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/212538015-c6dae03c-e3e3-49e6-8063-a617a604a4aa.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;발급받으려면 다음과 같은 양식대로 작성하고 승인을 기다리면 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/17917009/212538078-efee8105-f28f-4adf-9b64-a22d30d108bd.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;대기중일 경우에는 Pending이라고 나와있을텐데, 승인되면 위와 같인 Approved라고 상태가 바뀌고 API KEY를 제공해준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+이제 번거롭지 않게 development key를 사용할 필요가 없어졌다!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">GET과 POST의 특징</title>
       <link href="https://ykkim97.github.io/etc-getandpost" rel="alternate" type="text/html" title="GET과 POST의 특징" />
       <published>2022-10-12T19:40:00+09:00</published>
@@ -52,6 +135,7 @@
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -100,7 +184,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -128,6 +212,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -224,7 +309,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -252,6 +337,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -328,7 +414,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -356,6 +442,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -409,7 +496,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -437,6 +524,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -503,7 +591,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -531,6 +619,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -575,7 +664,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -603,6 +692,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -661,7 +751,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -689,6 +779,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -759,7 +850,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
@@ -787,6 +878,7 @@ End.&lt;/p&gt;</content>
     &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -844,90 +936,7 @@ End.&lt;/p&gt;</content>
       
 
       
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">DOM이란?</title>
-      <link href="https://ykkim97.github.io/etc-dom" rel="alternate" type="text/html" title="DOM이란?" />
-      <published>2022-07-07T07:20:00+09:00</published>
-      <updated>2022-07-07T07:20:00+09:00</updated>
-      <id>https://ykkim97.github.io/etc-dom</id>
-      <content type="html" xml:base="https://ykkim97.github.io/etc-dom">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-DOM을 어느정도는 대충 알지만 누군가가 DOM이 무엇이냐고 다짜고짜 묻는다면 명확히 대답하기 어려웠습니다.
-그래서 DOM에 대해서 공부한 내용을 간략히 정리해보려고 합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;dom-&quot;&gt;DOM ?&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-DOM은 Document Object Model의 약자입니다. 문서 객체 모델이라고도 합니다.
-그냥 문서 객체 모델? 로 해석하려고 하면 잘 이해가 되지 않습니다.
-&lt;br /&gt;
-&lt;br /&gt;
-쉽게 정리하면 DOM은 HTML 코드를 해석해서 요소들을 트리형태로 구조화해 표현하는 형식입니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-그러니까 브라우저가 HTML 코드를 해석해서 트리 형태로 구조화해서 표현하는 문서(데이터)를 생성하게 되는데 이게 DOM인 것입니다. 브라우저는 DOM을 통해서 화면에 웹 컨텐츠를 렌더링합니다.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;dom의-목적&quot;&gt;DOM의 목적&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-HTML코드를 해석해서 그대로 브라우저에 렌더링해주는 것이 브라우저의 역할인데 왜 중간에 DOM을 형성하는 걸까요?
-&lt;br /&gt;
-&lt;br /&gt;
-자바스크립트를 사용해서 이 문서에 대한 스크립트를 작성할 수 있게 해주는 데 목적이 있기 때문입니다.
-&lt;br /&gt;
-&lt;br /&gt;
-DOM은 자바스크립트를 사용해서 웹 컨텐츠를 추가, 수정, 삭제, 이벤트 처리 등을 정의할 수 있도록 제공되는
-프로그래밍 인터페이스입니다. 
-&lt;br /&gt;
-&lt;br /&gt;
-자바스크립트가 어떤 동작을 구현하면 DOM에 그 결과가 반영되어 웹브라우저 화면이 다시 렌더링됩니다. HTML 코드는 정적인데, 화면이 사용자와 동적인 상호작용을 하는데 DOM이 그 역할을 해주는 것입니다.
-&lt;br /&gt;
-&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징</summary>
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기</summary>
       
 
       
