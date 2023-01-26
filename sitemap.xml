@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://ykkim97.github.io/etc-clientandserver.html</loc>
+        
+        <lastmod>2023-01-26T18:40:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://ykkim97.github.io/etc-productionkey.html</loc>
         
         <lastmod>2023-01-14T22:40:00+09:00</lastmod>
