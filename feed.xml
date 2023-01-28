@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2023-01-28T21:44:03+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">서버와 클라이언트, 그리고 소켓주소 간단정리</title><link href="https://ykkim97.github.io/etc-clientandserver" rel="alternate" type="text/html" title="서버와 클라이언트, 그리고 소켓주소 간단정리" /><published>2023-01-26T18:40:00+09:00</published><updated>2023-01-26T18:40:00+09:00</updated><id>https://ykkim97.github.io/etc-clientandserver</id><content type="html" xml:base="https://ykkim97.github.io/etc-clientandserver">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ykkim97.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ykkim97.github.io/" rel="alternate" type="text/html" /><updated>2023-01-28T21:45:33+09:00</updated><id>https://ykkim97.github.io/feed.xml</id><title type="html">YoungGwon’s IT Tech Blog</title><subtitle>IT 기술 블로그입니다.</subtitle><entry><title type="html">URL의 구조에 대해</title><link href="https://ykkim97.github.io/etc-url" rel="alternate" type="text/html" title="URL의 구조에 대해" /><published>2023-01-28T21:40:00+09:00</published><updated>2023-01-28T21:40:00+09:00</updated><id>https://ykkim97.github.io/etc-url</id><content type="html" xml:base="https://ykkim97.github.io/etc-url">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-clientandserver&quot;&gt;서버와 클라이언트, 그리고 소켓주소 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-url&quot;&gt;URL의 구조에 대해&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;url이란&quot;&gt;URL이란?&lt;/h2&gt;
+
+&lt;p&gt;URL은 Uniform Resource Locator의 약자로 네트워크 상에서 리소스가 어디 있는지를 알려주기 위한 규약입니다.
+주소창에 입력하는 것이 URL이라고 보면될 것 같습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;url의-구조&quot;&gt;URL의 구조&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+예시)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.example.com:3000/path/resource?id=12&amp;amp;year=2023#section-id&lt;/code&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;프로토콜&quot;&gt;프로토콜&lt;/h3&gt;
+&lt;p&gt;맨 앞에 https:// 를 프로토콜이라고 합니다. http, https가 대표적입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;호스트&quot;&gt;호스트&lt;/h3&gt;
+&lt;p&gt;호스트는 www.example.com에 해당하는데 도메인네임이나 IP주소를 말합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;포트번호&quot;&gt;포트번호&lt;/h3&gt;
+&lt;p&gt;:3000 에 해당합니다. 포트번호를 따로 설정하지 않는다면 기본포트번호가 적용되는데 http의 경우 80, https의 경우 443이 디폴트포트번호입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;경로&quot;&gt;경로&lt;/h3&gt;
+&lt;p&gt;path/resource는 경로입니다. 서버에서 리소스에 대한 경로입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;쿼리-스트링&quot;&gt;쿼리 스트링&lt;/h3&gt;
+&lt;p&gt;?id=12&amp;amp;year=2023는 쿼리입니다. 서버에 추가로 보내는 값인데 ?뒤에 key=value형태로 나타내고 &amp;amp;로 구분합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;부분-식별자&quot;&gt;부분 식별자&lt;/h3&gt;
+&lt;p&gt;브라우저에게 알려주는 요소이고 문서의 특정 부분으로 이동하고 싶을 때 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기 서버와 클라이언트, 그리고 소켓주소 간단정리 URL의 구조에 대해</summary></entry><entry><title type="html">서버와 클라이언트, 그리고 소켓주소 간단정리</title><link href="https://ykkim97.github.io/etc-clientandserver" rel="alternate" type="text/html" title="서버와 클라이언트, 그리고 소켓주소 간단정리" /><published>2023-01-26T18:40:00+09:00</published><updated>2023-01-26T18:40:00+09:00</updated><id>https://ykkim97.github.io/etc-clientandserver</id><content type="html" xml:base="https://ykkim97.github.io/etc-clientandserver">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
@@ -55,59 +108,6 @@
   &lt;li&gt;http://125.209.222.141&lt;/li&gt;
   &lt;li&gt;http://125.209.222.141:80&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기 서버와 클라이언트, 그리고 소켓주소 간단정리 URL의 구조에 대해</summary></entry><entry><title type="html">URL의 구조에 대해</title><link href="https://ykkim97.github.io/etc-url" rel="alternate" type="text/html" title="URL의 구조에 대해" /><published>2023-01-26T18:40:00+09:00</published><updated>2023-01-26T18:40:00+09:00</updated><id>https://ykkim97.github.io/etc-url</id><content type="html" xml:base="https://ykkim97.github.io/etc-url">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-clientandserver&quot;&gt;서버와 클라이언트, 그리고 소켓주소 간단정리&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./etc-url&quot;&gt;URL의 구조에 대해&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;url이란&quot;&gt;URL이란?&lt;/h2&gt;
-
-&lt;p&gt;URL은 Uniform Resource Locator의 약자로 네트워크 상에서 리소스가 어디 있는지를 알려주기 위한 규약입니다.
-주소창에 입력하는 것이 URL이라고 보면될 것 같습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;url의-구조&quot;&gt;URL의 구조&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
-예시)&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://www.example.com:3000/path/resource?id=12&amp;amp;year=2023#section-id&lt;/code&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;프로토콜&quot;&gt;프로토콜&lt;/h3&gt;
-&lt;p&gt;맨 앞에 https:// 를 프로토콜이라고 합니다. http, https가 대표적입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;호스트&quot;&gt;호스트&lt;/h3&gt;
-&lt;p&gt;호스트는 www.example.com에 해당하는데 도메인네임이나 IP주소를 말합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;포트번호&quot;&gt;포트번호&lt;/h3&gt;
-&lt;p&gt;:3000 에 해당합니다. 포트번호를 따로 설정하지 않는다면 기본포트번호가 적용되는데 http의 경우 80, https의 경우 443이 디폴트포트번호입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;경로&quot;&gt;경로&lt;/h3&gt;
-&lt;p&gt;path/resource는 경로입니다. 서버에서 리소스에 대한 경로입니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;쿼리-스트링&quot;&gt;쿼리 스트링&lt;/h3&gt;
-&lt;p&gt;?id=12&amp;amp;year=2023는 쿼리입니다. 서버에 추가로 보내는 값인데 ?뒤에 key=value형태로 나타내고 &amp;amp;로 구분합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;부분-식별자&quot;&gt;부분 식별자&lt;/h3&gt;
-&lt;p&gt;브라우저에게 알려주는 요소이고 문서의 특정 부분으로 이동하고 싶을 때 사용합니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 End.&lt;/p&gt;</content><author><name>ykkim97</name></author><category term="etc" /><summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기 서버와 클라이언트, 그리고 소켓주소 간단정리 URL의 구조에 대해</summary></entry><entry><title type="html">LOL 전적검색 개발 - personal key 발급 승인받기</title><link href="https://ykkim97.github.io/etc-productionkey" rel="alternate" type="text/html" title="LOL 전적검색 개발 - personal key 발급 승인받기" /><published>2023-01-14T22:40:00+09:00</published><updated>2023-01-14T22:40:00+09:00</updated><id>https://ykkim97.github.io/etc-productionkey</id><content type="html" xml:base="https://ykkim97.github.io/etc-productionkey">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
