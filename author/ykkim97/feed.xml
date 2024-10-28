@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://ykkim97.github.io/author/ykkim97/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://ykkim97.github.io/" rel="alternate" type="text/html" />
-  <updated>2023-01-28T21:45:33+09:00</updated>
+  <updated>2024-10-28T19:27:15+09:00</updated>
   <id>https://ykkim97.github.io/author/ykkim97/feed.xml</id>
 
   
@@ -30,6 +30,101 @@
   
   
 
+  
+    <entry>
+      <title type="html">Three.js vs Babylon.js 비교</title>
+      <link href="https://ykkim97.github.io/etc-test" rel="alternate" type="text/html" title="Three.js vs Babylon.js 비교" />
+      <published>2024-10-28T17:43:00+09:00</published>
+      <updated>2024-10-28T17:43:00+09:00</updated>
+      <id>https://ykkim97.github.io/etc-test</id>
+      <content type="html" xml:base="https://ykkim97.github.io/etc-test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;기타 포스팅입니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-firebasedbrules&quot;&gt;Firebase DB에서 값을 불러올 수 없는 문제 해결&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-browser&quot;&gt;브라우저 동작 원리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-dom&quot;&gt;DOM이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-bubbling&quot;&gt;이벤트 버블링과 캡처링&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-whatisbundle&quot;&gt;번들링이 뭔데?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-processandthread&quot;&gt;프로세스와 쓰레드의 차이점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-csrssrssg&quot;&gt;CSR, SSR, SSG의 차이&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-libraryandframework&quot;&gt;라이브러리와 프레임워크&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-webstorage&quot;&gt;쿠키와 웹스토리지에 대해&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-crossbrowsing&quot;&gt;크로스 브라우징이란?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-vscodekey&quot;&gt;알면 유용한 vscode 단축키들&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-httphttps&quot;&gt;HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-getandpost&quot;&gt;GET과 POST의 특징&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-productionkey&quot;&gt;LOL 전적검색 개발 - personal key 발급 승인받기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-clientandserver&quot;&gt;서버와 클라이언트, 그리고 소켓주소 간단정리&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./etc-url&quot;&gt;URL의 구조에 대해&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;threejs-vs-babylonjs-비교&quot;&gt;Three.js vs Babylon.js 비교&lt;/h2&gt;
+
+&lt;h3 id=&quot;threejs나-babylonjs는-웹상에서-3d-오브젝트를-렌더링할-수-있도록해주는-라이브러리다&quot;&gt;Three.js나 Babylon.js는 웹상에서 3D 오브젝트를 렌더링할 수 있도록해주는 라이브러리다.&lt;/h3&gt;
+
+&lt;p&gt;취업 전에는 사이드프로젝트로 Three.js를 사용하여 가지고 놀았던 경험이 있고,
+이직 후에 실무에서 babylon.js를 사용한 경험이 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;두-라이브러리의-장단점&quot;&gt;두 라이브러리의 장단점&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+일단 Three.js경우,&lt;/p&gt;
+
+&lt;p&gt;기본기능에 충실한면이 있고, 나름 사용하기 편하다.
+또한 커뮤니티상에 예제들이 보다 많이 나와있어 관련 소스나 자료를 찾기 더 편한 것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+그런데 사실 게임엔진으로서는 babylon.js보다 기능이 다소 부족하다고 하여 만약 게임을 제대로 만들고 싶다면 babylon.js를 사용하는게 좋을 수도…&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;두번쨰로 babylon.js 경우,&lt;/p&gt;
+
+&lt;p&gt;일단 Three.js보다 더 복잡하고 다양한 기능을 제공하는 것으로 보인다.
+하지만 자료도 확실히 부족한 것 같고, 구글링으로 찾아가면서 코드를 짜는게 힘들었던 것 같다.(개인적인 생각)
+&lt;br /&gt;
+그리고 Three.js보다 확실히 무게감이 있는 라이브러리라는 것.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+하지만 chatgpt를 유용하게 사용하여 충분히 빠르게 궁금한 내용을 찾을 수 있는 것 같다.&lt;/p&gt;
+
+&lt;h2 id=&quot;정리&quot;&gt;정리&lt;/h2&gt;
+
+&lt;p&gt;확실하게 내가 짜고 싶은 코드가 무엇이고 목적이 무엇인지에 따라서 결정하면 될 것 같다.&lt;/p&gt;
+
+&lt;p&gt;Three.js가 그렇다고 너무 기능이 없는 것도 아니라고 생각한다.
+자신의 필요에 따라서 사용하면 될 것 같다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+End.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>ykkim97</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">기타 포스팅입니다. Firebase DB에서 값을 불러올 수 없는 문제 해결 브라우저 동작 원리 DOM이란? 이벤트 버블링과 캡처링 번들링이 뭔데? 프로세스와 쓰레드의 차이점 CSR, SSR, SSG의 차이 라이브러리와 프레임워크 쿠키와 웹스토리지에 대해 크로스 브라우징이란? 알면 유용한 vscode 단축키들 HTTP와 HTTPS의 차이점, HTTPS의 과정 및 장점 GET과 POST의 특징 LOL 전적검색 개발 - personal key 발급 승인받기 서버와 클라이언트, 그리고 소켓주소 간단정리 URL의 구조에 대해</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">URL의 구조에 대해</title>
@@ -870,82 +965,6 @@ End.&lt;/p&gt;</content>
 
       
         <summary type="html">HTML은 다음과 같이 구성되어 있습니다. 웹의 기본중의 기본! HTML에 대해서 알아보자 HTML 기본 태그들 DOCTYPE의 의미? 시맨틱 태그? img태그에서 srcset속성을 사용하는 이유 HTML lang 속성 HTML태그 - i와 em 그리고 b와 strong의 차이</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">class와 id의 차이점</title>
-      <link href="https://ykkim97.github.io/css-classandid" rel="alternate" type="text/html" title="class와 id의 차이점" />
-      <published>2022-10-13T13:20:00+09:00</published>
-      <updated>2022-10-13T13:20:00+09:00</updated>
-      <id>https://ykkim97.github.io/css-classandid</id>
-      <content type="html" xml:base="https://ykkim97.github.io/css-classandid">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;CSS는 다음과 같이 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-basic&quot;&gt;CSS의 의미와 적용방법&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-blockinline&quot;&gt;block과 inline의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-emAndRem&quot;&gt;em과 rem의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-sass&quot;&gt;Sass - CSS 전처리기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-marginPadding&quot;&gt;CSS margin과 padding의 차이&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-sticky&quot;&gt;sticky 를 알아보자&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-classandid&quot;&gt;class와 id의 차이점&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./css-flexbox&quot;&gt;CSS Flexbox - 자주 사용되는 것 정리&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;요소에 스타일을 주고 싶을 때 많은 방법이 있는데, 그중에 class 선택자, id 선택자를 많이 사용하여 스타일을 지정합니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;class-선택자&quot;&gt;class 선택자&lt;/h2&gt;
-
-&lt;p&gt;class는 아래와 같이 ‘.’을 사용해서 스타일을 추가합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.btn1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ffffff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;class는 한 요소에 여러 class명이 적용될 수 있고 동일한 class명을 여러 요소에도 중복해서 사용이 가능하다는 특징이 있습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;id-선택자&quot;&gt;id 선택자&lt;/h2&gt;
-
-&lt;p&gt;id는 아래와 같이 ‘#’을 사용해서 스타일을 추가합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#btn2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ffffff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;id는 한 요소에 한 id값만 적용이 가능하고 id명을 중복해서 사용할 수 없다는 특징이 있습니다.
-id는 class보다 우선순위가 높습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-End.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>ykkim97</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="css" />
-      
-
-      
-        <summary type="html">CSS는 다음과 같이 구성되어 있습니다. CSS의 의미와 적용방법 block과 inline의 차이점 em과 rem의 차이 Sass - CSS 전처리기 CSS margin과 padding의 차이 sticky 를 알아보자 class와 id의 차이점 CSS Flexbox - 자주 사용되는 것 정리</summary>
       
 
       
